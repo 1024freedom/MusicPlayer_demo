@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "FramelessWindow",
+            "lineNumber": 5,
+            "object": true,
+            "qualifiedClassName": "FramelessWindow",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QQuickWindow"
+                }
+            ]
+        }
+    ],
+    "inputFile": "framelesswindow.h",
+    "outputRevision": 69
+}
