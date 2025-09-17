@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "FramelessWindow",
-            "lineNumber": 5,
+            "lineNumber": 6,
             "object": true,
             "qualifiedClassName": "FramelessWindow",
             "superClasses": [

@@ -3,6 +3,62 @@
         "moduleFiles": [
             {
                 "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 15,
+                        "durationMicroseconds": 517,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 449,
+                        "errorMessage": "",
+                        "functionName": "click_pos",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 531,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: window",
+                        "functionName": "onPositionChanged",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 122,
+                        "errorMessage": "",
+                        "functionName": "onPositionChanged",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "onPressedChanged",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 53,
+                        "errorMessage": "",
+                        "functionName": "onPressedChanged",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 178,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 19
+                    }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/main.qml"
             }

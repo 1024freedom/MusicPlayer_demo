@@ -63,13 +63,80 @@ FramelessWindow::MousePosition FramelessWindow::getMousePos(QPointF &pos) {
     }
     return mouse_pos;
 }
+void FramelessWindow::setWindowGeometry(const QPointF &pos) {
+
+    QPointF offset = this->start_pos - pos;
+    if (offset.x() == 0 && offset.y() == 0)return;
+
+    auto set_geometry_func = [this](const QSize & size, const QPointF & pos) { //传入拖拽后窗口的size和pos
+        QPointF t_pos = this->old_pos;
+        QSize t_size = minimumSize();
+        if (size.width() > minimumWidth()) {
+            t_pos.setX(pos.x());
+            t_size.setWidth(size.width());
+        } else if (this->mouse_pos == MousePosition::LEFT) {
+            t_pos.setX(this->old_pos.x() + this->old_size.width() - minimumWidth());
+        }
+        if (size.height() > minimumHeight()) {
+            t_pos.setY(pos.y());
+            t_size.setHeight(size.height());
+        } else if (this->mouse_pos == MousePosition::TOP) {
+            t_pos.setX(this->old_pos.y() + this->old_size.height() - minimumHeight());
+        }
+        this->setGeometry(t_pos.x(), t_pos.y(), t_size.width(), t_size.height());
+        this->update();
+    };
+
+
+    switch (this->mouse_pos) {
+    case MousePosition::TOPLEFT: set_geometry_func(this->old_size + QSize(offset.x(), offset.y()),
+                this->old_pos - offset);
+        break;
+    case MousePosition::TOP: set_geometry_func(this->old_size + QSize(0, offset.y()),
+                this->old_pos - QPointF(0, offset.y()));
+        break;
+    case MousePosition::TOPRIGHT: set_geometry_func(this->old_size - QSize(offset.x(), -offset.y()),
+                this->old_pos - QPointF(0, offset.y()));
+        break;
+    case MousePosition::LEFT: set_geometry_func(this->old_size + QSize(offset.x(), 0),
+                this->old_pos - QPointF(offset.x(), 0));
+        break;
+    case MousePosition::RIGHT: set_geometry_func(this->old_size - QSize(offset.x(), 0),
+                this->position());
+        break;
+    case MousePosition::BOTTOMLEFT: set_geometry_func(this->old_size + QSize(offset.x(), -offset.y()),
+                this->old_pos - QPointF(offset.x(), 0));
+        break;
+    case MousePosition::BOTTOM: set_geometry_func(this->old_size + QSize(0, -offset.y()),
+                this->position());
+        break;
+    case MousePosition::BOTTOMRIGHT: set_geometry_func(this->old_size - QSize(offset.x(), offset.y()),
+                this->position());
+        break;
+    default:
+        break;
+    }
+}
 
 void FramelessWindow::mousePressEvent(QMouseEvent *event) {
-
+    this->start_pos = event->globalPosition();
+    this->old_pos = this->position();
+    this->old_size = this->size();
+    event->ignore();
+    QQuickWindow::mousePressEvent(event);
 }
 void FramelessWindow::mouseReleaseEvent(QMouseEvent *event) {
-
+    this->old_pos = this->position();
+    QQuickWindow::mouseReleaseEvent(event);
 }
 void FramelessWindow::mouseMoveEvent(QMouseEvent *event) {
-
+    QPointF pos = this->position();
+    if (event->buttons()&Qt::LeftButton) {
+        //改变大小
+        this->setWindowGeometry(pos);
+    } else {
+        this->mouse_pos = this->getMousePos(pos);
+        this->setCursorIcon();
+    }
+    QQuickWindow::mouseMoveEvent(event);
 }
