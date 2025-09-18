@@ -37,6 +37,23 @@ FramelessWindow {
                         window.showMaximized()
                     }
                 }
+                Row{
+                    width: parent.width
+                    height: parent.height-10
+                    anchors.cente
+                    Rectangle{
+                        width: 80
+                        height: 20
+                        Image {
+                            id: name
+                            source: "file"
+                        }
+                        Text {
+                            id: name0
+                            text: qsTr("text")
+                        }
+                    }
+                }
             }
 
         }

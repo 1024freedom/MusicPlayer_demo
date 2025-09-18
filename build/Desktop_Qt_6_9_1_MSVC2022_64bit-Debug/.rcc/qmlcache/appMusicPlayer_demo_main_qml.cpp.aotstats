@@ -5,59 +5,139 @@
                 "entries": [
                     {
                         "codegenSuccessful": true,
-                        "column": 15,
-                        "durationMicroseconds": 517,
+                        "column": 23,
+                        "durationMicroseconds": 434,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 240,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 14
+                        "line": 16
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 37,
-                        "durationMicroseconds": 449,
+                        "column": 41,
+                        "durationMicroseconds": 324,
                         "errorMessage": "",
                         "functionName": "click_pos",
-                        "line": 18
+                        "line": 20
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 531,
+                        "column": 36,
+                        "durationMicroseconds": 344,
                         "errorMessage": "Cannot retrieve a non-object type by ID: window",
                         "functionName": "onPositionChanged",
-                        "line": 20
+                        "line": 22
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 122,
+                        "column": 36,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
                         "functionName": "onPositionChanged",
-                        "line": 20
+                        "line": 22
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 31,
+                        "column": 35,
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "onPressedChanged",
-                        "line": 28
+                        "line": 30
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "",
+                        "functionName": "onPressedChanged",
+                        "line": 30
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: window",
+                        "functionName": "onDoubleClicked",
+                        "line": 33
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
-                        "functionName": "onPressedChanged",
-                        "line": 28
+                        "functionName": "fill",
+                        "line": 21
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 178,
+                        "column": 20,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 19
+                        "functionName": "width",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: window",
+                        "functionName": "height",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 91,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 48
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 106,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 49
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 58
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 65
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/main.qml"
