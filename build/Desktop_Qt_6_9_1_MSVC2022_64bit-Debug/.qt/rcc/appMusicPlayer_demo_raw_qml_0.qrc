@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="/MusicPlayer_demo/">
     <file alias="main.qml">D:/QtProjects/MusicPlayer_demo/main.qml</file>
+    <file alias="source.qrc">D:/QtProjects/MusicPlayer_demo/source.qrc</file>
   </qresource>
 </RCC>
 

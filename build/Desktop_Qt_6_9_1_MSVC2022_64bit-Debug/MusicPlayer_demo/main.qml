@@ -15,7 +15,7 @@ FramelessWindow {
             id:titleBar
             width:parent.width
             height: 80
-            color:"RED"
+            color:"#FAF2F1"
             MouseArea{
                 property var click_pos: Qt.point(0,0)
                 anchors.fill: parent
@@ -35,6 +35,32 @@ FramelessWindow {
                         window.showNormal()
                     }else{
                         window.showMaximized()
+                    }
+                }
+                Row{
+                    width: parent.width-20
+                    height: parent.height-10
+                    anchors.centerIn: parent
+                    Row{
+                        width: 80
+                        height: parent.height
+                        spacing: 15
+                        Image {
+                            width: 30
+                            height: 30
+                            id: topLeftIcon
+                            anchors.verticalCenter: parent.verticalCenter
+                            source: "qrc:/topleft"
+                        }
+                        Text {
+                            id: topLeftText
+                            font.pointSize: 12
+                            anchors.verticalCenter: parent.verticalCenter
+                            text: qsTr("music player demo")
+                        }
+                        Component.onCompleted: {
+                            width=children[0].width+children[1].contentWidth+parent.spacing
+                        }
                     }
                 }
             }

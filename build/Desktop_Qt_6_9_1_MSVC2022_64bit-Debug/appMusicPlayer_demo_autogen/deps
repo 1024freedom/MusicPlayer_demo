@@ -984,4 +984,5 @@ appMusicPlayer_demo_autogen/timestamp: \
 	D:/QtProjects/MusicPlayer_demo/framelesswindow.cpp \
 	D:/QtProjects/MusicPlayer_demo/framelesswindow.h \
 	D:/QtProjects/MusicPlayer_demo/main.cpp \
+	D:/QtProjects/MusicPlayer_demo/source.qrc \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe
