@@ -6086,6 +6086,18 @@
 			"value" : "D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Concurrent"
 		},
 		{
+			"name" : "Qt6Core5Compat_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6Core5Compat."
+				}
+			],
+			"type" : "PATH",
+			"value" : "Qt6Core5Compat_DIR-NOTFOUND"
+		},
+		{
 			"name" : "Qt6CorePrivate_DIR",
 			"properties" : 
 			[

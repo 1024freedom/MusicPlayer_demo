@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-af30d0a4dd47acf1ee3f.json",
+					"jsonFile" : "directory-.-Debug-ca8d446547d8175c21a6.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -77,35 +77,35 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-all_qmllint-Debug-ba42e2893258bcf3e770.json",
+					"jsonFile" : "target-all_qmllint-Debug-63daa224f2bce28256f7.json",
 					"name" : "all_qmllint",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-all_qmllint_json-Debug-ca895fd6ff8c1a4d99ff.json",
+					"jsonFile" : "target-all_qmllint_json-Debug-51ba0aba1a1ea61c3abf.json",
 					"name" : "all_qmllint_json",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-all_qmllint_module-Debug-7b3e0059085505abd23c.json",
+					"jsonFile" : "target-all_qmllint_module-Debug-dce2ec25640d5acdab8c.json",
 					"name" : "all_qmllint_module",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-all_qmltyperegistrations-Debug-1d0f289f5ff272e45808.json",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-323c855fe46edf3b7c31.json",
 					"name" : "all_qmltyperegistrations",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo-Debug-b44aba070eb1d17ed424.json",
+					"jsonFile" : "target-appMusicPlayer_demo-Debug-f4447122957c05eeca44.json",
 					"name" : "appMusicPlayer_demo",
 					"projectIndex" : 0
 				},
@@ -119,21 +119,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_autogen_timestamp_deps-Debug-bbd8d791812e70af46fb.json",
+					"jsonFile" : "target-appMusicPlayer_demo_autogen_timestamp_deps-Debug-e8c06d0c5626b1066879.json",
 					"name" : "appMusicPlayer_demo_autogen_timestamp_deps",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_copy_qml-Debug-b485e81502c919665217.json",
+					"jsonFile" : "target-appMusicPlayer_demo_copy_qml-Debug-0b36690419da76603d9d.json",
 					"name" : "appMusicPlayer_demo_copy_qml",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_copy_res-Debug-38573fa9d31b71238783.json",
+					"jsonFile" : "target-appMusicPlayer_demo_copy_res-Debug-6535786942e7ca82d788.json",
 					"name" : "appMusicPlayer_demo_copy_res",
 					"projectIndex" : 0
 				},
@@ -147,28 +147,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_qmllint::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_qmllint-Debug-48fcdba2a9cd84d40f62.json",
+					"jsonFile" : "target-appMusicPlayer_demo_qmllint-Debug-165f3eaa5d7ae91bd3ed.json",
 					"name" : "appMusicPlayer_demo_qmllint",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_qmllint_json::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_qmllint_json-Debug-f3789c6ebfe352431db1.json",
+					"jsonFile" : "target-appMusicPlayer_demo_qmllint_json-Debug-be432db3f30e6c111031.json",
 					"name" : "appMusicPlayer_demo_qmllint_json",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_qmllint_module::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_qmllint_module-Debug-c218f49b25cd8fbe7f1e.json",
+					"jsonFile" : "target-appMusicPlayer_demo_qmllint_module-Debug-9d21c6b16c2b699c7afb.json",
 					"name" : "appMusicPlayer_demo_qmllint_module",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_qmltyperegistration::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_qmltyperegistration-Debug-0d98e99e012f974cd82d.json",
+					"jsonFile" : "target-appMusicPlayer_demo_qmltyperegistration-Debug-b9b8c30249ff936ef4e0.json",
 					"name" : "appMusicPlayer_demo_qmltyperegistration",
 					"projectIndex" : 0
 				},

@@ -5,9 +5,11 @@ project(MusicPlayer_demo VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
-set(CMAKE_AUTORCC ON)
 
+find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
+#添加
+set(CMAKE_AUTORCC ON)
+#
 qt_add_executable(appMusicPlayer_demo
     main.cpp
 )

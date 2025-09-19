@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 358,
+                        "durationMicroseconds": 201,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 13
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 102,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 16
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 234,
+                        "durationMicroseconds": 168,
                         "errorMessage": "",
                         "functionName": "click_pos",
                         "line": 20
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 501,
+                        "durationMicroseconds": 193,
                         "errorMessage": "Cannot retrieve a non-object type by ID: window",
                         "functionName": "onPositionChanged",
                         "line": 22
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 84,
+                        "durationMicroseconds": 34,
                         "errorMessage": "",
                         "functionName": "onPositionChanged",
                         "line": 22
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 16,
                         "errorMessage": "",
                         "functionName": "onPressedChanged",
                         "line": 30
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 34,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 85,
                         "errorMessage": "Cannot retrieve a non-object type by ID: window",
                         "functionName": "onDoubleClicked",
                         "line": 33
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 21
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 107,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 41
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 42
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 43
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 43,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 46
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 53,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 52
@@ -118,82 +118,82 @@
                     {
                         "codegenSuccessful": true,
                         "column": 53,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 62,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 58
+                        "line": 59
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 48,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 134,
                         "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
                         "functionName": "onCompleted",
-                        "line": 61
+                        "line": 63
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 41,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 71
+                        "line": 78
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 53,
                         "errorMessage": "Cannot retrieve a non-object type by ID: window",
-                        "functionName": "height",
-                        "line": 72
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 82,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 74
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 68,
-                        "errorMessage": "",
-                        "functionName": "height",
-                        "line": 75
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 73,
-                        "errorMessage": "",
                         "functionName": "height",
                         "line": 79
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 151,
+                        "column": 24,
+                        "durationMicroseconds": 50,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 84
+                        "line": 81
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 82
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 43,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 85
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 99,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 41,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 92
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 35,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 91
+                        "line": 98
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/main.qml"

@@ -55,11 +55,18 @@ FramelessWindow {
                         Text {
                             id: topLeftText
                             font.pointSize: 12
+                            font.bold: true
                             anchors.verticalCenter: parent.verticalCenter
-                            text: qsTr("music player demo")
+                            text: qsTr("Music Player Demo")
+                            color: "#572920"
                         }
                         Component.onCompleted: {
                             width=children[0].width+children[1].contentWidth+parent.spacing
+                        }
+                    }
+                    Row{
+                        Rectangle{
+
                         }
                     }
                 }
