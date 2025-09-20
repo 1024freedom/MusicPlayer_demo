@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 422,
+                        "durationMicroseconds": 332,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "defaultTheme",
                         "line": 18
@@ -14,90 +14,90 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 24
+                        "line": 26
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 28
+                        "line": 30
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 19,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot load property backgroundColor from (component in D:/QtProjects/MusicPlayer_demo/main.qml)::thisTheme with type QVariant.",
                         "functionName": "color",
-                        "line": 30
+                        "line": 32
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 35
+                        "line": 37
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 47,
                         "errorMessage": "Cannot retrieve a non-object type by ID: window",
                         "functionName": "height",
-                        "line": 36
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 58,
-                        "errorMessage": "",
-                        "functionName": "width",
                         "line": 38
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 39,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 40
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 39
+                        "line": 41
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 43
+                        "line": 45
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 143,
+                        "durationMicroseconds": 104,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 47
+                        "line": 49
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 48
+                        "line": 50
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 54
+                        "line": 56
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/main.qml"

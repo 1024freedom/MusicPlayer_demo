@@ -24,6 +24,7 @@ Rectangle{
         ]
     width: 180
     height: parent.height
+    color: thisTheme.backgroundColor
 
     property var thisData: filterLeftBarData(leftBarData)
     property string thisQml: ""
@@ -48,10 +49,10 @@ Rectangle{
         anchors.fill: parent
         Column{
             topPadding: 10
-            spacing: 10
+            spacing: 15
             Repeater{
                 id:leftBarRepeater
-                model: leftBar.thisData.length
+                model: leftBar.count
                 delegate: repeaterDelegate
             }
         }
@@ -60,9 +61,16 @@ Rectangle{
             ListView{
                 id:listView
                 width: leftBarFlickable.width
-                height: 80
+                height: leftBar.btnHeight*count+40
                 interactive: false//禁止拖拽
+                spacing:7
                 model: ListModel{}
+                header: Text {
+                    font.pointSize: leftBar.fontSize-2
+                    color: leftBar.thisTheme.fontColor
+                    text: leftBar.thisData[index].headerText
+                    padding: 5
+                }
                 delegate: listViewDelegate
                 Component.onCompleted: {
                     model.append(leftBar.thisData[index].btnData)
@@ -73,11 +81,29 @@ Rectangle{
             id:listViewDelegate
             Rectangle{
                 property bool isHovered: false
+                property bool isThisBtn: leftBar.thisBtnText===btnText//当前按钮是否被选中
                 width: leftBarFlickable.width-15
                 height: leftBar.btnHeight
+                radius: 50
                 color: if(isHovered)return leftBar.thisTheme.subBackgroundColor
                     else return "#00000000"
+
+                Rectangle{
+                    width: parent.isThisBtn?parent.width:0
+                    height: parent.height
+                    radius: parent.radius
+                    color: leftBar.thisTheme.clickBackgroundColor
+                    Behavior on width {
+                        NumberAnimation{
+                            duration: 200
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                }
+
                 Row{
+                    spacing: 10
+                    anchors.verticalCenter: parent.verticalCenter
                     Image {
                         source: btnIcon
                         sourceSize: Qt.size(32,32)
@@ -85,9 +111,17 @@ Rectangle{
                         height: width
                     }
                     Text {
+                        font.bold: isThisBtn?true:false
+                        scale: isThisBtn?1.1:1
                         font.pointSize: leftBar.fontSize
                         color: leftBar.thisTheme.fontColor
-                        text: qsTr("text")
+                        text: btnText
+                        Behavior on scale {
+                            NumberAnimation{
+                                duration: 200
+                                easing.type: Easing.InOutQuad
+                            }
+                        }
                     }
                 }
 
@@ -95,7 +129,8 @@ Rectangle{
                     anchors.fill: parent
                     hoverEnabled: true
                     onClicked: {
-
+                        leftBar.thisBtnText=btnText
+                        leftBar.thisQml=qml
                     }
                     onEntered: {
                         parent.isHovered=true

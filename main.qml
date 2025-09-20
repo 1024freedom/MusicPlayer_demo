@@ -16,7 +16,9 @@ FramelessWindow {
         property int current: 0
         //分别为 默认主题、
         property var defaultTheme: [
-            {name:"pink",type:"defult",backgroundColor:"#FAF2F1",subBackgroundColor:"#FF5966",fontColor:"#572920"}
+            {name:"pink",type:"defult",backgroundColor:"#FAF2F1",
+                subBackgroundColor:"#F2A49B",clickBackgroundColor:"#F6867A",
+                fontColor:"#572920"}
         ]
     }
 
