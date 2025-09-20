@@ -1,6 +1,10 @@
 <RCC>
   <qresource prefix="/MusicPlayer_demo/">
     <file alias="main.qml">D:/QtProjects/MusicPlayer_demo/main.qml</file>
+    <file alias="TitleBar.qml">D:/QtProjects/MusicPlayer_demo/TitleBar.qml</file>
+    <file alias="LeftBar.qml">D:/QtProjects/MusicPlayer_demo/LeftBar.qml</file>
+    <file alias="RightContent.qml">D:/QtProjects/MusicPlayer_demo/RightContent.qml</file>
+    <file alias="BottomBar.qml">D:/QtProjects/MusicPlayer_demo/BottomBar.qml</file>
     <file alias="source.qrc">D:/QtProjects/MusicPlayer_demo/source.qrc</file>
   </qresource>
 </RCC>

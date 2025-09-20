@@ -1,4 +1,8 @@
 module MusicPlayer_demo
 typeinfo appMusicPlayer_demo.qmltypes
 prefer :/MusicPlayer_demo/
+TitleBar 1.0 TitleBar.qml
+LeftBar 1.0 LeftBar.qml
+RightContent 1.0 RightContent.qml
+BottomBar 1.0 BottomBar.qml
 

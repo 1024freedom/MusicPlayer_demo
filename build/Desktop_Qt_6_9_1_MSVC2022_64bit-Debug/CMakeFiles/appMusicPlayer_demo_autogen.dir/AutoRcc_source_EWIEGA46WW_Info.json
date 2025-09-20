@@ -7,7 +7,16 @@
 	"CROSS_CONFIG" : false,
 	"GENERATOR" : "Ninja",
 	"INCLUDE_DIR" : "D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusicPlayer_demo_autogen/include",
-	"INPUTS" : [ "D:/QtProjects/MusicPlayer_demo/\u7f51\u6613\u4e91\u97f3\u4e50.png" ],
+	"INPUTS" : 
+	[
+		"D:/QtProjects/MusicPlayer_demo/\u7f51\u6613\u4e91\u97f3\u4e50.png",
+		"D:/QtProjects/MusicPlayer_demo/\u559c\u6b22.png",
+		"D:/QtProjects/MusicPlayer_demo/\u4e50\u5e93.png",
+		"D:/QtProjects/MusicPlayer_demo/\u6b4c\u5355.png",
+		"D:/QtProjects/MusicPlayer_demo/\u6700\u8fd1\u64ad\u653e.png",
+		"D:/QtProjects/MusicPlayer_demo/\u4e0b\u8f7d.png",
+		"D:/QtProjects/MusicPlayer_demo/\u626b\u63cf\u672c\u5730\u97f3\u4e50.png"
+	],
 	"LOCK_FILE" : "D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/CMakeFiles/appMusicPlayer_demo_autogen.dir/AutoRcc_source_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "--no-zstd", "-name", "source" ],

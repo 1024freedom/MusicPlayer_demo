@@ -8,5 +8,9 @@ D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/r
 --resource
 D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusicPlayer_demo_raw_qml_0.qrc
 D:/QtProjects/MusicPlayer_demo/main.qml
+D:/QtProjects/MusicPlayer_demo/TitleBar.qml
+D:/QtProjects/MusicPlayer_demo/LeftBar.qml
+D:/QtProjects/MusicPlayer_demo/RightContent.qml
+D:/QtProjects/MusicPlayer_demo/BottomBar.qml
 --json
 D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusicPlayer_demo_qmllint.json

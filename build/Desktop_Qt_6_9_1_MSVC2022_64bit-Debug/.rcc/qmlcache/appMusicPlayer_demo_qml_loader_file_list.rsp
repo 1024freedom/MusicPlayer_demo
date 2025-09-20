@@ -3,3 +3,7 @@ D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/r
 --resource
 D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusicPlayer_demo_raw_qml_0.qrc
 /MusicPlayer_demo/main.qml
+/MusicPlayer_demo/TitleBar.qml
+/MusicPlayer_demo/LeftBar.qml
+/MusicPlayer_demo/RightContent.qml
+/MusicPlayer_demo/BottomBar.qml
