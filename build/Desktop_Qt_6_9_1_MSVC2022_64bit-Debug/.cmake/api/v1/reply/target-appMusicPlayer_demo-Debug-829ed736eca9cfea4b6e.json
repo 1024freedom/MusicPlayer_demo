@@ -27,13 +27,13 @@
 			"qt6_add_qml_module",
 			"qt_add_qml_module",
 			"add_dependencies",
+			"_qt_internal_qml_copy_files_to_build_dir",
+			"qt6_target_qml_sources",
 			"_qt_internal_scan_qml_imports",
 			"_qt_internal_generate_deploy_qml_imports_script",
 			"cmake_language",
 			"_qt_internal_finalize_executable",
 			"qt6_finalize_target",
-			"_qt_internal_qml_copy_files_to_build_dir",
-			"qt6_target_qml_sources",
 			"target_include_directories",
 			"_qt_internal_qml_type_registration",
 			"target_sources",
@@ -446,74 +446,74 @@
 				"parent" : 66
 			},
 			{
-				"file" : 1,
-				"line" : -1,
-				"parent" : 0
-			},
-			{
-				"command" : 18,
-				"file" : 23,
-				"line" : 1,
-				"parent" : 68
-			},
-			{
-				"command" : 17,
-				"file" : 0,
-				"line" : 818,
-				"parent" : 69
-			},
-			{
-				"command" : 16,
-				"file" : 0,
-				"line" : 740,
-				"parent" : 70
-			},
-			{
 				"command" : 15,
-				"file" : 0,
-				"line" : 740,
-				"parent" : 71
-			},
-			{
-				"command" : 14,
-				"file" : 10,
-				"line" : 4401,
-				"parent" : 72
-			},
-			{
-				"command" : 13,
-				"file" : 10,
-				"line" : 4176,
-				"parent" : 73
-			},
-			{
-				"command" : 20,
 				"file" : 10,
 				"line" : 916,
 				"parent" : 24
 			},
 			{
-				"command" : 19,
+				"command" : 14,
 				"file" : 10,
-				"line" : 3503,
-				"parent" : 75
+				"line" : 3497,
+				"parent" : 68
 			},
 			{
 				"command" : 13,
 				"file" : 10,
 				"line" : 2860,
+				"parent" : 69
+			},
+			{
+				"command" : 14,
+				"file" : 10,
+				"line" : 3503,
+				"parent" : 68
+			},
+			{
+				"command" : 13,
+				"file" : 10,
+				"line" : 2860,
+				"parent" : 71
+			},
+			{
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 20,
+				"file" : 23,
+				"line" : 1,
+				"parent" : 73
+			},
+			{
+				"command" : 19,
+				"file" : 0,
+				"line" : 818,
+				"parent" : 74
+			},
+			{
+				"command" : 18,
+				"file" : 0,
+				"line" : 740,
+				"parent" : 75
+			},
+			{
+				"command" : 17,
+				"file" : 0,
+				"line" : 740,
 				"parent" : 76
 			},
 			{
-				"command" : 19,
+				"command" : 16,
 				"file" : 10,
-				"line" : 3497,
-				"parent" : 75
+				"line" : 4401,
+				"parent" : 77
 			},
 			{
 				"command" : 13,
 				"file" : 10,
-				"line" : 2860,
+				"line" : 4176,
 				"parent" : 78
 			},
 			{
@@ -592,13 +592,13 @@
 				"command" : 23,
 				"file" : 10,
 				"line" : 3205,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 29,
 				"file" : 10,
 				"line" : 3342,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
@@ -610,61 +610,61 @@
 				"command" : 23,
 				"file" : 10,
 				"line" : 3398,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3205,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3398,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3205,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3398,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3205,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3398,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3205,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 10,
 				"line" : 3398,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 28,
 				"file" : 10,
 				"line" : 3519,
-				"parent" : 75
+				"parent" : 68
 			},
 			{
 				"command" : 27,
@@ -688,7 +688,7 @@
 				"command" : 30,
 				"file" : 0,
 				"line" : 812,
-				"parent" : 69
+				"parent" : 74
 			},
 			{
 				"command" : 23,
@@ -1101,23 +1101,23 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 74,
-			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
+			"backtrace" : 70,
+			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 77,
+			"backtrace" : 72,
 			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 79,
-			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
+			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "appMusicPlayer_demo_autogen::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 79,
+			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMusicPlayer_demo::@6890427a1f51a3e7e1df",
