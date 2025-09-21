@@ -454,7 +454,7 @@
 			{
 				"command" : 14,
 				"file" : 10,
-				"line" : 3503,
+				"line" : 3497,
 				"parent" : 68
 			},
 			{
@@ -462,6 +462,18 @@
 				"file" : 10,
 				"line" : 2860,
 				"parent" : 69
+			},
+			{
+				"command" : 14,
+				"file" : 10,
+				"line" : 3503,
+				"parent" : 68
+			},
+			{
+				"command" : 13,
+				"file" : 10,
+				"line" : 2860,
+				"parent" : 71
 			},
 			{
 				"file" : 1,
@@ -472,48 +484,36 @@
 				"command" : 20,
 				"file" : 23,
 				"line" : 1,
-				"parent" : 71
+				"parent" : 73
 			},
 			{
 				"command" : 19,
 				"file" : 0,
 				"line" : 818,
-				"parent" : 72
+				"parent" : 74
 			},
 			{
 				"command" : 18,
 				"file" : 0,
 				"line" : 740,
-				"parent" : 73
+				"parent" : 75
 			},
 			{
 				"command" : 17,
 				"file" : 0,
 				"line" : 740,
-				"parent" : 74
+				"parent" : 76
 			},
 			{
 				"command" : 16,
 				"file" : 10,
 				"line" : 4401,
-				"parent" : 75
+				"parent" : 77
 			},
 			{
 				"command" : 13,
 				"file" : 10,
 				"line" : 4176,
-				"parent" : 76
-			},
-			{
-				"command" : 14,
-				"file" : 10,
-				"line" : 3497,
-				"parent" : 68
-			},
-			{
-				"command" : 13,
-				"file" : 10,
-				"line" : 2860,
 				"parent" : 78
 			},
 			{
@@ -724,7 +724,7 @@
 				"command" : 30,
 				"file" : 0,
 				"line" : 812,
-				"parent" : 72
+				"parent" : 74
 			},
 			{
 				"command" : 23,
@@ -1141,22 +1141,22 @@
 	[
 		{
 			"backtrace" : 70,
+			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 72,
 			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 77,
-			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 79,
-			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
+			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "appMusicPlayer_demo_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMusicPlayer_demo::@6890427a1f51a3e7e1df",

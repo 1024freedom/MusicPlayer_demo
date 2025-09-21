@@ -7,5 +7,11 @@
         <file alias="like">喜欢.png</file>
         <file alias="download">下载.png</file>
         <file alias="recent">最近播放.png</file>
+        <file alias="reaptSinglePlay">单曲循环.png</file>
+        <file alias="lastPlay">上一首.png</file>
+        <file alias="nextPlay">下一首.png</file>
+        <file alias="pause">暂停按钮.png</file>
+        <file alias="playList">playList.png</file>
+        <file alias="soundChanger">声音.png</file>
     </qresource>
 </RCC>

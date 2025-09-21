@@ -1,6 +1,7 @@
 import QtQuick
 import sz.window
 import QtQuick.Layouts
+import QtQuick.Controls
 Rectangle{
     id:bottomBar
     property var thisTheme:p_theme.defaultTheme[p_theme.current]
@@ -8,12 +9,38 @@ Rectangle{
     width: parent.width
     height: 80
     color: thisTheme.backgroundColor
+    //进度条
+    Slider{
+        id:bottomBarSlider
+        width: parent.width
+        height: 5
+        anchors.bottom: parent.top
+        background: Rectangle{
+            color: thisTheme.subBackgroundColor
+            Rectangle{
+                width: bottomBarSlider.visualPosition*parent.width
+                height: parent.height
+                color: thisTheme.subBackgroundColor
+            }
+        }
+        handle: Rectangle{
+            implicitWidth: 20
+            implicitHeight: 20
+            x:(bottomBarSlider.availableWidth-width)*bottomBarSlider.visualPosition
+            y:-(height-bottomBarSlider.height)/2
+            radius: 100
+            border.width: 1.5
+            border.color: thisTheme.subBackgroundColor
+            color: bottomBarSlider.pressed?"#FF"+thisTheme.subBackgroundColor:"WHITE"
+        }
+    }
+
     Item {
         width: parent.width-15
         height: parent.height-20
         anchors.centerIn: parent
         Row{
-            width: parent.width*3
+            width: parent.width*0.3
             height: parent.height
             anchors.left: parent.left
             spacing: 10
@@ -36,6 +63,107 @@ Rectangle{
                     text: "歌手"
                     color: thisTheme.fontColor
                 }
+            }
+        }
+        Row{
+            width: parent.width*0.3
+            anchors.centerIn: parent
+            spacing: 10
+            ToolTipButtom{
+                width: 23
+                height: width
+                source:"qrc:/reaptSinglePlay"
+                hoveredColor: thisTheme.subBackgroundColor
+                color: "#00000000"
+            }
+            ToolTipButtom{
+                width: 25
+                height: width
+                source:"qrc:/lastPlay"
+                hoveredColor: thisTheme.subBackgroundColor
+                color: "#00000000"
+            }
+            ToolTipButtom{
+                width: 30
+                height: width
+                source:"qrc:/pause"
+                hoveredColor: thisTheme.subBackgroundColor
+                color: "#00000000"
+                onEntered: {
+                    scale=1.1
+                }
+                onExited: {
+                    scale=1
+                }
+                Behavior on scale {
+                    ScaleAnimator{
+                        duration: 200
+                        easing.type: Easing.InOutQuart
+                    }
+                }
+            }
+            ToolTipButtom{
+                width: 25
+                height: width
+                // source:"qrc:/nextPlay"
+                source:"qrc:/lastPlay"
+                transformOrigin: Item.Center
+                rotation: 180
+                hoveredColor: thisTheme.subBackgroundColor
+                color: "#00000000"
+            }
+            Component.onCompleted: {
+                var w=0
+                for(var i=0;i<children.length;i++){
+                    w+=children[i].width
+                }
+                w=w+children.length*spacing-spacing
+                width=w
+            }
+        }
+        Row{
+            anchors.right: parent.right
+            anchors.verticalCenter:parent.verticalCenter
+            spacing: 8
+            Text {
+                font.pointSize: bottomBar.fontSize
+                text: "00:00"
+                font.weight: 1
+                color: thisTheme.fontColor
+                anchors.verticalCenter: parent.verticalCenter
+            }
+            Text {
+                font.pointSize: bottomBar.fontSize
+                text: "/00:00"
+                font.weight: 1
+                color: thisTheme.fontColor
+                anchors.verticalCenter: parent.verticalCenter
+            }
+            ToolTipButtom{
+                width: 20
+                height: width
+                source:"qrc:/soundChanger"
+                hoveredColor: thisTheme.subBackgroundColor
+                color: "#00000000"
+            }
+            ToolTipButtom{
+                width: 20
+                height: width
+                source:"qrc:/playList"
+                hoveredColor: thisTheme.subBackgroundColor
+                color: "#00000000"
+            }
+            Component.onCompleted: {
+                var w=0
+                for(var i=0;i<children.length;i++){
+                    if(children[i] instanceof Text){
+                        w+=children[i].contentwidth
+                    }else{
+                        w+=children[i].width
+                    }
+                }
+                w=w+children.length*spacing-spacing
+                width=w
             }
         }
     }

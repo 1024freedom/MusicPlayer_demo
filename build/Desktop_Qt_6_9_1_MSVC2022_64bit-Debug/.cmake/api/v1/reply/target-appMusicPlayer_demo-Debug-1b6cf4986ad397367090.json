@@ -104,13 +104,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 46,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 42,
+				"line" : 43,
 				"parent" : 0
 			},
 			{
@@ -685,6 +685,18 @@
 				"parent" : 68
 			},
 			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 68
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 68
+			},
+			{
 				"command" : 28,
 				"file" : 10,
 				"line" : 3519,
@@ -694,19 +706,19 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 108
+				"parent" : 110
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2528,
-				"parent" : 109
+				"parent" : 111
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2072,
-				"parent" : 110
+				"parent" : 112
 			},
 			{
 				"command" : 30,
@@ -718,7 +730,7 @@
 				"command" : 23,
 				"file" : 0,
 				"line" : 2197,
-				"parent" : 112
+				"parent" : 114
 			}
 		]
 	},
@@ -924,8 +936,9 @@
 				17,
 				19,
 				21,
-				22,
-				28
+				23,
+				24,
+				30
 			]
 		},
 		{
@@ -1298,7 +1311,8 @@
 				16,
 				18,
 				20,
-				28
+				22,
+				30
 			]
 		},
 		{
@@ -1316,10 +1330,11 @@
 				17,
 				19,
 				21,
-				22,
 				23,
 				24,
-				25
+				25,
+				26,
+				27
 			]
 		},
 		{
@@ -1333,31 +1348,29 @@
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				26
+				28
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				27,
-				44,
-				45,
-				46,
+				29,
 				47,
 				48,
 				49,
 				50,
 				51,
-				52
+				52,
+				53,
+				54,
+				55
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				29,
-				30,
 				31,
 				32,
 				33,
@@ -1370,7 +1383,10 @@
 				40,
 				41,
 				42,
-				43
+				43,
+				44,
+				45,
+				46
 			]
 		}
 	],
@@ -1512,32 +1528,44 @@
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 111,
+			"backtrace" : 108,
+			"path" : "RoundImage.qml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 109,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_RoundImage_qml.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 113,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusicPlayer_demo_raw_qml_0.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 113,
+			"backtrace" : 115,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qmake_MusicPlayer_demo.qrc",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 113,
+			"backtrace" : 115,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/MusicPlayer_demo/qmldir",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 113,
+			"backtrace" : 115,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusicPlayer_demo_raw_qml_0.qrc",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 113,
+			"backtrace" : 115,
 			"path" : "source.qrc",
 			"sourceGroupIndex" : 3
 		},
@@ -1618,6 +1646,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_ToolTipButtom_qml.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_RoundImage_qml.cpp.rule",
 			"sourceGroupIndex" : 5
 		},
 		{
