@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-e392d634454b0c4771a3.json",
+					"jsonFile" : "directory-.-Debug-fb23f765283a40b3d907.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -70,7 +70,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-all_aotstats-Debug-f7df83ea6fa67eff69db.json",
+					"jsonFile" : "target-all_aotstats-Debug-45dda4493120e9375f3b.json",
 					"name" : "all_aotstats",
 					"projectIndex" : 0
 				},
@@ -105,7 +105,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo-Debug-1a6a8bd65cf68b2a25de.json",
+					"jsonFile" : "target-appMusicPlayer_demo-Debug-36ff9c1ec8492f675bdc.json",
 					"name" : "appMusicPlayer_demo",
 					"projectIndex" : 0
 				},
@@ -119,7 +119,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appMusicPlayer_demo_autogen_timestamp_deps-Debug-e58e20c82fb1a75b0539.json",
+					"jsonFile" : "target-appMusicPlayer_demo_autogen_timestamp_deps-Debug-e8c06d0c5626b1066879.json",
 					"name" : "appMusicPlayer_demo_autogen_timestamp_deps",
 					"projectIndex" : 0
 				},
@@ -175,7 +175,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "module_appMusicPlayer_demo_aotstats_target::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-module_appMusicPlayer_demo_aotstats_target-Debug-c23d59eed0d11687c724.json",
+					"jsonFile" : "target-module_appMusicPlayer_demo_aotstats_target-Debug-83ad002df5f5b8b1bcbd.json",
 					"name" : "module_appMusicPlayer_demo_aotstats_target",
 					"projectIndex" : 0
 				}

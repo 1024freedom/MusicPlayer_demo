@@ -38,5 +38,10 @@ Rectangle{
                 }
             }
         }
+        Row{
+            width: parent.width*3
+            height: parent.height
+            anchors.centerIn: parent
+        }
     }
 }

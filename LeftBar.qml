@@ -98,7 +98,7 @@ Rectangle{
                             duration: 200
                             easing.type: Easing.InOutQuad
                         }
-                    }
+                    }//平滑的动画过渡
                 }
 
                 Row{

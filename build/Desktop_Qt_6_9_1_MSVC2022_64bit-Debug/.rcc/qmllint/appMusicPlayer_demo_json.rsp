@@ -12,5 +12,8 @@ D:/QtProjects/MusicPlayer_demo/TitleBar.qml
 D:/QtProjects/MusicPlayer_demo/LeftBar.qml
 D:/QtProjects/MusicPlayer_demo/RightContent.qml
 D:/QtProjects/MusicPlayer_demo/BottomBar.qml
+D:/QtProjects/MusicPlayer_demo/Image.qml
+D:/QtProjects/MusicPlayer_demo/ToolTipButtom.qml
+D:/QtProjects/MusicPlayer_demo/RoundImage.qml
 --json
 D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appMusicPlayer_demo_qmllint.json

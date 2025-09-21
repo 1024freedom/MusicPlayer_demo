@@ -4,12 +4,140 @@
             {
                 "entries": [
                     {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 501,
+                        "errorMessage": "Cannot access value for name p_theme",
+                        "functionName": "thisTheme",
+                        "line": 6
+                    },
+                    {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 334,
+                        "durationMicroseconds": 151,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 6
+                        "line": 8
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 12,
+                        "durationMicroseconds": 13,
+                        "errorMessage": "Cannot load property backgroundColor from (component in D:/QtProjects/MusicPlayer_demo/BottomBar.qml)::thisTheme with type QVariant.",
+                        "functionName": "color",
+                        "line": 10
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 95,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 42,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 110,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 16
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 23
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 103,
+                        "errorMessage": "Cannot load property spacing from (component in D:/QtProjects/MusicPlayer_demo/BottomBar.qml)::parent with type QQuickItem.",
+                        "functionName": "width",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 32
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 42,
+                        "errorMessage": "",
+                        "functionName": "pointSize",
+                        "line": 30
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 37
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 50,
+                        "errorMessage": "",
+                        "functionName": "pointSize",
+                        "line": 35
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/BottomBar.qml"

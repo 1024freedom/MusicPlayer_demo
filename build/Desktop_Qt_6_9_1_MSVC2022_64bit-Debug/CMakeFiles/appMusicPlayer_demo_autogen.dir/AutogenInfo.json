@@ -1131,9 +1131,12 @@
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusicPlayer_demo_raw_qml_0.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_qmake_MusicPlayer_demo.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_BottomBar_qml.cpp",
+		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_Image_qml.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_LeftBar_qml.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_RightContent_qml.cpp",
+		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_RoundImage_qml.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_TitleBar_qml.cpp",
+		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_ToolTipButtom_qml.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_main_qml.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_qmlcache_loader.cpp",
 		"D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/appmusicplayer_demo_qmltyperegistrations.cpp"

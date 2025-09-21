@@ -5,4 +5,7 @@ TitleBar 1.0 TitleBar.qml
 LeftBar 1.0 LeftBar.qml
 RightContent 1.0 RightContent.qml
 BottomBar 1.0 BottomBar.qml
+Image 1.0 Image.qml
+ToolTipButtom 1.0 ToolTipButtom.qml
+RoundImage 1.0 RoundImage.qml
 

@@ -1,0 +1,44 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 322,
+                        "errorMessage": "Cannot load property source from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
+                        "functionName": "source",
+                        "line": 9
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 209,
+                        "errorMessage": "",
+                        "functionName": "fillMode",
+                        "line": 10
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 83,
+                        "errorMessage": "Cannot load property radius from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
+                        "functionName": "radius",
+                        "line": 15
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 13
+                    }
+                ],
+                "filePath": "D:/QtProjects/MusicPlayer_demo/RoundImage.qml"
+            }
+        ],
+        "moduleId": "MusicPlayer_demo(appMusicPlayer_demo)"
+    }
+]

@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 903,
+                        "durationMicroseconds": 590,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 6
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 9,
-                        "durationMicroseconds": 1280,
+                        "durationMicroseconds": 1049,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "leftBarData",
                         "line": 8
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 26
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 12,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot load property backgroundColor from (component in D:/QtProjects/MusicPlayer_demo/LeftBar.qml)::thisTheme with type QVariant.",
                         "functionName": "color",
                         "line": 27
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 83,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "thisData",
                         "line": 29
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot load property length from (component in D:/QtProjects/MusicPlayer_demo/LeftBar.qml)::thisData with type QVariant.",
                         "functionName": "count",
                         "line": 32
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 57,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 49
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 36,
                         "errorMessage": "",
                         "functionName": "delegate",
                         "line": 56
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot access value for name leftBarFlickable",
                         "functionName": "width",
                         "line": 63
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "height",
                         "line": 64
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "color",
                         "line": 70
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 281,
+                        "durationMicroseconds": 335,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "text",
                         "line": 71
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 37,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 30,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "pointSize",
                         "line": 69
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 491,
+                        "durationMicroseconds": 540,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "onCompleted",
                         "line": 75
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 42,
-                        "durationMicroseconds": 198,
+                        "durationMicroseconds": 224,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "isThisBtn",
                         "line": 84
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name leftBarFlickable",
                         "functionName": "width",
                         "line": 85
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 84,
+                        "durationMicroseconds": 90,
                         "errorMessage": "Cannot load property isThisBtn from (component in D:/QtProjects/MusicPlayer_demo/LeftBar.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 92
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 93
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 62,
                         "errorMessage": "Cannot load property radius from (component in D:/QtProjects/MusicPlayer_demo/LeftBar.qml)::parent with type QQuickItem.",
                         "functionName": "radius",
                         "line": 94
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 42,
-                        "durationMicroseconds": 267,
+                        "durationMicroseconds": 61,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 99
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 106
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 177,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "sourceSize",
                         "line": 109
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 41,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 111
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 35,
                         "errorMessage": "Cannot access value for name isThisBtn",
                         "functionName": "scale",
                         "line": 115
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 282,
+                        "durationMicroseconds": 304,
                         "errorMessage": "Cannot access value for name btnText",
                         "functionName": "text",
                         "line": 118
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 31,
                         "errorMessage": "Cannot access value for name isThisBtn",
                         "functionName": "bold",
                         "line": 114
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 41,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "pointSize",
                         "line": 116
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 122
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 376,
+                        "durationMicroseconds": 451,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "onClicked",
                         "line": 131
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/LeftBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onEntered",
                         "line": 135
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/LeftBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onExited",
                         "line": 138
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 129
