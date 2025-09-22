@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 1744,
+                        "durationMicroseconds": 720,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 6
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 795,
+                        "durationMicroseconds": 352,
                         "errorMessage": "",
                         "functionName": "click_pos",
                         "line": 8
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 2492,
+                        "durationMicroseconds": 1429,
                         "errorMessage": "Cannot access value for name window",
                         "functionName": "onPositionChanged",
                         "line": 10
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 333,
+                        "durationMicroseconds": 196,
                         "errorMessage": "",
                         "functionName": "onPositionChanged",
                         "line": 10
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 81,
+                        "durationMicroseconds": 39,
                         "errorMessage": "",
                         "functionName": "onPressedChanged",
                         "line": 18
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 2198,
+                        "durationMicroseconds": 1000,
                         "errorMessage": "Cannot access value for name window",
                         "functionName": "onDoubleClicked",
                         "line": 21
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 1161,
+                        "durationMicroseconds": 119,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 9
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 906,
+                        "durationMicroseconds": 158,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 29
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 606,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 30
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 361,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 31
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 234,
+                        "durationMicroseconds": 305,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 34
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 314,
+                        "durationMicroseconds": 213,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 40
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 246,
+                        "durationMicroseconds": 166,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 49
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 267,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 47
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 547,
+                        "durationMicroseconds": 259,
                         "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
                         "functionName": "onCompleted",
                         "line": 51
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 608,
+                        "durationMicroseconds": 239,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 59
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 695,
+                        "durationMicroseconds": 482,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 67
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 494,
+                        "durationMicroseconds": 207,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 70
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 85,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 73
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 72
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 863,
+                        "durationMicroseconds": 628,
                         "errorMessage": "Cannot access value for name window",
                         "functionName": "onClicked",
                         "line": 79
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/TitleBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onEntered",
                         "line": 82
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/TitleBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onExited",
                         "line": 85
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 77
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 522,
+                        "durationMicroseconds": 246,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 96
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 324,
+                        "durationMicroseconds": 141,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 99
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 100
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 101
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 39,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 73,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 105
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 2159,
+                        "durationMicroseconds": 926,
                         "errorMessage": "Cannot access value for name window",
                         "functionName": "onClicked",
                         "line": 111
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/TitleBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onEntered",
                         "line": 118
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/TitleBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onExited",
                         "line": 121
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 141,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 109
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 468,
+                        "durationMicroseconds": 224,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 132
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 302,
+                        "durationMicroseconds": 157,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 135
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 129,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 139
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 185,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 137
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 268,
+                        "durationMicroseconds": 349,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 142
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 91,
+                        "durationMicroseconds": 56,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 146
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 170,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 144
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 276,
+                        "durationMicroseconds": 141,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 151
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/TitleBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onEntered",
                         "line": 154
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/TitleBar.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onExited",
                         "line": 157
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 265,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 149

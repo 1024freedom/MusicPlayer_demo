@@ -6,17 +6,17 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 278,
+                        "durationMicroseconds": 373,
                         "errorMessage": "",
                         "functionName": "source",
                         "line": 8
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 25,
-                        "durationMicroseconds": 98,
+                        "column": 26,
+                        "durationMicroseconds": 134,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::item with type QObject does not have a property parent for writing",
-                        "functionName": "onStateChanged",
+                        "functionName": "onStatusChanged",
                         "line": 9
                     }
                 ],

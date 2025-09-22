@@ -71,12 +71,12 @@
 			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 7,
-			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df",

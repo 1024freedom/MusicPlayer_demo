@@ -68,6 +68,20 @@ namespace _0x5f_MusicPlayer_demo_PageFindMusic_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _0x5f_MusicPlayer_demo_NewMusicContent_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _0x5f_MusicPlayer_demo_PlayListContent_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -91,6 +105,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/ToolTipButtom.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_ToolTipButtom_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/RoundImage.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_RoundImage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/PageFindMusic.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_PageFindMusic_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/NewMusicContent.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_NewMusicContent_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/PlayListContent.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_PlayListContent_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

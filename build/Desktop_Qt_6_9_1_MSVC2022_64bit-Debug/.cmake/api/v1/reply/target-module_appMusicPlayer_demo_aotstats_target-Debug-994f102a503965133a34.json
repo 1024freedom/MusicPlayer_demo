@@ -82,7 +82,9 @@
 				9,
 				10,
 				11,
-				12
+				12,
+				13,
+				14
 			]
 		}
 	],
@@ -127,7 +129,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_NewMusicContent_qml.cpp.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PageFindMusic_qml.cpp.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PlayListContent_qml.cpp.rule",
 			"sourceGroupIndex" : 1
 		},
 		{

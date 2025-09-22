@@ -3,10 +3,10 @@ import sz.window
 import QtQuick.Layouts
 Rectangle{
     id:rightContent
-    property string thisQml: "PageFindMusic.qml"
+    property string thisQml: ""
     Loader{
         source: rightContent.thisQml
-        onStateChanged: {
+        onStatusChanged: {
             if(status===Loader.Ready){
                 item.parent=parent
             }

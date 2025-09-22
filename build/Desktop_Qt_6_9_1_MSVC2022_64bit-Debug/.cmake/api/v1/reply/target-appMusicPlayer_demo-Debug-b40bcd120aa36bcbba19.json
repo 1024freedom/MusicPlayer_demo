@@ -104,13 +104,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 47,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 43,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
@@ -464,6 +464,47 @@
 				"parent" : 69
 			},
 			{
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 20,
+				"file" : 23,
+				"line" : 1,
+				"parent" : 71
+			},
+			{
+				"command" : 19,
+				"file" : 0,
+				"line" : 818,
+				"parent" : 72
+			},
+			{
+				"command" : 18,
+				"file" : 0,
+				"line" : 740,
+				"parent" : 73
+			},
+			{
+				"command" : 17,
+				"file" : 0,
+				"line" : 740,
+				"parent" : 74
+			},
+			{
+				"command" : 16,
+				"file" : 10,
+				"line" : 4401,
+				"parent" : 75
+			},
+			{
+				"command" : 13,
+				"file" : 10,
+				"line" : 4176,
+				"parent" : 76
+			},
+			{
 				"command" : 14,
 				"file" : 10,
 				"line" : 3503,
@@ -473,47 +514,6 @@
 				"command" : 13,
 				"file" : 10,
 				"line" : 2860,
-				"parent" : 71
-			},
-			{
-				"file" : 1,
-				"line" : -1,
-				"parent" : 0
-			},
-			{
-				"command" : 20,
-				"file" : 23,
-				"line" : 1,
-				"parent" : 73
-			},
-			{
-				"command" : 19,
-				"file" : 0,
-				"line" : 818,
-				"parent" : 74
-			},
-			{
-				"command" : 18,
-				"file" : 0,
-				"line" : 740,
-				"parent" : 75
-			},
-			{
-				"command" : 17,
-				"file" : 0,
-				"line" : 740,
-				"parent" : 76
-			},
-			{
-				"command" : 16,
-				"file" : 10,
-				"line" : 4401,
-				"parent" : 77
-			},
-			{
-				"command" : 13,
-				"file" : 10,
-				"line" : 4176,
 				"parent" : 78
 			},
 			{
@@ -697,6 +697,42 @@
 				"parent" : 68
 			},
 			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 68
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 68
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 68
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 68
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 68
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 68
+			},
+			{
 				"command" : 28,
 				"file" : 10,
 				"line" : 3519,
@@ -706,31 +742,31 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 110
+				"parent" : 116
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2528,
-				"parent" : 111
+				"parent" : 117
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2072,
-				"parent" : 112
+				"parent" : 118
 			},
 			{
 				"command" : 30,
 				"file" : 0,
 				"line" : 812,
-				"parent" : 74
+				"parent" : 72
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2197,
-				"parent" : 114
+				"parent" : 120
 			}
 		]
 	},
@@ -937,8 +973,11 @@
 				19,
 				21,
 				23,
-				24,
-				30
+				25,
+				27,
+				29,
+				30,
+				36
 			]
 		},
 		{
@@ -1144,12 +1183,12 @@
 			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 72,
-			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
+			"backtrace" : 77,
+			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 79,
-			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
@@ -1312,7 +1351,10 @@
 				18,
 				20,
 				22,
-				30
+				24,
+				26,
+				28,
+				36
 			]
 		},
 		{
@@ -1331,10 +1373,13 @@
 				19,
 				21,
 				23,
-				24,
 				25,
-				26,
-				27
+				27,
+				29,
+				30,
+				31,
+				32,
+				33
 			]
 		},
 		{
@@ -1348,35 +1393,29 @@
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				28
+				34
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				29,
-				47,
-				48,
-				49,
-				50,
-				51,
-				52,
-				53,
-				54,
-				55
+				35,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				31,
-				32,
-				33,
-				34,
-				35,
-				36,
 				37,
 				38,
 				39,
@@ -1386,7 +1425,16 @@
 				43,
 				44,
 				45,
-				46
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55
 			]
 		}
 	],
@@ -1540,32 +1588,68 @@
 			"sourceGroupIndex" : 1
 		},
 		{
+			"backtrace" : 110,
+			"path" : "PageFindMusic.qml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 111,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PageFindMusic_qml.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 112,
+			"path" : "NewMusicContent.qml",
+			"sourceGroupIndex" : 0
+		},
+		{
 			"backtrace" : 113,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_NewMusicContent_qml.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 114,
+			"path" : "PlayListContent.qml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 115,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PlayListContent_qml.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 119,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusicPlayer_demo_raw_qml_0.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qmake_MusicPlayer_demo.qrc",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/MusicPlayer_demo/qmldir",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusicPlayer_demo_raw_qml_0.qrc",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 121,
 			"path" : "source.qrc",
 			"sourceGroupIndex" : 3
 		},
@@ -1652,6 +1736,24 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_RoundImage_qml.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PageFindMusic_qml.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_NewMusicContent_qml.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PlayListContent_qml.cpp.rule",
 			"sourceGroupIndex" : 5
 		},
 		{

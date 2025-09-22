@@ -27,7 +27,7 @@ Rectangle{
     color: thisTheme.backgroundColor
 
     property var thisData: filterLeftBarData(leftBarData)
-    property string thisQml: ""
+    property string thisQml: "PageFindMusic.qml"
     property string thisBtnText: "发现音乐"
     property int count: thisData.length
     property int btnHeight: 40

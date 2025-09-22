@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 993,
+                        "durationMicroseconds": 474,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "defaultTheme",
                         "line": 18
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 246,
+                        "durationMicroseconds": 188,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 26
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 185,
+                        "durationMicroseconds": 161,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 30
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 19,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 52,
                         "errorMessage": "Cannot load property backgroundColor from (component in D:/QtProjects/MusicPlayer_demo/main.qml)::thisTheme with type QVariant.",
                         "functionName": "color",
                         "line": 32
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 37
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 97,
                         "errorMessage": "Cannot retrieve a non-object type by ID: window",
                         "functionName": "height",
                         "line": 38
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 127,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 40
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 41
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 93,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 45
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 206,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 49
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 50
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 409,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "thisQml",
                         "line": 51
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 141,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 57

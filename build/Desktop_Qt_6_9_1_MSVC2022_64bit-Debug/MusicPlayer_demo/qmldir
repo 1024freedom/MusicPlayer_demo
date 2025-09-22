@@ -9,4 +9,6 @@ Image 1.0 Image.qml
 ToolTipButtom 1.0 ToolTipButtom.qml
 RoundImage 1.0 RoundImage.qml
 PageFindMusic 1.0 PageFindMusic.qml
+NewMusicContent 1.0 NewMusicContent.qml
+PlayListContent 1.0 PlayListContent.qml
 
