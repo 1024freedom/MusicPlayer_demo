@@ -27,6 +27,7 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES Image.qml
     QML_FILES ToolTipButtom.qml
     QML_FILES RoundImage.qml
+    QML_FILES PageFindMusic.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

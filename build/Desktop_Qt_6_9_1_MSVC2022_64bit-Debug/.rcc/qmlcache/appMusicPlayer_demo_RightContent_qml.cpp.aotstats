@@ -3,6 +3,22 @@
         "moduleFiles": [
             {
                 "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 278,
+                        "errorMessage": "",
+                        "functionName": "source",
+                        "line": 8
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 98,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::item with type QObject does not have a property parent for writing",
+                        "functionName": "onStateChanged",
+                        "line": 9
+                    }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/RightContent.qml"
             }

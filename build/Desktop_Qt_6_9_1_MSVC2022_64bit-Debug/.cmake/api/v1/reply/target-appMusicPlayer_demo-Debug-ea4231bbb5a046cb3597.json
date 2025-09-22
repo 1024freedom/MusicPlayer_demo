@@ -104,13 +104,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 47,
+				"line" : 48,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 43,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
@@ -697,6 +697,18 @@
 				"parent" : 68
 			},
 			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3205,
+				"parent" : 68
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3398,
+				"parent" : 68
+			},
+			{
 				"command" : 28,
 				"file" : 10,
 				"line" : 3519,
@@ -706,19 +718,19 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 110
+				"parent" : 112
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2528,
-				"parent" : 111
+				"parent" : 113
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2072,
-				"parent" : 112
+				"parent" : 114
 			},
 			{
 				"command" : 30,
@@ -730,7 +742,7 @@
 				"command" : 23,
 				"file" : 0,
 				"line" : 2197,
-				"parent" : 114
+				"parent" : 116
 			}
 		]
 	},
@@ -937,8 +949,9 @@
 				19,
 				21,
 				23,
-				24,
-				30
+				25,
+				26,
+				32
 			]
 		},
 		{
@@ -1152,11 +1165,11 @@
 			"id" : "appMusicPlayer_demo_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "appMusicPlayer_demo_autogen::@6890427a1f51a3e7e1df"
+			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "appMusicPlayer_demo_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMusicPlayer_demo::@6890427a1f51a3e7e1df",
@@ -1312,7 +1325,8 @@
 				18,
 				20,
 				22,
-				30
+				24,
+				32
 			]
 		},
 		{
@@ -1331,10 +1345,11 @@
 				19,
 				21,
 				23,
-				24,
 				25,
 				26,
-				27
+				27,
+				28,
+				29
 			]
 		},
 		{
@@ -1348,31 +1363,29 @@
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				28
+				30
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				29,
-				47,
-				48,
-				49,
+				31,
 				50,
 				51,
 				52,
 				53,
 				54,
-				55
+				55,
+				56,
+				57,
+				58
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				31,
-				32,
 				33,
 				34,
 				35,
@@ -1386,7 +1399,10 @@
 				43,
 				44,
 				45,
-				46
+				46,
+				47,
+				48,
+				49
 			]
 		}
 	],
@@ -1540,32 +1556,44 @@
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 113,
+			"backtrace" : 110,
+			"path" : "PageFindMusic.qml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 111,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PageFindMusic_qml.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 115,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qrc_appMusicPlayer_demo_raw_qml_0.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 117,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qmake_MusicPlayer_demo.qrc",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 117,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/MusicPlayer_demo/qmldir",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 117,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appMusicPlayer_demo_raw_qml_0.qrc",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 117,
 			"path" : "source.qrc",
 			"sourceGroupIndex" : 3
 		},
@@ -1652,6 +1680,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_RoundImage_qml.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.rcc/qmlcache/appMusicPlayer_demo_PageFindMusic_qml.cpp.rule",
 			"sourceGroupIndex" : 5
 		},
 		{

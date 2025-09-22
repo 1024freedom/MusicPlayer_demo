@@ -31,7 +31,7 @@ Rectangle{
             radius: 100
             border.width: 1.5
             border.color: thisTheme.subBackgroundColor
-            color: bottomBarSlider.pressed?"#FF"+thisTheme.subBackgroundColor:"WHITE"
+            color: bottomBarSlider.pressed?thisTheme.subBackgroundColor:"WHITE"
         }
     }
 

@@ -8,6 +8,7 @@
     <file alias="Image.qml">D:/QtProjects/MusicPlayer_demo/Image.qml</file>
     <file alias="ToolTipButtom.qml">D:/QtProjects/MusicPlayer_demo/ToolTipButtom.qml</file>
     <file alias="RoundImage.qml">D:/QtProjects/MusicPlayer_demo/RoundImage.qml</file>
+    <file alias="PageFindMusic.qml">D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml</file>
     <file alias="source.qrc">D:/QtProjects/MusicPlayer_demo/source.qrc</file>
   </qresource>
 </RCC>
