@@ -74,19 +74,16 @@ Flickable {
             }
         }
     }
-    Item {
+    Loader {
         id:findMusicContent
-        width: parent.width*0.85
+        width: parent.width
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: findMusicHeader.bottom
         anchors.topMargin: 25
-        Loader{
-            source: findMusicFlickable.headerData[findMusicHeader.current].qml
-            onStatusChanged: {
-                if(status===Loader.Ready){
-                    item.parent=findMusicContent
+        source: findMusicFlickable.headerData[findMusicHeader.current].qml
+        onStatusChanged: {
+            if(status===Loader.Ready){
 
-                }
             }
         }
     }

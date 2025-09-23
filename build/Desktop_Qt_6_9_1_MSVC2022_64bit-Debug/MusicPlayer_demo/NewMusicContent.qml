@@ -1,8 +1,153 @@
 import QtQuick
 
 Item {
-    anchors.fill: parent
-    Text {
-        text: "这是新歌速递"
+    id:newMusicContent
+    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var headerData: [{name:"全部",type:"0"},
+    {name:"华语",type:"7"},
+    {name:"欧美",type:"96"},
+    {name:"日本",type:"8"},
+    {name:"韩国",type:"16"},]
+    property double fontSize: 11
+    property int headerCurrent: 0
+    width: parent.width
+    height: header.height
+    Row {
+        id: header
+        spacing: 10
+        width: parent.width*0.9
+        height: 20
+        anchors.horizontalCenter: parent.horizontalCenter
+        Repeater{
+            model: ListModel{}
+            delegate: headerDelegate
+            Component.onCompleted: {
+                model.append(newMusicContent.headerData)
+            }
+        }
+        Component{
+            id:headerDelegate
+            Text {
+                property bool isHovered: false
+                font.bold: isHovered||newMusicContent.headerCurrent
+                font.pointSize: newMusicContent.fontSize
+                text: name
+                color: "#C3C3C3"
+                MouseArea{
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onClicked: {
+                        newMusicContent.headerCurrent=index
+                    }
+                    onEntered: {
+                        parent.isHovered=true
+                    }
+                    onExited: {
+                        parent.isHovered=false
+                    }
+                }
+            }
+        }
+    }
+    Rectangle{
+        id:content
+        width: parent.width*0.9
+        height: 0
+        anchors.top: header.bottom
+        anchors.topMargin: 15
+        anchors.horizontalCenter: parent.horizontalCenter
+        radius: 10
+        Column{
+            Repeater{
+                model: 5/*ListModel{
+                    id:contentModel
+                }*/
+                delegate: contentDelegate
+            }
+        }
+        Component{
+            id:contentDelegate
+            Rectangle{
+                property bool isHovered: false
+                width: content.width-20
+                height: 80
+                color: index%2?"PINK":"BLUE"
+                Row{
+                    width: parent.width-20
+                    height: parent.height-20
+                    spacing: 10
+                    anchors.verticalCenter: parent.verticalCenter
+                    Text {
+                        width: parent.width*0.1-40
+                        anchors.verticalCenter: parent.verticalCenter
+                        horizontalAlignment: Text.AlignVCenter
+                        font.weight: 2
+                        font.pointSize: newMusicContent.fontSize
+                        elide: Text.ElideRight
+                        color: thisTheme.fontColor
+                        text: index+1
+                    }
+                    RoundImage{
+                        width: parent.height
+                        height: width
+                        source:""
+                    }
+                    Text {
+                        width: parent.width*0.3
+                        anchors.verticalCenter: parent.verticalCenter
+                        horizontalAlignment: Text.AlignLeft
+                        font.weight: 2
+                        font.pointSize: newMusicContent.fontSize
+                        elide: Text.ElideRight
+                        color: thisTheme.fontColor
+                        text: index+1
+                    }
+                    Text {
+                        width: parent.width*0.2
+                        anchors.verticalCenter: parent.verticalCenter
+                        horizontalAlignment: Text.AlignLeft
+                        font.weight: 2
+                        font.pointSize: newMusicContent.fontSize
+                        elide: Text.ElideRight
+                        color: thisTheme.fontColor
+                        text: index+1
+                    }
+                    Text {
+                        width: parent.width*0.2
+                        anchors.verticalCenter: parent.verticalCenter
+                        horizontalAlignment: Text.AlignLeft
+                        font.weight: 2
+                        font.pointSize: newMusicContent.fontSize
+                        elide: Text.ElideRight
+                        color: thisTheme.fontColor
+                        text: index+1
+                    }
+                    Text {
+                        width: parent.width*0.2-parent.height
+                        anchors.verticalCenter: parent.verticalCenter
+                        horizontalAlignment: Text.AlignLeft
+                        font.weight: 2
+                        font.pointSize: newMusicContent.fontSize
+                        elide: Text.ElideRight
+                        color: thisTheme.fontColor
+                        text: index+1
+                    }
+                }
+
+                MouseArea{
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onClicked: {
+
+                    }
+                    onEntered: {
+                        parent.isHovered=true
+                    }
+                    onExited: {
+                        parent.isHovered=false
+                    }
+                }
+            }
+        }
     }
 }

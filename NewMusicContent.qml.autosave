@@ -12,6 +12,14 @@ Item {
     property int headerCurrent: 0
     width: parent.width
     height: header.height
+    
+    Component.onCompleted: {
+        var callBack=res=>{
+            console.log(JSON.stringify(res[0]))
+        }
+        p_musicRes.getNewMusic({type:headerData[headerCurrent].type,callBack})
+    }
+
     Row {
         id: header
         spacing: 10
