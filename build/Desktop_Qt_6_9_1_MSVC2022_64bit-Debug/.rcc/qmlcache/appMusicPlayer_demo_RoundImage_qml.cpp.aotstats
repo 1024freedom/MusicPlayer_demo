@@ -4,36 +4,44 @@
             {
                 "entries": [
                     {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 193,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 9
+                    },
+                    {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 318,
+                        "durationMicroseconds": 108,
                         "errorMessage": "Cannot load property source from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
                         "functionName": "source",
-                        "line": 9
+                        "line": 11
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 240,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "fillMode",
-                        "line": 10
+                        "line": 12
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 66,
                         "errorMessage": "Cannot load property radius from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
                         "functionName": "radius",
-                        "line": 15
+                        "line": 17
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 36,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 13
+                        "line": 15
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/RoundImage.qml"

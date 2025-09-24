@@ -9,8 +9,13 @@ Flickable {
         {headerText:"专属定制",qml:""}]
     property double fontSize: 11
     anchors.fill: parent
+    contentWidth: parent.width
+    contentHeight: findMusicContent.height*2+30
+
     Rectangle{
         id:findMusicHeader
+        width: parent.width
+        height: item!=null?item.height:0
         property int current: 0
         property double topBottomPadding: 25
         property double leftRightPadding: 35

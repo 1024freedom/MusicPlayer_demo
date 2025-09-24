@@ -10,8 +10,19 @@ Item {
     {name:"韩国",type:"16"},]
     property double fontSize: 11
     property int headerCurrent: 0
+    property int current: -1
     width: parent.width
-    height: header.height
+    height: header.height+content.height+80
+
+    Component.onCompleted: {
+        var callBack=res=>{
+            console.log(JSON.stringify(res[0]))
+            content.height=res.length*80
+            contentModel.append(res)
+        }
+        p_musicRes.getNewMusic({type:headerData[headerCurrent].type,callBack})
+    }
+
     Row {
         id: header
         spacing: 10
@@ -59,9 +70,9 @@ Item {
         radius: 10
         Column{
             Repeater{
-                model: 5/*ListModel{
+                model: ListModel{
                     id:contentModel
-                }*/
+                }
                 delegate: contentDelegate
             }
         }
@@ -71,7 +82,10 @@ Item {
                 property bool isHovered: false
                 width: content.width-20
                 height: 80
-                color: index%2?"PINK":"BLUE"
+                color: if(newMusicContent.current===index)
+                           return thisTheme.subBackgroundColor
+                        else if(isHovered) return thisTheme.subBackgroundColor
+                        else return "#00000000"
                 Row{
                     width: parent.width-20
                     height: parent.height-20
@@ -88,9 +102,9 @@ Item {
                         text: index+1
                     }
                     RoundImage{
-                        width: parent.height
+                        width: 60
                         height: width
-                        source:""
+                        source:coverImg
                     }
                     Text {
                         width: parent.width*0.3
@@ -100,7 +114,7 @@ Item {
                         font.pointSize: newMusicContent.fontSize
                         elide: Text.ElideRight
                         color: thisTheme.fontColor
-                        text: index+1
+                        text: name
                     }
                     Text {
                         width: parent.width*0.2
@@ -110,7 +124,7 @@ Item {
                         font.pointSize: newMusicContent.fontSize
                         elide: Text.ElideRight
                         color: thisTheme.fontColor
-                        text: index+1
+                        text: artists
                     }
                     Text {
                         width: parent.width*0.2
@@ -120,7 +134,7 @@ Item {
                         font.pointSize: newMusicContent.fontSize
                         elide: Text.ElideRight
                         color: thisTheme.fontColor
-                        text: index+1
+                        text: album
                     }
                     Text {
                         width: parent.width*0.2-parent.height
@@ -130,7 +144,7 @@ Item {
                         font.pointSize: newMusicContent.fontSize
                         elide: Text.ElideRight
                         color: thisTheme.fontColor
-                        text: index+1
+                        text: allTime
                     }
                 }
 

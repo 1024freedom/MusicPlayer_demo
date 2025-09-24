@@ -82,6 +82,13 @@ namespace _0x5f_MusicPlayer_demo_PlayListContent_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _0x5f_MusicPlayer_demo_MusicResource_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -107,6 +114,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/PageFindMusic.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_PageFindMusic_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/NewMusicContent.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_NewMusicContent_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/PlayListContent.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_PlayListContent_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/MusicPlayer_demo/MusicResource.qml"), &QmlCacheGeneratedCode::_0x5f_MusicPlayer_demo_MusicResource_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

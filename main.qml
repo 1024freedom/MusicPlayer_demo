@@ -21,6 +21,9 @@ FramelessWindow {
                 fontColor:"#572920"}
         ]
     }
+    MusicResource{
+        id:p_musicRes
+    }
 
     Column{
         anchors.fill: parent

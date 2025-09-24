@@ -1,0 +1,20 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "getNewMusic",
+                        "line": 4
+                    }
+                ],
+                "filePath": "D:/QtProjects/MusicPlayer_demo/MusicResource.qml"
+            }
+        ],
+        "moduleId": "MusicPlayer_demo(appMusicPlayer_demo)"
+    }
+]

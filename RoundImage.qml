@@ -5,6 +5,8 @@ Item {
     property string source: ""
     property double radius: 10
     Image {
+        width: 60
+        height: width
         id: img
         source: parent.source
         fillMode: Image.PreserveAspectCrop//图片适配模式
