@@ -9,18 +9,40 @@ Item {
     {name:"日本",type:"8"},
     {name:"韩国",type:"16"},]
     property double fontSize: 11
+    property var loadItems: []
+    property int startY: parent.y
     property int headerCurrent: 0
     property int current: -1
+    property int contentItemHeight: 80
     width: parent.width
     height: header.height+content.height+80
 
+    onHeaderCurrentChanged: {
+        setContentModel()
+    }
+
     Component.onCompleted: {
+        setContentModel()
+        // var callBack=res=>{
+        //     console.log(JSON.stringify(res[0]))
+        //     content.height=res.length*80+20
+        //     contentModel.append(res)
+        // }
+        // p_musicRes.getNewMusic({type:headerData[headerCurrent].type,callBack})
+    }
+
+    function setContentModel(){
+        content.height=0
+        contentModel.clear()
         var callBack=res=>{
             console.log(JSON.stringify(res[0]))
-            content.height=res.length*80
+            content.height=res.length*80+20
             contentModel.append(res)
         }
         p_musicRes.getNewMusic({type:headerData[headerCurrent].type,callBack})
+    }
+    function setContentItemVisible(){
+
     }
 
     Row {
@@ -40,7 +62,7 @@ Item {
             id:headerDelegate
             Text {
                 property bool isHovered: false
-                font.bold: isHovered||newMusicContent.headerCurrent
+                font.bold: isHovered||newMusicContent.headerCurrent===index
                 font.pointSize: newMusicContent.fontSize
                 text: name
                 color: "#C3C3C3"
@@ -68,7 +90,11 @@ Item {
         anchors.topMargin: 15
         anchors.horizontalCenter: parent.horizontalCenter
         radius: 10
-        Column{
+        /*Column*/Item{
+            // topPadding: 10
+            width: parent.width-20
+
+            anchors.horizontalCenter: parent.horizontalCenter
             Repeater{
                 model: ListModel{
                     id:contentModel
@@ -81,7 +107,13 @@ Item {
             Rectangle{
                 property bool isHovered: false
                 width: content.width-20
-                height: 80
+                height: newMusicContent.contentItemHeight
+                radius: 10
+
+                visible:false
+                y:index*newMusicContent.contentItemHeight+10
+
+                anchors.horizontalCenter: parent.horizontalCenter
                 color: if(newMusicContent.current===index)
                            return thisTheme.subBackgroundColor
                         else if(isHovered) return thisTheme.subBackgroundColor
@@ -90,11 +122,11 @@ Item {
                     width: parent.width-20
                     height: parent.height-20
                     spacing: 10
-                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.centerIn: parent
                     Text {
                         width: parent.width*0.1-40
                         anchors.verticalCenter: parent.verticalCenter
-                        horizontalAlignment: Text.AlignVCenter
+                        horizontalAlignment: Text.AlignHCenter
                         font.weight: 2
                         font.pointSize: newMusicContent.fontSize
                         elide: Text.ElideRight
@@ -104,7 +136,9 @@ Item {
                     RoundImage{
                         width: 60
                         height: width
-                        source:coverImg
+                        source:coverImg+"?param="+width+"y"+height
+                        //告诉图片服务器 “需要返回宽为 width、高为 height 的图片”，
+                        //服务器会根据这些参数对原始图片进行缩放、裁剪等处理后再返回。减少内存占用
                     }
                     Text {
                         width: parent.width*0.3

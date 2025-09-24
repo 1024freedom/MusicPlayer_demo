@@ -4,20 +4,36 @@
             {
                 "entries": [
                     {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 1197,
+                        "errorMessage": "Cannot access value for name p_theme",
+                        "functionName": "thisTheme",
+                        "line": 7
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 13,
+                        "durationMicroseconds": 50,
+                        "errorMessage": "Cannot load property subColor from (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::thisTheme with type QVariant.",
+                        "functionName": "color",
+                        "line": 8
+                    },
+                    {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 410,
+                        "durationMicroseconds": 347,
                         "errorMessage": "",
                         "functionName": "source",
-                        "line": 8
+                        "line": 10
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 145,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::item with type QObject does not have a property parent for writing",
                         "functionName": "onStatusChanged",
-                        "line": 9
+                        "line": 11
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/RightContent.qml"

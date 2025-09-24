@@ -18,7 +18,7 @@ FramelessWindow {
         property var defaultTheme: [
             {name:"pink",type:"defult",backgroundColor:"#FAF2F1",
                 subBackgroundColor:"#F2A49B",clickBackgroundColor:"#F6867A",
-                fontColor:"#572920"}
+                fontColor:"#572920",subColor:"#FAF7F6"}
         ]
     }
     MusicResource{

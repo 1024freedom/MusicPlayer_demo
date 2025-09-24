@@ -8,9 +8,45 @@ Flickable {
         {headerText:"个性推荐",qml:""},
         {headerText:"专属定制",qml:""}]
     property double fontSize: 11
+    property int wheelStep: 300
     anchors.fill: parent
     contentWidth: parent.width
-    contentHeight: findMusicContent.height*2+30
+    contentHeight: findMusicContent.height+findMusicHeader.height+30
+    clip: true//滚动时的截断
+    interactive: false
+
+    PropertyAnimation{
+        id:findMusicFlickableAni
+        target: findMusicFlickable
+        property: "contentY"
+        duration: 300
+        easing.type:Easing.InOutQuart
+    }
+
+    //滚动逻辑
+    MouseArea{
+        anchors.fill: parent
+        onWheel: function(wheel){
+            var step=contentY
+            if(wheel.angleDelta.y>0){
+                if(contentY-wheelStep<0){
+                    step=0
+                }else{
+                    step=contentY-wheelStep
+                }
+            }else if(wheel.angleDelta.y<0){
+                if(contentY+
+                        wheelStep+
+                        findMusicFlickable.height>findMusicFlickable.contentHeight){
+                    step=findMusicFlickable.contentHeight-findMusicFlickable.height
+                }else{
+                    step=contentY+wheelStep
+                }
+            }
+            findMusicFlickableAni.to=step
+            findMusicFlickableAni.start()
+        }
+    }
 
     Rectangle{
         id:findMusicHeader

@@ -88,6 +88,12 @@ Rectangle{
                 color: if(isHovered)return leftBar.thisTheme.subBackgroundColor
                     else return "#00000000"
 
+                onParentChanged: {
+                    if(parent!=null){
+                        anchors.horizontalCenter=parent.horizontalCenter
+                    }
+                }
+
                 Rectangle{
                     width: parent.isThisBtn?parent.width:0
                     height: parent.height

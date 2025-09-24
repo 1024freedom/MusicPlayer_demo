@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 894,
+                        "durationMicroseconds": 2929,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 5
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 538,
+                        "durationMicroseconds": 1250,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "headerData",
                         "line": 6
@@ -22,242 +22,282 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 296,
                         "errorMessage": "",
                         "functionName": "contentWidth",
-                        "line": 12
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 543,
-                        "errorMessage": "",
-                        "functionName": "contentHeight",
                         "line": 13
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 427,
+                        "errorMessage": "",
+                        "functionName": "contentHeight",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 198,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 11
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 193,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 183,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 23
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 18,
+                        "durationMicroseconds": 1044,
+                        "errorMessage": "Cannot access value for name contentY",
+                        "functionName": "onWheel",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "",
+                        "functionName": "onWheel",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 124,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 28
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 149,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 17
+                        "line": 53
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 697,
+                        "durationMicroseconds": 1051,
                         "errorMessage": "Cannot access value for name item",
                         "functionName": "height",
-                        "line": 18
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 87,
-                        "errorMessage": "",
-                        "functionName": "radius",
-                        "line": 25
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 16,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 26
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 79,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 22
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 22,
-                        "durationMicroseconds": 54,
-                        "errorMessage": "",
-                        "functionName": "top",
-                        "line": 23
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 74,
-                        "errorMessage": "",
-                        "functionName": "delegate",
-                        "line": 30
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 33,
-                        "durationMicroseconds": 2044,
-                        "errorMessage": "",
-                        "functionName": "onCountChanged",
-                        "line": 34
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 40,
-                        "durationMicroseconds": 182,
-                        "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
-                        "functionName": "onCompleted",
-                        "line": 31
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 55,
-                        "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
-                        "functionName": "width",
-                        "line": 52
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 25,
-                        "durationMicroseconds": 35,
-                        "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
-                        "functionName": "height",
-                        "line": 53
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 69,
-                        "errorMessage": "",
-                        "functionName": "radius",
                         "line": 54
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 217,
-                        "errorMessage": "Cannot access value for name findMusicHeader",
-                        "functionName": "color",
-                        "line": 55
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 312,
-                        "errorMessage": "Cannot access value for name headerText",
-                        "functionName": "text",
-                        "line": 63
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 18,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 64
-                    },
-                    {
                         "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 38,
+                        "column": 16,
+                        "durationMicroseconds": 278,
                         "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 60
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 37,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot access value for name findMusicFlickable",
-                        "functionName": "pointSize",
+                        "functionName": "radius",
                         "line": 61
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 234,
-                        "errorMessage": "Cannot access value for name findMusicHeader",
-                        "functionName": "bold",
+                        "column": 16,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
                         "line": 62
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 187,
-                        "errorMessage": "Cannot access value for name findMusicHeader",
-                        "functionName": "onClicked",
-                        "line": 69
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml)::parent with type QQuickItem does not have a property isHovered for writing",
-                        "functionName": "onEntered",
-                        "line": 72
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 8,
-                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml)::parent with type QQuickItem does not have a property isHovered for writing",
-                        "functionName": "onExited",
-                        "line": 75
-                    },
-                    {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 38,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 67
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 81,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 84
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 17,
-                        "durationMicroseconds": 124,
-                        "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type (component in D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml)::headerData with type QVariant (adjusted to QJSValue, stored as QJSValue)",
-                        "functionName": "source",
-                        "line": 88
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 26,
-                        "durationMicroseconds": 238,
-                        "errorMessage": "",
-                        "functionName": "onStatusChanged",
-                        "line": 89
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 241,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 85
+                        "line": 58
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 171,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 86
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 157,
+                        "errorMessage": "",
+                        "functionName": "delegate",
+                        "line": 66
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 5910,
+                        "errorMessage": "",
+                        "functionName": "onCountChanged",
+                        "line": 70
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 474,
+                        "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
+                        "functionName": "onCompleted",
+                        "line": 67
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 432,
+                        "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
+                        "functionName": "width",
+                        "line": 88
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 295,
+                        "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
+                        "functionName": "height",
+                        "line": 89
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 362,
+                        "errorMessage": "",
+                        "functionName": "radius",
+                        "line": 90
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 1071,
+                        "errorMessage": "Cannot access value for name findMusicHeader",
+                        "functionName": "color",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 1143,
+                        "errorMessage": "Cannot access value for name headerText",
+                        "functionName": "text",
+                        "line": 99
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 236,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 96
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "Cannot access value for name findMusicFlickable",
+                        "functionName": "pointSize",
+                        "line": 97
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 1073,
+                        "errorMessage": "Cannot access value for name findMusicHeader",
+                        "functionName": "bold",
+                        "line": 98
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 1070,
+                        "errorMessage": "Cannot access value for name findMusicHeader",
+                        "functionName": "onClicked",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 79,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onEntered",
+                        "line": 108
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onExited",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 184,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 103
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 261,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 120
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 442,
+                        "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type (component in D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml)::headerData with type QVariant (adjusted to QJSValue, stored as QJSValue)",
+                        "functionName": "source",
+                        "line": 124
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 382,
+                        "errorMessage": "",
+                        "functionName": "onStatusChanged",
+                        "line": 125
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 218,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 174,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 122
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml"
