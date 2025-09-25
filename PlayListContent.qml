@@ -17,7 +17,7 @@ Item {
     Column {
         id: header
         width: parent.width*0.9
-        height:headerBackground.height
+        height:headerBackground.height+headerPlayListSelectBar.height+spacing
         anchors.horizontalCenter: parent.horizontalCenter
         spacing: 20
         Item {
@@ -29,6 +29,7 @@ Item {
                 anchors.fill: parent
                 imgWidth: parent.width
                 imgHeight: parent.height
+                radius:12
                 source:"qrc:/yy"
                 sourceSize: Qt.size(50,50)
             }
@@ -38,6 +39,7 @@ Item {
                 imgWidth: parent.width
                 imgHeight: parent.height
                 anchors.fill: parent
+                radius:12
                 source:headerBackground_1.source
                 sourceSize: headerBackground_1.sourceSize
             }
@@ -111,14 +113,16 @@ Item {
                 }
             }
         }
-        Row {
+        Item {
             id: headerPlayListSelectBar
             width: parent.width
             height: children[0].height
             Rectangle{
-                width: children[0].contentWidth+40
-                height: children[0].contentHeight+20
+                width: children[0].contentWidth+30
+                height: children[0].contentHeight+15
                 radius: width/2
+                color: "#00000000"
+                border.color: thisTheme.fontColor
                 Text {
                     font.pointSize: playListContent.fontSize
                     anchors.centerIn: parent
@@ -126,44 +130,73 @@ Item {
                     text: "ACG"
                 }
             }
-            Repeater{
-                id:headerRepeater
+            Row {
                 anchors.right: parent.right
-                model: playListContent.headerData.length
-                delegate: Rectangle{
-                    property bool isHovered: false
-                    width: children[0].contentWidth+30
-                    height: children[0].contentHeight+20
-                    radius: width/2
-                    color: if(headerCurrent===index)
-                               return thisTheme.subBackgroundColor
-                            else return "#00000000"
-                    Text {
-                        font.pointSize: playListContent.fontSize-1
-                        font.bold: headerCurrent===index
-                        anchors.centerIn: parent
-                        color: thisTheme.fontColor
-                        text: playListContent.headerData[index].name
-                    }
-                    MouseArea{
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        onClicked: {
-
+                anchors.verticalCenter: parent.verticalCenter
+                Repeater{
+                    id:headerRepeater
+                    model: playListContent.headerData.length
+                    delegate: Rectangle{
+                        property bool isHovered: false
+                        width: children[0].contentWidth+25
+                        height: children[0].contentHeight+15
+                        radius: width/2
+                        color: if(headerCurrent===index)
+                                   return thisTheme.subBackgroundColor
+                                else return "#00000000"
+                        Text {
+                            font.pointSize: playListContent.fontSize-1
+                            font.bold: headerCurrent===index||parent.isHovered
+                            anchors.centerIn: parent
+                            color: if(headerCurrent===index)
+                                       return thisTheme.subBackgroundColor+"F"
+                                    else return thisTheme.fontColor
+                            text: playListContent.headerData[index].name
                         }
-                        onEntered: {
-                            parent.isHovered=true
-                        }
-                        onExited: {
-                            parent.isHovered=false
+                        MouseArea{
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            onClicked: {
+                                headerCurrent=index
+                            }
+                            onEntered: {
+                                parent.isHovered=true
+                            }
+                            onExited: {
+                                parent.isHovered=false
+                            }
                         }
                     }
                 }
             }
         }
+
     }
-    Item {
+    Grid {
         id: content
+        width: parent.width*0.9
+        height: 1000
+        anchors.top: header.bottom
+        anchors.topMargin: 20
+        anchors.horizontalCenter: parent.horizontalCenter
+        Repeater{
+            model: 10
+            delegate: PlayListLable{
+                button.source: "qrc:/pause"
+                button.color:thisTheme.subBackgroundColor
+                button.hoveredColor: thisTheme.subBackgroundColor+"F"
+                button.iconColor: "WHITE"
+                normalColor: "WHITE"
+                hoveredColor: thisTheme.subBackgroundColor
+                fontColor: thisTheme.fontColor
+                onClicked: {
+                    console.log("标签被点击")
+                }
+                onBtnClicked: {
+                    console.log("按钮被点击")
+                }
+            }
+        }
     }
 
 }

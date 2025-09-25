@@ -12,4 +12,5 @@ PageFindMusic 1.0 PageFindMusic.qml
 NewMusicContent 1.0 NewMusicContent.qml
 PlayListContent 1.0 PlayListContent.qml
 MusicResource 1.0 MusicResource.qml
+PlayListLable 1.0 PlayListLable.qml
 

@@ -32,6 +32,7 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES NewMusicContent.qml
     QML_FILES PlayListContent.qml
     QML_FILES MusicResource.qml
+    QML_FILES PlayListLable.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

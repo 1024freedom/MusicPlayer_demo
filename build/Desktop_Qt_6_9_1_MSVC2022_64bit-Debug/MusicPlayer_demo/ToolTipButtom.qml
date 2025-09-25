@@ -5,6 +5,7 @@ MouseArea{
     property string source: ""
     property bool isHovered: false
     property string hoveredColor: ""
+    property string iconColor: ""
     width: 30
     height: width
     hoverEnabled: true

@@ -380,6 +380,12 @@ Qt6QmlWorkerScript_DIR:PATH=D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QmlWorkerScript
 //The directory containing a CMake configuration file for Qt6Qml.
 Qt6Qml_DIR:PATH=D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Qml
 
+//The directory containing a CMake configuration file for Qt6QuickEffectsPrivate.
+Qt6QuickEffectsPrivate_DIR:PATH=D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate
+
+//The directory containing a CMake configuration file for Qt6QuickEffects.
+Qt6QuickEffects_DIR:PATH=D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects
+
 //The directory containing a CMake configuration file for Qt6QuickPrivate.
 Qt6QuickPrivate_DIR:PATH=D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickPrivate
 

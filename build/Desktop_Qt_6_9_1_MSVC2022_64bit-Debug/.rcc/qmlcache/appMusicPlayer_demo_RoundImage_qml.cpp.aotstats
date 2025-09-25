@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 448,
+                        "durationMicroseconds": 503,
                         "errorMessage": "Cannot load property imgWidth from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 29
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 164,
+                        "durationMicroseconds": 165,
                         "errorMessage": "Cannot load property imgHeight from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
                         "functionName": "height",
                         "line": 30
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 107,
                         "errorMessage": "Cannot load property source from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
                         "functionName": "source",
                         "line": 32
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 199,
+                        "durationMicroseconds": 437,
                         "errorMessage": "",
                         "functionName": "fillMode",
                         "line": 33
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 153,
+                        "durationMicroseconds": 279,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 28
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 170,
                         "errorMessage": "Cannot load property radius from (component in D:/QtProjects/MusicPlayer_demo/RoundImage.qml)::parent with type QQuickItem.",
                         "functionName": "radius",
                         "line": 38
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 36

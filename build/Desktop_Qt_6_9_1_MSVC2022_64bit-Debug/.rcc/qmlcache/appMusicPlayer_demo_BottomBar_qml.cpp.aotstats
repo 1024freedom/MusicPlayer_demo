@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 498,
+                        "durationMicroseconds": 1167,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 185,
+                        "durationMicroseconds": 376,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 9
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 12,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 415,
                         "errorMessage": "Cannot load property backgroundColor from (component in D:/QtProjects/MusicPlayer_demo/BottomBar.qml)::thisTheme with type QVariant.",
                         "functionName": "color",
                         "line": 11
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 52,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 19
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 62,
                         "errorMessage": "Cannot access value for name bottomBarSlider",
                         "functionName": "width",
                         "line": 21
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "height",
                         "line": 22
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 23
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 15,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 94,
                         "errorMessage": "Cannot access value for name bottomBarSlider",
                         "functionName": "x",
                         "line": 29
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 15,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 75,
                         "errorMessage": "Cannot access value for name height",
                         "functionName": "y",
                         "line": 30
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 133,
                         "errorMessage": "Cannot access value for name bottomBarSlider",
                         "functionName": "color",
                         "line": 34
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 110,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 33
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 185,
+                        "durationMicroseconds": 303,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 39
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 219,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 40
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 144,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 41
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 235,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 43
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 44
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 231,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 45
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 310,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 49
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 132,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 50
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 286,
                         "errorMessage": "Cannot load property spacing from (component in D:/QtProjects/MusicPlayer_demo/BottomBar.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 54
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 182,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 55
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 113,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 59
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 98,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 57
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 47,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 64
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 62
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 205,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 69
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 70
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 82,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 74
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 114,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 76
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 81
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 48,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 83
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 88
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 47,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 90
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "onEntered",
                         "line": 92
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 123,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
                         "functionName": "onExited",
                         "line": 95
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 38,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 169,
                         "errorMessage": "",
                         "functionName": "type",
                         "line": 101
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 194,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 107
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 215,
                         "errorMessage": "",
                         "functionName": "transformOrigin",
                         "line": 110
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 58,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 112
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 1034,
+                        "durationMicroseconds": 1445,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 115
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 226,
+                        "durationMicroseconds": 221,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 125
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 113,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 126
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 78,
+                        "durationMicroseconds": 63,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 132
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 137,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 129
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 156,
+                        "durationMicroseconds": 110,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 133
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 100,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 139
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 136
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 122,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 140
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 73,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 144
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 146
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 151
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 37,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 153
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 566,
+                        "durationMicroseconds": 1132,
                         "errorMessage": "Instruction \"generate_CmpInstanceOf\" not implemented",
                         "functionName": "onCompleted",
                         "line": 156

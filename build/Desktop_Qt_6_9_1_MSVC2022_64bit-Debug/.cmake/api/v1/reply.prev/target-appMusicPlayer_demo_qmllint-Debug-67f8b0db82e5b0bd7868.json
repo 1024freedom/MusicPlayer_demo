@@ -23,7 +23,7 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 17,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
@@ -47,7 +47,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 1561,
+				"line" : 1496,
 				"parent" : 4
 			}
 		]
@@ -62,8 +62,8 @@
 	{
 		"name" : "/QmlLinter"
 	},
-	"id" : "appMusicPlayer_demo_qmllint_module::@6890427a1f51a3e7e1df",
-	"name" : "appMusicPlayer_demo_qmllint_module",
+	"id" : "appMusicPlayer_demo_qmllint::@6890427a1f51a3e7e1df",
+	"name" : "appMusicPlayer_demo_qmllint",
 	"paths" : 
 	{
 		"build" : ".",
@@ -91,13 +91,13 @@
 		{
 			"backtrace" : 5,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/CMakeFiles/appMusicPlayer_demo_qmllint_module",
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/CMakeFiles/appMusicPlayer_demo_qmllint",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/CMakeFiles/appMusicPlayer_demo_qmllint_module.rule",
+			"path" : "build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/CMakeFiles/appMusicPlayer_demo_qmllint.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

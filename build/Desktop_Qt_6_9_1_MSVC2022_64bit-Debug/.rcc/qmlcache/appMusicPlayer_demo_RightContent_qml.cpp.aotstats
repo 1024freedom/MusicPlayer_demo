@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 1197,
+                        "durationMicroseconds": 930,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 13,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 32,
                         "errorMessage": "Cannot load property subColor from (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::thisTheme with type QVariant.",
                         "functionName": "color",
                         "line": 8
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 347,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "source",
                         "line": 10
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 94,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::item with type QObject does not have a property parent for writing",
                         "functionName": "onStatusChanged",
                         "line": 11
