@@ -9,7 +9,7 @@ Item {
     {name:"日本",type:"8"},
     {name:"韩国",type:"16"},]
     property double fontSize: 11
-    property var loadItems: []
+    property var loadItems: []//
     property int startY: parent.y
     property int headerCurrent: 0
     property int current: -1
@@ -41,8 +41,41 @@ Item {
         }
         p_musicRes.getNewMusic({type:headerData[headerCurrent].type,callBack})
     }
-    function setContentItemVisible(){
+    function setContentItemVisible(contentY){
+        var wheelStep=findMusicFlickable.wheelStep
+        var t=loadItems.slice(0,loadItems.length)//保存上次加载的组件项
+        var i=0
+        loadItems=[]
+        for(i=0;i<contentRepeater.count;i++){
+            var startY =content.startY+i*newMusicContent.contentItemHeight
+            var endY=contentY+findMusicFlickable.height
+            if(startY+wheelStep>=contentY){
+                if(startY<=endY+wheelStep){
+                    loadItems.push(i)
+                }else{
+                    break
+                }
+            }
+        }
+        for(i=0;i<loadItems.length;i++){//加载
+            contentRepeater.itemAt(loadItems[i]).visible=true
+        }
+        for(i=0;i<t.length;i++){//清理
+            if(loadItems.indexOf(t[i])===-1){//查找当前需要清理的加载项
+                contentRepeater.itemAt(t[i]).visible=false
+            }
 
+            // contentRepeater.itemAt(t[i]).visible=false
+        }
+        console.log("当前清理的项"+JSON.stringify(t))
+        console.log("当前加载的项"+JSON.stringify(loadItems))
+    }//
+
+    Connections{
+        target: findMusicFlickable
+        function onContentYChanged(){
+            setContentItemVisible(findMusicFlickable.contentY)
+        }
     }
 
     Row {
@@ -84,6 +117,7 @@ Item {
     }
     Rectangle{
         id:content
+        property int startY: newMusicContent.startY+y
         width: parent.width*0.9
         height: 0
         anchors.top: header.bottom
@@ -92,14 +126,18 @@ Item {
         radius: 10
         /*Column*/Item{
             // topPadding: 10
-            width: parent.width-20
+            width: parent.width-20//
 
             anchors.horizontalCenter: parent.horizontalCenter
             Repeater{
+                id:contentRepeater
                 model: ListModel{
                     id:contentModel
                 }
                 delegate: contentDelegate
+                onCountChanged: {
+                    setContentItemVisible(findMusicFlickable.contentY)
+                }
             }
         }
         Component{
@@ -111,7 +149,7 @@ Item {
                 radius: 10
 
                 visible:false
-                y:index*newMusicContent.contentItemHeight+10
+                y:index*newMusicContent.contentItemHeight+10//
 
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: if(newMusicContent.current===index)

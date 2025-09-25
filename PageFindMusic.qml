@@ -14,6 +14,10 @@ Flickable {
     contentHeight: findMusicContent.height+findMusicHeader.height+30
     clip: true//滚动时的截断
     interactive: false
+    signal contentYChanged()
+    onContentYChanged: {
+
+    }
 
     PropertyAnimation{
         id:findMusicFlickableAni
@@ -21,6 +25,9 @@ Flickable {
         property: "contentY"
         duration: 300
         easing.type:Easing.InOutQuart
+        onStopped: {
+            contentYChanged()
+        }
     }
 
     //滚动逻辑

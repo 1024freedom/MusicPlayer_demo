@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 1513,
+                        "durationMicroseconds": 599,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 5
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 1357,
+                        "durationMicroseconds": 629,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "headerData",
                         "line": 6
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 51,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "loadItems",
                         "line": 12
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 246,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "startY",
                         "line": 13
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 147,
+                        "durationMicroseconds": 50,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 17
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 392,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 18
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 156,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "onHeaderCurrentChanged",
                         "line": 20
@@ -62,554 +62,586 @@
                     {
                         "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 837,
+                        "durationMicroseconds": 330,
                         "errorMessage": "Cannot access value for name p_musicRes",
                         "functionName": "setContentModel",
                         "line": 34
                     },
                     {
-                        "codegenSuccessful": true,
+                        "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 50,
-                        "errorMessage": "",
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "setContentItemVisible",
                         "line": 44
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 24
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 319,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 51
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 244,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 53
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 118,
-                        "errorMessage": "",
-                        "functionName": "delegate",
-                        "line": 56
-                    },
-                    {
                         "codegenSuccessful": false,
-                        "column": 36,
-                        "durationMicroseconds": 369,
-                        "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
-                        "functionName": "onCompleted",
-                        "line": 57
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 23,
-                        "durationMicroseconds": 764,
-                        "errorMessage": "Cannot access value for name name",
-                        "functionName": "text",
-                        "line": 67
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 839,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "bold",
-                        "line": 65
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 33,
-                        "durationMicroseconds": 60,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "pointSize",
-                        "line": 66
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 584,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "onClicked",
-                        "line": 72
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 41,
-                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
-                        "functionName": "onEntered",
+                        "column": 17,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "Cannot access value for name findMusicFlickable",
+                        "functionName": "target",
                         "line": 75
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 26,
-                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
-                        "functionName": "onExited",
-                        "line": 78
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 143,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 70
+                        "column": 9,
+                        "durationMicroseconds": 146,
+                        "errorMessage": "Cannot access value for name findMusicFlickable",
+                        "functionName": "onContentYChanged",
+                        "line": 76
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 303,
+                        "durationMicroseconds": 138,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 87
+                        "line": 84
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 205,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "delegate",
+                        "line": 89
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 178,
+                        "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
+                        "functionName": "onCompleted",
+                        "line": 90
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 543,
+                        "errorMessage": "Cannot access value for name name",
+                        "functionName": "text",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 490,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "bold",
+                        "line": 98
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 48,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "pointSize",
+                        "line": 99
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 299,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "onClicked",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onEntered",
+                        "line": 108
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 12,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onExited",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 103
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "",
+                        "functionName": "startY",
+                        "line": 120
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 121
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 211,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 89
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 159,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 91
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 304,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 95
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 159,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 97
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 115,
-                        "errorMessage": "",
-                        "functionName": "delegate",
-                        "line": 102
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 94,
-                        "errorMessage": "Cannot access value for name content",
-                        "functionName": "width",
-                        "line": 109
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 25,
-                        "durationMicroseconds": 56,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "height",
-                        "line": 110
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 19,
-                        "durationMicroseconds": 608,
-                        "errorMessage": "Cannot access value for name index",
-                        "functionName": "y",
-                        "line": 114
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 667,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "color",
-                        "line": 117
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 43,
-                        "durationMicroseconds": 220,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 116
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 287,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 122
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 287,
-                        "errorMessage": "",
-                        "functionName": "height",
                         "line": 123
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 98,
+                        "column": 35,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
-                        "functionName": "centerIn",
+                        "functionName": "horizontalCenter",
                         "line": 125
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 385,
+                        "column": 20,
+                        "durationMicroseconds": 160,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 127
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 46,
-                        "durationMicroseconds": 177,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
                         "line": 129
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 120,
+                        "column": 39,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 132
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 270,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 133
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 3366,
-                        "errorMessage": "Cannot access value for name index",
-                        "functionName": "text",
-                        "line": 134
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 49,
-                        "durationMicroseconds": 303,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 128
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 41,
-                        "durationMicroseconds": 106,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "pointSize",
+                        "functionName": "horizontalCenter",
                         "line": 131
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 33,
-                        "durationMicroseconds": 133,
+                        "column": 27,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
-                        "functionName": "height",
+                        "functionName": "delegate",
+                        "line": 137
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 686,
+                        "errorMessage": "Cannot access value for name findMusicFlickable",
+                        "functionName": "onCountChanged",
                         "line": 138
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 620,
-                        "errorMessage": "Cannot access value for name coverImg",
-                        "functionName": "source",
-                        "line": 139
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 294,
-                        "errorMessage": "",
+                        "column": 24,
+                        "durationMicroseconds": 36,
+                        "errorMessage": "Cannot access value for name content",
                         "functionName": "width",
-                        "line": 144
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 46,
-                        "durationMicroseconds": 166,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 146
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 236,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 149
+                        "line": 147
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 95,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 150
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 723,
-                        "errorMessage": "Cannot access value for name name",
-                        "functionName": "text",
-                        "line": 151
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 49,
-                        "durationMicroseconds": 219,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 145
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 41,
-                        "durationMicroseconds": 107,
+                        "column": 25,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "pointSize",
+                        "functionName": "height",
                         "line": 148
                     },
                     {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 191,
+                        "errorMessage": "Cannot access value for name index",
+                        "functionName": "y",
+                        "line": 152
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 249,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "color",
+                        "line": 155
+                    },
+                    {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 275,
+                        "column": 43,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
-                        "functionName": "width",
+                        "functionName": "horizontalCenter",
                         "line": 154
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 46,
-                        "durationMicroseconds": 145,
+                        "column": 28,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 156
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 113,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 159
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 75,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
+                        "functionName": "width",
                         "line": 160
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 868,
-                        "errorMessage": "Cannot access value for name artists",
-                        "functionName": "text",
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "",
+                        "functionName": "height",
                         "line": 161
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 49,
-                        "durationMicroseconds": 492,
+                        "column": 39,
+                        "durationMicroseconds": 39,
                         "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 155
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 41,
-                        "durationMicroseconds": 135,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "pointSize",
-                        "line": 158
+                        "functionName": "centerIn",
+                        "line": 163
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 361,
+                        "durationMicroseconds": 132,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 164
+                        "line": 165
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 353,
+                        "durationMicroseconds": 69,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 166
+                        "line": 167
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 165,
+                        "durationMicroseconds": 47,
                         "errorMessage": "",
                         "functionName": "elide",
-                        "line": 169
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 109,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
                         "line": 170
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 848,
-                        "errorMessage": "Cannot access value for name album",
-                        "functionName": "text",
+                        "column": 32,
+                        "durationMicroseconds": 34,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
                         "line": 171
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 289,
+                        "errorMessage": "Cannot access value for name index",
+                        "functionName": "text",
+                        "line": 172
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 49,
-                        "durationMicroseconds": 280,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 165
+                        "line": 166
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 41,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 31,
                         "errorMessage": "Cannot access value for name newMusicContent",
                         "functionName": "pointSize",
-                        "line": 168
+                        "line": 169
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 176
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 201,
+                        "errorMessage": "Cannot access value for name coverImg",
+                        "functionName": "source",
+                        "line": 177
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 612,
+                        "durationMicroseconds": 104,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 174
+                        "line": 182
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 254,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 176
+                        "line": 184
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 203,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "elide",
-                        "line": 179
+                        "line": 187
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 150,
+                        "durationMicroseconds": 32,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
-                        "line": 180
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 1242,
-                        "errorMessage": "Cannot access value for name allTime",
-                        "functionName": "text",
-                        "line": 181
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 49,
-                        "durationMicroseconds": 458,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 175
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 41,
-                        "durationMicroseconds": 147,
-                        "errorMessage": "Cannot access value for name newMusicContent",
-                        "functionName": "pointSize",
-                        "line": 178
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 100,
-                        "errorMessage": "",
-                        "functionName": "onClicked",
                         "line": 188
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 59,
-                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
-                        "functionName": "onEntered",
-                        "line": 191
+                        "column": 31,
+                        "durationMicroseconds": 267,
+                        "errorMessage": "Cannot access value for name name",
+                        "functionName": "text",
+                        "line": 189
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 49,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 183
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 207,
-                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
-                        "functionName": "onExited",
+                        "column": 41,
+                        "durationMicroseconds": 102,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "pointSize",
+                        "line": 186
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 201,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 192
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 46,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
                         "line": 194
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 197
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 83,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 198
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 375,
+                        "errorMessage": "Cannot access value for name artists",
+                        "functionName": "text",
+                        "line": 199
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 49,
+                        "durationMicroseconds": 106,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 193
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 41,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "pointSize",
+                        "line": 196
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 105,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 202
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 46,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 204
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 48,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 207
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 32,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 208
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 281,
+                        "errorMessage": "Cannot access value for name album",
+                        "functionName": "text",
+                        "line": 209
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 49,
+                        "durationMicroseconds": 106,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 203
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 41,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "pointSize",
+                        "line": 206
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 177,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 212
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 46,
+                        "durationMicroseconds": 59,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 214
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 217
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 32,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 218
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 328,
+                        "errorMessage": "Cannot access value for name allTime",
+                        "functionName": "text",
+                        "line": 219
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 49,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 213
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 41,
+                        "durationMicroseconds": 29,
+                        "errorMessage": "Cannot access value for name newMusicContent",
+                        "functionName": "pointSize",
+                        "line": 216
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 226
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 16,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onEntered",
+                        "line": 229
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 11,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onExited",
+                        "line": 232
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 268,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 186
+                        "line": 224
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml"
