@@ -3,8 +3,11 @@ import QtQuick
 Item {
     id:roundImage
     property alias fillMode: img.fillMode//别名
+    property alias sourceSize: img.sourceSize
     property string source: ""
     property double radius: 10
+    property real imgWidth: 45
+    property real imgHeight: 45
     //圆角未实现
     // Rectangle{
     //     anchors.fill: parent
@@ -23,8 +26,8 @@ Item {
     // }
     Image {
         anchors.verticalCenter: parent.verticalCenter
-        width: 45
-        height: width
+        width: parent.imgWidth
+        height: parent.imgHeight
         id: img
         source: parent.source
         fillMode: Image.PreserveAspectCrop//图片适配模式

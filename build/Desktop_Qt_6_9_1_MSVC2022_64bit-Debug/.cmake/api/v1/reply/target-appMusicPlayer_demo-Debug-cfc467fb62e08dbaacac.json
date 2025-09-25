@@ -80,7 +80,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 13,
+				"line" : 14,
 				"parent" : 0
 			},
 			{
@@ -104,13 +104,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 51,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 47,
+				"line" : 48,
 				"parent" : 0
 			},
 			{
@@ -202,7 +202,7 @@
 			{
 				"command" : 12,
 				"file" : 1,
-				"line" : 17,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
@@ -454,7 +454,7 @@
 			{
 				"command" : 14,
 				"file" : 10,
-				"line" : 3497,
+				"line" : 3503,
 				"parent" : 68
 			},
 			{
@@ -507,7 +507,7 @@
 			{
 				"command" : 14,
 				"file" : 10,
-				"line" : 3503,
+				"line" : 3497,
 				"parent" : 68
 			},
 			{
@@ -1192,8 +1192,15 @@
 	"dependencies" : 
 	[
 		{
+			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "appMusicPlayer_demo_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 70,
-			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
+			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 77,
@@ -1201,14 +1208,7 @@
 		},
 		{
 			"backtrace" : 79,
-			"id" : "appMusicPlayer_demo_copy_res::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "appMusicPlayer_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "appMusicPlayer_demo_autogen::@6890427a1f51a3e7e1df"
+			"id" : "appMusicPlayer_demo_copy_qml::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMusicPlayer_demo::@6890427a1f51a3e7e1df",

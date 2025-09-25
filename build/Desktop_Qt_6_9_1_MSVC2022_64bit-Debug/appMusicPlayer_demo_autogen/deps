@@ -922,6 +922,22 @@ appMusicPlayer_demo_autogen/timestamp: \
 	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake \
 	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake \
 	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsAdditionalTargetInfo.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsConfig.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsConfigVersion.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsConfigVersionImpl.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsDependencies.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsTargets-debug.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsTargets-relwithdebinfo.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsTargets.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsVersionlessAliasTargets.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateAdditionalTargetInfo.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateConfig.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateConfigVersion.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateConfigVersionImpl.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateDependencies.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateTargets.cmake \
+	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateVersionlessAliasTargets.cmake \
 	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateAdditionalTargetInfo.cmake \
 	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateConfig.cmake \
 	D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateConfigVersion.cmake \

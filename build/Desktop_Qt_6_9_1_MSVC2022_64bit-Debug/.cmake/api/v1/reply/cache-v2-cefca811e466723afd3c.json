@@ -6410,6 +6410,30 @@
 			"value" : "D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6Qml"
 		},
 		{
+			"name" : "Qt6QuickEffectsPrivate_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6QuickEffectsPrivate."
+				}
+			],
+			"type" : "PATH",
+			"value" : "D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffectsPrivate"
+		},
+		{
+			"name" : "Qt6QuickEffects_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6QuickEffects."
+				}
+			],
+			"type" : "PATH",
+			"value" : "D:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6QuickEffects"
+		},
+		{
 			"name" : "Qt6QuickPrivate_DIR",
 			"properties" : 
 			[

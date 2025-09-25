@@ -13,5 +13,6 @@
         <file alias="pause">暂停按钮.png</file>
         <file alias="playList">playList.png</file>
         <file alias="soundChanger">声音.png</file>
+        <file alias="yy">yiyong.jpg</file>
     </qresource>
 </RCC>

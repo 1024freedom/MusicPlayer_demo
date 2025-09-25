@@ -219,7 +219,6 @@ Item {
                         text: allTime
                     }
                 }
-
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true
