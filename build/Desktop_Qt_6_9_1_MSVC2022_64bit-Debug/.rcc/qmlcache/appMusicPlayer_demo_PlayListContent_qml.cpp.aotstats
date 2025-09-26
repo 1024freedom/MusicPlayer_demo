@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 1400,
+                        "durationMicroseconds": 712,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 5
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 910,
+                        "durationMicroseconds": 399,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "headerData",
                         "line": 6
@@ -22,287 +22,239 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 42,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "loadItems",
                         "line": 12
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 12,
-                        "durationMicroseconds": 202,
+                        "column": 43,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
-                        "functionName": "width",
-                        "line": 14
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 13,
-                        "durationMicroseconds": 313,
-                        "errorMessage": "",
-                        "functionName": "height",
+                        "functionName": "minContentItemHeight",
                         "line": 15
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 256,
+                        "column": 39,
+                        "durationMicroseconds": 34,
+                        "errorMessage": "",
+                        "functionName": "contentItemWidth",
+                        "line": 16
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 40,
+                        "durationMicroseconds": 35,
+                        "errorMessage": "",
+                        "functionName": "contentItemHeight",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 19
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 315,
+                        "column": 13,
+                        "durationMicroseconds": 152,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 20
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 184,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 21
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "setContentModel",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 167,
+                        "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::headerData with type QVariant (adjusted to QJSValue, stored as QJSValue)",
+                        "functionName": "onCompleted",
+                        "line": 22
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 136,
+                        "column": 16,
+                        "durationMicroseconds": 96,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 25
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 150,
-                        "errorMessage": "",
-                        "functionName": "imgWidth",
-                        "line": 30
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 182,
-                        "errorMessage": "",
-                        "functionName": "imgHeight",
-                        "line": 31
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 416,
-                        "errorMessage": "",
-                        "functionName": "sourceSize",
-                        "line": 34
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 58,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 29
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 19,
-                        "durationMicroseconds": 165,
-                        "errorMessage": "",
-                        "functionName": "z",
-                        "line": 38
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 60,
-                        "errorMessage": "",
-                        "functionName": "imgWidth",
-                        "line": 39
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 50,
-                        "errorMessage": "",
-                        "functionName": "imgHeight",
                         "line": 40
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 55,
+                        "column": 16,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
-                        "functionName": "source",
-                        "line": 43
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 75,
-                        "errorMessage": "",
-                        "functionName": "sourceSize",
-                        "line": 44
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 77,
-                        "errorMessage": "",
-                        "functionName": "fill",
+                        "functionName": "height",
                         "line": 41
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 49,
+                        "column": 35,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
-                        "functionName": "source",
-                        "line": 49
+                        "functionName": "horizontalCenter",
+                        "line": 42
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 30,
-                        "durationMicroseconds": 46,
+                        "column": 20,
+                        "durationMicroseconds": 81,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 131,
+                        "errorMessage": "",
+                        "functionName": "imgWidth",
+                        "line": 51
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 148,
+                        "errorMessage": "",
+                        "functionName": "imgHeight",
+                        "line": 52
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 329,
+                        "errorMessage": "",
+                        "functionName": "sourceSize",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 48
+                        "line": 50
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 18,
-                        "durationMicroseconds": 103,
+                        "column": 19,
+                        "durationMicroseconds": 147,
                         "errorMessage": "",
                         "functionName": "z",
                         "line": 59
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 46,
+                        "column": 27,
+                        "durationMicroseconds": 157,
                         "errorMessage": "",
-                        "functionName": "source",
+                        "functionName": "imgWidth",
                         "line": 60
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 30,
-                        "durationMicroseconds": 34,
+                        "column": 28,
+                        "durationMicroseconds": 82,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 58
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 19,
-                        "durationMicroseconds": 123,
-                        "errorMessage": "",
-                        "functionName": "z",
-                        "line": 72
+                        "functionName": "imgHeight",
+                        "line": 61
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 145,
                         "errorMessage": "",
-                        "functionName": "width",
-                        "line": 73
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 111,
-                        "errorMessage": "",
-                        "functionName": "height",
-                        "line": 74
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 36,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 75
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 56,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 78
+                        "functionName": "source",
+                        "line": 64
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 107,
                         "errorMessage": "",
-                        "functionName": "height",
+                        "functionName": "sourceSize",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 62
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "",
+                        "functionName": "source",
+                        "line": 70
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 32,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 157,
+                        "errorMessage": "",
+                        "functionName": "z",
+                        "line": 80
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 64,
+                        "errorMessage": "",
+                        "functionName": "source",
+                        "line": 81
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "",
+                        "functionName": "fill",
                         "line": 79
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 56,
+                        "column": 19,
+                        "durationMicroseconds": 158,
                         "errorMessage": "",
-                        "functionName": "source",
-                        "line": 83
+                        "functionName": "z",
+                        "line": 93
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 33,
-                        "durationMicroseconds": 285,
-                        "errorMessage": "",
-                        "functionName": "sourceSize",
-                        "line": 84
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 130,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 87
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 54,
-                        "errorMessage": "",
-                        "functionName": "height",
-                        "line": 88
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 81,
-                        "errorMessage": "",
-                        "functionName": "left",
-                        "line": 89
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 45,
-                        "durationMicroseconds": 108,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 91
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 66,
+                        "column": 24,
+                        "durationMicroseconds": 165,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 94
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 33,
-                        "durationMicroseconds": 36,
+                        "column": 25,
+                        "durationMicroseconds": 209,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 95
@@ -310,250 +262,338 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 88,
                         "errorMessage": "",
-                        "functionName": "wrapMode",
-                        "line": 97
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 51,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 98
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 97,
-                        "errorMessage": "",
-                        "functionName": "pointSize",
+                        "functionName": "centerIn",
                         "line": 96
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 57,
+                        "column": 28,
+                        "durationMicroseconds": 127,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 103
+                        "line": 99
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 33,
-                        "durationMicroseconds": 804,
-                        "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type QQuickItem::children with type QQuickItem (adjusted to QVariant, stored as QVariant)",
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "",
                         "functionName": "height",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 70,
+                        "errorMessage": "",
+                        "functionName": "source",
                         "line": 104
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 132,
+                        "column": 33,
+                        "durationMicroseconds": 228,
                         "errorMessage": "",
-                        "functionName": "wrapMode",
+                        "functionName": "sourceSize",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 116,
+                        "errorMessage": "",
+                        "functionName": "width",
                         "line": 108
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 79,
+                        "column": 29,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
-                        "functionName": "elide",
+                        "functionName": "height",
                         "line": 109
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 144,
+                        "column": 35,
+                        "durationMicroseconds": 82,
                         "errorMessage": "",
-                        "functionName": "pointSize",
-                        "line": 107
+                        "functionName": "left",
+                        "line": 110
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 92,
+                        "column": 45,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 112
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
                         "functionName": "width",
+                        "line": 115
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 31,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 116
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 59,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
                         "line": 118
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 21,
-                        "durationMicroseconds": 178,
-                        "errorMessage": "",
-                        "functionName": "height",
-                        "line": 119
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 159,
-                        "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
-                        "functionName": "width",
-                        "line": 121
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 25,
-                        "durationMicroseconds": 59,
-                        "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
-                        "functionName": "height",
-                        "line": 122
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 251,
-                        "errorMessage": "",
-                        "functionName": "radius",
-                        "line": 123
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 44,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 125
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 30,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 129
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 37,
-                        "durationMicroseconds": 130,
-                        "errorMessage": "",
-                        "functionName": "pointSize",
-                        "line": 127
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 57,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 128
-                    },
-                    {
-                        "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
-                        "functionName": "right",
-                        "line": 134
+                        "functionName": "elide",
+                        "line": 119
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 206,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 135
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 35,
-                        "errorMessage": "Cannot load property length from (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::headerData with type QVariant.",
-                        "functionName": "model",
-                        "line": 138
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
                         "durationMicroseconds": 46,
-                        "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
-                        "functionName": "width",
-                        "line": 141
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 33,
-                        "durationMicroseconds": 28,
-                        "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
-                        "functionName": "height",
-                        "line": 142
+                        "errorMessage": "",
+                        "functionName": "pointSize",
+                        "line": 117
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 33,
-                        "durationMicroseconds": 102,
+                        "column": 32,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
-                        "functionName": "radius",
-                        "line": 143
+                        "functionName": "width",
+                        "line": 124
                     },
                     {
                         "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 545,
+                        "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type QQuickItem::children with type QQuickItem (adjusted to QVariant, stored as QVariant)",
+                        "functionName": "height",
+                        "line": 125
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 129
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 116,
-                        "errorMessage": "Cannot access value for name headerCurrent",
-                        "functionName": "color",
+                        "durationMicroseconds": 95,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 130
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "",
+                        "functionName": "pointSize",
+                        "line": 128
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 64,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 139
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 106,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 140
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 31,
+                        "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
+                        "functionName": "width",
+                        "line": 142
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
+                        "functionName": "height",
+                        "line": 143
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 96,
+                        "errorMessage": "",
+                        "functionName": "radius",
                         "line": 144
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 36,
-                        "durationMicroseconds": 519,
-                        "errorMessage": "Cannot access value for name headerCurrent",
+                        "column": 31,
+                        "durationMicroseconds": 35,
+                        "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
-                        "line": 151
+                        "line": 146
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 446,
-                        "errorMessage": "Cannot access value for name playListContent",
-                        "functionName": "text",
-                        "line": 154
+                        "column": 28,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 150
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 45,
-                        "durationMicroseconds": 75,
-                        "errorMessage": "Cannot access value for name playListContent",
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 53,
+                        "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 148
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 40,
-                        "durationMicroseconds": 550,
-                        "errorMessage": "Cannot access value for name headerCurrent",
-                        "functionName": "bold",
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 108,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
                         "line": 149
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 47,
-                        "durationMicroseconds": 74,
+                        "column": 32,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 150
+                        "functionName": "right",
+                        "line": 155
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 156
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 40,
-                        "durationMicroseconds": 279,
-                        "errorMessage": "Cannot access value for name index",
-                        "functionName": "onClicked",
+                        "column": 28,
+                        "durationMicroseconds": 16,
+                        "errorMessage": "Cannot load property length from (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::headerData with type QVariant.",
+                        "functionName": "model",
                         "line": 159
                     },
                     {
                         "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 42,
+                        "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
+                        "functionName": "width",
+                        "line": 162
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 35,
+                        "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
+                        "functionName": "height",
+                        "line": 163
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 114,
+                        "errorMessage": "",
+                        "functionName": "radius",
+                        "line": 164
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 127,
+                        "errorMessage": "Cannot access value for name headerCurrent",
+                        "functionName": "color",
+                        "line": 165
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 696,
+                        "errorMessage": "Cannot access value for name headerCurrent",
+                        "functionName": "color",
+                        "line": 172
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 495,
+                        "errorMessage": "Cannot access value for name playListContent",
+                        "functionName": "text",
+                        "line": 175
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "Cannot access value for name playListContent",
+                        "functionName": "pointSize",
+                        "line": 169
+                    },
+                    {
+                        "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 423,
+                        "errorMessage": "Cannot access value for name headerCurrent",
+                        "functionName": "bold",
+                        "line": 170
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 171
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 254,
+                        "errorMessage": "Cannot access value for name index",
+                        "functionName": "onClicked",
+                        "line": 180
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onEntered",
-                        "line": 162
+                        "line": 183
                     },
                     {
                         "codegenSuccessful": false,
@@ -561,87 +601,103 @@
                         "durationMicroseconds": 11,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onExited",
-                        "line": 165
+                        "line": 186
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 100,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 157
+                        "line": 178
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 150,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 177
+                        "line": 198
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 102,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 179
+                        "line": 200
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 81,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 181
+                        "line": 202
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 32,
+                        "errorMessage": "Cannot access value for name contentItemWidth",
+                        "functionName": "width",
+                        "line": 211
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 19,
+                        "errorMessage": "Cannot access value for name contentItemHeight",
+                        "functionName": "height",
+                        "line": 212
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 37,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "hoveredColor",
-                        "line": 190
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
                         "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "hoveredColor",
+                        "line": 218
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "fontColor",
-                        "line": 191
+                        "line": 219
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 488,
+                        "durationMicroseconds": 120,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 192
+                        "line": 220
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 143,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "onBtnClicked",
-                        "line": 195
+                        "line": 223
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
-                        "line": 186
+                        "line": 214
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 38,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 91,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
-                        "line": 187
+                        "line": 215
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/PlayListContent.qml"

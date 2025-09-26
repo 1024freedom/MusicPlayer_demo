@@ -10,6 +10,22 @@
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getNewMusic",
                         "line": 4
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "getMusicPlayList",
+                        "line": 31
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "getMusicBoutiquePlayList",
+                        "line": 58
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/MusicResource.qml"

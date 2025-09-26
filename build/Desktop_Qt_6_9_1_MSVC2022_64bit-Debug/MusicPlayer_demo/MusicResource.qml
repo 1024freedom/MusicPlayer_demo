@@ -28,4 +28,57 @@ Item {
         xhr.open("GET","http://localhost:3000/top/song?type="+type,true)
         xhr.send()
     }
+    function getMusicPlayList(obj){
+        var cat=obj.cat||"全部"
+        var order=obj.order||"hot"
+        var limit=obj.limit||"40"
+        var callBack=obj.callBack||(()=>{})//由于数据获取是异步的，所以使用回调函数
+        var xhr=new XMLHttpRequest()
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState===XMLHttpRequest.DONE){
+                if(xhr.status===200){
+                    var res=JSON.parse(xhr.responseText).playlists
+                    res=res.map(obj=>{
+                                return {
+                                        id:obj.id,
+                                        name: obj.name,
+                                        description:obj.description,
+                                        coverImg:obj.coverImgUrl,
+                                    }
+                                })
+                    callBack(res)
+                }else{
+                    console.log("获取最新音乐失败")
+                }
+            }
+        }
+        xhr.open("GET","http://localhost:3000/top/playlist?cat=" +cat+ "&limit="+limit+"&order="+order,true)
+        xhr.send()
+    }
+    function getMusicBoutiquePlayList(obj){
+        var cat=obj.cat||"全部"
+        var limit=obj.limit||"40"
+        var callBack=obj.callBack||(()=>{})//由于数据获取是异步的，所以使用回调函数
+        var xhr=new XMLHttpRequest()
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState===XMLHttpRequest.DONE){
+                if(xhr.status===200){
+                    var res=JSON.parse(xhr.responseText).playlists
+                    res=res.map(obj=>{
+                                return {
+                                        id:obj.id,
+                                        name: obj.name,
+                                        description:obj.description,
+                                        coverImg:obj.coverImgUrl.split('?')[0],
+                                    }
+                                })
+                    callBack(res)
+                }else{
+                    console.log("获取最新音乐失败")
+                }
+            }
+        }
+        xhr.open("GET","http://localhost:3000/top/playlist/highquality?cat=" +cat+ "&limit="+limit,true)
+        xhr.send()
+    }
 }

@@ -32,10 +32,6 @@ Rectangle{
                     target: btn
                     opacity:0
                 }
-                PropertyChanges {
-                    target: btn
-                    scale:1
-                }
             },
         State {
                 name: "hovered"
@@ -50,10 +46,6 @@ Rectangle{
                 PropertyChanges {
                     target: btn
                     opacity:1
-                }
-                PropertyChanges {
-                    target: btn
-                    scale:1.2
                 }
             }
     ]
@@ -99,12 +91,6 @@ Rectangle{
                 easing.type:Easing.InOutQuart
                 duration: 300
             }
-            PropertyAnimation{
-                target: btn
-                property: "scale"
-                easing.type:Easing.InOutQuart
-                duration: 300
-            }
         }
     ]
 
@@ -140,19 +126,19 @@ Rectangle{
                     height: width
                     x:parent.width-width-15
                     y:parent.height
-                    // scale: isHovered?1.2:1.0
+                    scale: isHovered?1.2:1.0
                     opacity: 0
                     onClicked: {
                         playListLable.btnClicked()
                     }
-                    // Behavior on scale{
-                    //     PropertyAnimation{
-                    //         target: btn
-                    //         property: "scale"
-                    //         easing.type:Easing.InOutQuart
-                    //         duration: 300
-                    //     }
-                    // }
+                    Behavior on scale{//使用state不起作用 为什么
+                        PropertyAnimation{
+                            target: btn
+                            property: "scale"
+                            easing.type:Easing.InOutQuart
+                            duration: 300
+                        }
+                    }
                 }
             }
             Text {

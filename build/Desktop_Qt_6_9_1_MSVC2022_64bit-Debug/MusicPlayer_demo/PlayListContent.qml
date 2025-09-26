@@ -11,8 +11,29 @@ Item {
     property double fontSize: 11
     property var loadItems: []
     property int headerCurrent: 0
+    property double minContentItemWidth: 240
+    property double minContentItemHeight: minContentItemWidth*1.3
+    property double contentItemWidth: minContentItemWidth
+    property double contentItemHeight: minContentItemHeight
+
     width: parent.width
     height: header.height+content.height+80
+
+    Component.onCompleted: {
+        setContentModel(headerData[headerCurrent].name)
+    }
+
+    function setContentModel(cat){
+        var boutiquePlayListCallBack=res=>{
+            console.log("BoutiquePlayList:"+JSON.stringify(res[0]))
+        }
+        var playListCallBack=res=>{
+            console.log("playListCallBack:"+JSON.stringify(res[0]))
+        }
+
+        p_musicRes.getMusicBoutiquePlayList({cat:cat,callBack:boutiquePlayListCallBack})
+        p_musicRes.getMusicPlayList({cat:cat,callBack:playListCallBack})
+    }
 
     Column {
         id: header
@@ -179,9 +200,16 @@ Item {
         anchors.top: header.bottom
         anchors.topMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
+        spacing: 20
+        columns: 3
         Repeater{
-            model: 10
+            model: ListModel{
+                id:contentModel
+            }
+
             delegate: PlayListLable{
+                width: contentItemWidth
+                height: contentItemHeight
                 button.source: "qrc:/pause"
                 button.color:thisTheme.subBackgroundColor
                 button.hoveredColor: thisTheme.subBackgroundColor+"F"
