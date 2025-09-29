@@ -9,6 +9,7 @@ Rectangle{
     property string fontColor: ""
     property string normalColor: ""
     property string hoveredColor: ""
+    property string text: ""
     width: 220
     height: width*1.3
     radius: 12
@@ -115,8 +116,8 @@ Rectangle{
                 id:coverImg
                 width: parent.width
                 height: width
-                imgWidth: parent.width
-                imgHeight: parent.height
+                imgWidth: width
+                imgHeight: height
                 radius:10
                 clip: true
                 source: playListLable.imgSource
@@ -148,7 +149,7 @@ Rectangle{
                 wrapMode: Text.Wrap
                 elide: Text.ElideRight
                 color: fontColor
-                text: "精品歌单名2132333333333333333333333333333333333333333333333333333333333333"
+                text: playListLable.text
             }
         }
     }

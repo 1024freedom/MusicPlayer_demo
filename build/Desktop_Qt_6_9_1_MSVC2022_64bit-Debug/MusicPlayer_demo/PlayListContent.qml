@@ -8,6 +8,7 @@ Item {
     {name:"流行"},
     {name:"欧美"},
     {name:"古风"}]
+    property var boutiquePlayListData: []
     property double fontSize: 11
     property var loadItems: []
     property int headerCurrent: 0
@@ -23,11 +24,24 @@ Item {
         setContentModel(headerData[headerCurrent].name)
     }
 
+    onHeaderCurrentChanged: {
+        setContentModel(headerData[headerCurrent].name)
+    }
+
     function setContentModel(cat){
+        content.height=0
         var boutiquePlayListCallBack=res=>{
+            boutiquePlayListData=res.slice(0,res.length)
+            headerBackground_1.source=boutiquePlayListData[0].coverImg
+            headerBoutiquePlayListInfo.nameText=boutiquePlayListData[0].name
+            headerBoutiquePlayListInfo.descriptionText=boutiquePlayListData[0].description
             console.log("BoutiquePlayList:"+JSON.stringify(res[0]))
         }
         var playListCallBack=res=>{
+            var rows=Math.ceil(res.length/content.columns)
+            contentModel.clear()
+            contentModel.append(res)
+            content.height=rows*contentItemHeight+rows*content.spacing
             console.log("playListCallBack:"+JSON.stringify(res[0]))
         }
 
@@ -90,6 +104,8 @@ Item {
 
             Item {
                 id: headerBoutiquePlayListInfo
+                property string nameText: ""
+                property string descriptionText: ''
                 z:headerBackground_2.z+1
                 width: parent.width-30
                 height: parent.height-30
@@ -118,7 +134,7 @@ Item {
                         wrapMode: Text.Wrap//换行规则保证单词完整
                         elide: Text.ElideRight
                         color: "WHITE"
-                        text: "精品歌单名"
+                        text: headerBoutiquePlayListInfo.nameText
                     }
                     Text {
                         width: parent.width
@@ -129,7 +145,7 @@ Item {
                         wrapMode: Text.Wrap//换行规则保证单词完整
                         elide: Text.ElideRight
                         color: "WHITE"
-                        text: "精品歌单简介11212313213242425323\n\n\n\n\n\n\n\n4242\n2131312131213131wowodjasdjowjdowjaodjaodoadjoawdjoajdoajdadjo"
+                        text: headerBoutiquePlayListInfo.descriptionText
                     }
                 }
             }
@@ -217,6 +233,8 @@ Item {
                 normalColor: "WHITE"
                 hoveredColor: thisTheme.subBackgroundColor
                 fontColor: thisTheme.fontColor
+                imgSource: coverImg+"?param="+200+"y"+200
+                text: name
                 onClicked: {
                     console.log("标签被点击")
                 }

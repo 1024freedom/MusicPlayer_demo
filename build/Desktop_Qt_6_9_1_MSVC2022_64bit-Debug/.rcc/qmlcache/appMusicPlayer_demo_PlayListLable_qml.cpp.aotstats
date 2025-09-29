@@ -6,34 +6,34 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 1031,
+                        "durationMicroseconds": 347,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 13
+                        "line": 14
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 184,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 39
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"color\". You may want use ID-based grouped properties here.",
-                        "functionName": "color",
                         "line": 40
                     },
                     {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"color\". You may want use ID-based grouped properties here.",
+                        "functionName": "color",
+                        "line": 41
+                    },
+                    {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 43
+                        "line": 44
                     },
                     {
                         "codegenSuccessful": false,
@@ -41,23 +41,23 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"y\". You may want use ID-based grouped properties here.",
                         "functionName": "y",
-                        "line": 44
+                        "line": 45
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 53,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 47
+                        "line": 48
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 47,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 24
+                        "line": 25
                     },
                     {
                         "codegenSuccessful": false,
@@ -65,15 +65,15 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"color\". You may want use ID-based grouped properties here.",
                         "functionName": "color",
-                        "line": 25
+                        "line": 26
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 51,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 28
+                        "line": 29
                     },
                     {
                         "codegenSuccessful": false,
@@ -81,311 +81,319 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"y\". You may want use ID-based grouped properties here.",
                         "functionName": "y",
-                        "line": 29
+                        "line": 30
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 61,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 32
+                        "line": 33
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 343,
+                        "durationMicroseconds": 54,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 78
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 259,
-                        "errorMessage": "",
-                        "functionName": "type",
                         "line": 79
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 110,
-                        "errorMessage": "",
-                        "functionName": "target",
-                        "line": 83
-                    },
-                    {
-                        "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 85
+                        "line": 80
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 89
+                        "line": 84
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 91
+                        "line": 86
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 57
+                        "line": 90
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 86,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "type",
+                        "line": 92
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "target",
                         "line": 58
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 120,
-                        "errorMessage": "",
-                        "functionName": "target",
-                        "line": 62
-                    },
-                    {
-                        "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 64
+                        "line": 59
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 68
+                        "line": 63
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 70
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 48,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 71
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 485,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 100
+                        "line": 101
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 255,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "onEntered",
-                        "line": 103
+                        "line": 104
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 282,
                         "errorMessage": "",
                         "functionName": "onExited",
-                        "line": 106
+                        "line": 107
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 124,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 98
+                        "line": 99
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 224,
+                        "durationMicroseconds": 210,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 110
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 21,
-                        "durationMicroseconds": 119,
-                        "errorMessage": "",
-                        "functionName": "height",
                         "line": 111
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 48,
+                        "column": 21,
+                        "durationMicroseconds": 200,
                         "errorMessage": "",
-                        "functionName": "centerIn",
+                        "functionName": "height",
                         "line": 112
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 78,
+                        "column": 31,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
-                        "functionName": "width",
-                        "line": 116
+                        "functionName": "centerIn",
+                        "line": 113
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 105,
+                        "column": 24,
+                        "durationMicroseconds": 100,
                         "errorMessage": "",
-                        "functionName": "height",
+                        "functionName": "width",
                         "line": 117
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 91,
+                        "column": 25,
+                        "durationMicroseconds": 39,
                         "errorMessage": "",
-                        "functionName": "imgWidth",
+                        "functionName": "height",
                         "line": 118
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 78,
+                        "column": 27,
+                        "durationMicroseconds": 34,
                         "errorMessage": "",
-                        "functionName": "imgHeight",
+                        "functionName": "imgWidth",
                         "line": 119
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "imgHeight",
+                        "line": 120
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "source",
-                        "line": 122
+                        "line": 123
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 126
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 300,
-                        "errorMessage": "",
-                        "functionName": "x",
                         "line": 127
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
-                        "functionName": "y",
+                        "functionName": "x",
                         "line": 128
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 164,
+                        "column": 23,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
-                        "functionName": "scale",
+                        "functionName": "y",
                         "line": 129
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 108,
+                        "errorMessage": "",
+                        "functionName": "scale",
+                        "line": 130
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 140,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 131
+                        "line": 132
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 61,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 136
+                        "line": 137
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 62,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 138
+                        "line": 139
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 171,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 145
+                        "line": 146
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 335,
+                        "durationMicroseconds": 134,
                         "errorMessage": "Cannot load property spacing from (component in D:/QtProjects/MusicPlayer_demo/PlayListLable.qml)::parent with type QQuickItem.",
                         "functionName": "height",
-                        "line": 146
+                        "line": 147
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 191,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "wrapMode",
-                        "line": 148
+                        "line": 149
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "elide",
-                        "line": 149
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 87,
-                        "errorMessage": "Cannot access value for name fontColor",
-                        "functionName": "color",
                         "line": 150
                     },
                     {
                         "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "Cannot access value for name fontColor",
+                        "functionName": "color",
+                        "line": 151
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 152
+                    },
+                    {
+                        "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 1254,
+                        "durationMicroseconds": 614,
                         "errorMessage": "Cannot access value for name playListContent",
                         "functionName": "pointSize",
-                        "line": 147
+                        "line": 148
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/PlayListLable.qml"
