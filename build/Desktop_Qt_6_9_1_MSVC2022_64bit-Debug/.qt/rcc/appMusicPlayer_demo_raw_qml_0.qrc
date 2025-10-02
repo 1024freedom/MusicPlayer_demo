@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="/MusicPlayer_demo/">
+    <file alias="main.qml">D:/QtProjects/MusicPlayer_demo/main.qml</file>
+    <file alias="TitleBar.qml">D:/QtProjects/MusicPlayer_demo/TitleBar.qml</file>
+    <file alias="LeftBar.qml">D:/QtProjects/MusicPlayer_demo/LeftBar.qml</file>
+    <file alias="RightContent.qml">D:/QtProjects/MusicPlayer_demo/RightContent.qml</file>
+    <file alias="BottomBar.qml">D:/QtProjects/MusicPlayer_demo/BottomBar.qml</file>
+    <file alias="Image.qml">D:/QtProjects/MusicPlayer_demo/Image.qml</file>
+    <file alias="ToolTipButtom.qml">D:/QtProjects/MusicPlayer_demo/ToolTipButtom.qml</file>
+    <file alias="RoundImage.qml">D:/QtProjects/MusicPlayer_demo/RoundImage.qml</file>
+    <file alias="PageFindMusic.qml">D:/QtProjects/MusicPlayer_demo/PageFindMusic.qml</file>
+    <file alias="NewMusicContent.qml">D:/QtProjects/MusicPlayer_demo/NewMusicContent.qml</file>
+    <file alias="PlayListContent.qml">D:/QtProjects/MusicPlayer_demo/PlayListContent.qml</file>
+    <file alias="MusicResource.qml">D:/QtProjects/MusicPlayer_demo/MusicResource.qml</file>
+    <file alias="PlayListLable.qml">D:/QtProjects/MusicPlayer_demo/PlayListLable.qml</file>
+    <file alias="source.qrc">D:/QtProjects/MusicPlayer_demo/source.qrc</file>
+  </qresource>
+</RCC>
+
