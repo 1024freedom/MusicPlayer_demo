@@ -9,6 +9,7 @@ Item {
     {name:"欧美"},
     {name:"古风"}]
     property var boutiquePlayListData: []
+    property var contentItemSourceSize: Qt.size()
     property double fontSize: 11
     property var loadItems: []
     property int headerCurrent: 0
@@ -47,6 +48,10 @@ Item {
 
         p_musicRes.getMusicBoutiquePlayList({cat:cat,callBack:boutiquePlayListCallBack})
         p_musicRes.getMusicPlayList({cat:cat,callBack:playListCallBack})
+    }
+
+    function setContentItemSize(){
+
     }
 
     Column {
@@ -233,6 +238,7 @@ Item {
                 normalColor: "WHITE"
                 hoveredColor: thisTheme.subBackgroundColor
                 fontColor: thisTheme.fontColor
+                imgSourceSize: Qt.size(width,height)
                 imgSource: coverImg+"?param="+200+"y"+200
                 text: name
                 onClicked: {
