@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/MusicPlayer_demo">
-    <file alias="qmldir">D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/MusicPlayer_demo/qmldir</file>
-  </qresource>
-</RCC>
-
