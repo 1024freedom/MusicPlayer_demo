@@ -3,9 +3,29 @@ import QtQuick
 ListView {
     id: playListDetail
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var playListInfo: null
     property int fontSize: 11
     width: parent.width
     height: parent.height
+
+    onPlayListInfoChanged: {
+        headerItem.id=playListInfo.id
+        headerItem.nameText=playListInfo.name
+        headerItem.coverImg=playListInfo.coverImg
+        headerItem.descriptionText=playListInfo.description
+
+        var musicDetailCallBack=res=>{
+            console.log(JSON.stringify(res[0]))
+        }
+
+        var musicPlayDetailCallBack=res=>{
+            var ids=res.trackIds.join(',')
+            console.log(JSON.stringify(res))
+            p_musicRes.getMusicDetail({ids:ids,callBack:musicDetailCallBack})
+        }
+
+        p_musicRes.getMusicPlayListDetail({id:playListInfo.id,callBack:musicPlayDetailCallBack})
+    }
 
     function setHeight(children,spacing){
         var h=0
@@ -22,6 +42,10 @@ ListView {
 
     header: Item {
         id: header
+        property string id: ""
+        property string nameText: ""
+        property string coverImg: ""
+        property string descriptionText: ""
         width: parent.width-60
         height: children[0].height+50
         anchors.horizontalCenter: parent.horizontalCenter
@@ -41,7 +65,7 @@ ListView {
                     height: width
                     imgWidth: width
                     imgHeight: height
-                    source: "qrc:/yy"
+                    source:header.coverImg
                 }
                 Column{
                     width: parent.width-coverImg.width-parent.spacing
@@ -60,26 +84,173 @@ ListView {
                         font.pointSize: 20
                         elide: Text.ElideRight
                         color: thisTheme.fontColor
-                        text: "歌单名"
+                        text: header.nameText
                     }
                     Text {
                         width: parent.width
                         font.pointSize: playListDetail.fontSize
                         elide: Text.ElideRight
                         color: thisTheme.fontColor
-                        text: "歌单信息"
+                        text: header.descriptionText
                     }
+                }
+            }
+            Row{
+                width: parent.width
+                height: 50
+                spacing: 15
+                ToolTipButtom{
+                    width: 34
+                    height: width
+                    source:"qrc:/pause"
+                    hoveredColor: thisTheme.subBackgroundColor
+                    color: "#00000000"
+                    onEntered: {
+                        scale=1.1
+                    }
+                    onExited: {
+                        scale=1
+                    }
+                    Behavior on scale {
+                        ScaleAnimator{
+                            duration: 200
+                            easing.type: Easing.InOutQuart
+                        }
+                    }
+                }
+                ToolTipButtom{
+                    width: 33
+                    height: width
+                    source:"qrc:/playList"
+                    hoveredColor: thisTheme.subBackgroundColor
+                    color: "#00000000"
+                }
+
+            }
+            Row{
+                width: parent.width-40
+                height: 30
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: 10
+                Text {
+                    width: parent.width*0.15-40
+                    anchors.verticalCenter: parent.verticalCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    font.weight: 2
+                    font.pointSize:fontSize
+                    elide: Text.ElideRight
+                    color: thisTheme.fontColor
+                    text: "序号"
+                }
+                Text {
+                    width: parent.width*0.3
+                    anchors.verticalCenter: parent.verticalCenter
+                    horizontalAlignment: Text.AlignLeft
+                    font.weight: 2
+                    font.pointSize:fontSize
+                    elide: Text.ElideRight
+                    color: thisTheme.fontColor
+                    text: "歌名"
+                }
+                Text {
+                    width: parent.width*0.25
+                    anchors.verticalCenter: parent.verticalCenter
+                    horizontalAlignment: Text.AlignLeft
+                    font.weight: 2
+                    font.pointSize: fontSize
+                    elide: Text.ElideRight
+                    color: thisTheme.fontColor
+                    text: "作者"
+                }
+                Text {
+                    width: parent.width*0.2
+                    anchors.verticalCenter: parent.verticalCenter
+                    horizontalAlignment: Text.AlignLeft
+                    font.weight: 2
+                    font.pointSize: fontSize
+                    elide: Text.ElideRight
+                    color: thisTheme.fontColor
+                    text: "专辑"
+                }
+                Text {
+                    width: parent.width*0.1
+                    anchors.verticalCenter: parent.verticalCenter
+                    horizontalAlignment: Text.AlignLeft
+                    font.weight: 2
+                    font.pointSize: fontSize
+                    elide: Text.ElideRight
+                    color: thisTheme.fontColor
+                    text: "时长"
                 }
             }
         }
     }
-    model: 10
+    model: ListModel{
+        id:contentListModel
+    }
+
     delegate: Rectangle{
         width: playListDetail.width-80
         height: 80
         onParentChanged: {
             if(parent!=null){
                 anchors.horizontalCenter=parent.horizontalCenter
+            }
+        }
+        Row{
+            width: parent.width-20
+            height: 30
+            anchors.centerIn: parent
+            spacing: 10
+            Text {
+                width: parent.width*0.15-40
+                anchors.verticalCenter: parent.verticalCenter
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: 2
+                font.pointSize:fontSize
+                elide: Text.ElideRight
+                color: thisTheme.fontColor
+                text: "序号"
+            }
+            Text {
+                width: parent.width*0.3
+                anchors.verticalCenter: parent.verticalCenter
+                horizontalAlignment: Text.AlignLeft
+                font.weight: 2
+                font.pointSize:fontSize
+                elide: Text.ElideRight
+                color: thisTheme.fontColor
+                text: "歌名"
+            }
+            Text {
+                width: parent.width*0.25
+                anchors.verticalCenter: parent.verticalCenter
+                horizontalAlignment: Text.AlignLeft
+                font.weight: 2
+                font.pointSize: fontSize
+                elide: Text.ElideRight
+                color: thisTheme.fontColor
+                text: "作者"
+            }
+            Text {
+                width: parent.width*0.2
+                anchors.verticalCenter: parent.verticalCenter
+                horizontalAlignment: Text.AlignLeft
+                font.weight: 2
+                font.pointSize: fontSize
+                elide: Text.ElideRight
+                color: thisTheme.fontColor
+                text: "专辑"
+            }
+            Text {
+                width: parent.width*0.1
+                anchors.verticalCenter: parent.verticalCenter
+                horizontalAlignment: Text.AlignLeft
+                font.weight: 2
+                font.pointSize: fontSize
+                elide: Text.ElideRight
+                color: thisTheme.fontColor
+                text: "时长"
             }
         }
     }

@@ -51,7 +51,11 @@ FramelessWindow {
                     id:rightContent
                     width: parent.width-leftBar.width
                     height: parent.height
-                    thisQml: "PlayListDetail.qml"
+                    thisQml: leftBar.thisQml
+                    Binding on thisQml{
+                        when:leftBar.thisBtnText!==""
+                        value:leftBar.thisQml
+                    }
                 }
             }
         }

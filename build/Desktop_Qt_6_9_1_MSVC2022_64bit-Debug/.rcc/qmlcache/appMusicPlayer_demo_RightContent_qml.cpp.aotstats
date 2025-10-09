@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 1901,
+                        "durationMicroseconds": 969,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 7
@@ -14,26 +14,26 @@
                     {
                         "codegenSuccessful": false,
                         "column": 13,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot load property subColor from (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::thisTheme with type QVariant.",
                         "functionName": "color",
-                        "line": 8
+                        "line": 9
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 645,
+                        "durationMicroseconds": 264,
                         "errorMessage": "",
                         "functionName": "source",
-                        "line": 10
+                        "line": 12
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 26,
-                        "durationMicroseconds": 278,
+                        "column": 19,
+                        "durationMicroseconds": 46,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/RightContent.qml)::item with type QObject does not have a property parent for writing",
-                        "functionName": "onStatusChanged",
-                        "line": 11
+                        "functionName": "onLoaded",
+                        "line": 13
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/RightContent.qml"

@@ -17,7 +17,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getMusicPlayList",
-                        "line": 31
+                        "line": 32
                     },
                     {
                         "codegenSuccessful": false,
@@ -25,7 +25,31 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getMusicBoutiquePlayList",
-                        "line": 58
+                        "line": 60
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "getMusicPlayListDetail",
+                        "line": 87
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "getMusicDetail",
+                        "line": 112
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "setTime",
+                        "line": 141
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/MusicResource.qml"

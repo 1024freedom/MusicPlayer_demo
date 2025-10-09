@@ -262,6 +262,11 @@ Item {
                 imgSource: coverImg+"?param="+200+"y"+200
                 text: name
                 onClicked: {
+                    leftBar.thisBtnText=""
+                    rightContent.thisQml="PlayListDetail.qml"
+
+                    rightContent.loadItem.playListInfo={id:id,name:name,description:description,coverImg:coverImg}
+
                     console.log("标签被点击")
                 }
                 onBtnClicked: {
