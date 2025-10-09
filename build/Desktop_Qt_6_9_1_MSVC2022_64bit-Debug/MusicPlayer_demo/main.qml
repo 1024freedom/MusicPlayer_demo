@@ -51,7 +51,7 @@ FramelessWindow {
                     id:rightContent
                     width: parent.width-leftBar.width
                     height: parent.height
-                    thisQml: leftBar.thisQml
+                    thisQml: "PlayListDetail.qml"
                 }
             }
         }

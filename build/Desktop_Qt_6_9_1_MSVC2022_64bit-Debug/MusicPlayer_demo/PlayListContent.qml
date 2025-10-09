@@ -9,14 +9,14 @@ Item {
     {name:"欧美"},
     {name:"古风"}]
     property var boutiquePlayListData: []
-    property var contentItemSourceSize: Qt.size()
+    property var contentItemSourceSize: Qt.size(minContentItemWidth,minContentItemHeight)
     property double fontSize: 11
     property var loadItems: []
     property int headerCurrent: 0
     property double minContentItemWidth: 240
     property double minContentItemHeight: minContentItemWidth*1.3
     property double contentItemWidth: minContentItemWidth
-    property double contentItemHeight: minContentItemHeight
+    property double contentItemHeight: contentItemWidth*1.3
 
     width: parent.width
     height: header.height+content.height+80
@@ -51,7 +51,21 @@ Item {
     }
 
     function setContentItemSize(){
-
+        var w=content.width
+        var columns=content.columns
+        while(true){
+            if(w>=columns*content.spacing+(columns+1)*minContentItemWidth){
+                columns+=1
+            }else if(w<(columns-1)*content.spacing+columns*minContentItemWidth){
+                column-=1
+            }else {
+                break
+            }
+        }
+        content.columns=columns
+        content.rows=Math.ceil(contentModel.count/columns)
+        contentItemWidth=w/columns-((columns-1)*content.spacing)/columns
+        content.height=content.rows*(contentItemHeight+content.spacing)
     }
 
     Column {
@@ -223,6 +237,12 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         spacing: 20
         columns: 3
+        onWidthChanged: {
+            if(width>0){
+                setContentItemSize
+            }
+        }
+
         Repeater{
             model: ListModel{
                 id:contentModel
@@ -238,7 +258,7 @@ Item {
                 normalColor: "WHITE"
                 hoveredColor: thisTheme.subBackgroundColor
                 fontColor: thisTheme.fontColor
-                imgSourceSize: Qt.size(width,height)
+                imgSourceSize: contentItemSourceSize
                 imgSource: coverImg+"?param="+200+"y"+200
                 text: name
                 onClicked: {

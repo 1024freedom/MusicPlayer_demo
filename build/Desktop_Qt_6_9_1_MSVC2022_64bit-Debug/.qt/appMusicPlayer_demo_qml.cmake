@@ -28,6 +28,8 @@ set(src_and_dest_list
     "D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/MusicPlayer_demo/MusicResource.qml"
     "D:/QtProjects/MusicPlayer_demo/PlayListLable.qml"
     "D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/MusicPlayer_demo/PlayListLable.qml"
+    "D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml"
+    "D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/MusicPlayer_demo/PlayListDetail.qml"
 
 )
 set(timestamp_file "D:/QtProjects/MusicPlayer_demo/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/appMusicPlayer_demo_qml.txt")

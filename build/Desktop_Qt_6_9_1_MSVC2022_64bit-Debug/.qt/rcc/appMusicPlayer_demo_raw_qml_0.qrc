@@ -13,6 +13,7 @@
     <file alias="PlayListContent.qml">D:/QtProjects/MusicPlayer_demo/PlayListContent.qml</file>
     <file alias="MusicResource.qml">D:/QtProjects/MusicPlayer_demo/MusicResource.qml</file>
     <file alias="PlayListLable.qml">D:/QtProjects/MusicPlayer_demo/PlayListLable.qml</file>
+    <file alias="PlayListDetail.qml">D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml</file>
     <file alias="source.qrc">D:/QtProjects/MusicPlayer_demo/source.qrc</file>
   </qresource>
 </RCC>
