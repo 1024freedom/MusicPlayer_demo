@@ -14,5 +14,6 @@
         <file alias="playList">playList.png</file>
         <file alias="soundChanger">声音.png</file>
         <file alias="yy">yiyong.jpg</file>
+        <file alias="play">播放.png</file>
     </qresource>
 </RCC>

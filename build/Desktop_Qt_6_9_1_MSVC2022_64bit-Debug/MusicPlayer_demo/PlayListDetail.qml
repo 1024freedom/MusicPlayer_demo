@@ -194,7 +194,7 @@ ListView {
         }
     }
 
-    footer: Rectangle{
+    footer: Rectangle{//视觉缓冲 平衡布局
         width: parent.width-80
         height: 50
         color: "#00000000"
@@ -277,6 +277,20 @@ ListView {
         MouseArea{
             anchors.fill: parent
             hoverEnabled: true
+            onDoubleClicked: {
+                var musicInfo={id:id,name:name,artists:artists,
+                                album:album,coverImg:coverImg,url:"",
+                                allTime:allTime
+                }
+                var musicUrlCallBack=res=>{
+                    musicInfo.url=res.url
+                    p_musicRes.thisPlayMusicInfo=musicInfo
+                    p_musicRes.thisPlayMusicInfoChanged()//手动触发值更新函数
+                }
+
+
+                p_musicRes.getMusicUrl({id:id,callBack:musicUrlCallBack})
+            }
             onClicked: {
                 currentIndex=index
             }
@@ -288,13 +302,13 @@ ListView {
             }
         }
     }
-    // Rectangle{
-    //     id:contentItemBackground
-    //     parent: playListDetail.contentItem
-    //     y:-15
-    //     width: playListDetail.width-50
-    //     anchors.horizontalCenter: parent.horizontalCenter
-    //     radius: 12
-    // }
+    Rectangle{
+        id:contentItemBackground
+        parent: playListDetail.contentItem
+        y:-15
+        width: playListDetail.width-50
+        anchors.horizontalCenter: parent.horizontalCenter
+        radius: 12
+    }
 
 }

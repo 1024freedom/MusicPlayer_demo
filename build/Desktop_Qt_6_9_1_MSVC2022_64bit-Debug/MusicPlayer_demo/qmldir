@@ -14,4 +14,5 @@ PlayListContent 1.0 PlayListContent.qml
 MusicResource 1.0 MusicResource.qml
 PlayListLable 1.0 PlayListLable.qml
 PlayListDetail 1.0 PlayListDetail.qml
+MusicPlayer 1.0 MusicPlayer.qml
 

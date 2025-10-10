@@ -1,6 +1,22 @@
 import QtQuick
 
 Item {
+
+    property var thisPlayMusicInfo: {
+        "id":"",
+        "name":"",
+        "artists":"",
+        "album":"",
+        "coverImg":"",
+        "url":"",
+        "allTime":"",
+    }
+
+    onThisPlayMusicInfoChanged: {
+        console.log("播放歌曲信息"+JSON.stringify(thisPlayMusicInfo))
+    }
+
+
     function getNewMusic(obj){//获取最新音乐
         var type=obj.type||"0"
         var callBack=obj.callBack||(()=>{})//由于数据获取是异步的，所以使用回调函数
@@ -16,6 +32,7 @@ Item {
                                         artists:obj.artists.map(ar=>ar.name).join('/'),
                                         album:obj.album.name,
                                         coverImg:obj.album.picUrl,
+                                        url:"",
                                         allTime:"00:00"
                                     }
                                 })
@@ -26,6 +43,24 @@ Item {
             }
         }
         xhr.open("GET","http://localhost:3000/top/song?type="+type,true)
+        xhr.send()
+    }
+
+    function getMusicUrl(obj){//获取音乐url
+        var id=obj.id||""
+        var callBack=obj.callBack||(()=>{})
+        var xhr=new XMLHttpRequest()
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState===XMLHttpRequest.DONE){
+                if(xhr.status===200){
+                    var res=JSON.parse(xhr.responseText).data[0]
+                    callBack(res)
+                }else{
+                    console.log("获取音乐url失败")
+                }
+            }
+        }
+        xhr.open("GET","http://localhost:3000/song/url?id="+id,true)
         xhr.send()
     }
 
@@ -125,6 +160,7 @@ Item {
                                         artists:obj.ar.map(ar=>ar.name).join('/'),
                                         album:obj.al.name,
                                         coverImg:obj.al.picUrl,
+                                        url:"",
                                         allTime:setTime(obj.dt)
                                     }
                                 })

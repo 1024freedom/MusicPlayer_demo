@@ -48,19 +48,19 @@ Rectangle{
                 id:musicCoverImg
                 width: parent.height
                 height: width
-                source:"qrc:/topleft"
+                source:p_musicRes.thisPlayMusicInfo.coverImg
             }
             Column{
                 width: parent.width-musicCoverImg.width-parent.spacing
                 anchors.verticalCenter: parent.verticalCenter
                 Text {
                     font.pointSize: bottomBar.fontSize
-                    text: "歌名"
+                    text: p_musicRes.thisPlayMusicInfo.name
                     color: thisTheme.fontColor
                 }
                 Text {
-                    font.pointSize: bottomBar.fontSize
-                    text: "歌手"
+                    font.pointSize: bottomBar.fontSize-1
+                    text: p_musicRes.thisPlayMusicInfo.artists
                     color: thisTheme.fontColor
                 }
             }
@@ -82,13 +82,21 @@ Rectangle{
                 source:"qrc:/lastPlay"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
+                onClicked: {
+                    p_musicPlayer.preMusicPlay()
+                }
             }
             ToolTipButtom{
                 width: 30
                 height: width
-                source:"qrc:/pause"
+                source:if(p_musicPlayer.playing)return "qrc:/play"
+                else return "qrc:/pause"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
+                onClicked: {
+                    p_musicPlayer.playPauseMusic()
+                }
+
                 onEntered: {
                     scale=1.1
                 }
@@ -111,6 +119,9 @@ Rectangle{
                 rotation: 180
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
+                onClicked: {
+                    p_musicPlayer.nextMusicPlay()
+                }
             }
             Component.onCompleted: {
                 var w=0
@@ -134,7 +145,7 @@ Rectangle{
             }
             Text {
                 font.pointSize: bottomBar.fontSize
-                text: "/00:00"
+                text: "/"+p_musicRes.thisPlayMusicInfo.allTime
                 font.weight: 1
                 color: thisTheme.fontColor
                 anchors.verticalCenter: parent.verticalCenter

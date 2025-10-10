@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 388,
+                        "durationMicroseconds": 396,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 10
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 242,
                         "errorMessage": "",
                         "functionName": "onEntered",
                         "line": 25
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 15,
-                        "durationMicroseconds": 290,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "onExited",
                         "line": 28
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 493,
+                        "durationMicroseconds": 489,
                         "errorMessage": "Cannot load property isHovered from (component in D:/QtProjects/MusicPlayer_demo/ToolTipButtom.qml)::parent with type QQuickItem.",
                         "functionName": "color",
                         "line": 15
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 137,
+                        "durationMicroseconds": 149,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 13
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 354,
+                        "durationMicroseconds": 316,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 19
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 107,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 20
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 17,
-                        "durationMicroseconds": 189,
+                        "durationMicroseconds": 166,
                         "errorMessage": "Cannot load property source from (component in D:/QtProjects/MusicPlayer_demo/ToolTipButtom.qml)::parent with type QQuickItem.",
                         "functionName": "source",
                         "line": 23
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 106,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 21
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 22

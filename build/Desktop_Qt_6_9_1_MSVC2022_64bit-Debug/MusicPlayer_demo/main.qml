@@ -25,6 +25,11 @@ FramelessWindow {
         id:p_musicRes
     }
 
+    MusicPlayer{
+        id:p_musicPlayer
+        source: p_musicRes.thisPlayMusicInfo.url
+    }
+
     Column{
         anchors.fill: parent
 

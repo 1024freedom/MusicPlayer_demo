@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 728,
+                        "durationMicroseconds": 1191,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 5
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 566,
+                        "durationMicroseconds": 690,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "headerData",
                         "line": 6
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 108,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "boutiquePlayListData",
                         "line": 11
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 1176,
+                        "durationMicroseconds": 379,
                         "errorMessage": "",
                         "functionName": "contentItemSourceSize",
                         "line": 12
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 90,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "loadItems",
                         "line": 14
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 117,
+                        "durationMicroseconds": 171,
                         "errorMessage": "",
                         "functionName": "minContentItemHeight",
                         "line": 17
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "contentItemWidth",
                         "line": 18
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 40,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 157,
                         "errorMessage": "",
                         "functionName": "contentItemHeight",
                         "line": 19
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 80,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 21
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 216,
+                        "durationMicroseconds": 498,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 22
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 173,
+                        "durationMicroseconds": 324,
                         "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::headerData with type QVariant (adjusted to QJSValue, stored as QJSValue)",
                         "functionName": "onHeaderCurrentChanged",
                         "line": 28
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 3855,
+                        "durationMicroseconds": 6894,
                         "errorMessage": "Cannot access value for name column",
                         "functionName": "setContentItemSize",
                         "line": 53
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 246,
+                        "durationMicroseconds": 647,
                         "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::headerData with type QVariant (adjusted to QJSValue, stored as QJSValue)",
                         "functionName": "onCompleted",
                         "line": 24
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 116,
+                        "durationMicroseconds": 295,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 73
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 469,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 74
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 760,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 75
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 399,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 79
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 207,
                         "errorMessage": "",
                         "functionName": "imgWidth",
                         "line": 84
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 113,
                         "errorMessage": "",
                         "functionName": "imgHeight",
                         "line": 85
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 783,
+                        "durationMicroseconds": 467,
                         "errorMessage": "",
                         "functionName": "sourceSize",
                         "line": 88
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 145,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 83
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 122,
+                        "durationMicroseconds": 235,
                         "errorMessage": "",
                         "functionName": "z",
                         "line": 92
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 226,
                         "errorMessage": "",
                         "functionName": "imgWidth",
                         "line": 93
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 139,
+                        "durationMicroseconds": 217,
                         "errorMessage": "",
                         "functionName": "imgHeight",
                         "line": 94
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 213,
                         "errorMessage": "",
                         "functionName": "source",
                         "line": 97
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 86,
+                        "durationMicroseconds": 653,
                         "errorMessage": "",
                         "functionName": "sourceSize",
                         "line": 98
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 153,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 95
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "source",
                         "line": 103
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 113,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 102
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 18,
-                        "durationMicroseconds": 130,
+                        "durationMicroseconds": 256,
                         "errorMessage": "",
                         "functionName": "z",
                         "line": 113
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 112,
                         "errorMessage": "",
                         "functionName": "source",
                         "line": 114
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 155,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 112
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 258,
                         "errorMessage": "",
                         "functionName": "z",
                         "line": 128
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 176,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 129
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 189,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 130
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 109,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 131
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 136,
+                        "durationMicroseconds": 135,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 134
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 135
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 205,
                         "errorMessage": "",
                         "functionName": "source",
                         "line": 139
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 207,
+                        "durationMicroseconds": 421,
                         "errorMessage": "",
                         "functionName": "sourceSize",
                         "line": 140
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 202,
+                        "durationMicroseconds": 442,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 143
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 113,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 144
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 150,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 145
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 109,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 147
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 106,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 150
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 151
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 130,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 153
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 154
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 156
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 152
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 84,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 159
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 632,
+                        "durationMicroseconds": 1028,
                         "errorMessage": "Cannot generate efficient code for LoadElement with non-list base type QQuickItem::children with type QQuickItem (adjusted to QVariant, stored as QVariant)",
                         "functionName": "height",
                         "line": 160
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 233,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 164
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 132,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 165
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 167
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 490,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 163
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 130,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 174
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 115,
+                        "durationMicroseconds": 261,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 175
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 94,
                         "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
                         "functionName": "width",
                         "line": 177
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 63,
                         "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
                         "functionName": "height",
                         "line": 178
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 205,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 179
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 93,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 181
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 62,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 185
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 117,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 183
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 184
@@ -534,7 +534,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 176,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 190
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 117,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 191
@@ -550,7 +550,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot load property length from (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::headerData with type QVariant.",
                         "functionName": "model",
                         "line": 194
@@ -558,7 +558,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 85,
                         "errorMessage": "Cannot load property contentWidth from conversion to QVariant.",
                         "functionName": "width",
                         "line": 197
@@ -566,7 +566,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 65,
                         "errorMessage": "Cannot load property contentHeight from conversion to QVariant.",
                         "functionName": "height",
                         "line": 198
@@ -574,7 +574,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 86,
+                        "durationMicroseconds": 245,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 199
@@ -582,7 +582,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 171,
+                        "durationMicroseconds": 215,
                         "errorMessage": "Cannot access value for name headerCurrent",
                         "functionName": "color",
                         "line": 200
@@ -590,7 +590,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 439,
+                        "durationMicroseconds": 999,
                         "errorMessage": "Cannot access value for name headerCurrent",
                         "functionName": "color",
                         "line": 207
@@ -598,7 +598,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 311,
+                        "durationMicroseconds": 722,
                         "errorMessage": "Cannot access value for name playListContent",
                         "functionName": "text",
                         "line": 210
@@ -606,7 +606,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 45,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 184,
                         "errorMessage": "Cannot access value for name playListContent",
                         "functionName": "pointSize",
                         "line": 204
@@ -614,7 +614,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 377,
+                        "durationMicroseconds": 3787,
                         "errorMessage": "Cannot access value for name headerCurrent",
                         "functionName": "bold",
                         "line": 205
@@ -622,7 +622,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 200,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 206
@@ -630,7 +630,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 345,
+                        "durationMicroseconds": 558,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "onClicked",
                         "line": 215
@@ -638,7 +638,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 42,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onEntered",
                         "line": 218
@@ -646,7 +646,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 39,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PlayListContent.qml)::parent with type QQuickItem does not have a property isHovered for writing",
                         "functionName": "onExited",
                         "line": 221
@@ -654,7 +654,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 256,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 213
@@ -662,7 +662,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 318,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 233
@@ -670,7 +670,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 514,
+                        "durationMicroseconds": 1894,
                         "errorMessage": "Cannot access value for name setContentItemSize",
                         "functionName": "onWidthChanged",
                         "line": 240
@@ -678,7 +678,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 219,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 235
@@ -686,7 +686,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 344,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 237
@@ -694,7 +694,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 79,
                         "errorMessage": "Cannot access value for name contentItemWidth",
                         "functionName": "width",
                         "line": 252
@@ -702,7 +702,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name contentItemHeight",
                         "functionName": "height",
                         "line": 253
@@ -710,7 +710,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 259
@@ -718,7 +718,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "fontColor",
                         "line": 260
@@ -726,7 +726,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 30,
                         "errorMessage": "Cannot access value for name contentItemSourceSize",
                         "functionName": "imgSourceSize",
                         "line": 261
@@ -734,7 +734,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 283,
+                        "durationMicroseconds": 641,
                         "errorMessage": "Cannot access value for name coverImg",
                         "functionName": "imgSource",
                         "line": 262
@@ -742,7 +742,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 23,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 325,
                         "errorMessage": "Cannot access value for name name",
                         "functionName": "text",
                         "line": 263
@@ -750,7 +750,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 1631,
+                        "durationMicroseconds": 2616,
                         "errorMessage": "Cannot access value for name leftBar",
                         "functionName": "onClicked",
                         "line": 264
@@ -758,7 +758,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 205,
                         "errorMessage": "",
                         "functionName": "onBtnClicked",
                         "line": 272
@@ -766,7 +766,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 255
@@ -774,7 +774,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 38,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 42,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
                         "line": 256

@@ -14,6 +14,7 @@ Item {
     property int headerCurrent: 0
     property int current: -1
     property int contentItemHeight: 80
+    property int contentCurrent: -1
     width: parent.width
     height: header.height+content.height+80
 
@@ -152,7 +153,7 @@ Item {
                 y:index*newMusicContent.contentItemHeight+10//
 
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: if(newMusicContent.current===index)
+                color: if(newMusicContent.contentCurrent===index)
                            return thisTheme.subBackgroundColor
                         else if(isHovered) return thisTheme.subBackgroundColor
                         else return "#00000000"
@@ -222,8 +223,23 @@ Item {
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true
-                    onClicked: {
+                    onDoubleClicked: {
+                        var musicInfo={id:id,name:name,artists:artists,
+                                        album:album,coverImg:coverImg,url:"",
+                                        allTime:allTime
+                        }
+                        var musicUrlCallBack=res=>{
+                            musicInfo.url=res.url
+                            p_musicRes.thisPlayMusicInfo=musicInfo
+                            p_musicRes.thisPlayMusicInfoChanged()//手动触发值更新函数
+                        }
 
+
+                        p_musicRes.getMusicUrl({id:id,callBack:musicUrlCallBack})
+                    }
+
+                    onClicked: {
+                        newMusicContent.contentCurrent=index
                     }
                     onEntered: {
                         parent.isHovered=true
