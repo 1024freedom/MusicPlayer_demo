@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 1489,
+                        "durationMicroseconds": 1746,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 5
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 533,
+                        "durationMicroseconds": 201,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 8
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 13,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 61,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 9
@@ -30,10 +30,18 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 900,
+                        "durationMicroseconds": 950,
                         "errorMessage": "Cannot load property id from (component in D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml)::playListInfo with type QVariant.",
                         "functionName": "onPlayListInfoChanged",
-                        "line": 11
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 1284,
+                        "errorMessage": "Cannot access value for name contentItemBackground",
+                        "functionName": "onCountChanged",
+                        "line": 34
                     },
                     {
                         "codegenSuccessful": false,
@@ -41,439 +49,119 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "setHeight",
-                        "line": 30
+                        "line": 38
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 158,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 49
+                        "line": 57
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 200,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 50
+                        "line": 58
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 96,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 51
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 54,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 53
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 21,
-                        "durationMicroseconds": 306,
-                        "errorMessage": "method setHeight cannot be resolved.",
-                        "functionName": "height",
-                        "line": 54
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 26,
-                        "durationMicroseconds": 70,
-                        "errorMessage": "",
-                        "functionName": "top",
-                        "line": 55
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 45,
-                        "errorMessage": "",
-                        "functionName": "width",
                         "line": 59
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 43,
+                        "column": 20,
+                        "durationMicroseconds": 52,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 64
+                        "line": 61
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 31,
-                        "errorMessage": "",
+                        "codegenSuccessful": false,
+                        "column": 21,
+                        "durationMicroseconds": 309,
+                        "errorMessage": "method setHeight cannot be resolved.",
                         "functionName": "height",
-                        "line": 65
+                        "line": 62
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 32,
+                        "column": 26,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
-                        "functionName": "imgWidth",
-                        "line": 66
+                        "functionName": "top",
+                        "line": 63
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 30,
+                        "column": 24,
+                        "durationMicroseconds": 51,
                         "errorMessage": "",
-                        "functionName": "imgHeight",
+                        "functionName": "width",
                         "line": 67
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 77,
                         "errorMessage": "",
-                        "functionName": "source",
-                        "line": 68
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 120,
-                        "errorMessage": "Cannot load property spacing from (component in D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml)::parent with type QQuickItem.",
                         "functionName": "width",
-                        "line": 71
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 268,
-                        "errorMessage": "method setHeight cannot be resolved.",
-                        "functionName": "height",
                         "line": 72
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 45,
-                        "durationMicroseconds": 90,
+                        "column": 29,
+                        "durationMicroseconds": 35,
                         "errorMessage": "",
-                        "functionName": "verticalCenter",
+                        "functionName": "height",
                         "line": 73
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 67,
+                        "column": 31,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
-                        "functionName": "width",
-                        "line": 76
+                        "functionName": "imgWidth",
+                        "line": 74
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 81,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 78
+                        "functionName": "imgHeight",
+                        "line": 75
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "source",
+                        "line": 76
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 37,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
+                        "column": 28,
+                        "durationMicroseconds": 137,
+                        "errorMessage": "Cannot load property spacing from (component in D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml)::parent with type QQuickItem.",
+                        "functionName": "width",
                         "line": 79
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 41,
-                        "durationMicroseconds": 28,
-                        "errorMessage": "Cannot access value for name playListDetail",
-                        "functionName": "pointSize",
-                        "line": 77
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 81,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 83
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 47,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 85
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 25,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 86
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 81,
-                        "errorMessage": "",
-                        "functionName": "text",
-                        "line": 87
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 56,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 90
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 45,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 41,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 93
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 58,
-                        "errorMessage": "",
-                        "functionName": "text",
-                        "line": 94
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 41,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name playListDetail",
-                        "functionName": "pointSize",
-                        "line": 91
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 40,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 99
-                    },
-                    {
-                        "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 32,
-                        "errorMessage": "",
+                        "durationMicroseconds": 295,
+                        "errorMessage": "method setHeight cannot be resolved.",
                         "functionName": "height",
-                        "line": 104
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 40,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "hoveredColor",
-                        "line": 106
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 77,
-                        "errorMessage": "",
-                        "functionName": "onEntered",
-                        "line": 108
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 38,
-                        "errorMessage": "",
-                        "functionName": "onExited",
-                        "line": 111
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 42,
-                        "durationMicroseconds": 76,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 117
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 29,
-                        "durationMicroseconds": 32,
-                        "errorMessage": "",
-                        "functionName": "height",
-                        "line": 123
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 25,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "hoveredColor",
-                        "line": 125
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 89,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 131
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 43,
-                        "durationMicroseconds": 65,
-                        "errorMessage": "",
-                        "functionName": "horizontalCenter",
-                        "line": 133
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 122,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 136
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 42,
-                        "durationMicroseconds": 45,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 138
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 37,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 141
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 25,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 142
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 45,
-                        "durationMicroseconds": 138,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 137
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 36,
-                        "durationMicroseconds": 29,
-                        "errorMessage": "Cannot access value for name fontSize",
-                        "functionName": "pointSize",
-                        "line": 140
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 99,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 146
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 42,
-                        "durationMicroseconds": 51,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 148
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 41,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 151
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 152
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 45,
-                        "durationMicroseconds": 59,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 147
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 36,
-                        "durationMicroseconds": 28,
-                        "errorMessage": "Cannot access value for name fontSize",
-                        "functionName": "pointSize",
-                        "line": 150
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 90,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 156
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 42,
-                        "durationMicroseconds": 43,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 158
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 37,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 161
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 21,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 162
+                        "line": 80
                     },
                     {
                         "codegenSuccessful": true,
@@ -481,47 +169,271 @@
                         "durationMicroseconds": 106,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 157
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 37,
-                        "durationMicroseconds": 17,
-                        "errorMessage": "Cannot access value for name fontSize",
-                        "functionName": "pointSize",
-                        "line": 160
+                        "line": 81
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 71,
+                        "column": 32,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 166
+                        "line": 84
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 87
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 41,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "Cannot access value for name playListDetail",
+                        "functionName": "pointSize",
+                        "line": 85
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 97,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 101,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 93
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 52,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 94
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 89,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 95
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 94,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 98
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 55,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 101
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 90,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 102
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 41,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "Cannot access value for name playListDetail",
+                        "functionName": "pointSize",
+                        "line": 99
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 101,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 107
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 56,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 112
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "hoveredColor",
+                        "line": 114
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 95,
+                        "errorMessage": "",
+                        "functionName": "onEntered",
+                        "line": 116
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 82,
+                        "errorMessage": "",
+                        "functionName": "onExited",
+                        "line": 119
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 42,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 168
+                        "functionName": "type",
+                        "line": 125
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 36,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 131
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 29,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "hoveredColor",
+                        "line": 133
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 139
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 107,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 141
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 132,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 144
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 42,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 146
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "elide",
-                        "line": 171
+                        "line": 149
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
-                        "line": 172
+                        "line": 150
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 145
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "Cannot access value for name fontSize",
+                        "functionName": "pointSize",
+                        "line": 148
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 154
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 42,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 156
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 159
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 26,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 160
                     },
                     {
                         "codegenSuccessful": true,
@@ -529,335 +441,519 @@
                         "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 167
+                        "line": 155
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 37,
-                        "durationMicroseconds": 19,
+                        "column": 36,
+                        "durationMicroseconds": 146,
                         "errorMessage": "Cannot access value for name fontSize",
                         "functionName": "pointSize",
-                        "line": 170
+                        "line": 158
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 206,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 176
+                        "line": 164
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 42,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
+                        "line": 166
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 95,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 169
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 49,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 170
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 88,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 165
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 31,
+                        "errorMessage": "Cannot access value for name fontSize",
+                        "functionName": "pointSize",
+                        "line": 168
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 120,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 174
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 42,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 176
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 179
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 33,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 180
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 175
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "Cannot access value for name fontSize",
+                        "functionName": "pointSize",
                         "line": 178
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 117,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 184
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 42,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 186
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
                         "functionName": "elide",
-                        "line": 181
+                        "line": 189
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
-                        "line": 182
+                        "line": 190
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 91,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 177
+                        "line": 185
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 37,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name fontSize",
                         "functionName": "pointSize",
-                        "line": 180
+                        "line": 188
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 109,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 198
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name playListDetail",
                         "functionName": "width",
-                        "line": 193
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 26,
-                        "durationMicroseconds": 259,
-                        "errorMessage": "",
-                        "functionName": "onParentChanged",
-                        "line": 195
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 80,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 201
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 30,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 203
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 134,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 206
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 38,
-                        "durationMicroseconds": 48,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 208
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 38,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 211
+                        "line": 209
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 30,
-                        "errorMessage": "Cannot access value for name thisTheme",
+                        "column": 16,
+                        "durationMicroseconds": 101,
+                        "errorMessage": "Cannot access value for name currentIndex",
                         "functionName": "color",
                         "line": 212
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 62,
+                        "column": 26,
+                        "durationMicroseconds": 234,
                         "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 207
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot access value for name fontSize",
-                        "functionName": "pointSize",
-                        "line": 210
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 75,
-                        "errorMessage": "",
-                        "functionName": "width",
+                        "functionName": "onParentChanged",
                         "line": 216
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 38,
-                        "durationMicroseconds": 46,
+                        "column": 20,
+                        "durationMicroseconds": 177,
                         "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 218
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 36,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 221
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 22,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
+                        "functionName": "width",
                         "line": 222
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 64,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 224
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 251,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 227
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 97,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 229
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 232
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 233
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 373,
+                        "errorMessage": "Cannot access value for name index",
+                        "functionName": "text",
+                        "line": 234
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 102,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 217
+                        "line": 228
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 29,
                         "errorMessage": "Cannot access value for name fontSize",
                         "functionName": "pointSize",
-                        "line": 220
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 185,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 226
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 38,
-                        "durationMicroseconds": 46,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 228
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 204,
-                        "errorMessage": "",
-                        "functionName": "elide",
                         "line": 231
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 47,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 232
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 78,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 227
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 33,
-                        "durationMicroseconds": 37,
-                        "errorMessage": "Cannot access value for name fontSize",
-                        "functionName": "pointSize",
-                        "line": 230
-                    },
-                    {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 105,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 236
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 38,
-                        "durationMicroseconds": 47,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 238
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 41,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 241
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 242
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 57,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
                         "line": 237
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 33,
-                        "durationMicroseconds": 17,
-                        "errorMessage": "Cannot access value for name fontSize",
-                        "functionName": "pointSize",
-                        "line": 240
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 85,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 246
-                    },
-                    {
                         "codegenSuccessful": true,
                         "column": 38,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 112,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 248
+                        "line": 239
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 46,
                         "errorMessage": "",
                         "functionName": "elide",
-                        "line": 251
+                        "line": 242
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 30,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
-                        "line": 252
+                        "line": 243
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 315,
+                        "errorMessage": "Cannot access value for name name",
+                        "functionName": "text",
+                        "line": 244
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 57,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
+                        "line": 238
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 26,
+                        "errorMessage": "Cannot access value for name fontSize",
+                        "functionName": "pointSize",
+                        "line": 241
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 101,
+                        "errorMessage": "",
+                        "functionName": "width",
                         "line": 247
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 249
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 252
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 253
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 370,
+                        "errorMessage": "Cannot access value for name artists",
+                        "functionName": "text",
+                        "line": 254
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 248
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name fontSize",
                         "functionName": "pointSize",
-                        "line": 250
+                        "line": 251
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 96,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 257
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 55,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 259
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 262
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 28,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 263
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 299,
+                        "errorMessage": "Cannot access value for name album",
+                        "functionName": "text",
+                        "line": 264
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 86,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 258
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "Cannot access value for name fontSize",
+                        "functionName": "pointSize",
+                        "line": 261
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 102,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 267
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 269
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 272
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 273
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 353,
+                        "errorMessage": "Cannot access value for name allTime",
+                        "functionName": "text",
+                        "line": 274
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 268
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 33,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "Cannot access value for name fontSize",
+                        "functionName": "pointSize",
+                        "line": 271
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 262,
+                        "errorMessage": "Cannot access value for name index",
+                        "functionName": "onClicked",
+                        "line": 280
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onEntered",
+                        "line": 283
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 10,
+                        "errorMessage": "Type (component in D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml)::parent with type QQuickItem does not have a property isHovered for writing",
+                        "functionName": "onExited",
+                        "line": 286
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 278
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/PlayListDetail.qml"

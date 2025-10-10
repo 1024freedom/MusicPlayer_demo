@@ -8,6 +8,9 @@ ListView {
     width: parent.width
     height: parent.height
 
+    currentIndex: -1
+    clip: true
+
     onPlayListInfoChanged: {
         headerItem.id=playListInfo.id
         headerItem.nameText=playListInfo.name
@@ -15,6 +18,7 @@ ListView {
         headerItem.descriptionText=playListInfo.description
 
         var musicDetailCallBack=res=>{
+            contentListModel.append(res)
             console.log(JSON.stringify(res[0]))
         }
 
@@ -25,6 +29,10 @@ ListView {
         }
 
         p_musicRes.getMusicPlayListDetail({id:playListInfo.id,callBack:musicPlayDetailCallBack})
+    }
+
+    onCountChanged: {
+        contentItemBackground.height=count*80+30
     }
 
     function setHeight(children,spacing){
@@ -185,13 +193,26 @@ ListView {
             }
         }
     }
+
+    footer: Rectangle{
+        width: parent.width-80
+        height: 50
+        color: "#00000000"
+    }
+
     model: ListModel{
         id:contentListModel
     }
 
     delegate: Rectangle{
+        property bool isHovered: false
         width: playListDetail.width-80
         height: 80
+        radius: 12
+        color: if(currentIndex===index)
+                   return thisTheme.subBackgroundColor
+                else if(isHovered) return thisTheme.subBackgroundColor
+                else return "#00000000"
         onParentChanged: {
             if(parent!=null){
                 anchors.horizontalCenter=parent.horizontalCenter
@@ -210,7 +231,7 @@ ListView {
                 font.pointSize:fontSize
                 elide: Text.ElideRight
                 color: thisTheme.fontColor
-                text: "序号"
+                text: index+1
             }
             Text {
                 width: parent.width*0.3
@@ -220,7 +241,7 @@ ListView {
                 font.pointSize:fontSize
                 elide: Text.ElideRight
                 color: thisTheme.fontColor
-                text: "歌名"
+                text: name
             }
             Text {
                 width: parent.width*0.25
@@ -230,7 +251,7 @@ ListView {
                 font.pointSize: fontSize
                 elide: Text.ElideRight
                 color: thisTheme.fontColor
-                text: "作者"
+                text: artists
             }
             Text {
                 width: parent.width*0.2
@@ -240,7 +261,7 @@ ListView {
                 font.pointSize: fontSize
                 elide: Text.ElideRight
                 color: thisTheme.fontColor
-                text: "专辑"
+                text: album
             }
             Text {
                 width: parent.width*0.1
@@ -250,9 +271,30 @@ ListView {
                 font.pointSize: fontSize
                 elide: Text.ElideRight
                 color: thisTheme.fontColor
-                text: "时长"
+                text: allTime
+            }
+        }
+        MouseArea{
+            anchors.fill: parent
+            hoverEnabled: true
+            onClicked: {
+                currentIndex=index
+            }
+            onEntered: {
+                parent.isHovered=true
+            }
+            onExited: {
+                parent.isHovered=false
             }
         }
     }
+    // Rectangle{
+    //     id:contentItemBackground
+    //     parent: playListDetail.contentItem
+    //     y:-15
+    //     width: playListDetail.width-50
+    //     anchors.horizontalCenter: parent.horizontalCenter
+    //     radius: 12
+    // }
 
 }
