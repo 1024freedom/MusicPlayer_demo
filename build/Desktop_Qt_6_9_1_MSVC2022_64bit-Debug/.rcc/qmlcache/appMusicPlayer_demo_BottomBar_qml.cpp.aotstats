@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 1173,
+                        "durationMicroseconds": 514,
                         "errorMessage": "Cannot access value for name p_theme",
                         "functionName": "thisTheme",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 324,
+                        "durationMicroseconds": 153,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 9
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 12,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot load property backgroundColor from (component in D:/QtProjects/MusicPlayer_demo/BottomBar.qml)::thisTheme with type QVariant.",
                         "functionName": "color",
                         "line": 11
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 19
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot access value for name bottomBarSlider",
                         "functionName": "width",
                         "line": 21
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 7,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "height",
                         "line": 22
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 23
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 15,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name bottomBarSlider",
                         "functionName": "x",
                         "line": 29
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 15,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot access value for name height",
                         "functionName": "y",
                         "line": 30
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name bottomBarSlider",
                         "functionName": "color",
                         "line": 34
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 33
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 296,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 39
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 226,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 40
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 50,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 41
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 43
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 44
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 45
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 156,
+                        "durationMicroseconds": 43,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 49
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 84,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 50
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 547,
+                        "durationMicroseconds": 233,
                         "errorMessage": "Cannot access value for name p_musicRes",
                         "functionName": "source",
                         "line": 51
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 254,
+                        "durationMicroseconds": 79,
                         "errorMessage": "Cannot load property spacing from (component in D:/QtProjects/MusicPlayer_demo/BottomBar.qml)::parent with type QQuickItem.",
                         "functionName": "width",
                         "line": 54
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 192,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 55
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 938,
+                        "durationMicroseconds": 351,
                         "errorMessage": "Cannot access value for name p_musicRes",
                         "functionName": "text",
                         "line": 58
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 59
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 171,
+                        "durationMicroseconds": 43,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 57
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 794,
+                        "durationMicroseconds": 315,
                         "errorMessage": "Cannot access value for name p_musicRes",
                         "functionName": "text",
                         "line": 63
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
                         "line": 64
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 190,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "pointSize",
                         "line": 62
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 271,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 69
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 70
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 113,
+                        "durationMicroseconds": 27,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 74
@@ -270,242 +270,274 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
-                        "line": 76
+                        "line": 77
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 75
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 122,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 81
+                        "line": 82
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
-                        "line": 83
+                        "line": 85
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 1101,
+                        "durationMicroseconds": 355,
                         "errorMessage": "Cannot access value for name p_musicPlayer",
                         "functionName": "onClicked",
-                        "line": 85
+                        "line": 87
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 59,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 83
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 337,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 91
+                        "line": 93
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 976,
+                        "durationMicroseconds": 323,
                         "errorMessage": "Cannot access value for name p_musicPlayer",
                         "functionName": "source",
-                        "line": 92
+                        "line": 95
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
-                        "line": 94
+                        "line": 97
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 890,
+                        "durationMicroseconds": 311,
                         "errorMessage": "Cannot access value for name p_musicPlayer",
                         "functionName": "onClicked",
-                        "line": 96
+                        "line": 99
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 191,
+                        "durationMicroseconds": 51,
                         "errorMessage": "",
                         "functionName": "onEntered",
-                        "line": 100
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 98,
-                        "errorMessage": "",
-                        "functionName": "onExited",
                         "line": 103
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "",
+                        "functionName": "onExited",
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 94
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 38,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 109
+                        "line": 112
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 115
+                        "line": 118
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
                         "functionName": "transformOrigin",
-                        "line": 118
+                        "line": 122
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
-                        "line": 120
+                        "line": 124
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 821,
+                        "durationMicroseconds": 335,
                         "errorMessage": "Cannot access value for name p_musicPlayer",
                         "functionName": "onClicked",
-                        "line": 122
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 36,
-                        "durationMicroseconds": 3382,
-                        "errorMessage": "",
-                        "functionName": "onCompleted",
                         "line": 126
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 28,
-                        "durationMicroseconds": 267,
+                        "column": 41,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
-                        "functionName": "right",
-                        "line": 136
+                        "functionName": "verticalCenter",
+                        "line": 119
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 680,
                         "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 137
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 102,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "color",
-                        "line": 143
+                        "functionName": "onCompleted",
+                        "line": 130
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 33,
-                        "durationMicroseconds": 145,
+                        "column": 28,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
-                        "functionName": "pointSize",
+                        "functionName": "right",
                         "line": 140
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 198,
+                        "column": 36,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 144
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 23,
-                        "durationMicroseconds": 1027,
-                        "errorMessage": "Cannot access value for name p_musicRes",
-                        "functionName": "text",
-                        "line": 148
+                        "line": 141
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "color",
-                        "line": 150
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 33,
-                        "durationMicroseconds": 149,
-                        "errorMessage": "",
-                        "functionName": "pointSize",
                         "line": 147
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "",
+                        "functionName": "pointSize",
+                        "line": 144
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 41,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
+                        "line": 148
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 391,
+                        "errorMessage": "Cannot access value for name p_musicRes",
+                        "functionName": "text",
+                        "line": 152
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "color",
+                        "line": 154
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 50,
+                        "errorMessage": "",
+                        "functionName": "pointSize",
                         "line": 151
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 140,
+                        "column": 41,
+                        "durationMicroseconds": 92,
                         "errorMessage": "",
-                        "functionName": "height",
+                        "functionName": "verticalCenter",
                         "line": 155
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 162,
-                        "errorMessage": "Cannot access value for name thisTheme",
-                        "functionName": "hoveredColor",
-                        "line": 157
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 256,
+                        "durationMicroseconds": 36,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 162
+                        "line": 159
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 209,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name thisTheme",
                         "functionName": "hoveredColor",
-                        "line": 164
+                        "line": 161
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 166
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 19,
+                        "errorMessage": "Cannot access value for name thisTheme",
+                        "functionName": "hoveredColor",
+                        "line": 168
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 2030,
+                        "durationMicroseconds": 534,
                         "errorMessage": "Instruction \"generate_CmpInstanceOf\" not implemented",
                         "functionName": "onCompleted",
-                        "line": 167
+                        "line": 171
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/BottomBar.qml"

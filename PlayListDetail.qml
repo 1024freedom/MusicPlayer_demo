@@ -282,14 +282,14 @@ ListView {
                                 album:album,coverImg:coverImg,url:"",
                                 allTime:allTime
                 }
-                var musicUrlCallBack=res=>{
-                    musicInfo.url=res.url
-                    p_musicRes.thisPlayMusicInfo=musicInfo
-                    p_musicRes.thisPlayMusicInfoChanged()//手动触发值更新函数
+                p_musicPlayer.playMusic(id,musicInfo)
+
+                p_musicRes.thisPlayListInfo.clear()
+                for(var i=0;i<contentListModel.count;i++){
+                    p_musicRes.thisPlayListInfo.append(contentListModel.get(i))
                 }
-
-
-                p_musicRes.getMusicUrl({id:id,callBack:musicUrlCallBack})
+                p_musicRes.thisPlayCurrent=index
+                console.log("当前播放列表"+JSON.stringify(p_musicRes.thisPlayListInfo.get(0)))
             }
             onClicked: {
                 currentIndex=index

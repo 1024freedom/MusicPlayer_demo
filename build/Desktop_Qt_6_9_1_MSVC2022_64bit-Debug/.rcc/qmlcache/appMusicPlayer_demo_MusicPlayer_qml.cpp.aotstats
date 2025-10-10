@@ -4,28 +4,44 @@
             {
                 "entries": [
                     {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 455,
+                        "errorMessage": "",
+                        "functionName": "onSourceChanged",
+                        "line": 9
+                    },
+                    {
                         "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 971,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Functions without type annotations won't be compiled",
+                        "functionName": "playMusic",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 525,
                         "errorMessage": "Cannot generate efficient code for incomparable types QString and (component in D:/QtProjects/MusicPlayer_demo/MusicPlayer.qml)::source with type QUrl",
                         "functionName": "playPauseMusic",
-                        "line": 8
+                        "line": 22
                     },
                     {
-                        "codegenSuccessful": true,
+                        "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 53,
-                        "errorMessage": "",
+                        "durationMicroseconds": 1169,
+                        "errorMessage": "Cannot access value for name p_musicRes",
                         "functionName": "preMusicPlay",
-                        "line": 18
+                        "line": 32
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 5,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 27,
                         "errorMessage": "",
                         "functionName": "nextMusicPlay",
-                        "line": 21
+                        "line": 41
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/MusicPlayer.qml"

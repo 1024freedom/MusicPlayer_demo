@@ -2,6 +2,8 @@ import QtQuick
 
 Item {
 
+    property int thisPlayCurrent: -1
+
     property var thisPlayMusicInfo: {
         "id":"",
         "name":"",
@@ -10,6 +12,10 @@ Item {
         "coverImg":"",
         "url":"",
         "allTime":"",
+    }
+
+    property ListModel thisPlayListInfo: ListModel{
+
     }
 
     onThisPlayMusicInfoChanged: {

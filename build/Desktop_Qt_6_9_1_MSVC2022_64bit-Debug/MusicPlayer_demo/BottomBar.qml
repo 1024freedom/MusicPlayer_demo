@@ -72,13 +72,15 @@ Rectangle{
             ToolTipButtom{
                 width: 23
                 height: width
+                anchors.verticalCenter: parent.verticalCenter
                 source:"qrc:/reaptSinglePlay"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
             }
             ToolTipButtom{
-                width: 25
+                width: 20
                 height: width
+                anchors.verticalCenter: parent.verticalCenter
                 source:"qrc:/lastPlay"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
@@ -87,8 +89,9 @@ Rectangle{
                 }
             }
             ToolTipButtom{
-                width: 30
+                width: 33
                 height: width
+                anchors.verticalCenter: parent.verticalCenter
                 source:if(p_musicPlayer.playing)return "qrc:/play"
                 else return "qrc:/pause"
                 hoveredColor: thisTheme.subBackgroundColor
@@ -111,8 +114,9 @@ Rectangle{
                 }
             }
             ToolTipButtom{
-                width: 25
+                width: 20
                 height: width
+                anchors.verticalCenter: parent.verticalCenter
                 // source:"qrc:/nextPlay"
                 source:"qrc:/lastPlay"
                 transformOrigin: Item.Center
