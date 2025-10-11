@@ -201,13 +201,10 @@ Rectangle{
                 color: thisTheme.fontColor
                 anchors.verticalCenter: parent.verticalCenter
             }
-            ToolTipButtom{
-                width: 20
-                height: width
-                source:"qrc:/soundChanger"
-                hoveredColor: thisTheme.subBackgroundColor
-                color: "#00000000"
+            ButtomBarVolumeBtn{
+
             }
+
             ToolTipButtom{
                 width: 20
                 height: width
