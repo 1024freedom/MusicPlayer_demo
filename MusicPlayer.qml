@@ -65,14 +65,6 @@ MediaPlayer {
 
         //随机播放
         if(playerModeStatus===MusicPlayer.PlayerMode.RANDOMPLAY){
-            // if(index!==p_musicRes.randomPlayCurrent){
-            //     for(let i=0;i<p_musicRes.randomPlayListIndex[i].length;i++){
-            //         if(index===p_musicRes.randomPlayListIndex[i]){
-            //             index=i
-            //             break
-            //         }
-            //     }
-            // }
             p_musicRes.randomPlayCurrent=(index+1)%p_musicRes.randomPlayListIndex.length
             index=p_musicRes.randomPlayListIndex[p_musicRes.randomPlayCurrent]
         }else{
