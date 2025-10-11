@@ -201,7 +201,7 @@ Rectangle{
                 color: thisTheme.fontColor
                 anchors.verticalCenter: parent.verticalCenter
             }
-            ButtomBarVolumeBtn{
+            BottomBarVolumeBtn{
 
             }
 

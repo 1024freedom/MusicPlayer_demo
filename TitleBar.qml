@@ -34,8 +34,8 @@ Rectangle{
                 height: parent.height
                 spacing: 15
                 Image {
-                    width: 30
-                    height: 30
+                    width: 40
+                    height: 40
                     id: topLeftIcon
                     anchors.verticalCenter: parent.verticalCenter
                     source: "qrc:/topleft"
@@ -45,7 +45,7 @@ Rectangle{
                     font.pointSize: 12
                     font.bold: true
                     anchors.verticalCenter: parent.verticalCenter
-                    text: qsTr("Music Player Demo")
+                    text: qsTr("Wings of Freedom")
                     color: thisTheme.fontColor
                 }
                 Component.onCompleted: {

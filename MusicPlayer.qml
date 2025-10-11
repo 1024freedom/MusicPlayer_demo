@@ -11,6 +11,8 @@ MediaPlayer {
     }
     property int playerModeCount: 4
     property int playerModeStatus: MusicPlayer.PlayerMode.LISTLOOPPLAY
+    property double volume: 1.0
+    property double lastVolume: 1.0
 
     function setPlayMode(){//循环设置
         playerModeStatus=(playerModeStatus+1)%playerModeCount
@@ -25,7 +27,7 @@ MediaPlayer {
 
     autoPlay:true
     audioOutput: AudioOutput{
-
+        volume: p_musicPlayer.volume
     }
     onSourceChanged: {
         play()
