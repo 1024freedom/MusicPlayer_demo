@@ -289,7 +289,8 @@ ListView {
                     p_musicRes.thisPlayListInfo.append(contentListModel.get(i))
                 }
                 p_musicRes.thisPlayCurrent=index
-                console.log("当前播放列表"+JSON.stringify(p_musicRes.thisPlayListInfo.get(0)))
+
+                p_musicRes.thisPlayListInfoChanged()
             }
             onClicked: {
                 currentIndex=index

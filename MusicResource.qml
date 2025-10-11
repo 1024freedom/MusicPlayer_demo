@@ -3,7 +3,7 @@ import QtQuick
 Item {
 
     property int thisPlayCurrent: -1
-
+    property int randomPlayCurrent: -1
     property var thisPlayMusicInfo: {
         "id":"",
         "name":"",
@@ -18,10 +18,21 @@ Item {
 
     }
 
+    //随机播放下标
+    property var randomPlayListIndex:[]
+
     onThisPlayMusicInfoChanged: {
         console.log("播放歌曲信息"+JSON.stringify(thisPlayMusicInfo))
     }
+    onThisPlayListInfoChanged: {
+        randomPlayListIndex=Array.from({length:thisPlayListInfo.count},(_,index)=>index)//以下标生成数组并赋值
+        for(let i=randomPlayListIndex.length-1;i>0;i--){//洗牌算法随机打乱数组
+            const index=Math.floor(Math.random()*(i+1));//为当前i位置的元素随机生成一个前面的位置index
+            [randomPlayListIndex[i],randomPlayListIndex[index]]=[randomPlayListIndex[index],randomPlayListIndex[i]]//交换
+        }
 
+        console.log(JSON.stringify(randomPlayListIndex))
+    }
 
     function getNewMusic(obj){//获取最新音乐
         var type=obj.type||"0"
@@ -189,6 +200,6 @@ Item {
         m=m<10?"0"+m:m
         s=s<10?"0"+s:s
 
-        return h+(h===""?":"+m:m)+":"+s
+        return h+(h===""?m:":"+m)+":"+s
     }
 }

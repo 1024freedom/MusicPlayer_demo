@@ -6,18 +6,34 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 1999,
+                        "durationMicroseconds": 601,
                         "errorMessage": "",
                         "functionName": "thisPlayMusicInfo",
                         "line": 7
                     },
                     {
                         "codegenSuccessful": false,
+                        "column": 38,
+                        "durationMicroseconds": 55,
+                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
+                        "functionName": "randomPlayListIndex",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 1476,
+                        "durationMicroseconds": 548,
                         "errorMessage": "Cannot generate efficient code for internal conversion into unsupported wrapper type.",
                         "functionName": "onThisPlayMusicInfoChanged",
-                        "line": 21
+                        "line": 24
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 649,
+                        "errorMessage": "Cannot load property length from (component in D:/QtProjects/MusicPlayer_demo/MusicResource.qml)::randomPlayListIndex with type QVariant.",
+                        "functionName": "onThisPlayListInfoChanged",
+                        "line": 27
                     },
                     {
                         "codegenSuccessful": false,
@@ -25,7 +41,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getNewMusic",
-                        "line": 26
+                        "line": 37
                     },
                     {
                         "codegenSuccessful": false,
@@ -33,7 +49,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getMusicUrl",
-                        "line": 55
+                        "line": 66
                     },
                     {
                         "codegenSuccessful": false,
@@ -41,7 +57,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getMusicPlayList",
-                        "line": 73
+                        "line": 84
                     },
                     {
                         "codegenSuccessful": false,
@@ -49,7 +65,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getMusicBoutiquePlayList",
-                        "line": 101
+                        "line": 112
                     },
                     {
                         "codegenSuccessful": false,
@@ -57,7 +73,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getMusicPlayListDetail",
-                        "line": 128
+                        "line": 139
                     },
                     {
                         "codegenSuccessful": false,
@@ -65,7 +81,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getMusicDetail",
-                        "line": 153
+                        "line": 164
                     },
                     {
                         "codegenSuccessful": false,
@@ -73,7 +89,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "setTime",
-                        "line": 183
+                        "line": 194
                     }
                 ],
                 "filePath": "D:/QtProjects/MusicPlayer_demo/MusicResource.qml"

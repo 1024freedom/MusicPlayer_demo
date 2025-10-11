@@ -12,15 +12,18 @@ Rectangle{
     //进度条
     Slider{
         id:bottomBarSlider
+        property bool movePressed: value
         width: parent.width
         height: 5
+        from: 0
+        to:p_musicPlayer.duration//总时长
         anchors.bottom: parent.top
         background: Rectangle{
             color: thisTheme.subBackgroundColor
             Rectangle{
                 width: bottomBarSlider.visualPosition*parent.width
                 height: parent.height
-                color: thisTheme.subBackgroundColor
+                color: "RED"
             }
         }
         handle: Rectangle{
@@ -32,6 +35,22 @@ Rectangle{
             border.width: 1.5
             border.color: thisTheme.subBackgroundColor
             color: bottomBarSlider.pressed?thisTheme.subBackgroundColor:"WHITE"
+        }
+        onMoved: {
+            movePressed=true
+        }
+        onPressedChanged: {
+            if(movePressed&&!pressed){//松手后更新
+                movePressed=pressed
+                p_musicPlayer.position=value
+            }
+        }
+        Connections{
+            target: p_musicPlayer
+            enabled:bottomBarSlider.pressed===false
+            function onPositionChanged(){
+                bottomBarSlider.value=p_musicPlayer.position
+            }
         }
     }
 
@@ -68,14 +87,42 @@ Rectangle{
         Row{
             width: parent.width*0.3
             anchors.centerIn: parent
-            spacing: 10
+            spacing: 15
             ToolTipButtom{
-                width: 23
+                id:playerModeIcon
+                width: 20
                 height: width
                 anchors.verticalCenter: parent.verticalCenter
-                source:"qrc:/reaptSinglePlay"
+                source:"qrc:/listloop"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
+                onClicked: {
+                    p_musicPlayer.setPlayMode()
+                }
+
+                Connections{
+                    target: p_musicPlayer
+                    // ONELOOPPLAY,//单曲循环
+                    // LISTLOOPPLAY,//列表循环
+                    // RANDOMPLAY,//随机播放
+                    // LINEPLAY//顺序播放
+                    function onPlayerModeStatusChanged() {
+                        switch(p_musicPlayer.playerModeStatus){
+                        case MusicPlayer.PlayerMode.ONELOOPPLAY:
+                            playerModeIcon.source="qrc:/reaptSinglePlay"
+                            break
+                        case MusicPlayer.PlayerMode.LISTLOOPPLAY:
+                            playerModeIcon.source="qrc:/listloop"
+                            break
+                        case MusicPlayer.PlayerMode.RANDOMPLAY:
+                            playerModeIcon.source="qrc:/randomplay"
+                            break
+                        case MusicPlayer.PlayerMode.LINEPLAY:
+                            playerModeIcon.source="qrc:/lineplay"
+                            break
+                        }
+                    }
+                }
             }
             ToolTipButtom{
                 width: 20
@@ -142,7 +189,7 @@ Rectangle{
             spacing: 8
             Text {
                 font.pointSize: bottomBar.fontSize
-                text: "00:00"
+                text: p_musicRes.setTime(bottomBarSlider.value)
                 font.weight: 1
                 color: thisTheme.fontColor
                 anchors.verticalCenter: parent.verticalCenter

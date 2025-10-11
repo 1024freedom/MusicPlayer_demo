@@ -228,14 +228,10 @@ Item {
                                         album:album,coverImg:coverImg,url:"",
                                         allTime:allTime
                         }
-                        var musicUrlCallBack=res=>{
-                            musicInfo.url=res.url
-                            p_musicRes.thisPlayMusicInfo=musicInfo
-                            p_musicRes.thisPlayMusicInfoChanged()//手动触发值更新函数
-                        }
-
-
-                        p_musicRes.getMusicUrl({id:id,callBack:musicUrlCallBack})
+                        p_musicRes.thisPlayListInfo.append(musicInfo)
+                        p_musicRes.thisPlayCurrent=index
+                        p_musicRes.thisPlayListInfoChanged()
+                        p_musicPlayer.playMusic(id,musicInfo)
                     }
 
                     onClicked: {
