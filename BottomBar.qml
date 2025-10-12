@@ -9,6 +9,11 @@ Rectangle{
     width: parent.width
     height: 80
     color: thisTheme.backgroundColor
+
+    ThisPlayerListLabel{
+        id:thisPlayerListLabel
+    }
+
     //进度条
     Slider{
         id:bottomBarSlider

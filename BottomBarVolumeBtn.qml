@@ -5,7 +5,7 @@ MouseArea{
     width: parent.height
     height: 160
     hoverEnabled: true
-    anchors.bottom: parent.bottom
+    anchors.bottom: parent.bottom//重要，必须设置
     state: "normal"
     states: [
         State {
@@ -67,9 +67,9 @@ MouseArea{
         state="normal"
     }//注意位置
 
-    Rectangle{
-        anchors.fill: parent
-    }//调试
+    // Rectangle{
+    //     anchors.fill: parent
+    // }//调试
 
     Rectangle {
         id:bottomBarVolumeSliderBackground
@@ -138,6 +138,12 @@ MouseArea{
             parent.state="hovered"
         }
         onClicked: {//一键静音
+            if(source==="qrc:/soundChanger"){
+                source="qrc:/nosound"
+            }else if(source==="qrc:/nosound"){
+                source="qrc:/soundChanger"
+            }
+
             if(p_musicPlayer.volume!==0){
                 p_musicPlayer.volume=0
             }else{

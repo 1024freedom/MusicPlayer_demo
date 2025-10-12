@@ -35,7 +35,7 @@ ListView {
         contentItemBackground.height=count*80+30
     }
 
-    function setHeight(children,spacing){
+    function setHeight(children,spacing){//用于将头部与内容部分分离
         var h=0
         for(var i=0;i<children.length;i++){
             if(children[i]instanceof Text){
