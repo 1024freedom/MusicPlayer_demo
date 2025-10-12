@@ -184,6 +184,7 @@ Rectangle{
             }
         }
         Row{
+            height: 20
             anchors.right: parent.right
             anchors.verticalCenter:parent.verticalCenter
             spacing: 8
