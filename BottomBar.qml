@@ -77,16 +77,90 @@ Rectangle{
             }
             Column{
                 width: parent.width-musicCoverImg.width-parent.spacing
+                clip: true
                 anchors.verticalCenter: parent.verticalCenter
                 Text {
+                    id:nameText
+                    width: parent.width
                     font.pointSize: bottomBar.fontSize
                     text: p_musicRes.thisPlayMusicInfo.name
                     color: thisTheme.fontColor
+
+                    Connections{
+                        target: p_musicRes
+                        function onThisPlayMusicInfoChanged(){
+                            nameTextAni.stop()
+                            nameTextAni.lastText=p_musicRes.thisPlayMusicInfo.name
+                            nameText.text=p_musicRes.thisPlayMusicInfo.name
+                        }
+                    }
+
+                    NumberAnimation {//长文本滚动动画效果
+                        id:nameTextAni
+                        property string lastText: ""
+                        target: nameText
+                        property: "x"
+                        to:-nameText.contentWidth/2-nameText.font.pointSize/4*3
+                        duration: nameText.text.length*50
+                        easing.type: Easing.Linear
+                        onStopped: {
+                            nameText.text=lastText
+                            nameText.x=0
+                            lastText=""
+                        }
+                    }
+                    MouseArea{
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        onEntered: {
+                            if(nameText.width<nameText.contentWidth){
+                                nameTextAni.lastText=nameText.text
+                                nameText.text+="   "+nameText.text
+                                nameTextAni.start()
+                            }
+                        }
+                    }
                 }
                 Text {
+                    id:artistsText
+                    width: parent.width
                     font.pointSize: bottomBar.fontSize-1
                     text: p_musicRes.thisPlayMusicInfo.artists
                     color: thisTheme.fontColor
+                    Connections{
+                        target: p_musicRes
+                        function onThisPlayMusicInfoChanged(){
+                            artistsTextAni.stop()
+                            artistsTextAni.lastText=p_musicRes.thisPlayMusicInfo.artists
+                            artistsText.text=p_musicRes.thisPlayMusicInfo.artists
+                        }
+                    }
+
+                    NumberAnimation {//长文本滚动动画效果
+                        id:artistsTextAni
+                        property string lastText: ""
+                        target: artistsText
+                        property: "x"
+                        to:-artistsText.contentWidth/2-artistsText.font.pointSize/4*3
+                        duration: artistsText.text.length*50
+                        easing.type: Easing.Linear
+                        onStopped: {
+                            artistsText.text=lastText
+                            artistsText.x=0
+                            lastText=""
+                        }
+                    }
+                    MouseArea{
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        onEntered: {
+                            if(artistsText.width<artistsText.contentWidth){
+                                artistsTextAni.lastText=artistsText.text
+                                artistsText.text+="   "+artistsText.text
+                                artistsTextAni.start()
+                            }
+                        }
+                    }
                 }
             }
         }

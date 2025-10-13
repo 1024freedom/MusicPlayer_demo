@@ -20,6 +20,13 @@ Rectangle {
         return h+(children.length-1)*spacing
     }
 
+    MouseArea{//捕获鼠标事件防止传递滑动
+        anchors.fill: parent
+        onWheel: function (mouse){
+
+        }
+    }
+
     ListView{
         id:thisPlayerListLabelLv
         anchors.fill: parent
@@ -161,7 +168,7 @@ Rectangle {
         visible: !p_musicRes.thisPlayListInfo.count
         anchors.centerIn: parent
         font.pointSize: bottomBar.fontSize+5
-        text: "还未添加歌曲"
+        text: "还未添加任何歌曲哦"
         color: thisTheme.fontColor
     }
 }

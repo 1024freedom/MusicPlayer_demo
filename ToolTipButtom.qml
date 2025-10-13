@@ -9,6 +9,7 @@ MouseArea{
     width: 30
     height: width
     hoverEnabled: true
+    cursorShape: Qt.PointingHandCursor
     Rectangle{
         anchors.fill: parent
         radius: 100
