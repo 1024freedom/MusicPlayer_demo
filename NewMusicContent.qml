@@ -228,9 +228,15 @@ Item {
                                         album:album,coverImg:coverImg,url:"",
                                         allTime:allTime
                         }
-                        p_musicRes.thisPlayListInfo.append(musicInfo)
-                        p_musicRes.thisPlayCurrent=index
-                        p_musicRes.thisPlayListInfoChanged()
+                        var findIndex=p_musicRes.indexOf(id)
+                        if(findIndex===-1){
+                            p_musicRes.thisPlayListInfo.insert(p_musicRes.thisPlayCurrent+1,musicInfo)
+                            p_musicRes.thisPlayListInfoChanged()
+                            p_musicRes.thisPlayCurrent+=1
+                        }else{
+                            p_musicRes.thisPlayCurrent=findIndex
+                        }
+
                         p_musicPlayer.playMusic(id,musicInfo)
                     }
 

@@ -282,15 +282,18 @@ ListView {
                                 album:album,coverImg:coverImg,url:"",
                                 allTime:allTime
                 }
-                p_musicPlayer.playMusic(id,musicInfo)
-
-                p_musicRes.thisPlayListInfo.clear()
-                for(var i=0;i<contentListModel.count;i++){
-                    p_musicRes.thisPlayListInfo.append(contentListModel.get(i))
+                var findIndex=p_musicRes.indexOf(id)
+                if(findIndex===-1){
+                    for(var i=0;i<contentListModel.count;i++){
+                        p_musicRes.thisPlayListInfo.append(contentListModel.get(i))
+                    }
+                    p_musicRes.thisPlayListInfoChanged()
+                    p_musicRes.thisPlayCurrent+=1
+                }else{
+                    p_musicRes.thisPlayCurrent=findIndex
                 }
-                p_musicRes.thisPlayCurrent=index
 
-                p_musicRes.thisPlayListInfoChanged()
+                p_musicPlayer.playMusic(id,musicInfo)
             }
             onClicked: {
                 currentIndex=index

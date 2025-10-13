@@ -34,6 +34,19 @@ Item {
         console.log(JSON.stringify(randomPlayListIndex))
     }
 
+    function indexOf(id){//添加的歌曲是否已经存在
+        if(thisPlayListInfo.count<=0){
+            return -1
+        }
+        for(let i=0;i<thisPlayListInfo.count;i++){
+            if(thisPlayListInfo.get(i).id===id){
+                return i
+            }
+        }
+        return -1
+    }
+
+
     function getNewMusic(obj){//获取最新音乐
         var type=obj.type||"0"
         var callBack=obj.callBack||(()=>{})//由于数据获取是异步的，所以使用回调函数

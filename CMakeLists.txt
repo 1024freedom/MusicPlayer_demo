@@ -25,7 +25,7 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES LeftBar.qml
     QML_FILES RightContent.qml
     QML_FILES BottomBar.qml
-    QML_FILES Image.qml
+    QML_FILES PlayerImage.qml
     QML_FILES ToolTipButtom.qml
     QML_FILES RoundImage.qml
     QML_FILES PageFindMusic.qml

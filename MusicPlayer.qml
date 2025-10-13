@@ -64,6 +64,9 @@ MediaPlayer {
     }
     function nextMusicPlay(){//下一首(顺序或随机)
         var index=p_musicRes.thisPlayCurrent
+        if(p_musicRes.thisPlayListInfo.count<=0){
+            return
+        }
 
         //随机播放
         if(playerModeStatus===MusicPlayer.PlayerMode.RANDOMPLAY){

@@ -63,7 +63,18 @@ Rectangle {
                             anchors.fill: parent
                             cursorShape: Qt.PointingHandCursor
                             onClicked: {
-
+                                p_musicRes.thisPlayListInfo.clear()
+                                p_musicRes.thisPlayMusicInfo={
+                                    "id":"",
+                                    "name":"",
+                                    "artists":"",
+                                    "album":"",
+                                    "coverImg":"",
+                                    "url":"",
+                                    "allTime":"",
+                                }
+                                p_musicRes.thisPlayMusicInfoChanged()
+                                p_musicRes.thisPlayCurrent=-1
                             }
                         }
                     }
@@ -90,6 +101,7 @@ Rectangle {
             Row{
                 width: parent.width-40
                 height: children[0].contentHeight
+                anchors.centerIn: parent
                 spacing: 10
                 Text {
                     width: parent.width*0.3
@@ -120,6 +132,36 @@ Rectangle {
                     text: allTime
                 }
             }
+            MouseArea{
+                anchors.fill: parent
+                onDoubleClicked: {
+                    p_musicRes.thisPlayCurrent=index
+                    p_musicPlayer.playMusic(id,p_musicRes.thisPlayListInfo.get(index))
+                }
+            }
         }
+        onCurrentItemChanged: {
+            if(currentItem!=null){
+                thisPlayerListLabelPausePlay.parent=currentItem
+            }else{
+                thisPlayerListLabelPausePlay.parent=thisPlayerListLabel
+            }
+        }
+    }
+    Image{
+        id:thisPlayerListLabelPausePlay
+        width: 20
+        height: width
+        anchors.verticalCenter: parent.verticalCenter
+        visible: parent!=thisPlayerListLabel
+        source:if(p_musicPlayer.playbackState===1)return "qrc:/play"
+                else return "qrc:/pause"
+    }
+    Text {
+        visible: !p_musicRes.thisPlayListInfo.count
+        anchors.centerIn: parent
+        font.pointSize: bottomBar.fontSize+5
+        text: "还未添加歌曲"
+        color: thisTheme.fontColor
     }
 }

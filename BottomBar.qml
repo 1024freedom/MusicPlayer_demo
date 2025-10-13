@@ -12,6 +12,7 @@ Rectangle{
 
     ThisPlayerListLabel{
         id:thisPlayerListLabel
+        visible: false
     }
 
     //进度条
@@ -217,6 +218,9 @@ Rectangle{
                 source:"qrc:/playList"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
+                onClicked: {
+                    thisPlayerListLabel.visible=!thisPlayerListLabel.visible
+                }
             }
             Component.onCompleted: {
                 var w=0
