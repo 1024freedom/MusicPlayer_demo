@@ -2,8 +2,16 @@ import QtQuick
 import QtQuick.Controls
 
 Item {
-    anchors.fill: parent
+    id:musicLyricPage
+    width: parent.width
+    height: parent.height
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
+
+    Component.onCompleted: {
+        y=parent.height
+
+    }
+
     Rectangle{
         id:backGround
         anchors.fill: parent
@@ -49,6 +57,9 @@ Item {
                     color: "#00000000"
                     hoveredColor: "#2FFFFFFF"
                     iconColor: "#FFFFFF"
+                    onClicked: {
+                        musicLyricPage.parent.hidePage()
+                    }
                 }
 
                 Rectangle{
@@ -164,6 +175,12 @@ Item {
         width: musicLyricPage.width
         anchors.top:header.bottom
         height: musicLyricPage.height-header.height-footer.height
+    }
+    ThisPlayerListLabel{
+        id:thisPlayerListLabel
+        visible: false
+        anchors.bottom: footer.top
+        anchors.right: footer.right
     }
     Item {
         id: footer
@@ -341,8 +358,24 @@ Item {
                 }
 
             }
-            Item {
+            Row {
                 id: footerRight
+                height: 20
+                anchors.right: parent.right
+                spacing: 15
+                BottomBarVolumeBtn{
+
+                }
+                ToolTipButtom{
+                    width: 20
+                    height: width
+                    source:"qrc:/playList"
+                    hoveredColor: thisTheme.subBackgroundColor
+                    color: "#00000000"
+                    onClicked: {
+                        thisPlayerListLabel.visible=!thisPlayerListLabel.visible
+                    }
+                }
             }
 
         }

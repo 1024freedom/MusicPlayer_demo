@@ -13,6 +13,8 @@ Rectangle{
     ThisPlayerListLabel{
         id:thisPlayerListLabel
         visible: false
+        anchors.bottom: parent.top
+        anchors.right: parent.right
     }
 
     //进度条
@@ -74,6 +76,13 @@ Rectangle{
                 width: parent.height
                 height: width
                 source:p_musicRes.thisPlayMusicInfo.coverImg
+                MouseArea{
+                    anchors.fill: parent
+
+                    onClicked: {
+                        musicLyricPage.showPage()
+                    }
+                }
             }
             Column{
                 width: parent.width-musicCoverImg.width-parent.spacing

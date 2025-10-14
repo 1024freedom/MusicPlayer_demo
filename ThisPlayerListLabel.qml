@@ -1,10 +1,9 @@
 import QtQuick
 
 Rectangle {
+    id:thisPlayerListLabel
     width: 350
     height: 500
-    anchors.bottom: parent.top
-    anchors.right: parent.right
     radius: 12
     color: "#FAF2F1"
 
@@ -99,11 +98,14 @@ Rectangle {
             property string fontColor:if(thisPlayerListLabelLv.currentIndex===index)
                                           return thisTheme.subBackgroundColor+"FF"
                                         else return thisTheme.fontColor
+            property bool isHovered: false
             width: thisPlayerListLabel.width
             height: children[0].height+20
-            color:if(index%2===0)
-                      return thisTheme.subBackgroundColor
-                    else return "PINK"
+            color: if(isHovered)
+                       return "RED"
+                        else if(index%2===0)
+                            return thisTheme.subBackgroundColor
+                        else return "PINK"
 
             Row{
                 width: parent.width-40
@@ -141,9 +143,16 @@ Rectangle {
             }
             MouseArea{
                 anchors.fill: parent
+                hoverEnabled: true
                 onDoubleClicked: {
                     p_musicRes.thisPlayCurrent=index
                     p_musicPlayer.playMusic(id,p_musicRes.thisPlayListInfo.get(index))
+                }
+                onEntered: {
+                    parent.isHovered=true
+                }
+                onExited: {
+                    parent.isHovered=false
                 }
             }
         }
