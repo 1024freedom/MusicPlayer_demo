@@ -19,5 +19,6 @@
         <file alias="lineplay">顺序播放.png</file>
         <file alias="randomplay">随机播放.png</file>
         <file alias="nosound">静音.png</file>
+        <file alias="detailpackup">向下收起.png</file>
     </qresource>
 </RCC>

@@ -70,6 +70,9 @@ FramelessWindow {
             height: 80
         }
     }
+    PageMusicLyricDetail{
+        id:musicLyricPage
+    }
 
 
 
