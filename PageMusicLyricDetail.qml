@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Effects
 
 Item {
     id:musicLyricPage
@@ -175,6 +176,110 @@ Item {
         width: musicLyricPage.width
         anchors.top:header.bottom
         height: musicLyricPage.height-header.height-footer.height
+        Row{
+            width: parent.width-30
+            height: parent.height
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing: 20
+            Item {//左侧
+                id: musicInfoItem
+                width: parent.width/2-parent.spacing
+                height: parent.height
+                Column{
+                    width: parent.width
+                    anchors.centerIn: parent
+                    spacing: 20
+                    Item {//封面
+                        id:leftContentCover
+                        width: parent.width*0.5
+                        height: width
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        RoundImage{
+                            id:coverImg
+                            width: parent.width
+                            height: width
+                            imgWidth: parent.width
+                            imgHeight: imgWidth
+                            source: p_musicRes.thisPlayMusicInfo.coverImg
+                            sourceSize: Qt.size(400,400)
+                        }
+                        // 边缘淡发光效果
+                        MultiEffect {
+                            z:coverImg.z-1
+                            anchors.fill: coverImg
+                            source: coverImg
+                            blurEnabled: true
+                            blurMax: 70
+                            blur: 0.25  // 0.0-1.0 范围
+                            blurMultiplier: 1.5
+                        }
+                    }
+                    Column{
+                        width: leftContentCover.width
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        Text{//歌名文本
+                            id:nameText
+                            width: parent.width
+                            height: contentHeight
+                            horizontalAlignment: Text.AlignLeft
+                            wrapMode: Text.Wrap
+                            font.pointSize: 15
+                            text: p_musicRes.thisPlayMusicInfo.name
+                            color: "WHITE"
+                            // layer.enabled: true
+                            // layer.effect: Glow{
+                            //     anchors.fill: nameText
+                            //     source:nameText
+                            //     samples:radius*2+1
+                            //     radius:12
+                            //     spread:.1
+                            //      color:
+                            // }需改为使用qt6
+                        }
+                        Text{//作曲家文本
+                            id:artistsText
+                            width: parent.width
+                            height: contentHeight
+                            horizontalAlignment: Text.AlignLeft
+                            wrapMode: Text.Wrap
+                            font.pointSize: 15
+                            text: p_musicRes.thisPlayMusicInfo.artists
+                            color: "WHITE"
+                            // layer.enabled: true
+                            // layer.effect: Glow{
+                            //     anchors.fill: nameText
+                            //     source:nameText
+                            //     samples:radius*2+1
+                            //     radius:12
+                            //     spread:.1
+                            // }需改为使用qt6
+                        }
+                        Text{//专辑文本
+                            id:albumText
+                            width: parent.width
+                            height: contentHeight
+                            horizontalAlignment: Text.AlignLeft
+                            wrapMode: Text.Wrap
+                            font.pointSize: 15
+                            text: p_musicRes.thisPlayMusicInfo.album
+                            color: "WHITE"
+                            // layer.enabled: true
+                            // layer.effect: Glow{
+                            //     anchors.fill: nameText
+                            //     source:nameText
+                            //     samples:radius*2+1
+                            //     radius:12
+                            //     spread:.1
+                            // }需改为使用qt6
+                        }
+                    }
+                }
+            }
+            Item {//右侧内容
+                width: parent.width/2-parent.spacing
+                height: parent.height
+            }
+        }
     }
     ThisPlayerListLabel{
         id:thisPlayerListLabel
