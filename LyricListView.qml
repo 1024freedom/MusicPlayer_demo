@@ -30,8 +30,8 @@ Item {
         highlightMoveDuration: 500
         highlightRangeMode: ListView.StrictlyEnforceRange
         currentIndex: -1
-        interactive: false
         model: lyricListView.lyricData
+        interactive: false//禁用自带的滚动
         delegate: lyricDelegate
         spacing: 20
         clip: true
@@ -45,13 +45,11 @@ Item {
             width: children[0].width+30
             height: children[0].height+30
             radius: 12
-            color: if(isHovered)return "#2F000000"
+            color: if(isHovered)return "RED"
                         else return "#00000000"
 
             Behavior on color{
                 ColorAnimation {
-                    from: "#00000000"
-                    to: "#2F000000"
                     duration: 400
                     easing.type: Easing.OutCubic
                 }
@@ -70,7 +68,7 @@ Item {
                     font.pointSize: 15
                     font.bold: true
                     color: "WHITE"
-                    text: /*lyric*/"122222"
+                    text: lyric
                     onContentWidthChanged: function (contentWidth){
                         if(contentWidth>parent.childMaxWidth){
                             parent.childMaxWidth=contentWidth
@@ -85,7 +83,7 @@ Item {
                     font.pointSize: 15
                     font.bold: true
                     wrapMode: Text.Wrap
-                    text: /*tlrc*/"12334"
+                    text: tlrc
                     color: "WHITE"
                     onContentWidthChanged: function (contentWidth){
                         if(contentWidth>parent.childMaxWidth){

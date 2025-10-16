@@ -36,9 +36,6 @@ Item {
         if(thisPlayMusicInfo.id){
             getMuiscLyric({id:thisPlayMusicInfo.id,callBack:lyricCallBack})
         }
-
-
-
     }
     onThisPlayListInfoChanged: {
         randomPlayListIndex=Array.from({length:thisPlayListInfo.count},(_,index)=>index)//以下标生成数组并赋值
@@ -89,6 +86,86 @@ Item {
             }
         }
         xhr.open("GET","http://localhost:3000/top/song?type="+type,true)
+        xhr.send()
+    }
+
+    function parseLyric(lrc,tlrc) {
+        var i = 0
+        lrc = lrc.split('\n')
+        tlrc = tlrc.split('\n')
+
+        try {
+            if(Array.isArray(lrc)) {
+
+                for(i = 0; i < lrc.length;i++) {
+                    if(!lrc[i]) continue
+                    let t = lrc[i].match(/\[(.*?)\]\s*(.*)/)
+                    let tim = t[1].split(':')
+                    tim = parseInt(tim[0]) * 60*1000 + parseInt(parseFloat(tim[1])*1000)
+                    lrc[i] = {tim: tim, lyric: t[2],tlrc: ""}
+                }
+
+            }
+            if(Array.isArray(tlrc)) {
+
+                for(i = 0; i < tlrc.length;i++) {
+                    if(!tlrc[i]) continue
+                    let t = tlrc[i].match(/\[(.*?)\]\s*(.*)/)
+                    let tim = -1
+                    if(!t) {
+                        tlrc[i] = {tim: tim, lyric: ""}
+                        continue
+                    }
+                    tim = t[1].split(':')
+                    tim = parseInt(tim[0]) * 60*1000 + parseInt(parseFloat(tim[1])*1000)
+                    tlrc[i] = {tim: tim, lyric: t[2]}
+                }
+
+            }
+
+            if(Array.isArray(tlrc))
+            for(i = 0; i < lrc.length;i++) {
+                let index = tlrc.findIndex(r => lrc[i].tim === r.tim)
+                if(index !== -1) {
+                    lrc[i].tlrc = tlrc[index].lyric
+                }
+            }
+        } catch(err) {
+            console.log("歌词解析错误！" + err)
+            for(i = 0; i < lrc.length;i++) {
+               lrc[i] = { "lyric": lrc[i],"tlrc": "",tim: 0 }
+            }
+        }
+        lrc = lrc.filter(item => item.lyric)
+        return lrc
+    }
+
+
+    function getMuiscLyric(obj){//获取歌词
+        var id=obj.id||"0"
+        var callBack=obj.callBack||(()=>{})
+        var xhr=new XMLHttpRequest()
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState===XMLHttpRequest.DONE){
+                if(xhr.status===200){
+                    var res=JSON.parse(xhr.responseText)
+                    var lrc=res.lrc.lyric
+                    var lyric=null
+                    //特殊处理纯音乐
+                    if(res.hasOwnProperty("pureMusic")){
+                        console.log("纯音乐")
+                        lyric=parseLyric(lrc,"")
+                    }else{
+                        lyric=parseLyric(lrc,res.tlyric.lyric)
+                    }
+
+                    callBack(lyric)
+                }else{
+                    console.log("获取歌词失败")
+                }
+            }
+        }
+        xhr.open("GET","http://localhost:3000/lyric?id="+id,true)
         xhr.send()
     }
 
@@ -234,61 +311,4 @@ Item {
 
 
 
-
-    function getMuiscLyric(obj){//获取歌词
-        var id=obj.id||""
-        var callBack=obj.callBack||(()=>{})
-        var xhr=new XMLHttpRequest()
-        xhr.onreadystatechange=function(){
-            if(xhr.readyState===XMLHttpRequest.DONE){
-                if(xhr.status===200){
-                    var res=JSON.parse(xhr.responseText)
-                    var lrc=res.lrc.lyric
-                    var lyric=null
-                    //特殊处理纯音乐
-                    if(res.hasOwnProperty("pureMusic")){
-                        console.log("纯音乐")
-                        lyric=parseLyric(lrc,"")
-                    }else{
-                        lyric=parseLyric(lrc,res.tlyric.lyric)
-                    }
-
-                    callBack(res)
-                }else{
-                    console.log("获取歌词失败")
-                }
-            }
-        }
-        xhr.open("GET","http://localhost:3000/lyric?id="+id,true)
-        xhr.send()
-    }
-    function parseLyric(lrc,tlrc){//解析歌词
-        lrc=lrc.split("\n")
-        tlrc=tlrc.split("\n")
-        var i=0
-        var lyric={}
-        for(i=0;i<lrc.length;i++){//歌词
-            if(!lrc[i])continue
-            let t=lrc[i].match(/\[(.*?)\]\s*(.*)/)
-            let tim=t[1].split(":")
-            tim=parseInt(tim[0])*60*1000+parseInt(parseFloat(tim[1])*1000)//总毫秒
-            lrc[i]={tim:tim,lyric:t[2],tlrc:""}
-        }
-        for(i=0;i<tlrc.length;i++){//翻译歌词
-            if(!tlrc[i])continue
-            let t=tlrc[i].match(/\[(.*?)\]\s*(.*)/)
-            let tim=t[1].split(":")
-            tim=parseInt(tim[0])*60*1000+parseInt(parseFloat(tim[1])*1000)
-            tlrc[i]={tim:tim,tlrc:t[2]}
-        }
-        for(i=0;i<lrc.length;i++){
-            let index=tlrc.findIndex(item=>item.tim===lrc[i].tim)
-            if(index!==-1){
-                lrc[i].tlrc=tlrc[index].tlrc
-            }
-        }
-        //去掉空的字段
-        lrc=lrc.filter(item=>item.lyric)
-        return lrc
-    }
 }
