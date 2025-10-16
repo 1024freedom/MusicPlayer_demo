@@ -29,7 +29,7 @@ Item {
         console.log("播放歌曲信息"+JSON.stringify(thisPlayMusicInfo))
 
         var lyricCallBack=res=>{
-            // console.log("歌词"+JSON.stringify(res))
+            console.log("歌词"+JSON.stringify(res))
             thisPlayMusicLyric.clear()
             thisPlayMusicLyric.append(res)
         }
@@ -271,7 +271,7 @@ Item {
             if(!lrc[i])continue
             let t=lrc[i].match(/\[(.*?)\]\s*(.*)/)
             let tim=t[1].split(":")
-            tim=parseInt(tim[0])*60*1000+parseInt(parseFloat(tim[1])*1000)
+            tim=parseInt(tim[0])*60*1000+parseInt(parseFloat(tim[1])*1000)//总毫秒
             lrc[i]={tim:tim,lyric:t[2],tlrc:""}
         }
         for(i=0;i<tlrc.length;i++){//翻译歌词

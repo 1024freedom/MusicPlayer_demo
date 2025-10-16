@@ -278,6 +278,9 @@ Item {
             Item {//右侧内容
                 width: parent.width/2-parent.spacing
                 height: parent.height
+                LyricListView{
+                    lyricData: p_musicRes.thisPlayMusicLyric
+                }
             }
         }
     }
