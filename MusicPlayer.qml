@@ -29,6 +29,9 @@ MediaPlayer {
     audioOutput: AudioOutput{
         volume: p_musicPlayer.volume
     }
+
+
+
     onSourceChanged: {
         play()
     }

@@ -279,7 +279,11 @@ Item {
                 width: parent.width/2-parent.spacing
                 height: parent.height
                 LyricListView{
+                    id:lyricListView
+                    width: parent.width
+                    height: parent.height
                     lyricData: p_musicRes.thisPlayMusicLyric
+                    mediaPlayer: p_musicPlayer
                 }
             }
         }
@@ -298,6 +302,7 @@ Item {
         Item {
             width: parent.width-30
             height: parent.height-30
+            anchors.centerIn: parent
             Column {
                 id:footerContent
                 width: 350
@@ -410,7 +415,7 @@ Item {
                         font.pointSize: 10
                         width: contentWidth
                         height: contentHeight
-                        text: "00:00"
+                        text: p_musicRes.setTime(footerSlider.value)
                         color: "WHITE"
                     }
                     Slider{
@@ -460,7 +465,7 @@ Item {
                         font.pointSize: 10
                         width: contentWidth
                         height: contentHeight
-                        text: "00:00"
+                        text: p_musicRes.setTime(p_musicRes.thisPlayMusicInfo.allTime)
                         color: "WHITE"
                     }
                 }
