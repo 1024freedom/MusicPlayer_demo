@@ -25,10 +25,10 @@ Item {
     //     }
     // }
     Image {
+        id: img
         anchors.verticalCenter: parent.verticalCenter
         width: parent.imgWidth
         height: parent.imgHeight
-        id: img
         source: parent.source
         fillMode: Image.PreserveAspectCrop//图片适配模式
     }

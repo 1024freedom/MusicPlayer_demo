@@ -223,16 +223,35 @@ ListView {
             height: 30
             anchors.centerIn: parent
             spacing: 10
-            Text {
+            Row{
                 width: parent.width*0.15-40
+                height: 35
                 anchors.verticalCenter: parent.verticalCenter
-                horizontalAlignment: Text.AlignHCenter
-                font.weight: 2
-                font.pointSize:fontSize
-                elide: Text.ElideRight
-                color: thisTheme.fontColor
-                text: index+1
+                spacing: 5
+                Text {
+                    anchors.verticalCenter: parent.verticalCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    font.weight: 2
+                    font.pointSize:fontSize
+                    elide: Text.ElideRight
+                    color: thisTheme.fontColor
+                    text: index+1
+                }
+                ToolTipButtom{//添加喜欢按钮
+                    id:playerModeIcon
+                    width: 20
+                    height: width
+                    anchors.verticalCenter: parent.verticalCenter
+                    source:"qrc:/like"
+                    hoveredColor: thisTheme.subBackgroundColor
+                    color: "#00000000"
+                    onClicked: {
+
+                    }
+                }
             }
+
+
             Text {
                 width: parent.width*0.3
                 anchors.verticalCenter: parent.verticalCenter

@@ -10,6 +10,7 @@ find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
 #添加
 set(CMAKE_AUTORCC ON)
 find_package(Qt6 REQUIRED COMPONENTS Quick QuickEffects)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 #
 qt_add_executable(appMusicPlayer_demo
     main.cpp
@@ -41,6 +42,7 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES ThisPlayerListLabel.qml
     QML_FILES PageMusicLyricDetail.qml
     QML_FILES LyricListView.qml
+    SOURCES favoritemanager.h favoritemanager.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -56,6 +58,7 @@ set_target_properties(appMusicPlayer_demo PROPERTIES
 
 target_link_libraries(appMusicPlayer_demo
     PRIVATE Qt6::Quick)
+target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
 
 include(GNUInstallDirs)
 install(TARGETS appMusicPlayer_demo

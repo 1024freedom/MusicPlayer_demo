@@ -7,6 +7,7 @@ Item {
     width: parent.width
     height: parent.height
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property string backgroundColor: "BLACK"//大背景默认黑色
 
     Component.onCompleted: {
         y=parent.height
@@ -16,8 +17,17 @@ Item {
     Rectangle{
         id:backGround
         anchors.fill: parent
-        color:"BLACK"
+        color:musicLyricPage.backgroundColor
     }
+
+    // function extractRandomColor(){
+    //     var imgWidth=coverImg.imgWidth
+    //     var imgHeight=coverImg.imgHeight
+    //     var randomX=Math.floor(Math.random()*imgWidth)
+    //     var randomY=Math.floor(Math.random()*imgHeight)
+    //     //获取像素的argb值
+    //     const imgARGB = coverImg.source
+    // }
 
     MouseArea{
         id: header
@@ -193,8 +203,8 @@ Item {
                         id:leftContentCover
                         width: parent.width*0.5
                         height: width
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        RoundImage{
+                        anchors.horizontalCenter:parent.horizontalCenter
+                        RoundImage{//封面图片
                             id:coverImg
                             width: parent.width
                             height: width
