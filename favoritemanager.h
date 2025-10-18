@@ -15,7 +15,7 @@ class FavoriteManager: public QObject {
     Q_PROPERTY(QJsonArray data READ data WRITE setData NOTIFY dataChanged FINAL)
     Q_PROPERTY(QString savePath READ savePath WRITE setSavePath NOTIFY savePathChanged FINAL)
 public:
-    FavoriteManager(QObject* parent = nullptr);
+    explicit FavoriteManager(QObject* parent = nullptr);
     //Q_INVOKABLE 将类的成员函数注册到qt元对象系统，让函数具备“可被元对象系统识别和调用的能力”，用于QML与c++交互，无元对象系统支持时，QML无法调用
     Q_INVOKABLE void append(const QJsonValue& obj);
     Q_INVOKABLE void remove(const QString& id);
@@ -41,6 +41,6 @@ private slots:
     void onDataValueChanged();
 
 
-}
+};
 
 #endif // FAVORITEMANAGER_H

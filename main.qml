@@ -30,6 +30,11 @@ FramelessWindow {
         source: p_musicRes.thisPlayMusicInfo.url
     }
 
+    FavoriteManager{
+        id:p_favoriteManager
+        savePath: "userInfo/favoriteMusic.json"
+    }
+
     Column{
         id:mainPage
         anchors.fill: parent
@@ -131,7 +136,6 @@ FramelessWindow {
     // PageMusicLyricDetail{
     //     id:musicLyricPage
     // }
-
 
 
 }

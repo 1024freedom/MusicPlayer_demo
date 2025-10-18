@@ -239,14 +239,30 @@ ListView {
                 }
                 ToolTipButtom{//添加喜欢按钮
                     id:playerModeIcon
+                    property bool isFavorited: false
                     width: 20
                     height: width
                     anchors.verticalCenter: parent.verticalCenter
-                    source:"qrc:/like"
+                    source:if(isFavorited)return "qrc:/favorited"
+                                else return "qrc:/like"
                     hoveredColor: thisTheme.subBackgroundColor
                     color: "#00000000"
                     onClicked: {
-
+                        if(isFavorited){
+                            p_favoriteManager.remove(id)
+                            isFavorited=false
+                        }else{
+                            p_favoriteManager.append(contentListModel.get(index))
+                            isFavorited=true
+                        }
+                    }
+                    Component.onCompleted: {
+                        var index=p_favoriteManager.indexOf(id)
+                        if(index<=-1){
+                            isFavorited=false
+                        }else{
+                            isFavorited=true
+                        }
                     }
                 }
             }

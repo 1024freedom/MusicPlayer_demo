@@ -16,7 +16,7 @@ void FavoriteManager::setData(const QJsonArray &newData) {
     emit dataChanged();
 }
 
-QString FavoriteManager::savePath()const {
+QString FavoriteManager::savePath() const {
     return m_savePath;
 }
 
@@ -56,7 +56,7 @@ void FavoriteManager::remove(const QString &id) {
     emit dataValueChanged();
 }
 
-void FavoriteManager::readFile(const QString &filePath) {
+QJsonArray FavoriteManager::readFile(const QString &filePath) {
     QJsonArray jsonArr;
     QFileInfo fileInfo(filePath);
     QFile file(filePath);
