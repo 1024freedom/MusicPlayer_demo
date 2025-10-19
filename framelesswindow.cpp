@@ -169,7 +169,7 @@ void FramelessWindow::updateCursorIcon() {
         this->setCursor(Qt::ArrowCursor);
         break;
     default:
-        this->unsetCursor();
+        // this->unsetCursor();
         break;
     }
 }

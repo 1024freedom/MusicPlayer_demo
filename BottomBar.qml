@@ -263,6 +263,7 @@ Rectangle{
                     p_musicPlayer.nextMusicPlay()
                 }
             }
+
             Component.onCompleted: {
                 var w=0
                 for(var i=0;i<children.length;i++){
@@ -291,10 +292,35 @@ Rectangle{
                 color: thisTheme.fontColor
                 anchors.verticalCenter: parent.verticalCenter
             }
+
             BottomBarVolumeBtn{
 
             }
 
+            ToolTipButtom{
+                property bool isClicked: false
+                property bool isShow: false
+                width: 20
+                height: width
+                anchors.verticalCenter: parent.verticalCenter
+                source:if(!isClicked)return "qrc:/lyricforclicked"
+                            else return "qrc:/lyricclicked"
+                hoveredColor: thisTheme.subBackgroundColor
+                color: "#00000000"
+                onClicked: {
+                    isClicked=!isClicked
+                    isShow=!isShow
+                    if(isShow){
+                        var cmp=Qt.createComponent("DeskTopLyric.qml")
+                        if(cmp.status===Component.Ready){
+                            cmp=cmp.createObject()
+                            cmp.mediaPlayer=p_musicPlayer
+                            cmp.lyricData=p_musicRes.thisPlayMusicLyric
+                            cmp.show()
+                        }
+                    }
+                }
+            }
             ToolTipButtom{
                 width: 20
                 height: width

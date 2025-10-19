@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include "framelesswindow.h"
 #include "favoritemanager.h"
+#include "desktoplyric.h"
 
 int main(int argc, char* argv[]) {
     QGuiApplication app(argc, argv);
@@ -11,6 +12,7 @@ int main(int argc, char* argv[]) {
 
     qmlRegisterType<FramelessWindow>("sz.window", 1, 0, "FramelessWindow");
     qmlRegisterType<FavoriteManager>("sz.window", 1, 0, "FavoriteManager");
+    qmlRegisterType<DesktopLyric>("sz.window", 1, 0, "DesktopLyric");
 
     QObject::connect(
         &engine,

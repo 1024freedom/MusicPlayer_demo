@@ -22,5 +22,7 @@
         <file alias="detailpackup">向下收起.png</file>
         <file alias="favorited">已喜欢.png</file>
         <file alias="next">下一个.png</file>
+        <file alias="lyricforclicked">歌词未点击.png</file>
+        <file alias="lyricclicked">歌词已点击.png</file>
     </qresource>
 </RCC>

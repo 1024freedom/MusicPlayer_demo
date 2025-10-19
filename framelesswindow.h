@@ -79,7 +79,7 @@ private:
     void handleWindowMove(const QPointF& globalMousePos);
 
     int m_borderWidth = 10;           // 边框宽度
-    int m_titleBarHeight = 40;       // 标题栏高度
+    int m_titleBarHeight = 60;       // 标题栏高度
 
     MousePosition m_mousePosition = MousePosition::NORMAL;
     bool m_isResizing = false;
