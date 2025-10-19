@@ -48,6 +48,41 @@ Rectangle{
                     text: qsTr("Wings of Freedom")
                     color: thisTheme.fontColor
                 }
+                Row{
+                    width: 70
+                    height: 35
+                    anchors.verticalCenter: parent.verticalCenter
+                    spacing: 20
+                    ToolTipButtom{
+                        id:pageNextMoveButton
+                        // property bool isActived: false
+                        width: 17
+                        height: width
+                        rotation: 180
+                        transformOrigin: Item.Center
+                        anchors.verticalCenter: parent.verticalCenter
+                        source:"qrc:/next"
+                        hoveredColor: thisTheme.subBackgroundColor
+                        color: "#00000000"
+                        onClicked: {
+                            rightContent.preStep()
+                        }
+                    }
+                    ToolTipButtom{
+                        id:pagePreMoveButton
+                        width: 17
+                        height: width
+                        transformOrigin: Item.Center
+                        anchors.verticalCenter: parent.verticalCenter
+                        source:"qrc:/next"
+                        hoveredColor: thisTheme.subBackgroundColor
+                        color: "#00000000"
+                        onClicked: {
+                            rightContent.nextStep()
+                        }
+                    }
+                }
+
                 Component.onCompleted: {
                     width=children[0].width+children[1].contentWidth+parent.spacing
                 }

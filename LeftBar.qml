@@ -135,8 +135,12 @@ Rectangle{
                     anchors.fill: parent
                     hoverEnabled: true
                     onClicked: {
-                        leftBar.thisQml=qml
-                        leftBar.thisBtnText=btnText
+                        let func=()=>{
+                            leftBar.thisQml=qml
+                            leftBar.thisBtnText=btnText
+                        }
+                        func()
+                        rightContent.pushStep({name:btnText,callBack:func})
                     }
                     onEntered: {
                         parent.isHovered=true

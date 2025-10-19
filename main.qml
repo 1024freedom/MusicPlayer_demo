@@ -67,6 +67,15 @@ FramelessWindow {
                         when:leftBar.thisBtnText!==""
                         value:leftBar.thisQml
                     }
+                    Component.onCompleted: {
+                        let qml=leftBar.thisQml
+                        let btnText=leftBar.thisBtnText
+                        let func=()=>{
+                            leftBar.thisQml=qml
+                            leftBar.thisBtnText=btnText
+                        }
+                        rightContent.pushStep({name:btnText,callBack:func})
+                    }
                 }
             }
         }

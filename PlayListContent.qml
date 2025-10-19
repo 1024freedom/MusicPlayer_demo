@@ -262,10 +262,17 @@ Item {
                 imgSource: coverImg+"?param="+200+"y"+200
                 text: name
                 onClicked: {
-                    leftBar.thisBtnText=""
-                    rightContent.thisQml="PlayListDetail.qml"
+                    let lb=leftBar
+                    let rc=rightContent
+                    let playListInfo={id:id,name:name,description:description,coverImg:coverImg}
+                    let func=()=>{
+                        lb.thisBtnText=""
+                        rc.thisQml="PlayListDetail.qml"
+                        rc.loadItem.playListInfo=playListInfo
+                    }//注意使用变量而不是直接写在回调函数中的原因
+                    func()
+                    rightContent.pushStep({name:name,callBack:func})
 
-                    rightContent.loadItem.playListInfo={id:id,name:name,description:description,coverImg:coverImg}
 
                     console.log("标签被点击")
                 }

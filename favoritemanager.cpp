@@ -62,7 +62,6 @@ void FavoriteManager::remove(const QString &id) {
 
 QJsonArray FavoriteManager::readFile(const QString &filePath) {
     QJsonArray jsonArr;
-    QFileInfo fileInfo(filePath);
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly)) {
         return jsonArr;
