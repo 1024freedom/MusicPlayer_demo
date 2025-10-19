@@ -3,10 +3,32 @@ import sz.window
 import QtQuick.Layouts
 Rectangle{
     id:titleBar
+
+
+
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
     MouseArea{
+
+        // 关键：添加MouseArea并允许事件传递
+
+       anchors.fill: parent
+       // 允许事件传递到C++窗口（核心属性）
+       propagateComposedEvents: true
+       // 拦截鼠标按下事件（用于窗口移动），但传递移动事件
+       onPressed: {
+           // 可选：如果需要标题栏移动窗口，可在这里发送信号给C++
+           // 不需要则留空，仅保证事件传递
+       }
+       // 必须显式传递鼠标移动事件
+       onMouseXChanged: {
+
+           mouse.accepted = false;  // 不拦截，让事件传递到C++层
+       }
+       onMouseYChanged: {
+           mouse.accepted = false;
+       }
+
         property var click_pos: Qt.point(0,0)
-        anchors.fill: parent
         onPositionChanged: function(mouse){
             if(!pressed)return
             if(!window.startSystemMove()){
