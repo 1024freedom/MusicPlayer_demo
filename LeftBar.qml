@@ -14,7 +14,7 @@ Rectangle{
             },
         {headerText:"我的音乐",
             btnData:[
-                {btnText:"我的收藏",btnIcon:"qrc:/like",qml:"",isActive:true},
+                {btnText:"我的收藏",btnIcon:"qrc:/like",qml:"PageFavoriteMusicDetail.qml",isActive:true},
                 {btnText:"最近播放",btnIcon:"qrc:/recent",qml:"",isActive:true},
                 {btnText:"本地音乐",btnIcon:"qrc:/local",qml:"",isActive:true},
                 {btnText:"下载",btnIcon:"qrc:/download",qml:"",isActive:true}
@@ -28,7 +28,7 @@ Rectangle{
 
     property var thisData: filterLeftBarData(leftBarData)
     property string thisQml: "PageFindMusic.qml"
-    property string thisBtnText: "发现音乐"
+    property string thisBtnText: "乐库"
     property int count: thisData.length
     property int btnHeight: 40
     property int fontSize: 11
@@ -135,8 +135,8 @@ Rectangle{
                     anchors.fill: parent
                     hoverEnabled: true
                     onClicked: {
-                        leftBar.thisBtnText=btnText
                         leftBar.thisQml=qml
+                        leftBar.thisBtnText=btnText
                     }
                     onEntered: {
                         parent.isHovered=true

@@ -17,7 +17,7 @@ class FavoriteManager: public QObject {
 public:
     explicit FavoriteManager(QObject* parent = nullptr);
     //Q_INVOKABLE 将类的成员函数注册到qt元对象系统，让函数具备“可被元对象系统识别和调用的能力”，用于QML与c++交互，无元对象系统支持时，QML无法调用
-    Q_INVOKABLE void append(const QJsonValue& obj);
+    Q_INVOKABLE void append(const QJsonObject& obj);
     Q_INVOKABLE void remove(const QString& id);
     Q_INVOKABLE int indexOf(const QString& findId);
 

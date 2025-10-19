@@ -1,7 +1,7 @@
 import QtQuick
 
 ListView {
-    id: playListDetail
+    id: favoriteMusicDetail
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
     property var playListInfo: null
     property int fontSize: 11
@@ -10,26 +10,6 @@ ListView {
 
     currentIndex: -1
     clip: true
-
-    onPlayListInfoChanged: {
-        headerItem.id=playListInfo.id
-        headerItem.nameText=playListInfo.name
-        headerItem.coverImg=playListInfo.coverImg
-        headerItem.descriptionText=playListInfo.description
-
-        var musicDetailCallBack=res=>{
-            contentListModel.append(res)
-            console.log(JSON.stringify(res[0]))
-        }
-
-        var musicPlayDetailCallBack=res=>{
-            var ids=res.trackIds.join(',')
-            console.log(JSON.stringify(res))
-            p_musicRes.getMusicDetail({ids:ids,callBack:musicDetailCallBack})
-        }
-
-        p_musicRes.getMusicPlayListDetail({id:playListInfo.id,callBack:musicPlayDetailCallBack})
-    }
 
     onCountChanged: {
         contentItemBackground.height=count*80+30
@@ -51,7 +31,7 @@ ListView {
     header: Item {
         id: header
         property string id: ""
-        property string nameText: ""
+        property string nameText: "我的收藏"
         property string coverImg: ""
         property string descriptionText: ""
         width: parent.width-60
@@ -82,7 +62,7 @@ ListView {
                     spacing: 15
                     Text {
                         width: parent.width
-                        font.pointSize: playListDetail.fontSize
+                        font.pointSize: favoriteMusicDetail.fontSize
                         elide: Text.ElideRight
                         color: thisTheme.subBackgroundColor
                         text: "歌单"
@@ -96,7 +76,7 @@ ListView {
                     }
                     Text {
                         width: parent.width
-                        font.pointSize: playListDetail.fontSize
+                        font.pointSize: favoriteMusicDetail.fontSize
                         elide: Text.ElideRight
                         color: thisTheme.fontColor
                         text: header.descriptionText
@@ -200,13 +180,21 @@ ListView {
         color: "#00000000"
     }
 
+
     model: ListModel{
         id:contentListModel
+        Component.onCompleted: {
+            var jsonArry=p_favoriteManager.data
+            append(jsonArry)
+            console.log("收藏数据："+jsonArry)
+            favoriteMusicDetail.headerItem.coverImg=get(0).coverImg//第一首歌的coverimg作为头图
+
+        }
     }
 
     delegate: Rectangle{
         property bool isHovered: false
-        width: playListDetail.width-80
+        width: favoriteMusicDetail.width-80
         height: 80
         radius: 12
         color: if(currentIndex===index)
@@ -343,9 +331,9 @@ ListView {
     }
     Rectangle{
         id:contentItemBackground
-        parent: playListDetail.contentItem
+        parent: favoriteMusicDetail.contentItem
         y:-15
-        width: playListDetail.width-50
+        width: favoriteMusicDetail.width-50
         anchors.horizontalCenter: parent.horizontalCenter
         radius: 12
     }

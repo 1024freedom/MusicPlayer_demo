@@ -2,9 +2,17 @@
 
 FavoriteManager::FavoriteManager(QObject* parent): QObject(parent) {
     m_data = readFile(m_savePath);
+    connect(this, &FavoriteManager::dataValueChanged, this, &FavoriteManager::onDataValueChanged);
 }
 
 QJsonArray FavoriteManager::data() const {
+    // int cnt=m_data.count();
+    // for(in i=0;i<cnt;i++){
+    //     QJsonObject obj = m_data.at(i).toObject();
+    //     if (obj.contains("coverImg"))
+    //         qDebug() << "  coverImg:" << obj["coverImg"].toString();
+    // }
+
     return m_data;
 }
 
@@ -28,22 +36,18 @@ void FavoriteManager::setSavePath(const QString &newSavePath) {
     emit savePathChanged();
 }
 
-void FavoriteManager::append(const QJsonValue &obj) {
-    QJsonArray jsonArr = obj.toArray();
-    if (jsonArr.isEmpty()) {
-        if (indexOf(QString::number(obj["id"].toInteger())) <= -1) {
-            return;
-        }
-        m_data.insert(0, obj);
-    } else {
-        for (int i = 0; i < jsonArr.count(); i++) {
-            QString id = QString::number(jsonArr.at(i).toObject()["id"].toInteger());
-            if (indexOf(id) <= -1) {
-                continue;
-            }
-            m_data.insert(0, jsonArr.at(i));
-        }
+void FavoriteManager::append(const QJsonObject &obj) {
+    // QJsonArray jsonArr = obj.toArray();
+    // if (jsonArr.isEmpty()) {
+    //     m_data.insert(0, obj);
+    // } else {
+    //     for (int i = 0; i < jsonArr.count(); i++) {
+    QString id = QString::number(/*jsonArr.at(i).toObject()*/obj["id"].toInt());
+    if (indexOf(id) <= -1) {
+        m_data.insert(0, /*jsonArr.at(i)*/obj);
     }
+    //     }
+    // }
     emit dataValueChanged();
 }
 
@@ -76,7 +80,7 @@ QJsonArray FavoriteManager::readFile(const QString &filePath) {
 }
 
 void FavoriteManager::writeFile(const QString &filePath, const QJsonArray &obj) {
-    QJsonDocument jsonDoc;
+    QJsonDocument jsonDoc(obj);
     QFileInfo fileInfo(filePath);
     QDir dir = fileInfo.absoluteDir();
     if (!dir.exists()) { //检查当前路径是否存在，不存在则创建
@@ -93,12 +97,12 @@ void FavoriteManager::writeFile(const QString &filePath, const QJsonArray &obj) 
 
 int FavoriteManager::indexOf(const QString &findId) {
     for (int i = 0; i < m_data.count(); i++) {
-        QString id = QString::number(m_data.at(i).toObject()["id"].toInteger());
+        QString id = QString::number(m_data.at(i).toObject()["id"].toInt());
         if (id == findId) {
             return i;
         }
-        return -1;
     }
+    return -1;
 }
 
 void FavoriteManager::onDataValueChanged() {
