@@ -300,6 +300,7 @@ Rectangle{
             ToolTipButtom{
                 property bool isClicked: false
                 property bool isShow: false
+                property var deskTopLyric: null
                 width: 20
                 height: width
                 anchors.verticalCenter: parent.verticalCenter
@@ -310,14 +311,17 @@ Rectangle{
                 onClicked: {
                     isClicked=!isClicked
                     isShow=!isShow
+                    var cmp=Qt.createComponent("DeskTopLyric.qml")
                     if(isShow){
-                        var cmp=Qt.createComponent("DeskTopLyric.qml")
                         if(cmp.status===Component.Ready){
-                            cmp=cmp.createObject()
-                            cmp.mediaPlayer=p_musicPlayer
-                            cmp.lyricData=p_musicRes.thisPlayMusicLyric
-                            cmp.show()
+                            deskTopLyric=cmp.createObject()
+                            deskTopLyric.mediaPlayer=p_musicPlayer
+                            deskTopLyric.lyricData=p_musicRes.thisPlayMusicLyric
+                            deskTopLyric.show()
                         }
+                    }else if(deskTopLyric){
+                        deskTopLyric.destroy()
+                        deskTopLyric = null
                     }
                 }
             }
