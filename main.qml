@@ -32,7 +32,7 @@ FramelessWindow {
 
     FavoriteManager{
         id:p_favoriteManager
-        savePath: "userInfo/favoriteMusic.json"
+        // savePath: "userInfo/favoriteMusic.json"
     }
 
     Column{

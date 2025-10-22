@@ -184,8 +184,8 @@ ListView {
     model: ListModel{
         id:contentListModel
         Component.onCompleted: {
-            var jsonArry=p_favoriteManager.data
-            append(jsonArry)
+            var jsonArray=JSON.parse(p_favoriteManager.data)
+            append(jsonArray)
             console.log("收藏数据："+jsonArry)
             favoriteMusicDetail.headerItem.coverImg=get(0).coverImg//第一首歌的coverimg作为头图
 

@@ -9,36 +9,58 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QJsonDocument>
+#include <Qtsql/QSqlDatabase>
+#include <Qtsql/QSqlQuery>
+#include <Qtsql/QSqlError>
+#include <QVariant>
+#include <QDateTime>
 
 class FavoriteManager: public QObject {
     Q_OBJECT
-    Q_PROPERTY(QJsonArray data READ data WRITE setData NOTIFY dataChanged FINAL)
-    Q_PROPERTY(QString savePath READ savePath WRITE setSavePath NOTIFY savePathChanged FINAL)
+    Q_PROPERTY(QJsonArray data READ data WRITE refreshData NOTIFY dataChanged FINAL)
+    Q_PROPERTY(QString databasePath READ databasePath WRITE setDatabasePath NOTIFY databasePathChanged FINAL)
 public:
     explicit FavoriteManager(QObject* parent = nullptr);
+    ~FavoriteManager();
     //Q_INVOKABLE 将类的成员函数注册到qt元对象系统，让函数具备“可被元对象系统识别和调用的能力”，用于QML与c++交互，无元对象系统支持时，QML无法调用
     Q_INVOKABLE void append(const QJsonObject& obj);
     Q_INVOKABLE void remove(const QString& id);
     Q_INVOKABLE int indexOf(const QString& findId);
+    // Q_INVOKABLE void clearAll();
 
     QJsonArray data()const;
-    void setData(const QJsonArray &newData);
+    void refreshData(const QJsonArray& newData);
 
-    QString savePath()const;
-    void setSavePath(const QString &newSavePath);
+    QString databasePath()const;
+    void setDatabasePath(const QString &newDatabasePath);
 
 private:
-    QJsonArray readFile(const QString& filePath);
-    void writeFile(const QString& filePath, const QJsonArray& obj);
+    // QJsonArray readFile(const QString& filePath);
+    // void writeFile(const QString& filePath, const QJsonArray& obj);
 
-    QJsonArray m_data;//存储数据
-    QString m_savePath = "userInfo/favoriteMusic.json"; //文件保存路径
+    // QJsonArray m_data;//存储数据
+    // QString m_savePath = "userInfo/favoriteMusic.json"; //文件保存路径
+
+    bool initializeDatabase();
+    bool createTable();
+    QJsonArray loadAllFavorites();//从数据库获取数据转为json
+    bool addFavorite(const QJsonObject& obj);
+    bool deleteFavorite(const QString& id);
+    bool favoriteExists(const QString& id);
+
+    QSqlDatabase m_database;
+    QJsonArray m_data;
+    QString m_databasePath = "userInfo/favoriteMusic.db"; //数据库文件路径
+
 signals:
-    void dataValueChanged();
+    // void dataValueChanged();
+    // void dataChanged();
+    // void savePathChanged();
+
     void dataChanged();
-    void savePathChanged();
+    void databasePathChanged();
 private slots:
-    void onDataValueChanged();
+    // void onDataValueChanged();
 
 
 };

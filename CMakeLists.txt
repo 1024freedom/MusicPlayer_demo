@@ -11,6 +11,7 @@ find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
 set(CMAKE_AUTORCC ON)
 find_package(Qt6 REQUIRED COMPONENTS Quick QuickEffects)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Qml Sql)
 #
 qt_add_executable(appMusicPlayer_demo
     main.cpp
@@ -59,9 +60,14 @@ set_target_properties(appMusicPlayer_demo PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+
+
+
+
 target_link_libraries(appMusicPlayer_demo
     PRIVATE Qt6::Quick)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
+target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Qml Qt6::Sql)
 
 include(GNUInstallDirs)
 install(TARGETS appMusicPlayer_demo
