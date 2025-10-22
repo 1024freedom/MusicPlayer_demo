@@ -184,10 +184,12 @@ ListView {
     model: ListModel{
         id:contentListModel
         Component.onCompleted: {
-            var jsonArray=JSON.parse(p_favoriteManager.data)
-            append(jsonArray)
-            console.log("收藏数据："+jsonArry)
-            favoriteMusicDetail.headerItem.coverImg=get(0).coverImg//第一首歌的coverimg作为头图
+            var data=p_favoriteManager.data
+            for(var i=0;i<data.length;i++){
+                append(data[i])
+            }
+
+            favoriteMusicDetail.headerItem.coverImg=contentListModel.get(0).coverImg//第一首歌的coverimg作为头图
 
         }
     }
@@ -268,7 +270,7 @@ ListView {
                         color: "#00000000"
                         onClicked: {
                             if(isFavorited){
-                                p_favoriteManager.remove(id)
+                                p_favoriteManager.remove(model.id)
                                 isFavorited=false
                             }else{
                                 p_favoriteManager.append(contentListModel.get(index))
@@ -277,11 +279,7 @@ ListView {
                         }
                         Component.onCompleted: {
                             var index=p_favoriteManager.indexOf(id)
-                            if(index<=-1){
-                                isFavorited=false
-                            }else{
-                                isFavorited=true
-                            }
+                            isFavorited=(index!==-1)
                         }
                     }
                 }
@@ -293,7 +291,7 @@ ListView {
                     font.pointSize:fontSize
                     elide: Text.ElideRight
                     color: thisTheme.fontColor
-                    text: name
+                    text: model.name
                 }
                 Text {
                     width: parent.width*0.25
@@ -303,7 +301,7 @@ ListView {
                     font.pointSize: fontSize
                     elide: Text.ElideRight
                     color: thisTheme.fontColor
-                    text: artists
+                    text: model.artists
                 }
                 Text {
                     width: parent.width*0.2
@@ -313,7 +311,7 @@ ListView {
                     font.pointSize: fontSize
                     elide: Text.ElideRight
                     color: thisTheme.fontColor
-                    text: album
+                    text: model.album
                 }
                 Text {
                     width: parent.width*0.1
@@ -323,7 +321,7 @@ ListView {
                     font.pointSize: fontSize
                     elide: Text.ElideRight
                     color: thisTheme.fontColor
-                    text: allTime
+                    text: model.allTime
                 }
             }
 

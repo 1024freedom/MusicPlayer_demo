@@ -164,7 +164,7 @@ bool FavoriteManager::createTable() {
     return true;
 }
 
-QJsonArray FavoriteManager::data() const {
+QVariantList FavoriteManager::data() const {
     return m_data;
 }
 
@@ -189,8 +189,18 @@ void FavoriteManager::setDatabasePath(const QString &newDatabasePath) {
     emit databasePathChanged();
 }
 
-void FavoriteManager::append(const QJsonObject &obj) {
-    QString id = QString::number(obj["id"].toInt());
+// void FavoriteManager::append(const QJsonObject &obj) {
+//     QString id = QString::number(obj["id"].toInt());
+//     if (!favoriteExists(id)) {
+//         if (addFavorite(obj)) {
+//             refreshData(loadAllFavorites());
+//         } else {
+//             qDebug() << "添加收藏失败";
+//         }
+//     }
+// }
+void FavoriteManager::append(const QVariantMap& obj) {
+    QString id = obj["id"].toString();
     if (!favoriteExists(id)) {
         if (addFavorite(obj)) {
             refreshData(loadAllFavorites());
@@ -208,9 +218,19 @@ void FavoriteManager::remove(const QString &id) {
     }
 }
 
+// int FavoriteManager::indexOf(const QString &findId) {
+//     for (int i = 0; i < m_data.count(); i++) {
+//         QString id = QString::number(m_data.at(i).toObject()["id"].toInt());
+//         if (id == findId) {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
 int FavoriteManager::indexOf(const QString &findId) {
     for (int i = 0; i < m_data.count(); i++) {
-        QString id = QString::number(m_data.at(i).toObject()["id"].toInt());
+        QVariantMap item = m_data[i].toMap();
+        QString id = item["id"].toString();
         if (id == findId) {
             return i;
         }
@@ -218,17 +238,26 @@ int FavoriteManager::indexOf(const QString &findId) {
     return -1;
 }
 
-QJsonArray FavoriteManager::loadAllFavorites() {
-    QJsonArray favoritesArray;
+QVariantMap FavoriteManager::get(int index) const {
+    if (index >= 0 && index <= m_data.count()) {
+        return m_data[index].toMap();
+    }
+    return QVariantMap();
+}
+
+QVariantList FavoriteManager::loadAllFavorites() {
+    // QJsonArray favoritesArray;
+    QVariantList favoritesList;
     QSqlQuery query(m_database);
     QString selectSQL = "SELECT id, name, artists, album, coverImg, url, allTime FROM favorites ORDER BY create_time DESC"; //获取数据库中的数据
     if (!query.exec(selectSQL)) {
         qDebug() << "获取收藏数据失败";
-        return favoritesArray;
+        return favoritesList;
     }
 
     while (query.next()) {
-        QJsonObject favorite;
+        // QJsonObject favorite;
+        QVariantMap favorite;
         favorite["id"] = query.value("id").toString().toInt();
         favorite["name"] = query.value("name").toString();
         favorite["artists"] = query.value("artists").toString();
@@ -236,21 +265,22 @@ QJsonArray FavoriteManager::loadAllFavorites() {
         favorite["coverImg"] = query.value("coverImg").toString();
         favorite["url"] = query.value("url").toString();
         favorite["allTime"] = query.value("allTime").toString();
-        favoritesArray.append(favorite);
+        // favoritesArray.append(favorite);
+        favoritesList.append(favorite);
     }
 
-    qDebug() << "从数据库加载了" << favoritesArray.count() << "条数据";
-    return favoritesArray;
+    qDebug() << "从数据库加载了" << favoritesList.count() << "条数据";
+    return favoritesList;
 }
 
-bool FavoriteManager::addFavorite(const QJsonObject &obj) {
+bool FavoriteManager::addFavorite(const /*QJsonObject*/QVariantMap &obj) {
     QSqlQuery query(m_database);
     query.prepare(R"(
         INSERT INTO favorites (id, name, artists, album, coverImg, url, allTime)
         VALUES (:id, :name, :artists, :album, :coverImg, :url, :allTime)
     )");//命名参数占位符实现参数绑定
 
-    QString id = QString::number(obj["id"].toInt());
+    QString id = obj["id"].toString();
     query.bindValue(":id", id);
     query.bindValue(":name", obj["name"].toString());
     query.bindValue(":artists", obj["artists"].toString());
@@ -289,7 +319,7 @@ bool FavoriteManager::favoriteExists(const QString &id) {
     return query.value(0).toInt() > 0;
 }
 
-void FavoriteManager::refreshData(const QJsonArray& newData) {
+void FavoriteManager::refreshData(const QVariantList& newData) {
     if (m_data != newData) {
         m_data = newData;
         emit dataChanged();
