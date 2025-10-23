@@ -7,7 +7,7 @@ Item {
     width: parent.width
     height: parent.height
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
-    property string backgroundColor: "BLACK"//大背景默认黑色
+    property string backgroundColor: p_imageColor.getMainColors(p_musicRes.thisPlayMusicInfo.coverImg)
 
     Component.onCompleted: {
         y=parent.height

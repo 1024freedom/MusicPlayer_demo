@@ -12,6 +12,7 @@ set(CMAKE_AUTORCC ON)
 find_package(Qt6 REQUIRED COMPONENTS Quick QuickEffects)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Qml Sql)
+find_package(OpenMP)
 #
 qt_add_executable(appMusicPlayer_demo
     main.cpp
@@ -37,8 +38,6 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES PlayListLable.qml
     QML_FILES PlayListDetail.qml
     QML_FILES MusicPlayer.qml
-    QML_FILES
-    QML_FILES
     QML_FILES BottomBarVolumeBtn.qml
     QML_FILES ThisPlayerListLabel.qml
     QML_FILES PageMusicLyricDetail.qml
@@ -47,6 +46,8 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES PageFavoriteMusicDetail.qml
     SOURCES desktoplyric.h desktoplyric.cpp
     QML_FILES DeskTopLyric.qml
+    SOURCES imagecolor.h imagecolor.cpp
+    QML_FILES BackgroundManager.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -64,10 +65,17 @@ set_target_properties(appMusicPlayer_demo PROPERTIES
 
 
 
-target_link_libraries(appMusicPlayer_demo
-    PRIVATE Qt6::Quick)
+
+
+target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Quick)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Qml Qt6::Sql)
+if(OpenMP_CXX_FOUND)
+    message("支持")
+    target_link_libraries(appMusicPlayer_demo PUBLIC OpenMP::OpenMP_CXX)
+else()
+    message("不支持")
+endif()
 
 include(GNUInstallDirs)
 install(TARGETS appMusicPlayer_demo

@@ -128,6 +128,8 @@ bool FavoriteManager::initializeDatabase() {
     if (!m_database.open()) {
         qDebug() << "数据库打开失败";
         return false;
+    } else {
+        qDebug() << "数据库打开成功";
     }
 
     //建表
@@ -160,7 +162,6 @@ bool FavoriteManager::createTable() {
     query.exec("CREATE INDEX IF NOT EXISTS idx_create_time ON favorites (url)");
     query.exec("CREATE INDEX IF NOT EXISTS idx_create_time ON favorites (coverImg)");
 
-    qDebug() << "建表成功";
     return true;
 }
 

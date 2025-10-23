@@ -34,6 +34,9 @@ FramelessWindow {
         id:p_favoriteManager
         // savePath: "userInfo/favoriteMusic.json"
     }
+    ImageColor{
+        id:p_imageColor
+    }
 
     Column{
         id:mainPage
