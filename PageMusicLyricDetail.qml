@@ -7,27 +7,26 @@ Item {
     width: parent.width
     height: parent.height
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
-    property string backgroundColor: p_imageColor.getMainColors(p_musicRes.thisPlayMusicInfo.coverImg)
+    property string backgroundColor: "BLACK"//大背景
 
     Component.onCompleted: {
         y=parent.height
 
     }
 
-    Rectangle{
-        id:backGround
+    BackgroundManager{
+        id:backgroundManager
         anchors.fill: parent
-        color:musicLyricPage.backgroundColor
+        coverSource: p_musicRes.thisPlayMusicInfo.coverImg
+        backgroundOpacity: 0.85
+        colorCount: 4
     }
-
-    // function extractRandomColor(){
-    //     var imgWidth=coverImg.imgWidth
-    //     var imgHeight=coverImg.imgHeight
-    //     var randomX=Math.floor(Math.random()*imgWidth)
-    //     var randomY=Math.floor(Math.random()*imgHeight)
-    //     //获取像素的argb值
-    //     const imgARGB = coverImg.source
-    // }
+    Connections {
+            target: p_musicRes
+            function onThisPlayMusicInfoChanged() {
+                backgroundManager.coverSource = p_musicRes.thisPlayMusicInfo.coverImg
+            }
+        }
 
     MouseArea{
         id: header
