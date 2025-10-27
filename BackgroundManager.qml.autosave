@@ -68,10 +68,10 @@ Item {
             // }
 
         }
-        // Component.onCompleted: {
-        //     console.log("背景组件初始化完成")
-        //     _backgroundReady=true
-        // }
+        Component.onCompleted: {
+            console.log("背景组件初始化完成")
+            _backgroundReady=true
+        }
     }
 
     // Timer{//定时器调用避免过于迅速阻塞ui线程
@@ -264,113 +264,6 @@ Item {
         }
     }
 
-
-
-    // function extractColorsFromCover(coverUrl) {
-    //     if (_extractionInProgress) {
-    //         console.log("颜色提取正在进行中，跳过")
-    //         return
-    //     }
-        
-    //     _extractionInProgress = true
-    //     console.log("开始提取封面颜色:", coverUrl)
-        
-    //     // 创建临时图片用于分析
-    //     var tempImage = Qt.createQmlObject(`
-    //         import QtQuick 2.15
-    //         Image {
-    //             source: "${coverUrl}"
-    //             asynchronous: true
-    //             visible: false
-    //             cache: true
-    //             // 确保图片有最小尺寸
-    //             width: sourceSize.width > 0 ? sourceSize.width : 100
-    //             height: sourceSize.height > 0 ? sourceSize.height : 100
-    //             onStatusChanged: {
-    //                 console.log("图片状态变化:", status, "进度:", progress, "尺寸:", width, "x", height)
-    //             }
-    //         }
-    //     `, root)
-
-    //     var retryCount=0
-    //     var maxRetries=300//最大重试次数（由加载态到ready态的转换/等待尝试）
-
-    //     // 等待图片加载
-    //     var checkStatus = function() {
-    //         console.log("图片状态:", tempImage.status, "进度:", tempImage.progress)
-            
-    //         if (tempImage.status === Image.Ready) {
-    //             console.log("封面图片加载完成")
-    //             // 抓取图片用于颜色分析
-    //             tempImage.grabToImage(function(result) {
-    //                 if (result && result.image) {
-    //                     console.log("图片抓取成功，调用C++颜色提取")
-    //                     try {
-    //                         // 直接调用C++函数，不传递尺寸参数
-    //                         var colors = p_imageColor.getMainColors(result.image)
-    //                         console.log("C++颜色提取返回:", colors)
-    //                         applyColorsToBackground(colors)
-    //                     } catch (error) {
-    //                         console.error("调用C++颜色提取出错:", error)
-    //                         resetToDefaultColors()
-    //                     }
-    //                 } else {
-    //                     console.warn("图片抓取失败")
-    //                     resetToDefaultColors()
-    //                 }
-    //                 tempImage.destroy()
-    //                 _extractionInProgress = false
-    //             }) // 移除尺寸参数，使用默认尺寸
-                
-    //         } else if (tempImage.status === Image.Error) {
-    //             console.warn("封面加载失败:", coverUrl, "错误:", tempImage.errorString)
-    //             tempImage.destroy()
-    //             resetToDefaultColors()
-    //             _extractionInProgress = false
-    //         } else if(tempImage.status===Image.Loading&&tempImage.progress===1.0){
-    //             //进度为1但状态仍未loading为正常情况，需要等待状态变为Ready，不然会直接跳到未知状态的处理
-    //             if(retryCount<maxRetries){
-    //                 retryCount++
-    //                 Qt.callLater(checkStatus)
-    //             }else{
-    //                 console.warn("状态更新超时，尝试强制处理")
-    //                 //状态未更新时也尝试处理图片
-    //                 tempImage.grabToImage(function(result) {
-    //                     if (result && result.image) {
-    //                         console.log("图片抓取成功，调用C++颜色提取")
-    //                         try {
-    //                             // 直接调用C++函数，不传递尺寸参数
-    //                             var colors = p_imageColor.getMainColors(result.image)
-    //                             console.log("C++颜色提取返回:", colors)
-    //                             applyColorsToBackground(colors)
-    //                         } catch (error) {
-    //                             console.error("调用C++颜色提取出错:", error)
-    //                             resetToDefaultColors()
-    //                         }
-    //                     } else {
-    //                         console.warn("图片抓取失败")
-    //                         resetToDefaultColors()
-    //                     }
-    //                     tempImage.destroy()
-    //                     _extractionInProgress = false
-    //                 })
-    //             }
-
-    //         } else if (tempImage.progress < 1.0) {
-    //             // 继续等待加载
-    //             console.log("等待封面图片加载... 进度:", tempImage.progress)
-    //             Qt.callLater(checkStatus)
-    //         } else {
-    //             // 其他状态，安全处理
-    //             console.log("图片加载未知状态，重置")
-    //             tempImage.destroy()
-    //             resetToDefaultColors()
-    //             _extractionInProgress = false
-    //         }
-    //     }
-        
-    //     Qt.callLater(checkStatus)
-    // }
     
     /**
      * 应用颜色到背景
@@ -480,7 +373,6 @@ Item {
    Component.onCompleted: {
        console.log("BackgroundManager 初始化完成")
        resetToDefaultColors()
-       _backgroundReady = true
 
        // 延迟启动初始颜色提取，确保页面先显示
        if (coverSource) {
