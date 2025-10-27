@@ -245,18 +245,23 @@ Item {
     // === 公共属性 ===
     property url coverSource: ""  // 专辑封面源
     property real backgroundOpacity: 0.9  // 背景不透明度
-    property int colorCount: 4    // 提取颜色数量
+    property int colorCount: 3    // 提取颜色数量
+
+    property color defaultColor1: "#102B4B"
+    property color defaultColor2: "#37424B"
+    property color defaultColor3: "#2d2d2d"
     
     // 提取到的颜色
-    property color firstColor: "#1a1a1a"
-    property color secondColor: "#2d2d2d"
+    property color firstColor: "#102B4B"
+    property color secondColor: "#37424B"
     property color thirdColor: "#2d2d2d"
-    property color forthColor: "#2d2d2d"
-    property color fifthColor: "#2d2d2d"
+    // property color forthColor: "#2d2d2d"
+    // property color fifthColor: "#2d2d2d"
     
     // 内部属性
     property url _lastProcessedCover: ""
     property bool _extractionInProgress: false
+    property bool _backgroundReady: false
     
     // === 背景渲染 ===
     
@@ -276,35 +281,49 @@ Item {
             }
             GradientStop { 
                 id: gradientStop2
-                position: 0.25;
+                position: 0.5;
                 color: secondColor
             }
             GradientStop {
                 id: gradientStop3
-                position: 0.5;
+                position: 1.0;
                 color: thirdColor
             }
-            GradientStop {
-                id: gradientStop4
-                position: 0.75;
-                color: forthColor
-            }
-            GradientStop {
-                id: gradientStop5
-                position: 1.0;
-                color: fifthColor
-            }
+            // GradientStop {
+            //     id: gradientStop4
+            //     position: 0.75;
+            //     color: forthColor
+            // }
+            // GradientStop {
+            //     id: gradientStop5
+            //     position: 1.0;
+            //     color: fifthColor
+            // }
 
+        }
+        Component.onCompleted: {
+            console.log("背景组件初始化完成")
+            _backgroundReady=true
+        }
+    }
+
+    Timer{//定时器调用避免过于迅速阻塞ui线程
+        id:extractColorTimer
+        interval:2000;
+        repeat:false;
+        onTriggered:{
+            console.log("封面变化，开始提取颜色:", coverSource)
+            _lastProcessedCover = coverSource
+            extractColorsFromCover(coverSource)
         }
     }
     
     // === 颜色提取逻辑 ===
     
     onCoverSourceChanged: {
-        if (coverSource && coverSource !== _lastProcessedCover && !_extractionInProgress) {
-            console.log("封面变化，开始提取颜色:", coverSource)
-            extractColorsFromCover(coverSource)
-            _lastProcessedCover = coverSource
+        if (coverSource && coverSource !== _lastProcessedCover && !_extractionInProgress&&_backgroundReady) {//_backgroundReady控制颜色的提取与主组件加载异步进行，避免阻塞主页面ui界面的显示
+            resetToDefaultColors()
+            extractColorTimer.running=true
         }
     }
     
@@ -328,9 +347,18 @@ Item {
                 asynchronous: true
                 visible: false
                 cache: true
+                // 确保图片有最小尺寸
+                width: sourceSize.width > 0 ? sourceSize.width : 100
+                height: sourceSize.height > 0 ? sourceSize.height : 100
+                onStatusChanged: {
+                    console.log("图片状态变化:", status, "进度:", progress, "尺寸:", width, "x", height)
+                }
             }
         `, root)
-        
+
+        var retryCount=0
+        var maxRetries=300//最大重试次数（由加载态到ready态的转换/等待尝试）
+
         // 等待图片加载
         var checkStatus = function() {
             console.log("图片状态:", tempImage.status, "进度:", tempImage.progress)
@@ -365,7 +393,32 @@ Item {
                 _extractionInProgress = false
             } else if(tempImage.status===Image.Loading&&tempImage.progress===1.0){
                 //进度为1但状态仍未loading为正常情况，需要等待状态变为Ready，不然会直接跳到未知状态的处理
-
+                if(retryCount<maxRetries){
+                    retryCount++
+                    Qt.callLater(checkStatus)
+                }else{
+                    console.warn("状态更新超时，尝试强制处理")
+                    //状态未更新时也尝试处理图片
+                    tempImage.grabToImage(function(result) {
+                        if (result && result.image) {
+                            console.log("图片抓取成功，调用C++颜色提取")
+                            try {
+                                // 直接调用C++函数，不传递尺寸参数
+                                var colors = p_imageColor.getMainColors(result.image)
+                                console.log("C++颜色提取返回:", colors)
+                                applyColorsToBackground(colors)
+                            } catch (error) {
+                                console.error("调用C++颜色提取出错:", error)
+                                resetToDefaultColors()
+                            }
+                        } else {
+                            console.warn("图片抓取失败")
+                            resetToDefaultColors()
+                        }
+                        tempImage.destroy()
+                        _extractionInProgress = false
+                    })
+                }
 
             } else if (tempImage.progress < 1.0) {
                 // 继续等待加载
@@ -406,10 +459,10 @@ Item {
         var color1 = colors[0]
         var color2 = colors[1]
         var color3=colors[2]
-        var color4=colors[3]
-        var color5=colors[4]
+        // var color4=colors[3]
+        // var color5=colors[4]
         
-        console.log("使用颜色1:", color1, "颜色2:", color2,"颜色3:", color3,"颜色4:", color4,"颜色5:", color5)
+        console.log("使用颜色1:", color1, "颜色2:", color2,"颜色3:", color3)
         
         // 验证颜色有效性
         if (!isValidColor(color1) || !isValidColor(color2)) {
@@ -419,7 +472,7 @@ Item {
         }
         
         // 更新背景渐变颜色
-        updateGradientColors(color1, color2,color3,color4,color5)
+        updateGradientColors(color1, color2,color3)
     }
     
     /**
@@ -438,21 +491,21 @@ Item {
     /**
      * 更新渐变颜色
      */
-    function updateGradientColors(color1, color2,color3,color4,color5) {
+    function updateGradientColors(color1, color2,color3) {
         // 确保在主线程中更新UI
         Qt.callLater(function() {
             gradientStop1.color = color1
             gradientStop2.color = color2
             gradientStop3.color = color3
-            gradientStop4.color = color4
-            gradientStop5.color = color5
+            // gradientStop4.color = color4
+            // gradientStop5.color = color5
             
             // 同时更新属性，以便外部访问
             firstColor = color1
             secondColor = color2
             thirdColor = color3
-            forthColor = color4
-            fifthColor = color5
+            // forthColor = color4
+            // fifthColor = color5
             
             console.log("背景颜色成功更新:", firstColor, "->", secondColor)
         })
@@ -463,9 +516,7 @@ Item {
      */
     function resetToDefaultColors() {
         console.log("重置为默认颜色")
-        var defaultColor1 = "#2d3748"  // 深蓝色
-        var defaultColor2 = "#4a5568"  // 中灰色
-        updateGradientColors(defaultColor1, defaultColor2)
+        updateGradientColors(defaultColor1, defaultColor2,defaultColor3)
     }
     
     /**

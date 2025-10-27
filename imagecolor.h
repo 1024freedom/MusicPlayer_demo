@@ -24,9 +24,9 @@ public:
     //最小距离
     double m_minDistance = 15;
     //聚类中心的数量
-    const int k = 5;
+    const int k = 3;
     //最大迭代次数(逐步修正聚类中心的位置，让其从初始的 “粗略估计” 收敛到 “能准确代表簇内颜色的最优位置”)
-    const int maxItrations = 10;
+    const int maxItrations = 6;
 private:
     //计算两个颜色之间的欧氏距离(值越小表示两个颜色越相似)
     double colorEuclideanDistance(const QColor& c1, const QColor& c2);

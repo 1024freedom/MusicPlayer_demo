@@ -11,7 +11,6 @@ Item {
 
     Component.onCompleted: {
         y=parent.height
-
     }
 
     BackgroundManager{
@@ -19,7 +18,7 @@ Item {
         anchors.fill: parent
         coverSource: p_musicRes.thisPlayMusicInfo.coverImg
         backgroundOpacity: 0.85
-        colorCount: 4
+        colorCount: 3
     }
     Connections {
             target: p_musicRes
