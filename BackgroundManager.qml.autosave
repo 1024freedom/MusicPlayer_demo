@@ -391,13 +391,6 @@ Item {
             return
         }
         
-        // // 检查是否是数组且有足够元素
-        // if (!Array.isArray(colors)) {
-        //     console.warn("返回的不是数组:", typeof colors)
-        //     resetToDefaultColors()
-        //     return
-        // }
-        
         console.log("成功提取到", colors.length, "个颜色")
         
         if (colors.length < 2) {

@@ -132,7 +132,7 @@ QVector<QColor> ImageColor::kmeansPlusPlus(const QImage &image, int k) {
     //选择剩余聚类中心
     QVector<double>minDistance(totalPixels, std::numeric_limits<double>::max());
 
-    for (int i = 0; i < k; i++) {
+    for (int i = 1; i < k; i++) {
         double totalDist = 0.0;
 
         //并行计算最小距离
@@ -159,7 +159,7 @@ QVector<QColor> ImageColor::kmeansPlusPlus(const QImage &image, int k) {
             cumulativeSums[idx] = cumulativeSums[idx - 1] + minDistance[idx];
         }//前缀和,构建概率分布区间
 
-        std::uniform_int_distribution<>realDis(0.0, totalDist);
+        std::uniform_real_distribution<>realDis(0.0, totalDist);
         double randVal = realDis(gen);
 
         //二分法搜索目标像素位置
@@ -211,6 +211,10 @@ QVector<QColor> ImageColor::getMainColors(const QImage &image) {
         QVector<QColor> oldCentroids = centroids; //保存旧中心用于收敛判断
         bool converged = true; //是否收敛
 
+        // Qt 隐式共享机制：Qt 容器（如 QVector、QList）默认采用 “写时复制（Copy-on-Write）” 策略，多个容器可共享同一块内存，直到其中一个被修改时才复制数据（detach 操作）
+
+        centroids.data();//触发分离
+        std::vector<QColor> localCentroids(centroids.begin(), centroids.end()); //打破隐式共享，确保内存独立
         //并行化像素分配
         #pragma omp parallel for if(totalPixels>10000)
         for (int idx = 0; idx < totalPixels; idx++) {
@@ -221,8 +225,8 @@ QVector<QColor> ImageColor::getMainColors(const QImage &image) {
             double minDistance = std::numeric_limits<double>::max();
 
             //寻找当前像素最近的聚类中心
-            for (int i = 0; i < this->k; i++) {
-                double distance = colorEuclideanDistance(pixel, centroids[i]);
+            for (int i = 0; i < localCentroids.size(); i++) {
+                double distance = colorEuclideanDistance(pixel, localCentroids[i]);
                 if (distance < minDistance) {
                     minDistance = distance;
                     closestCentroid = i;
