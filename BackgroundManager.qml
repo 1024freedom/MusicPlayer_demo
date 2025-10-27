@@ -363,17 +363,21 @@ Item {
                 tempImage.destroy()
                 resetToDefaultColors()
                 _extractionInProgress = false
+            } else if(tempImage.status===Image.Loading&&tempImage.progress===1.0){
+                //进度为1但状态仍未loading为正常情况，需要等待状态变为Ready，不然会直接跳到未知状态的处理
+
+
             } else if (tempImage.progress < 1.0) {
                 // 继续等待加载
                 console.log("等待封面图片加载... 进度:", tempImage.progress)
                 Qt.callLater(checkStatus)
-            } /*else {
+            } else {
                 // 其他状态，安全处理
                 console.log("图片加载未知状态，重置")
                 tempImage.destroy()
                 resetToDefaultColors()
                 _extractionInProgress = false
-            }*/
+            }
         }
         
         Qt.callLater(checkStatus)
@@ -390,13 +394,6 @@ Item {
             resetToDefaultColors()
             return
         }
-        
-        // // 检查是否是数组且有足够元素
-        // if (!Array.isArray(colors)) {
-        //     console.warn("返回的不是数组:", typeof colors)
-        //     resetToDefaultColors()
-        //     return
-        // }
         
         console.log("成功提取到", colors.length, "个颜色")
         
