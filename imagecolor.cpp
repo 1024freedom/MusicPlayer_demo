@@ -1,10 +1,7 @@
 #include "imagecolor.h"
 
-ImageColor::ImageColor() {}
+ImageColor::ImageColor(): m_futureWatcher(nullptr), m_cancelled(false) {
 
-
-ImageColor::ImageColor(const QImage &image) {
-    avgColor(image);
 }
 
 double ImageColor::colorEuclideanDistance(const QColor &c1, const QColor &c2) {
@@ -14,35 +11,6 @@ double ImageColor::colorEuclideanDistance(const QColor &c1, const QColor &c2) {
     return std::sqrt(dr * dr + dg * dg + db * db);
 }
 
-QString ImageColor::avgColor(const QImage &image) {
-    qDebug() << "图片宽高" << "w:" << image.width() << "h:" << image.height();
-
-    //初始化颜色值的总和
-    int totalRed = 0;
-    int totalGreen = 0;
-    int totalBlue = 0;
-    int totalPixels = image.width() * image.height();
-
-    //遍历图片像素，累加颜色值
-    for (int y = 0; y < image.height(); y++) {
-        for (int x = 0; x < image.width(); x++) {
-            QColor color(image.pixel(x, y));
-            totalRed += color.red();
-            totalGreen += color.green();
-            totalBlue += color.blue();
-        }
-    }
-
-    //计算平均颜色
-    int avgRed = totalRed / totalPixels;
-    int avgGreen = totalGreen / totalPixels;
-    int avgBlue = totalBlue / totalPixels;
-
-    //创建平均颜色的qcolor对象
-    QColor avgColor(avgRed, avgGreen, avgBlue);
-
-    return avgColor.name();//平均颜色值
-}
 
 // //选择初始聚类中心的K-means++算法
 // QVector<QColor> ImageColor::kmeansPlusPlus(const QImage &image, int k){
@@ -176,7 +144,45 @@ QVector<QColor> ImageColor::kmeansPlusPlus(const QImage &image, int k) {
 }
 
 
-QVector<QColor> ImageColor::getMainColors(const QImage &image) {
+QVector<QColor> ImageColor::getMainColorsSync(const QImage &image) {
+    return extractColors(image, this->k, this->maxIterations);
+}
+
+void ImageColor::getMainColorsAsync(const QImage &image) {
+    cancelCurrentOperation();
+    m_cancelled = false;
+    //使用QtConcurrent在后台线程进行
+    QFuture<QVector<QColor>> future = QtConcurrent::run(&ImageColor::extractColors, image, this->k, this->maxIterations);
+    //创建监视器
+    m_futureWatcher = new QFutureWatcher<QVector<QColor>>(this);
+    connect(m_futureWatcher, &QFutureWatcher::isFinished, this, &ImageColor::onAsyncOperationFinished);
+    m_futureWatcher->setFuture(future);
+}
+
+void ImageColor::cancelCurrentOperation() {
+    m_cancelled = true;
+    if (m_futureWatcher && m_futureWatcher->isRunning()) {
+        m_futureWatcher->cancel();
+        m_futureWatcher->waitForFinished();
+    }
+}
+
+void ImageColor::onAsyncOperationFinished() {
+    if (m_futureWatcher && m_futureWatcher->isFinished()) {
+        if (!m_cancelled) {
+            try {
+                QVector<QColor> result = m_futureWatcher->result();
+                emit colorsExtracted(result);
+            } catch (...) {
+                emit extractionFailed();
+            }
+        }
+        m_futureWatcher->deleteLater();
+        m_futureWatcher = nullptr;
+    }
+}
+
+QVector<QColor> ImageColor::extractColors(const QImage &image, int k, int maxIterations) {
     if (image.width() <= 0 || image.height() <= 0 || k <= 0) {
         return QVector<QColor>();
     }
@@ -194,20 +200,20 @@ QVector<QColor> ImageColor::getMainColors(const QImage &image) {
     }
 
     //使用k-means++初始化聚类中心点
-    QVector<QColor> centroids = ImageColor::kmeansPlusPlus(image, this->k);
-    QVector<int>centroidsCnt(this->k, 0); //每个簇的像素数量，用于结果分析
+    QVector<QColor> centroids = ImageColor::kmeansPlusPlus(image, k);
+    QVector<int>centroidsCnt(k, 0); //每个簇的像素数量，用于结果分析
 
     //提前计算收敛阈值
     const double convergenceThreshold = 1.0;
 
     //主迭代循环（同一个索引的中心点在不同迭代周期中的实体构成一个簇）
-    for (int iter = 0; iter < this->maxItrations; iter++) {
+    for (int iter = 0; iter < maxIterations; iter++) {
 
         // 使用累加器记录每个簇的颜色分量总和，避免存储所有像素
         // 使用qint64防止大图像求和时整数溢出
-        QVector<qint64> sumR(this->k, 0), sumG(this->k, 0), sumB(this->k, 0);
+        QVector<qint64> sumR(k, 0), sumG(k, 0), sumB(k, 0);
 
-        QVector<int> clusterSizes(this->k, 0); //在一个迭代周期中每个簇的像素增加量
+        QVector<int> clusterSizes(k, 0); //在一个迭代周期中每个簇的像素增加量
         QVector<QColor> oldCentroids = centroids; //保存旧中心用于收敛判断
         bool converged = true; //是否收敛
 
@@ -215,7 +221,7 @@ QVector<QColor> ImageColor::getMainColors(const QImage &image) {
 
         centroids.data();//触发分离
         std::vector<QColor> localCentroids(centroids.begin(), centroids.end()); //打破隐式共享，确保内存独立
-        //并行化像素分配
+//并行化像素分配
         #pragma omp parallel for if(totalPixels>10000)
         for (int idx = 0; idx < totalPixels; idx++) {
             QRgb rgb = pixels[idx];
@@ -232,7 +238,7 @@ QVector<QColor> ImageColor::getMainColors(const QImage &image) {
                     closestCentroid = i;
                 }
             }
-            //原子操作更新累加器
+//原子操作更新累加器
             #pragma omp atomic
             sumR[closestCentroid] += qRed(rgb);
             #pragma omp atomic
@@ -244,7 +250,7 @@ QVector<QColor> ImageColor::getMainColors(const QImage &image) {
         }
 
         //迭代聚类中心并检查收敛
-        for (int i = 0; i < this->k; i++) {
+        for (int i = 0; i < k; i++) {
             if (clusterSizes[i] > 0) {
                 int r = static_cast<int>(sumR[i] / clusterSizes[i]);
                 int g = static_cast<int>(sumG[i] / clusterSizes[i]);
@@ -278,3 +284,5 @@ QVector<QColor> ImageColor::getMainColors(const QImage &image) {
 
     return validCentroids;
 }
+
+
