@@ -4,6 +4,7 @@
 #include "favoritemanager.h"
 #include "desktoplyric.h"
 #include "imagecolor.h"
+#include "thememanager.h"
 
 int main(int argc, char* argv[]) {
     QGuiApplication app(argc, argv);
@@ -15,6 +16,7 @@ int main(int argc, char* argv[]) {
     qmlRegisterType<FavoriteManager>("sz.window", 1, 0, "FavoriteManager");
     qmlRegisterType<DesktopLyric>("sz.window", 1, 0, "DesktopLyric");
     qmlRegisterType<ImageColor>("sz.window", 1, 0, "ImageColor");
+    qmlRegisterType<ThemeManager>("sz.window", 1, 0, "ThemeManager");
 
     QObject::connect(
         &engine,

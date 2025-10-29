@@ -11,16 +11,16 @@ FramelessWindow {
     visible: true
     title: qsTr("Hello World")
 
-    QtObject{
-        id:p_theme
-        property int current: 0
-        //分别为 默认主题、
-        property var defaultTheme: [
-            {name:"pink",type:"defult",backgroundColor:"#FAF2F1",
-                subBackgroundColor:"#F2A49B",clickBackgroundColor:"#F6867A",
-                fontColor:"#572920",subColor:"#FAF7F6"}
-        ]
-    }
+    // QtObject{
+    //     id:p_theme
+    //     property int current: 0
+    //     //分别为 默认主题、
+    //     property var defaultTheme: [
+    //         {name:"pink",type:"defult",backgroundColor:"#FAF2F1",
+    //             subBackgroundColor:"#F2A49B",clickBackgroundColor:"#F6867A",
+    //             fontColor:"#572920",subColor:"#FAF7F6"}
+    //     ]
+    // }
     MusicResource{
         id:p_musicRes
     }
@@ -36,6 +36,9 @@ FramelessWindow {
     }
     ImageColor{
         id:p_imageColor
+    }
+    ThemeManager{
+        id:p_theme
     }
 
     Column{
@@ -69,6 +72,10 @@ FramelessWindow {
                     Binding on thisQml{
                         when:leftBar.thisBtnText!==""
                         value:leftBar.thisQml
+                    }
+                    Binding on thisQml {
+                        when:titleBar.thisQml!==""
+                        value:titleBar.thisQml
                     }
                     Component.onCompleted: {
                         let qml=leftBar.thisQml

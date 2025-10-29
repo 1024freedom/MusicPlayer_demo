@@ -71,17 +71,6 @@ Item {
             console.log("背景组件初始化完成")
         }
     }
-
-    // Timer{//定时器调用避免过于迅速阻塞ui线程
-    //     id:extractColorTimer
-    //     interval:2000;
-    //     repeat:false;
-    //     onTriggered:{
-    //         console.log("封面变化，开始提取颜色:", coverSource)
-    //         _lastProcessedCover = coverSource
-    //         extractColorsFromCover(coverSource)
-    //     }
-    // }
     
     // === 颜色提取逻辑 ===
     
@@ -362,23 +351,6 @@ Item {
         console.log("重置为默认颜色")
         updateGradientColors(defaultColor1, defaultColor2,defaultColor3)
     }
-    
-    /**
-     * 手动触发颜色提取
-     */
-    // function updateBackground() {
-    //     if (coverSource) {
-    //         _lastProcessedCover = ""
-    //         _extractionInProgress = false
-    //         extractColorsFromCover(coverSource)
-    //     }
-    // }
-    
-
-    // 初始化
-   Component.onCompleted: {
-       console.log("BackgroundManager 初始化完成")
-   }
 
    // 清理资源
    Component.onDestruction: {

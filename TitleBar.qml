@@ -4,6 +4,7 @@ import QtQuick.Layouts
 Rectangle{
     id:titleBar
     property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property string thisQml: ""
     MouseArea{
 
         // 允许事件传递,否则会影响鼠标拖动事件
@@ -111,6 +112,21 @@ Rectangle{
             Row{
                 width: 30*3+5*3
                 spacing: 5
+
+                ToolTipButtom{
+                    width: 17
+                    height: 20
+                    anchors.verticalCenter: parent.verticalCenter
+                    source:"qrc:/theme"
+                    hoveredColor: "RED"
+                    onClicked: {
+                        titleBar.thisQml="PageThemeChoose.qml"
+                    }
+                }
+                Rectangle{
+                    width: 30
+                }
+
                 Rectangle{
                     id:minWindowBtn
                     property bool isHovered: false
