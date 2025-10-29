@@ -13,6 +13,7 @@ find_package(Qt6 REQUIRED COMPONENTS Quick QuickEffects)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Qml Sql)
 find_package(OpenMP)
+find_package(Qt6 REQUIRED COMPONENTS Concurrent)
 #
 qt_add_executable(appMusicPlayer_demo
     main.cpp
@@ -70,6 +71,7 @@ set_target_properties(appMusicPlayer_demo PROPERTIES
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Quick)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Qml Qt6::Sql)
+target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Concurrent)
 if(OpenMP_CXX_FOUND)
     message("支持openMP")
     target_link_libraries(appMusicPlayer_demo PUBLIC OpenMP::OpenMP_CXX)

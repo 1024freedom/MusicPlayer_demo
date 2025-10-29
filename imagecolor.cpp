@@ -3,7 +3,22 @@
 ImageColor::ImageColor(): m_futureWatcher(nullptr), m_cancelled(false) {
 
 }
+int ImageColor::getK() const { return k; }
+int ImageColor::getMaxIterations() const { return maxIterations; }
 
+void ImageColor::setK(int newk) {
+    if (k != newk) {
+        k = newk;
+        emit kChanged();
+    }
+}
+
+void ImageColor::setMaxIterations(int iterations) {
+    if (maxIterations != iterations) {
+        maxIterations = iterations;
+        emit maxIterationsChanged();
+    }
+}
 double ImageColor::colorEuclideanDistance(const QColor &c1, const QColor &c2) {
     int dr = c1.red() - c2.red();
     int dg = c1.green() - c2.green();
@@ -155,7 +170,7 @@ void ImageColor::getMainColorsAsync(const QImage &image) {
     QFuture<QVector<QColor>> future = QtConcurrent::run(&ImageColor::extractColors, image, this->k, this->maxIterations);
     //创建监视器
     m_futureWatcher = new QFutureWatcher<QVector<QColor>>(this);
-    connect(m_futureWatcher, &QFutureWatcher::isFinished, this, &ImageColor::onAsyncOperationFinished);
+    connect(m_futureWatcher, &QFutureWatcher<QVector<QColor>>::finished, this, &ImageColor::onAsyncOperationFinished);
     m_futureWatcher->setFuture(future);
 }
 
@@ -273,7 +288,7 @@ QVector<QColor> ImageColor::extractColors(const QImage &image, int k, int maxIte
     }
     //过滤空簇并按亮度排序
     QVector<QColor> validCentroids;
-    for (int i = 0; i < this->k; i++) {
+    for (int i = 0; i < k; i++) {
         if (centroidsCnt[i] > 0) {
             validCentroids.append(centroids[i]);
         }

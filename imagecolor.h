@@ -15,15 +15,10 @@
 
 class ImageColor: public QObject {
     Q_OBJECT
-    Q_PROPERTY(int k READ k WRITE setK NOTIFY kChanged)
-    Q_PROPERTY(int maxIterations READ maxIterations WRITE setMaxIterations NOTIFY maxIterationsChanged)
+    Q_PROPERTY(int k READ getK WRITE setK NOTIFY kChanged)
+    Q_PROPERTY(int maxIterations READ getMaxIterations WRITE setMaxIterations NOTIFY maxIterationsChanged)
 public:
     ImageColor();
-
-    //聚类中心的数量
-    const int k = 3;
-    //最大迭代次数(逐步修正聚类中心的位置，让其从初始的 “粗略估计” 收敛到 “能准确代表簇内颜色的最优位置”)
-    const int maxItrations = 6;
 
     //K-means++算法
     Q_INVOKABLE QVector<QColor> getMainColorsSync(const QImage& image);//同步版本
@@ -33,22 +28,11 @@ public:
     Q_INVOKABLE void cancelCurrentOperation();
 
     // 属性访问器
-    int k() const { return k; }
-    int maxIterations() const { return maxIterations; }
+    int getK() const;
+    int getMaxIterations() const;
 
-    void setK(int newk) {
-        if (k != newk) {
-            k = newk;
-            emit kChanged();
-        }
-    }
-
-    void setMaxIterations(int iterations) {
-        if (maxIterations != iterations) {
-            maxIterations = iterations;
-            emit maxIterationsChanged();
-        }
-    }
+    void setK(int newk);
+    void setMaxIterations(int iterations);
 signals:
     void colorsExtracted(const QVector<QColor>& colors);
     void extractionFailed();
@@ -56,7 +40,10 @@ signals:
     void maxIterationsChanged();
 
 private:
-
+    //聚类中心的数量
+    int k = 3;
+    //最大迭代次数(逐步修正聚类中心的位置，让其从初始的 “粗略估计” 收敛到 “能准确代表簇内颜色的最优位置”)
+    int maxIterations = 6;
 
     QFutureWatcher<QVector<QColor>>* m_futureWatcher = nullptr;
     bool m_cancelled = false;

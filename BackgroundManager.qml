@@ -102,18 +102,7 @@ Item {
     }
     
 
-    // 连接C++异步信号
-    Connections {
-        target: p_imageColor
-        onColorsExtracted: {
-           console.log("收到异步颜色结果:", colors)
-           extractor.extractionComplete(colors)
-        }
-        onExtractionFailed: {
-           console.log("颜色提取失败")
-           extractor.extractionFailed()
-        }
-    }
+
     //异步颜色提取机制
 
     //使用独立的异步处理器
@@ -127,6 +116,25 @@ Item {
 
             signal extractionComplete(var colors)
             signal extractionFailed()
+
+            // 连接C++异步信号
+            Connections {
+                target: p_imageColor
+
+                function onColorsExtracted(colors) {
+                    console.log("收到异步颜色结果:", colors)
+                    if (extractor) {
+                        extractor.extractionComplete(colors)
+                    }
+                }
+
+                function onExtractionFailed() {
+                    console.log("颜色提取失败")
+                    if (extractor) {
+                        extractor.extractionFailed()
+                    }
+                }
+            }
 
             function start(){
                 if (_extractionInProgress) {
@@ -370,10 +378,6 @@ Item {
     // 初始化
    Component.onCompleted: {
        console.log("BackgroundManager 初始化完成")
-       resetToDefaultColors()
-       if (coverSource) {
-          asyncProcessor.startAsyncExtraction(coverSource)
-       }
    }
 
    // 清理资源
