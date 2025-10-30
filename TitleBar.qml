@@ -100,6 +100,9 @@ Rectangle{
                             rightContent.nextStep()
                         }
                     }
+                    TitleBarSearchBox{
+
+                    }
                 }
 
                 Component.onCompleted: {
@@ -110,7 +113,7 @@ Rectangle{
                 Layout.fillWidth: true
             }
             Row{
-                width: 30*3+5*3
+                width: 250
                 spacing: 5
                 property bool themeVisible: false
                 ToolTipButtom{
@@ -118,7 +121,7 @@ Rectangle{
                     height: 20
                     anchors.verticalCenter: parent.verticalCenter
                     source:"qrc:/theme"
-                    hoveredColor: "RED"
+                    hoveredColor: thisTheme.subColor
                     onClicked: {
                         if(!parent.themeVisible){
                             titleBar.thisQml="PageThemeChoose.qml"
@@ -128,6 +131,7 @@ Rectangle{
                             parent.themeVisible=!parent.themeVisible
                         }
                     }
+                    anchors.rightMargin: 20
                 }
                 Rectangle{
                     width: 30

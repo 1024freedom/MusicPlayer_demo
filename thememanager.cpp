@@ -92,7 +92,7 @@ void ThemeManager::setM_currentIndex(int index) {
         m_currentIndex = index;
         m_currentTheme = m_themes[m_currentIndex].toMap();
         saveSettings();
-        emit m_currentThemeChanged(); ;
+        emit m_currentThemeChanged();
     }
 }
 

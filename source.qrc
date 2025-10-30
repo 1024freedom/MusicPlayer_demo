@@ -30,5 +30,6 @@
         <file>theme2.png</file>
         <file>theme3.png</file>
         <file>theme4.png</file>
+        <file alias="search">搜索.png</file>
     </qresource>
 </RCC>

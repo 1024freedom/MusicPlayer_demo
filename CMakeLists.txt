@@ -57,6 +57,8 @@ qt_add_qml_module(appMusicPlayer_demo
     SOURCES thememanager.h thememanager.cpp
     QML_FILES PageThemeChoose.qml
     QML_FILES ThemeButton.qml
+    QML_FILES TitleBarSearchBox.qml
+    QML_FILES PageSearchResult.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

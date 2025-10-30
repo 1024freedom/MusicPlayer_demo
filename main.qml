@@ -77,6 +77,7 @@ FramelessWindow {
                         when:titleBar.thisQml!==""
                         value:titleBar.thisQml
                     }
+
                     Component.onCompleted: {
                         let qml=leftBar.thisQml
                         let btnText=leftBar.thisBtnText

@@ -66,7 +66,7 @@ Item {
         var currentRetry=1//当前重试次数
 
         var type=obj.type||"0"
-        var callBack=obj.callBack||(()=>{})//由于数据获取是异步的，所以使用回调函数
+        var callBack=obj.callBack||(()=>{})//由于XMLHttpRequest()数据获取是异步的，所以使用回调函数，避免阻塞ui或者数据异常
 
         function makeRequest(){
             var xhr=new XMLHttpRequest()
