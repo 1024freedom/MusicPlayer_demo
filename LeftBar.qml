@@ -7,8 +7,8 @@ Rectangle{
     property var leftBarData:
         [{headerText:"发现音乐",
             btnData:[
-                {btnText:"乐库",btnIcon:"qrc:/music",qml:"PageFindMusic.qml",isActive:true},
-                {btnText:"歌单",btnIcon:"qrc:/list",qml:"",isActive:true}
+                {btnText:"新歌速递",btnIcon:"qrc:/music",qml:"PageFindMusic.qml",isActive:true},
+                {btnText:"歌单",btnIcon:"qrc:/list",qml:"PlayListContent.qml",isActive:true}
                 ],
             isActive:true
             },

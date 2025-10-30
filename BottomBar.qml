@@ -31,7 +31,7 @@ Rectangle{
             Rectangle{
                 width: bottomBarSlider.visualPosition*parent.width
                 height: parent.height
-                color: "RED"
+                color: thisTheme.subColor
             }
         }
         handle: Rectangle{

@@ -29,6 +29,7 @@ Item {
         setContentModel(headerData[headerCurrent].name)
     }
 
+
     function setContentModel(cat){
         content.height=0
         var boutiquePlayListCallBack=res=>{

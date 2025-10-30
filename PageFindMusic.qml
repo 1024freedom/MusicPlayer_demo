@@ -3,10 +3,10 @@ import QtQuick
 Flickable {
     id:findMusicFlickable
     property var thisTheme: p_theme.m_currentTheme
-    property var headerData: [{headerText:"歌单",qml:"PlayListContent.qml"},
-        {headerText:"新歌速递",qml:"NewMusicContent.qml"},
-        {headerText:"个性推荐",qml:""},
-        {headerText:"专属定制",qml:""}]
+    property var headerData: [/*{headerText:"歌单",qml:"PlayListContent.qml"},*/
+        {headerText:"新歌速递",qml:"NewMusicContent.qml"}
+        /*{headerText:"个性推荐",qml:""},
+        {headerText:"专属定制",qml:""}*/]
     property double fontSize: 11
     property int wheelStep: 300
     anchors.fill: parent
@@ -93,7 +93,7 @@ Flickable {
                 radius: width/2
                 color: if(findMusicHeader.current===index)
                            return thisTheme.subBackgroundColor
-                        else if(isHovered) return "PINK"
+                        else if(isHovered) return thisTheme.subColor
                         else return thisTheme.backgroundColor
                 Text {
                     anchors.centerIn: parent

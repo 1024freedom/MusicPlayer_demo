@@ -12,6 +12,10 @@ int main(int argc, char* argv[]) {
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/MusicPlayer_demo/main.qml"));
 
+    // 关键：设置组织名和应用名（自定义名称）
+    QCoreApplication::setOrganizationName("sz");
+    QCoreApplication::setApplicationName("MusicPlayerDemo");
+
     qmlRegisterType<FramelessWindow>("sz.window", 1, 0, "FramelessWindow");
     qmlRegisterType<FavoriteManager>("sz.window", 1, 0, "FavoriteManager");
     qmlRegisterType<DesktopLyric>("sz.window", 1, 0, "DesktopLyric");

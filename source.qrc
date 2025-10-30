@@ -25,5 +25,10 @@
         <file alias="lyricforclicked">歌词未点击.png</file>
         <file alias="lyricclicked">歌词已点击.png</file>
         <file alias="theme">主题.png</file>
+        <file>theme0.png</file>
+        <file>theme1.png</file>
+        <file>theme2.png</file>
+        <file>theme3.png</file>
+        <file>theme4.png</file>
     </qresource>
 </RCC>

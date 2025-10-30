@@ -28,18 +28,23 @@ Flickable{
 
             ThemeButton{
                 index:0
+                source: "qrc:/theme0.png"
             }
             ThemeButton{
                 index:1
+                source: "qrc:/theme1.png"
             }
             ThemeButton{
                 index:2
+                source: "qrc:/theme2.png"
             }
             ThemeButton{
                 index:3
+                source: "qrc:/theme3.png"
             }
             ThemeButton{
                 index:4
+                source: "qrc:/theme4.png"
             }
         }
     }

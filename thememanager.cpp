@@ -2,6 +2,7 @@
 
 ThemeManager::ThemeManager(QObject* parent): QObject(parent), m_settings(), m_currentIndex(0), m_currentTheme() {
     setM_themes();
+    initialize();
 }
 
 void ThemeManager::initialize() {
