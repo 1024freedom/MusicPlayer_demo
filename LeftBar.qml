@@ -3,7 +3,7 @@ import sz.window
 import QtQuick.Layouts
 Rectangle{
     id:leftBar
-    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var thisTheme: p_theme.m_currentTheme
     property var leftBarData:
         [{headerText:"发现音乐",
             btnData:[
@@ -24,7 +24,7 @@ Rectangle{
         ]
     width: 180
     height: parent.height
-    color: thisTheme.backgroundColor
+    color: p_theme.m_currentTheme.backgroundColor
 
     property var thisData: filterLeftBarData(leftBarData)
     property string thisQml: "PageFindMusic.qml"

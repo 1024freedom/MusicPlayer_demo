@@ -3,7 +3,7 @@ import sz.window
 import QtQuick.Layouts
 Rectangle{
     id:titleBar
-    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var thisTheme: p_theme.m_currentTheme
     property string thisQml: ""
     MouseArea{
 
@@ -112,7 +112,7 @@ Rectangle{
             Row{
                 width: 30*3+5*3
                 spacing: 5
-
+                property bool themeVisible: false
                 ToolTipButtom{
                     width: 17
                     height: 20
@@ -120,7 +120,13 @@ Rectangle{
                     source:"qrc:/theme"
                     hoveredColor: "RED"
                     onClicked: {
-                        titleBar.thisQml="PageThemeChoose.qml"
+                        if(!parent.themeVisible){
+                            titleBar.thisQml="PageThemeChoose.qml"
+                            parent.themeVisible=!parent.themeVisible
+                        }else{
+                            titleBar.thisQml=""
+                            parent.themeVisible=!parent.themeVisible
+                        }
                     }
                 }
                 Rectangle{

@@ -2,7 +2,7 @@ import QtQuick
 
 ListView {
     id: playListDetail
-    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var thisTheme: p_theme.m_currentTheme
     property var playListInfo: null
     property int fontSize: 11
     width: parent.width

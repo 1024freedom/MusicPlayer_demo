@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import QtQuick.Controls
 Rectangle{
     id:bottomBar
-    property var thisTheme:p_theme.defaultTheme[p_theme.current]
+    property var thisTheme:p_theme.m_currentTheme
     property double fontSize: 11
     width: parent.width
     height: 80

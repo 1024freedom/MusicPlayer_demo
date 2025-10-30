@@ -13,36 +13,53 @@ void ThemeManager::setM_themes() {
     // 粉色主题
     QVariantMap pinkTheme;
     pinkTheme["name"] = "pink";
-    pinkTheme["displayName"] = "粉色主题";
+    pinkTheme["displayName"] = "粉色";
     pinkTheme["backgroundColor"] = "#FAF2F1";
     pinkTheme["subBackgroundColor"] = "#F2A49B";
     pinkTheme["clickBackgroundColor"] = "#F6867A";
     pinkTheme["fontColor"] = "#572920";
     pinkTheme["subColor"] = "#FAF7F6";
     m_themes.append(pinkTheme);
-
     // 深色主题
     QVariantMap darkTheme;
     darkTheme["name"] = "dark";
-    darkTheme["displayName"] = "深色主题";
+    darkTheme["displayName"] = "深色";
     darkTheme["backgroundColor"] = "#2D3748";
     darkTheme["subBackgroundColor"] = "#4A5568";
     darkTheme["clickBackgroundColor"] = "#718096";
     darkTheme["fontColor"] = "#F7FAFC";
     darkTheme["subColor"] = "#E2E8F0";
     m_themes.append(darkTheme);
-
     // 蓝色主题
     QVariantMap blueTheme;
     blueTheme["name"] = "blue";
-    blueTheme["displayName"] = "蓝色主题";
+    blueTheme["displayName"] = "蓝色";
     blueTheme["backgroundColor"] = "#EBF8FF";
     blueTheme["subBackgroundColor"] = "#90CDF4";
     blueTheme["clickBackgroundColor"] = "#4299E1";
     blueTheme["fontColor"] = "#2D3748";
     blueTheme["subColor"] = "#BEE3F8";
     m_themes.append(blueTheme);
-
+    // 黑红主题
+    QVariantMap blackRedTheme;
+    blackRedTheme["name"] = "blackRed";
+    blackRedTheme["displayName"] = "黑红";
+    blackRedTheme["backgroundColor"] = "#0D0D0D";        // 深黑色背景
+    blackRedTheme["subBackgroundColor"] = "#1A1A1A";     // 稍浅的黑色次级背景
+    blackRedTheme["clickBackgroundColor"] = "#B30000";   // 鲜艳的红色点击背景
+    blackRedTheme["fontColor"] = "#E6E6E6";              // 浅灰色文字
+    blackRedTheme["subColor"] = "#333333";               // 深灰色辅助色
+    m_themes.append(blackRedTheme);
+    // 暗红主题
+    QVariantMap darkRedTheme;
+    darkRedTheme["name"] = "darkRed";
+    darkRedTheme["displayName"] = "暗红";
+    darkRedTheme["backgroundColor"] = "#1A0F0F";        // 带红色调的深黑
+    darkRedTheme["subBackgroundColor"] = "#2C1A1A";     // 暗红色次级背景
+    darkRedTheme["clickBackgroundColor"] = "#8B0000";   // 深红色点击背景
+    darkRedTheme["fontColor"] = "#F0E6E6";              // 浅米白色文字
+    darkRedTheme["subColor"] = "#3D2B2B";               // 棕红色辅助色;
+    m_themes.append(darkRedTheme);
     // 设置当前主题
     if (!m_themes.isEmpty()) {
         m_currentTheme = m_themes.first().toMap();
@@ -59,6 +76,14 @@ QVariantMap ThemeManager::getM_currentTheme()const {
 }
 QVariantList ThemeManager::getM_themes()const {
     return m_themes;
+}
+QVariantMap ThemeManager::getM_indexofTheme(int index) const {
+    for (int i = 0; i < m_themes.size(); i++) {
+        if (i == index) {
+            return m_themes[i].toMap();
+        }
+    }
+    return QVariantMap();
 }
 
 void ThemeManager::setM_currentIndex(int index) {

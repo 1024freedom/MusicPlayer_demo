@@ -24,6 +24,7 @@ public:
     Q_INVOKABLE void setM_themes();
     Q_INVOKABLE void saveSettings();
     Q_INVOKABLE void loadSettings();
+    Q_INVOKABLE QVariantMap getM_indexofTheme(int index)const;
 signals:
     void m_currentIndexChanged();
     void m_currentThemeChanged();

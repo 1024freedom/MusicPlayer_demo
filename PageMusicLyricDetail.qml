@@ -6,7 +6,7 @@ Item {
     id:musicLyricPage
     width: parent.width
     height: parent.height
-    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var thisTheme: p_theme.m_currentTheme
     property string backgroundColor: "BLACK"//大背景
 
     Component.onCompleted: {

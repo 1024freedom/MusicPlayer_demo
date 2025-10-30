@@ -2,7 +2,7 @@ import QtQuick
 
 Item {
     id:newMusicContent
-    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var thisTheme: p_theme.m_currentTheme
     property var headerData: [{name:"全部",type:"0"},
     {name:"华语",type:"7"},
     {name:"欧美",type:"96"},

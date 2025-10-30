@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Effects
 Item {
     id:playListContent
-    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var thisTheme: p_theme.m_currentTheme
     property var headerData: [{name:"ACG"},
     {name:"电子"},
     {name:"流行"},

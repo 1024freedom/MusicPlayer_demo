@@ -2,7 +2,7 @@ import QtQuick
 
 Flickable {
     id:findMusicFlickable
-    property var thisTheme: p_theme.defaultTheme[p_theme.current]
+    property var thisTheme: p_theme.m_currentTheme
     property var headerData: [{headerText:"歌单",qml:"PlayListContent.qml"},
         {headerText:"新歌速递",qml:"NewMusicContent.qml"},
         {headerText:"个性推荐",qml:""},
