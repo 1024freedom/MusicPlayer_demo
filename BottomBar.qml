@@ -71,18 +71,11 @@ Rectangle{
             height: parent.height
             anchors.left: parent.left
             spacing: 10
-            RoundImage{
+            BottomImage{
                 id:musicCoverImg
                 width: parent.height
                 height: width
-                source:p_musicRes.thisPlayMusicInfo.coverImg
-                MouseArea{
-                    anchors.fill: parent
-
-                    onClicked: {
-                        musicLyricPage.showPage()
-                    }
-                }
+                source:p_musicRes.thisPlayMusicInfo.coverImg 
             }
             Column{
                 width: parent.width-musicCoverImg.width-parent.spacing

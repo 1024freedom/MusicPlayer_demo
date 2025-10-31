@@ -157,69 +157,6 @@ Item {
                            return thisTheme.subBackgroundColor
                         else if(isHovered) return thisTheme.subBackgroundColor
                         else return "#00000000"
-                Row{
-                    width: parent.width-20
-                    height: parent.height-20
-                    spacing: 10
-                    anchors.centerIn: parent
-                    Text {
-                        width: parent.width*0.1-40
-                        anchors.verticalCenter: parent.verticalCenter
-                        horizontalAlignment: Text.AlignHCenter
-                        font.weight: 2
-                        font.pointSize: newMusicContent.fontSize
-                        elide: Text.ElideRight
-                        color: thisTheme.fontColor
-                        text: index+1
-                    }
-                    RoundImage{
-                        width: 60
-                        height: width
-                        source:coverImg+"?param="+width+"y"+height
-                        //告诉图片服务器 “需要返回宽为 width、高为 height 的图片”，
-                        //服务器会根据这些参数对原始图片进行缩放、裁剪等处理后再返回。减少内存占用
-                    }
-                    Text {
-                        width: parent.width*0.3
-                        anchors.verticalCenter: parent.verticalCenter
-                        horizontalAlignment: Text.AlignLeft
-                        font.weight: 2
-                        font.pointSize: newMusicContent.fontSize
-                        elide: Text.ElideRight
-                        color: thisTheme.fontColor
-                        text: name
-                    }
-                    Text {
-                        width: parent.width*0.2
-                        anchors.verticalCenter: parent.verticalCenter
-                        horizontalAlignment: Text.AlignLeft
-                        font.weight: 2
-                        font.pointSize: newMusicContent.fontSize
-                        elide: Text.ElideRight
-                        color: thisTheme.fontColor
-                        text: artists
-                    }
-                    Text {
-                        width: parent.width*0.2
-                        anchors.verticalCenter: parent.verticalCenter
-                        horizontalAlignment: Text.AlignLeft
-                        font.weight: 2
-                        font.pointSize: newMusicContent.fontSize
-                        elide: Text.ElideRight
-                        color: thisTheme.fontColor
-                        text: album
-                    }
-                    Text {
-                        width: parent.width*0.2-parent.height
-                        anchors.verticalCenter: parent.verticalCenter
-                        horizontalAlignment: Text.AlignLeft
-                        font.weight: 2
-                        font.pointSize: newMusicContent.fontSize
-                        elide: Text.ElideRight
-                        color: thisTheme.fontColor
-                        text: allTime
-                    }
-                }
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true
@@ -248,6 +185,83 @@ Item {
                     }
                     onExited: {
                         parent.isHovered=false
+                    }
+                    Row{
+                        width: parent.width-20
+                        height: parent.height-20
+                        spacing: 10
+                        anchors.centerIn: parent
+
+                        ToolTipButtom{//添加喜欢按钮
+                            property bool isFavorited: false
+                            width: 20
+                            height: width
+                            anchors.verticalCenter: parent.verticalCenter
+                            source:if(isFavorited)return "qrc:/favorited"
+                                        else return "qrc:/like"
+                            hoveredColor: thisTheme.subBackgroundColor
+                            color: "#00000000"
+                            onClicked: {
+                                if(isFavorited){
+                                    p_favoriteManager.remove(id)
+                                    isFavorited=false
+                                }else{
+                                    p_favoriteManager.append(contentModel.get(index))
+                                    isFavorited=true
+                                }
+                            }
+                            Component.onCompleted: {
+                                var index=p_favoriteManager.indexOf(id)
+                                isFavorited=(index!==-1)
+                            }
+                        }
+                        RoundImage{
+                            width: 60
+                            height: width
+                            source:coverImg+"?param="+width+"y"+height
+                            //告诉图片服务器 “需要返回宽为 width、高为 height 的图片”，
+                            //服务器会根据这些参数对原始图片进行缩放、裁剪等处理后再返回。减少内存占用
+                        }
+                        Text {
+                            width: parent.width*0.3
+                            anchors.verticalCenter: parent.verticalCenter
+                            horizontalAlignment: Text.AlignLeft
+                            font.weight: 2
+                            font.pointSize: newMusicContent.fontSize
+                            elide: Text.ElideRight
+                            color: thisTheme.fontColor
+                            text: name
+                        }
+                        Text {
+                            width: parent.width*0.2
+                            anchors.verticalCenter: parent.verticalCenter
+                            horizontalAlignment: Text.AlignLeft
+                            font.weight: 2
+                            font.pointSize: newMusicContent.fontSize
+                            elide: Text.ElideRight
+                            color: thisTheme.fontColor
+                            text: artists
+                        }
+                        Text {
+                            width: parent.width*0.2
+                            anchors.verticalCenter: parent.verticalCenter
+                            horizontalAlignment: Text.AlignLeft
+                            font.weight: 2
+                            font.pointSize: newMusicContent.fontSize
+                            elide: Text.ElideRight
+                            color: thisTheme.fontColor
+                            text: album
+                        }
+                        Text {
+                            width: parent.width*0.2-parent.height
+                            anchors.verticalCenter: parent.verticalCenter
+                            horizontalAlignment: Text.AlignLeft
+                            font.weight: 2
+                            font.pointSize: newMusicContent.fontSize
+                            elide: Text.ElideRight
+                            color: thisTheme.fontColor
+                            text: allTime
+                        }
                     }
                 }
             }

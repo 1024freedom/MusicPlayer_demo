@@ -209,7 +209,6 @@ Item {
                             imgWidth: parent.width
                             imgHeight: imgWidth
                             source: p_musicRes.thisPlayMusicInfo.coverImg
-                            sourceSize: Qt.size(400,400)
                         }
                         // 边缘淡发光效果
                         MultiEffect {

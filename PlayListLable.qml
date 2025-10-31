@@ -3,7 +3,6 @@ import QtQuick
 Rectangle{
     id:playListLable
     property alias button: btn
-    property alias imgSourceSize: coverImg.sourceSize
     property string imgSource: "qrc:/yy"
     property int fontSize: 11
     property string fontColor: ""

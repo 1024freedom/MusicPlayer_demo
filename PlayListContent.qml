@@ -86,7 +86,7 @@ Item {
                 imgHeight: parent.height
                 radius:12
                 source:"qrc:/yy"
-                sourceSize: Qt.size(50,50)
+
             }
             RoundImage{
                 id:headerBackground_2
@@ -96,7 +96,7 @@ Item {
                 anchors.fill: parent
                 radius:12
                 source:headerBackground_1.source
-                sourceSize: headerBackground_1.sourceSize
+
             }
             // 边缘淡发光效果
             MultiEffect {
@@ -138,7 +138,7 @@ Item {
                     imgWidth: 130
                     radius: 10
                     source: headerBackground_2.source
-                    sourceSize: Qt.size(width,height)
+
                 }
                 Column{
                     width: parent.width-boutiquePlayListCoverImg.width
@@ -259,7 +259,7 @@ Item {
                 normalColor: "WHITE"
                 hoveredColor: thisTheme.subBackgroundColor
                 fontColor: thisTheme.fontColor
-                imgSourceSize: contentItemSourceSize
+
                 imgSource: coverImg+"?param="+200+"y"+200
                 text: name
                 onClicked: {

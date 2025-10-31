@@ -24,8 +24,6 @@ MediaPlayer {
         }
     }
 
-
-    autoPlay:true
     audioOutput: AudioOutput{
         volume: p_musicPlayer.volume
     }
@@ -34,6 +32,7 @@ MediaPlayer {
 
     onSourceChanged: {
         play()
+
     }
 
 

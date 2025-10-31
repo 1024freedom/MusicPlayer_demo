@@ -26,9 +26,24 @@ Rectangle{
             //实时显示搜索建议
             contentItem: ListView{
                 id:suggestionList
+                model: ListModel{id:suggestionModel}
+                delegate: ItemDelegate{
+                    width: parent.width
+                    text: model.text
+                    onClicked: {
 
+                    }
+                }
             }
         }
+        onTextChanged: {
+            var currentText=searchTextField.text
+            if(currentText.length>0){
+                titleBarSearchBox.updatePopupContent(currentText)
+                popup.open()
+            }
+        }
+
         width: parent.width-40
         height: contentHeight+5
         focus: searchTextField.popup.visible
@@ -45,7 +60,10 @@ Rectangle{
             searchTextField.popup.open()
         }
         Keys.onReturnPressed: function(){
-            parent.showSearchResultPage();
+            if(text.length>0){
+                titleBarSearchBox.showSearchResultPage();
+            }
+
         }
     }
     ToolTipButtom{
@@ -55,10 +73,17 @@ Rectangle{
         source:"qrc:/search"
         color: if(isHovered)return thisTheme.subColor
                 else return "#00000000"
+        onClicked: {
+            parent.showSearchResultPage();
+        }
     }
 
     function showSearchResultPage(){
         searchTextField.focus=false
         TitleBar.thisQml="PageSearchResult.qml"
+    }
+    function updatePopupContent(searchText){
+        suggestionModel.clear()
+
     }
 }

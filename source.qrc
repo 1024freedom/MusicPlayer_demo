@@ -31,5 +31,6 @@
         <file>theme3.png</file>
         <file>theme4.png</file>
         <file alias="search">搜索.png</file>
+        <file alias="up">上箭头.png</file>
     </qresource>
 </RCC>
