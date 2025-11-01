@@ -123,7 +123,7 @@ bool FavoriteManager::initializeDatabase() {
 
     //打开数据库(sqlite)
     m_database = QSqlDatabase::addDatabase("QSQLITE", "favorites_connection"); //连接名为favorites_connection的sqlite数据库
-    m_database.setDatabaseName(m_databasePath);
+    m_database.setDatabaseName(m_databasePath);//绑定指定目录，若目标目录有数据库文件，则直接打开，否则创建一个新的
 
     if (!m_database.open()) {
         qDebug() << "数据库打开失败";

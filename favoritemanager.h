@@ -32,18 +32,13 @@ public:
     Q_INVOKABLE QVariantMap get(int index)const;
     // Q_INVOKABLE void clearAll();
 
-    QVariantList data()const;
+    Q_INVOKABLE QVariantList data()const;
     // void refreshData(const QJsonArray& newData);
     void refreshData(const QVariantList& newData);
     QString databasePath()const;
     void setDatabasePath(const QString &newDatabasePath);
 
 private:
-    // QJsonArray readFile(const QString& filePath);
-    // void writeFile(const QString& filePath, const QJsonArray& obj);
-
-    // QJsonArray m_data;//存储数据
-    // QString m_savePath = "userInfo/favoriteMusic.json"; //文件保存路径
 
     bool initializeDatabase();
     bool createTable();
