@@ -176,6 +176,7 @@ Rectangle{
                 height: width
                 anchors.verticalCenter: parent.verticalCenter
                 source:"qrc:/listloop"
+                hintText:"列表循环"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
                 onClicked: {
@@ -192,15 +193,19 @@ Rectangle{
                         switch(p_musicPlayer.playerModeStatus){
                         case MusicPlayer.PlayerMode.ONELOOPPLAY:
                             playerModeIcon.source="qrc:/reaptSinglePlay"
+                            playerModeIcon.hintText="单曲循环"
                             break
                         case MusicPlayer.PlayerMode.LISTLOOPPLAY:
                             playerModeIcon.source="qrc:/listloop"
+                            playerModeIcon.hintText="列表循环"
                             break
                         case MusicPlayer.PlayerMode.RANDOMPLAY:
                             playerModeIcon.source="qrc:/randomplay"
+                            playerModeIcon.hintText="随机播放"
                             break
                         case MusicPlayer.PlayerMode.LINEPLAY:
                             playerModeIcon.source="qrc:/lineplay"
+                            playerModeIcon.hintText="顺序播放"
                             break
                         }
                     }
@@ -213,6 +218,7 @@ Rectangle{
                 source:"qrc:/lastPlay"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
+                hintText: "上一首"
                 onClicked: {
                     p_musicPlayer.preMusicPlay()
                 }
@@ -224,6 +230,8 @@ Rectangle{
                 source:if(p_musicPlayer.playing)return "qrc:/play"
                 else return "qrc:/pause"
                 hoveredColor: thisTheme.subBackgroundColor
+                hintText: if(p_musicPlayer.playing)return "暂停"
+                          else return "播放"
                 color: "#00000000"
                 onClicked: {
                     p_musicPlayer.playPauseMusic()
@@ -249,6 +257,7 @@ Rectangle{
                 // source:"qrc:/nextPlay"
                 source:"qrc:/lastPlay"
                 transformOrigin: Item.Center
+                hintText: "下一首"
                 rotation: 180
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
@@ -300,6 +309,8 @@ Rectangle{
                 source:if(!isClicked)return "qrc:/lyricforclicked"
                             else return "qrc:/lyricclicked"
                 hoveredColor: thisTheme.subBackgroundColor
+                hintText: if(!isClicked)return "开启桌面歌词"
+                          else return "关闭桌面歌词"
                 color: "#00000000"
                 onClicked: {
                     isClicked=!isClicked
@@ -324,6 +335,7 @@ Rectangle{
                 source:"qrc:/playList"
                 hoveredColor: thisTheme.subBackgroundColor
                 color: "#00000000"
+                hintText: "播放队列"
                 onClicked: {
                     thisPlayerListLabel.visible=!thisPlayerListLabel.visible
                 }

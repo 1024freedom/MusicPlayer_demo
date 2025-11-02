@@ -61,10 +61,11 @@ Rectangle{
                 }
                 Text {
                     id: topLeftText
-                    font.pointSize: 12
+                    font.pointSize: 17
                     font.bold: true
+                    font.family: "Brush Script MT"
                     anchors.verticalCenter: parent.verticalCenter
-                    text: qsTr("Wings of Freedom")
+                    text: qsTr("Music Of Freedom")
                     color: thisTheme.fontColor
                 }
                 Row{
@@ -121,6 +122,7 @@ Rectangle{
                     height: 20
                     anchors.verticalCenter: parent.verticalCenter
                     source:"qrc:/theme"
+                    hintText: "主题"
                     hoveredColor: thisTheme.subColor
                     onClicked: {
                         if(!parent.themeVisible){

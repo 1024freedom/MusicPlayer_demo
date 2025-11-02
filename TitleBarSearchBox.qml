@@ -71,6 +71,7 @@ Rectangle{
         width: height
         anchors.right: parent.right
         source:"qrc:/search"
+        hintText: "搜索"
         color: if(isHovered)return thisTheme.subColor
                 else return "#00000000"
         onClicked: {

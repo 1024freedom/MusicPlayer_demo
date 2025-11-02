@@ -17,7 +17,6 @@
 
 class PlayHistoryManager: public QObject {
     Q_OBJECT
-    Q_PROPERTY(QVariantList m_data READ getRecentPlays WRITE addRecentPlay NOTIFY m_dataChanged FINAL)
 
 public:
     explicit PlayHistoryManager(QObject* parent = nullptr);
@@ -44,11 +43,10 @@ private:
     void autoCleanup();//清除七天前的数据
     void refreshData(const QVariantList& newData);
 signals:
-    m_dataChanged();
-    m_databaseChanged();
+    void m_dataChanged();
+    void m_databaseChanged();
 private slots:
     void onAutoCleanupTimeout();
-    void onM_dataChanged();
     void onM_databaseChanged();
 };
 

@@ -181,7 +181,7 @@ QVariantList PlayHistoryManager::getRecentPlays(const int limit) {
 bool PlayHistoryManager::indexAppear(const int findId) {
     for (int i = 0; i < m_data.count(); i++) {
         QVariantMap item = m_data[i].toMap();
-        QString id = item["id"].toInt();
+        int id = item["id"].toInt();
         if (id == findId) {
             return true;
         }

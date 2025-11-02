@@ -133,6 +133,7 @@ MouseArea{
         source:"qrc:/soundChanger"
         anchors.bottom: parent.bottom
         hoveredColor: thisTheme.subBackgroundColor
+        hintText: "调节音量"
         color: "#00000000"
         onEntered: {
             parent.state="hovered"
