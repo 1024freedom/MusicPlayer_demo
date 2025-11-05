@@ -54,8 +54,8 @@ public:
 signals:
     //成功开始下载
     void downloadRelay(const QString& fileName, const QString& savePath);
-    //下载完成
-    void dowloadFinished();
+    //下载任务结束（以任何状态的结束）
+    void downloadFinished();
     //下载错误
     void downloadError(const QString& error, const QString& fileName);
 

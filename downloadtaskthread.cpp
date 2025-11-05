@@ -1,3 +1,77 @@
 #include "downloadtaskthread.h"
 
 DownloadTaskThread::DownloadTaskThread() {}
+
+DownloadTaskThread::DownloadTaskThread(const QString &url, const QString &savePath, const QString &fileName) {
+    m_url = url;
+    m_fileName = fileName;
+    m_downloadTask = new DownloadTask(url, savePath, fileName);
+    connect(m_downloadTask, &DownloadTask::statusChanged, this, &DownloadTaskThread::setStatus);
+    connect(m_downloadTask, &DownloadTask::progressValueChanged, this, &DownloadTaskThread::setProgressValue);
+    connect(m_downloadTask, &DownloadTask::downloadRelay, this, &DownloadTaskThread::downloadRelay);
+    connect(m_downloadTask, &DownloadTask::downloadError, this, &DownloadTaskThread::downloadError);
+}
+
+DownloadTaskThread::~DownloadTaskThread() {
+    //内存清理
+    if (m_downloadTask) {
+        if (m_downloadTask->status() == DownloadTask::TaskStatus::Loading) {
+            m_downloadTask->pauseDownload();
+        }
+        m_downloadTask->deleteLater();
+    }
+    if (m_thread) {
+        if (m_thread->isRunning()) {
+            m_thread->quit();
+            m_thread->wait();
+        }
+        m_thread->deleteLater();
+    }
+}
+
+int DownloadTaskThread::getStatus()const {
+    return m_status;
+}
+
+void DownloadTaskThread::setStatus(const int newStatus) {
+    if (m_status == newStatus) {
+        return;
+    }
+    m_status = newStatus;
+    emit statusChanged(m_status);
+}
+
+QString DownloadTaskThread::getSavePath() {
+    return m_savePath;
+}
+
+void DownloadTaskThread::setSavePath(const QString &newSavePath) {
+    if (m_savePath == newSavePath) {
+        return;
+    }
+    m_savePath = newSavePath;
+    emit savePathChanged();
+}
+
+void DownloadTaskThread::start() {
+    std::unique_lock<std::mutex> locker(m_mutex);
+    if (m_thread == nullptr) {
+        m_thread = new QThread();
+    }
+    qDebug() << "启动" << m_thread->thread() << "启动线程" << QThread::currentThread();
+
+    if (m_thread != m_downloadTask->thread()) {
+        m_downloadTask->moveToThread(m_thread);
+        connect(m_thread, &QThread::started, m_downloadTask, &DownloadTask::startDownload);
+        connect(m_downloadTask, &DownloadTask::downloadFinished, m_thread, [ = ]() { //值捕获避免竞争风险
+            qDebug() << "已退出线程：" << QThread::currentThread();
+            m_thread->quit();
+            m_thread->wait();
+        });
+    }
+    m_thread->start();
+}
+
+void DownloadTaskThread::pause() {
+
+}

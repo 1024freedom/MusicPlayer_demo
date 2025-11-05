@@ -155,6 +155,51 @@ void DownloadTask::onFinished() {
         QString suffix = m_url.sliced(m_url.lastIndexOf('.', -1)); //后缀
         QFileInfo fileInfo(m_file);
         QString newFileName = fileInfo.absoluteFilePath() + suffix;
-
+        if (QFile::exists(m_file.fileName())) {
+            if (m_file.rename(newFileName)) {
+                qDebug() << "音乐：" + m_fileName + "下载完成" + m_file.fileName();
+                emit downloadRelay(m_fileName, "file:///" + m_file.fileName());
+            } else {
+                setStatus(TaskStatus::Error);
+                m_file.remove();
+                qDebug() << "音乐：" + m_fileName + "写入失败";
+                emit downloadError("写入失败", m_fileName);
+            }
+        }
+    };
+    auto defaultError_func = [&]() {
+        m_bufferByte += m_progressByte;
+        setStatus(TaskStatus::Error);
+        qDebug() << "音乐：" + m_fileName + "下载失败" + m_reply->errorString();
+        emit downloadError(m_reply->errorString(), m_fileName);
+    };
+    auto canceledError_func = [&]() {
+        if (m_status == TaskStatus::Paused) {
+            m_bufferByte += m_progressByte;
+        }
+        if (m_status == TaskStatus::Cancel) {
+            m_progressByte = 0;
+            m_bufferByte = 0;
+            m_file.remove();
+        }
+    };
+    switch (m_reply->error()) {
+    case QNetworkReply::NoError:
+        noError_func();
+        break;
+    case QNetworkReply::OperationCanceledError:
+        canceledError_func();
+        break;
+    default:
+        defaultError_func();
+        break;
     }
+    m_progressByte = 0;
+    m_reply->deleteLater();
+    m_reply = nullptr;
+    emit downloadFinished();
 }
+
+
+
+
