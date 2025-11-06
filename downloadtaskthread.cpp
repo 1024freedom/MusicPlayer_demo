@@ -73,5 +73,32 @@ void DownloadTaskThread::start() {
 }
 
 void DownloadTaskThread::pause() {
+    std::lock_guard<std::mutex> locker(m_mutex);
+    if (m_thread->isRunning()) {
+        m_downloadTask->pauseDownload();
+    }
+}
 
+double DownloadTaskThread::getProgressValue()const {
+    return m_progressValue;
+}
+
+void DownloadTaskThread::setProgressValue(const double newProgressValue) {
+    if (qFuzzyCompare(m_progressValue, newProgressValue)) {
+        return;
+    }
+    m_progressValue = newProgressValue;
+    emit progressValueChanged(m_progressValue);
+}
+
+QString DownloadTaskThread::getFileName()const {
+    return m_fileName;
+}
+
+void DownloadTaskThread::setFileName(const QString &newFileName) {
+    if (m_fileName == newFileName) {
+        return;
+    }
+    m_fileName = newFileName;
+    emit fileNameChanged(m_fileName);
 }
