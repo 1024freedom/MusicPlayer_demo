@@ -47,7 +47,7 @@ Item {
         console.log(JSON.stringify(randomPlayListIndex))
     }
 
-    function indexOf(id){//添加的歌曲是否已经存在
+    function indexOf(id){//添加的歌曲是否已经存在，存在则返回下标
         if(thisPlayListInfo.count<=0){
             return -1
         }

@@ -22,7 +22,7 @@ class MusicDownload: public QObject {
     Q_PROPERTY(QVariantList data READ data WRITE setData NOTIFY dataChanged FINAL)
 
 public:
-    explicit MusicDownload(QObject* parentp = nullptr);
+    explicit MusicDownload(QObject* parent = nullptr);
     ~MusicDownload();
 
     Q_INVOKABLE void startDownload(const QString& taskId, const QVariantMap& obj);
