@@ -59,7 +59,7 @@ signals:
     //下载错误
     void downloadError(const QString& error, const QString& fileName);
 
-    void statusChanged(int);
+    void statusChanged(TaskStatus);
     void urlChanged(QString);
     void fileNameChanged(QString);
     void savePathChanged(QString);

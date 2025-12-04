@@ -17,9 +17,6 @@ DownloadTask::~DownloadTask() {
 
 void DownloadTask::startDownload() {
     qDebug() << "运行线程:" << QThread::currentThreadId();
-    if (m_status == nullptr) {
-        return;
-    }
     if (m_manager == nullptr) {
         m_manager = new QNetworkAccessManager(this);
     }
@@ -46,10 +43,11 @@ void DownloadTask::startDownload() {
         return;
     }
 
-    //连接下载完成信号
-    connect(m_reply, &QNetworkReply::finished, this, &DownloadTask::onFinished, Qt::UniqueConnection);
-    //有新数据
+    //数据可读
     connect(m_reply, &QNetworkReply::readyRead, this, &DownloadTask::onDownloadReadyRead, Qt::UniqueConnection);
+    //连接请求数据完成信号
+    connect(m_reply, &QNetworkReply::finished, this, &DownloadTask::onFinished, Qt::UniqueConnection);
+
     //下载进度
     connect(m_reply, &QNetworkReply::downloadProgress, this, &DownloadTask::onDownloadProgress, Qt::UniqueConnection);
 }

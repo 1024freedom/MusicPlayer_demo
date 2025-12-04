@@ -18,7 +18,7 @@ void MusicDownload::startDownload(const QString &taskId, const QVariantMap &obj)
         qDebug() << "无此任务";
         return;
     }
-    connect(m_downloadInfos[taskId], &DownloadTaskThread::downloadRelay, this, [obj, taskId](const QString & fileName, const QString & savePath) {
+    connect(m_downloadInfos[taskId], &DownloadTaskThread::downloadRelay, this, [this, obj, taskId](const QString & fileName, const QString & savePath) {
         if (this->localIndexOf(QString::number(obj["id"].toInt())) >= 0) {
             return;
         }
@@ -58,7 +58,7 @@ void MusicDownload::moveTask(const QString &taskId) {
     if (m_downloadInfos.find(taskId) == m_downloadInfos.end()) {
         return;
     }
-    DownloadTask task = m_downloadInfos.take(taskId);
-    task.deleteLater();
+    DownloadTaskThread* task = m_downloadInfos.take(taskId);
+    task->deleteLater();
     setCount(m_downloadInfos.count());
 }

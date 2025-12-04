@@ -41,7 +41,7 @@ void DownloadTaskThread::setStatus(const int newStatus) {
     emit statusChanged(m_status);
 }
 
-QString DownloadTaskThread::getSavePath() {
+QString DownloadTaskThread::getSavePath() const {
     return m_savePath;
 }
 
