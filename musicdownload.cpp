@@ -1,5 +1,7 @@
 #include "musicdownload.h"
 
+//数据库存储歌曲元数据和其音频文件对应的存储路径，底层downloadtask下载的是歌曲音频数据，存储在本地文件夹中
+
 MusicDownload::MusicDownload(QObject* parent): QObject(parent) {
     m_data = readFile(m_savePath);
     connect(this, &MusicDownload::dataChanged, this, &MusicDownload::onDataChanged);
@@ -13,23 +15,23 @@ MusicDownload::~MusicDownload() {
     }
 }
 
-void MusicDownload::startDownload(const QString &taskId, const QVariantMap &obj) {
+void MusicDownload::startDownload(const QString &taskId, const QVariantMap obj) { //传入任务id和歌曲元数据
     if (m_downloadInfos.find(taskId) == m_downloadInfos.end()) {
         qDebug() << "无此任务";
         return;
     }
-    connect(m_downloadInfos[taskId], &DownloadTaskThread::downloadRelay, this, [this, obj, taskId](const QString & fileName, const QString & savePath) {
-        if (this->localIndexOf(QString::number(obj["id"].toInt())) >= 0) {
+    m_downloadInfos[taskId]->start();
+
+    connect(m_downloadInfos[taskId], &DownloadTaskThread::downloadRelay, this, [this, taskId, obj](const QString & fileName, const QString & savePath) {
+        if (this->localIndexOf() >= 0) {//该歌曲是否已经下载过
             return;
         }
-        QVariantMap o(obj);
-        o["url"] = savePath;
-        this->m_data.insert(0, o);
-        this->m_taskCount++;
+        //将元数据和下载好的音频文件路径写入数据库
+
         this->moveTask(taskId);
         emit dataChanged();
     });//写入数据信号
-    m_downloadInfos[taskId]->start();
+
 }
 
 void MusicDownload::pauseDownload(const QString &taskId) {
@@ -62,3 +64,8 @@ void MusicDownload::moveTask(const QString &taskId) {
     task->deleteLater();
     setCount(m_downloadInfos.count());
 }
+
+void MusicDownload::initDatabase() {
+
+}
+void MusicDownload::

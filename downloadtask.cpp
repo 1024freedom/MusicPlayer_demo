@@ -38,17 +38,16 @@ void DownloadTask::startDownload() {
         dir.mkpath(".");
     }
     m_file.setFileName(fullPath);
-    if (!m_file.open(QIODevice::WriteOnly) || QIODevice::Append) {
+    if (!m_file.open(QIODevice::WriteOnly) | QIODevice::Append) {
         m_reply->abort();
         return;
     }
 
-    //数据可读
+    //有数据可读信号
     connect(m_reply, &QNetworkReply::readyRead, this, &DownloadTask::onDownloadReadyRead, Qt::UniqueConnection);
-    //连接请求数据完成信号
+    //下载完成信号
     connect(m_reply, &QNetworkReply::finished, this, &DownloadTask::onFinished, Qt::UniqueConnection);
-
-    //下载进度
+    //下载进度更新信号
     connect(m_reply, &QNetworkReply::downloadProgress, this, &DownloadTask::onDownloadProgress, Qt::UniqueConnection);
 }
 
@@ -156,7 +155,7 @@ void DownloadTask::onFinished() {
         if (QFile::exists(m_file.fileName())) {
             if (m_file.rename(newFileName)) {
                 qDebug() << "音乐：" + m_fileName + "下载完成" + m_file.fileName();
-                emit downloadRelay(m_fileName, "file:///" + m_file.fileName());
+                emit downloadRelay(m_fileName, m_file.fileName());//向上层传递文件
             } else {
                 setStatus(TaskStatus::Error);
                 m_file.remove();

@@ -30,8 +30,8 @@ public:
     Q_INVOKABLE void cancelDownload(const QString& taskId);
     Q_INVOKABLE void addTask(const QString& url, const QString& fileName, const QString& taskId);
     Q_INVOKABLE void moveTask(const QString& taskId);
-    Q_INVOKABLE int localIndexOf(const QString& id);
-    Q_INVOKABLE void addLocalMusic(const QVariantMap& obj);
+
+    int localIndexOf(const QString& id);
 
     int getCount()const;
     void setCount(int newCount);
@@ -55,16 +55,13 @@ private slots:
 private:
     bool initDatabase();
     bool createTable();
-    void writeFile(const QString& filePath, const QVariantList& data);
-    QVariantList readFile(const QString& filePath);
+    QVariantList loadAllDownloads();
 
     QSqlDatabase m_database;
-    //正在下载或者在任务队列中的数据
     QMap<QString, DownloadTaskThread*> m_downloadInfos;
-    //已经下载完的数据
-    QVariantList m_data;
+    QVariantList m_data;//元数据和下载好的音频文件路径
     std::mutex m_mutex;
-    QString m_downloadSavePath = "";
+    QString m_downloadSavePath = "userInfo/downloadInfo";
     QString m_savePath = "userInfo/downloadInfo.db";
     int m_count = 0;
     int m_taskCount = 0;
