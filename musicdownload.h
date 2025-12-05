@@ -31,7 +31,7 @@ public:
     Q_INVOKABLE void addTask(const QString& url, const QString& fileName, const QString& taskId);
     Q_INVOKABLE void moveTask(const QString& taskId);
 
-    int localIndexOf(const QString& id);
+    bool localExist(const QString& id);
 
     int getCount()const;
     void setCount(int newCount);
@@ -56,6 +56,7 @@ private:
     bool initDatabase();
     bool createTable();
     QVariantList loadAllDownloads();
+    bool addDownload(const QVariantMap& obj, const QString& savePath);
 
     QSqlDatabase m_database;
     QMap<QString, DownloadTaskThread*> m_downloadInfos;
