@@ -3,7 +3,8 @@
 //数据库存储歌曲元数据和其音频文件对应的存储路径，底层downloadtask下载的是歌曲音频数据，存储在本地文件夹中
 
 MusicDownload::MusicDownload(QObject* parent): QObject(parent) {
-    m_data = readFile(m_savePath);
+    initDatabase();
+    m_data = loadAllDownloads();
     connect(this, &MusicDownload::dataChanged, this, &MusicDownload::onDataChanged);
 }
 
@@ -41,13 +42,13 @@ QString MusicDownload::getDownloadSavePath()const {
 }
 void MusicDownload::setDownloadSavePath(const QString &newDownloadSavePath) {
     if (m_downloadSavePath != newDownloadSavePath) {
-        m_downloadInfos = newDownloadSavePath;
+        m_downloadSavePath = newDownloadSavePath;
         emit downloadSavePathChanged();
     } else {
         return;
     }
 }
-void MusicDownload::startDownload(const QString &taskId, const QVariantMap obj) { //传入任务id和歌曲元数据
+void MusicDownload::startDownload(const QString& taskId, const QVariantMap& obj) { //传入任务id和歌曲元数据
     if (m_downloadInfos.find(taskId) == m_downloadInfos.end()) {
         qDebug() << "无此任务";
         return;
@@ -172,7 +173,7 @@ bool MusicDownload::addDownload(const QVariantMap &obj, const QString &savePath)
 QVariantList MusicDownload::loadAllDownloads() {
     QVariantList downloadsList;
     QSqlQuery query(m_database);
-    QString selectSQL = "SELECT id, savePath,name, artists, album, coverImg, url, allTime FROM favorites ORDER BY create_time DESC";
+    QString selectSQL = "SELECT id, savePath,name, artists, album, coverImg, url, allTime FROM downloads ORDER BY create_time DESC";
     if (!query.exec(selectSQL)) {
         qDebug() << "获取下载数据失败";
         return downloadsList;
