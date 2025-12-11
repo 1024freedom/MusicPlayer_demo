@@ -8,7 +8,7 @@ class DownloadTaskThread : public QObject {
     Q_OBJECT
     Q_PROPERTY(QString m_fileName READ getFileName WRITE setFileName NOTIFY fileNameChanged FINAL)
     Q_PROPERTY(double m_progressValue READ getProgressValue WRITE setProgressValue NOTIFY progressValueChanged FINAL)
-    Q_PROPERTY(int status READ getStatus WRITE setStatus NOTIFY statusChanged FINAL)
+    Q_PROPERTY(DownloadTask::TaskStatus status READ getStatus WRITE setStatus NOTIFY statusChanged FINAL)
     Q_PROPERTY(QString savePath READ getSavePath WRITE setSavePath NOTIFY savePathChanged FINAL)
 
 public:
@@ -26,8 +26,8 @@ public:
     double getProgressValue()const;
     void setProgressValue(const double newProgressValue);
 
-    int getStatus()const;
-    void setStatus(const int newStatus);
+    DownloadTask::TaskStatus getStatus()const;
+    void setStatus(const DownloadTask::TaskStatus newStatus);
 
     QString getSavePath()const;
     void setSavePath(const QString& newSavePath);
@@ -41,7 +41,7 @@ signals:
 
     void fileNameChanged(const QString& fileName);
 
-    void statusChanged(int status);
+    void statusChanged(const DownloadTask::TaskStatus status);
 
     void savePathChanged();
 
@@ -55,7 +55,7 @@ private:
     QString m_url = "";
     QString m_savePath = "";
     QString m_fileName = "";
-    int m_status = 0;
+    DownloadTask::TaskStatus m_status = DownloadTask::TaskStatus::Normal;
     double m_progressValue = 0;
 };
 

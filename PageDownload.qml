@@ -112,7 +112,7 @@ Rectangle {
                 delegate: Rectangle {
                     width: downloadedListView.width
                     height: 50
-                    color: index % 2 === 0 ? Theme.background : Theme.surface // 斑马纹效果
+
 
                     // 鼠标悬停高亮
                     property bool hovered: false

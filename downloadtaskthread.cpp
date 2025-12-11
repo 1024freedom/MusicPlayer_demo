@@ -29,11 +29,11 @@ DownloadTaskThread::~DownloadTaskThread() {
     }
 }
 
-int DownloadTaskThread::getStatus()const {
+DownloadTask::TaskStatus DownloadTaskThread::getStatus()const {
     return m_status;
 }
 
-void DownloadTaskThread::setStatus(const int newStatus) {
+void DownloadTaskThread::setStatus(const DownloadTask::TaskStatus newStatus) {
     if (m_status == newStatus) {
         return;
     }

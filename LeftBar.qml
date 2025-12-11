@@ -15,9 +15,9 @@ Rectangle{
         {headerText:"我的音乐",
             btnData:[
                 {btnText:"我的收藏",btnIcon:"qrc:/like",qml:"PageFavoriteMusicDetail.qml",isActive:true},
-                {btnText:"最近播放",btnIcon:"qrc:/recent",qml:"PagePlayHistory",isActive:true},
+                {btnText:"最近播放",btnIcon:"qrc:/recent",qml:"PagePlayHistory.qml",isActive:true},
                 {btnText:"本地音乐",btnIcon:"qrc:/local",qml:"",isActive:true},
-                {btnText:"下载",btnIcon:"qrc:/download",qml:"PageDownload",isActive:true}
+                {btnText:"下载",btnIcon:"qrc:/download",qml:"PageDownload.qml",isActive:true}
                 ],
             isActive:true
             }

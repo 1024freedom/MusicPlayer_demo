@@ -40,6 +40,9 @@ FramelessWindow {
     ThemeManager{
         id:p_theme
     }
+    PlayHistoryManager{
+        id:p_history
+    }
 
     Column{
         id:mainPage

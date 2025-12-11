@@ -173,6 +173,7 @@ void PlayHistoryManager::onAutoCleanupTimeout() {
 QVariantList PlayHistoryManager::getRecentPlays(const int limit) {
     QVariantList limitHistorys;
     for (int i = 0; i < limit; i++) {
+        if (i >= m_data.length())break;
         limitHistorys.append(m_data[i].toMap());
     }
     return limitHistorys;

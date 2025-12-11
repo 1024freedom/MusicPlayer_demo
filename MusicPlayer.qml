@@ -32,11 +32,11 @@ MediaPlayer {
 
     onSourceChanged: {
         play()
-
     }
 
 
     function playMusic(id,musicInfo){
+        p_history.addRecentPlay(musicInfo);//添加到播放历史
         var musicUrlCallBack=res=>{
             musicInfo.url=res.url
             p_musicRes.thisPlayMusicInfo=musicInfo
@@ -48,7 +48,7 @@ MediaPlayer {
     function playPauseMusic(){//暂停或播放
         //没有播放源时返回
         if(source==="")return
-
+        //source在main函数中已经绑定到playmusicinfo.url
         if(playing){
             pause()
         }else{

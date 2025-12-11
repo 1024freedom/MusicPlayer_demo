@@ -6,6 +6,7 @@
 #include "imagecolor.h"
 #include "thememanager.h"
 #include "musicdownload.h"
+#include "playhistorymanager.h"
 
 int main(int argc, char* argv[]) {
     QGuiApplication app(argc, argv);
@@ -22,6 +23,7 @@ int main(int argc, char* argv[]) {
     qmlRegisterType<DesktopLyric>("sz.window", 1, 0, "DesktopLyric");
     qmlRegisterType<ImageColor>("sz.window", 1, 0, "ImageColor");
     qmlRegisterType<ThemeManager>("sz.window", 1, 0, "ThemeManager");
+    qmlRegisterType<PlayHistoryManager>("sz.window", 1, 0, "PlayHistoryManager");
     qmlRegisterType<MusicDownload>("sz.window", 1, 0, "MuiscDownload");
 
     QObject::connect(
