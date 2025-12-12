@@ -3,10 +3,11 @@ import QtQuick 2.15
 Column{
     id:themeButton
     property int index: 0
-    property string hoveredColor: p_theme.m_currentTheme.subBackgroundColor
+    //利用index从后端拿对应的主题Map
+    property var themeMap: p_theme.getM_indexofTheme(themeButton.index)
+    property string hoveredColor: p_theme.m_currentTheme.itemHoverColor
     property bool isHovered: false
-    property string source: ""
-    property string color: "WHITE"
+
     MouseArea{
         id:themeIcon
 
@@ -26,16 +27,11 @@ Column{
         Rectangle{
             anchors.fill: parent
             radius: 10
-            color:if(themeButton.isHovered) return themeButton.hoveredColor
-                  else return themeButton.color
+            color:themeButton.isHovered ? themeButton.hoveredColor : "transparent"
+            //如果是当前选中的主题，显示高亮框
+
         }
-        Image {
-            width: parent.width*0.5
-            height: width
-            anchors.fill: parent
-            anchors.centerIn: parent
-            source: themeButton.source
-        }
+
     }
     Text {
         id: themeName

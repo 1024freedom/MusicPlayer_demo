@@ -6,8 +6,16 @@ Item {
     id: root
     anchors.fill: parent
 
+    // blueTheme["name"] = "blue";
+    // blueTheme["displayName"] = "蓝色";
+    // blueTheme["backgroundColor"] = "#EBF8FF";
+    // blueTheme["subBackgroundColor"] = "#90CDF4";
+    // blueTheme["clickBackgroundColor"] = "#4299E1";
+    // blueTheme["fontColor"] = "#2D3748";
+    // blueTheme["subColor"] = "#BEE3F8";
+    property var thisTheme: p_theme.m_currentTheme
     // --- 主题颜色配置 (替换为项目中的全局单例或属性) ---
-    property color themeBackground: "#FFFFFF"       // 背景色
+    property color themeBackground: thisTheme.backgroundColor      // 背景色
     property color themeAlternateBackground: "#F9F9F9" // 偶数行背景色
     property color themeHoverColor: "#F0F0F0"       // 悬停颜色
     property color themeTextColor: "#333333"        // 主要文字颜色
@@ -253,7 +261,7 @@ Item {
                     // 5. 时长
                     Text {
                         Layout.preferredWidth: 80
-                        text: allTime // 数据库中存的是 "03:20" 这种格式字符串
+                        text: allTime
                         color: themeSubTextColor
                         font.pixelSize: 13
                         horizontalAlignment: Text.AlignRight

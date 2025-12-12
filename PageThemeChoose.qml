@@ -46,6 +46,10 @@ Flickable{
                 index:4
                 source: "qrc:/theme4.png"
             }
+            ThemeButton{
+                index:5
+                source: "qrc:/theme5.png"
+            }
         }
     }
 }
