@@ -7,6 +7,7 @@ Column{
     property var themeMap: p_theme.getM_indexofTheme(themeButton.index)
     property string hoveredColor: p_theme.m_currentTheme.itemHoverColor
     property bool isHovered: false
+    spacing:5
 
     MouseArea{
         id:themeIcon
@@ -29,15 +30,22 @@ Column{
             radius: 10
             color:themeButton.isHovered ? themeButton.hoveredColor : "transparent"
             //如果是当前选中的主题，显示高亮框
-
+            border.width: p_theme.m_currentTheme.name === themeButton.themeMap["name"] ? 6 : 0
+            border.color: p_theme.m_currentTheme.alternateRowColor
+        }
+        ThemePreviewIcon{
+            anchors.centerIn: parent
+            width: parent.width-16
+            height: parent.height-16
+            themeData: themeButton.themeMap
         }
 
     }
     Text {
         id: themeName
-        anchors.top: themeIcon.Bottom
-        text: p_theme.getM_indexofTheme(themeButton.index).displayName
-        color: p_theme.m_currentTheme.fontColor
+                anchors.horizontalCenter: themeIcon.horizontalCenter
+        text: themeButton.themeMap["displayName"]
+        color: p_theme.m_currentTheme.primaryTextColor
         font.bold: true
         font.pointSize: 10
     }

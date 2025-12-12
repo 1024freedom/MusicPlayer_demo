@@ -62,7 +62,7 @@ Flickable {
         anchors.top: parent.top
         anchors.topMargin: 25
         radius:width/2
-        color: thisTheme.backgroundColor
+        color: thisTheme.contentBackgroundColor
         Row{
             Repeater{
                 model: ListModel{}
@@ -92,15 +92,15 @@ Flickable {
                 height: children[0].contentHeight+findMusicHeader.topBottomPadding
                 radius: width/2
                 color: if(findMusicHeader.current===index)
-                           return thisTheme.subBackgroundColor
-                        else if(isHovered) return thisTheme.subColor
-                        else return thisTheme.backgroundColor
+                           return thisTheme.itemSelectedColor
+                        else if(isHovered) return thisTheme.itemHoverColor
+                        else return thisTheme.contentBackgroundColor
                 Text {
                     anchors.centerIn: parent
                     font.pointSize: findMusicFlickable.fontSize
                     font.bold: findMusicHeader.current===index
                     text: headerText
-                    color: thisTheme.fontColor
+                    color: thisTheme.primaryTextColor
                 }
                 MouseArea{
                     anchors.fill: parent

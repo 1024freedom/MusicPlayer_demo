@@ -6,24 +6,7 @@ Item {
     id: root
     anchors.fill: parent
 
-    // blueTheme["name"] = "blue";
-    // blueTheme["displayName"] = "蓝色";
-    // blueTheme["backgroundColor"] = "#EBF8FF";
-    // blueTheme["subBackgroundColor"] = "#90CDF4";
-    // blueTheme["clickBackgroundColor"] = "#4299E1";
-    // blueTheme["fontColor"] = "#2D3748";
-    // blueTheme["subColor"] = "#BEE3F8";
     property var thisTheme: p_theme.m_currentTheme
-    // --- 主题颜色配置 (替换为项目中的全局单例或属性) ---
-    property color themeBackground: thisTheme.backgroundColor      // 背景色
-    property color themeAlternateBackground: "#F9F9F9" // 偶数行背景色
-    property color themeHoverColor: "#F0F0F0"       // 悬停颜色
-    property color themeTextColor: "#333333"        // 主要文字颜色
-    property color themeSubTextColor: "#888888"     // 次要文字(歌手/专辑)颜色
-    property color themeDividerColor: "#E0E0E0"     // 分割线颜色
-    property color themeHighlightColor: "#C20C0C"   // 强调色(如正在播放的图标颜色)
-
-    // --- 逻辑处理 ---
 
     // 初始化时加载数据
     Component.onCompleted: {
@@ -58,7 +41,7 @@ Item {
         Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: 60
-            color: themeBackground
+            color: thisTheme.windowBackgroundColor
 
             RowLayout {
                 anchors.fill: parent
@@ -69,14 +52,14 @@ Item {
                     text: "最近播放"
                     font.pixelSize: 24
                     font.bold: true
-                    color: themeTextColor
+                    color: thisTheme.primaryTextColor
                 }
 
                 Text {
                     id: totalCountText
                     text: "共 0 首"
                     font.pixelSize: 14
-                    color: themeSubTextColor
+                    color: thisTheme.primaryTextColor
                     Layout.alignment: Qt.AlignBottom
                     Layout.bottomMargin: 5
                 }
@@ -97,7 +80,7 @@ Item {
             Rectangle {
                 width: parent.width
                 height: 1
-                color: themeHighlightColor
+                color: thisTheme.dividerColor
                 anchors.bottom: parent.bottom
             }
         }
@@ -106,7 +89,7 @@ Item {
         Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: 30
-            color: themeBackground
+            color: thisTheme.contentBackgroundColor
 
             RowLayout {
                 anchors.fill: parent
@@ -118,7 +101,7 @@ Item {
                 // 标题列
                 Text {
                     text: "音乐标题"
-                    color: themeSubTextColor
+                    color: thisTheme.secondaryTextColor
                     font.pixelSize: 13
                     Layout.fillWidth: true
                     Layout.preferredWidth: 4
@@ -128,7 +111,7 @@ Item {
                 // 歌手列
                 Text {
                     text: "歌手"
-                    color: themeSubTextColor
+                    color: thisTheme.secondaryTextColor
                     font.pixelSize: 13
                     Layout.fillWidth: true
                     Layout.preferredWidth: 2
@@ -138,7 +121,7 @@ Item {
                 // 专辑列
                 Text {
                     text: "专辑"
-                    color: themeSubTextColor
+                    color: thisTheme.secondaryTextColor
                     font.pixelSize: 13
                     Layout.fillWidth: true
                     Layout.preferredWidth: 2
@@ -148,7 +131,7 @@ Item {
                 // 时长列
                 Text {
                     text: "时长"
-                    color: themeSubTextColor
+                    color: thisTheme.secondaryTextColor
                     font.pixelSize: 13
                     Layout.preferredWidth: 80
                     horizontalAlignment: Text.AlignRight
@@ -179,8 +162,8 @@ Item {
 
                 // 斑马纹背景：偶数行颜色不同
                 color: {
-                    if (mouseArea.containsMouse) return themeHoverColor
-                    return index % 2 === 0 ? themeBackground : themeAlternateBackground
+                    if (mouseArea.containsMouse) return thisTheme.itemHoverColor
+                    return index % 2 === 0 ? thisTheme.contentBackgroundColor : thisTheme.alternateRowColor
                 }
 
                 MouseArea {
@@ -220,7 +203,7 @@ Item {
                     Text {
                         Layout.preferredWidth: 50
                         text: (index + 1).toString().padStart(2, '0')
-                        color: themeSubTextColor
+                        color: thisTheme.secondaryTextColor
                         font.pixelSize: 13
                         horizontalAlignment: Text.AlignCenter
                     }
@@ -230,7 +213,7 @@ Item {
                         Layout.fillWidth: true
                         Layout.preferredWidth: 4
                         text: name
-                        color: themeTextColor
+                        color: thisTheme.primaryTextColor
                         font.pixelSize: 13
                         elide: Text.ElideRight
                         Layout.rightMargin: 10
@@ -241,7 +224,7 @@ Item {
                         Layout.fillWidth: true
                         Layout.preferredWidth: 2
                         text: artists
-                        color: themeSubTextColor // 歌手通常稍微灰一点
+                        color: thisTheme.secondaryTextColor
                         font.pixelSize: 13
                         elide: Text.ElideRight
                         Layout.rightMargin: 10
@@ -252,7 +235,7 @@ Item {
                         Layout.fillWidth: true
                         Layout.preferredWidth: 2
                         text: album
-                        color: themeSubTextColor
+                        color: thisTheme.secondaryTextColor
                         font.pixelSize: 13
                         elide: Text.ElideRight
                         Layout.rightMargin: 10
@@ -262,7 +245,7 @@ Item {
                     Text {
                         Layout.preferredWidth: 80
                         text: allTime
-                        color: themeSubTextColor
+                        color: thisTheme.secondaryTextColor
                         font.pixelSize: 13
                         horizontalAlignment: Text.AlignRight
                         rightPadding: 20

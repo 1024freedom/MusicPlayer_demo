@@ -24,7 +24,7 @@ Rectangle{
         ]
     width: 180
     height: parent.height
-    color: p_theme.m_currentTheme.backgroundColor
+    color: p_theme.m_currentTheme.windowBackgroundColor
 
     property var thisData: filterLeftBarData(leftBarData)
     property string thisQml: "PageFindMusic.qml"
@@ -67,7 +67,7 @@ Rectangle{
                 model: ListModel{}
                 header: Text {
                     font.pointSize: leftBar.fontSize-2
-                    color: leftBar.thisTheme.fontColor
+                    color: leftBar.thisTheme.primaryTextColor
                     text: leftBar.thisData[index].headerText
                     padding: 5
                 }
@@ -85,7 +85,7 @@ Rectangle{
                 width: leftBarFlickable.width-15
                 height: leftBar.btnHeight
                 radius: 50
-                color: if(isHovered)return leftBar.thisTheme.subBackgroundColor
+                color: if(isHovered)return leftBar.thisTheme.itemHoverColor
                     else return "#00000000"
 
                 onParentChanged: {
@@ -98,7 +98,7 @@ Rectangle{
                     width: parent.isThisBtn?parent.width:0
                     height: parent.height
                     radius: parent.radius
-                    color: leftBar.thisTheme.clickBackgroundColor
+                    color: leftBar.thisTheme.itemSelectedColor
                     Behavior on width {
                         NumberAnimation{
                             duration: 200
@@ -120,7 +120,7 @@ Rectangle{
                         font.bold: isThisBtn?true:false
                         scale: isThisBtn?1.1:1
                         font.pointSize: leftBar.fontSize
-                        color: leftBar.thisTheme.fontColor
+                        color: leftBar.thisTheme.primaryTextColor
                         text: btnText
                         Behavior on scale {
                             NumberAnimation{

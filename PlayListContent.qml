@@ -179,11 +179,11 @@ Item {
                 height: children[0].contentHeight+15
                 radius: width/2
                 color: "#00000000"
-                border.color: thisTheme.fontColor
+                border.color: thisTheme.dividerColor
                 Text {
                     font.pointSize: playListContent.fontSize
                     anchors.centerIn: parent
-                    color: thisTheme.fontColor
+                    color: thisTheme.primaryTextColor
                     text: "ACG"
                 }
             }
@@ -199,15 +199,15 @@ Item {
                         height: children[0].contentHeight+15
                         radius: width/2
                         color: if(headerCurrent===index)
-                                   return thisTheme.subBackgroundColor
+                                   return thisTheme.itemSelectedColor
                                 else return "#00000000"
                         Text {
                             font.pointSize: playListContent.fontSize-1
                             font.bold: headerCurrent===index||parent.isHovered
                             anchors.centerIn: parent
                             color: if(headerCurrent===index)
-                                       return thisTheme.subBackgroundColor+"F"
-                                    else return thisTheme.fontColor
+                                       return thisTheme.itemSelectedColor
+                                    else return thisTheme.primaryTextColor
                             text: playListContent.headerData[index].name
                         }
                         MouseArea{
@@ -253,12 +253,12 @@ Item {
                 width: contentItemWidth
                 height: contentItemHeight
                 button.source: "qrc:/pause"
-                button.color:thisTheme.subBackgroundColor
-                button.hoveredColor: thisTheme.subBackgroundColor+"F"
+                button.color:thisTheme.itemSelectedColor
+                button.hoveredColor: thisTheme.itemHoverColor
                 button.iconColor: "WHITE"
                 normalColor: "WHITE"
-                hoveredColor: thisTheme.subBackgroundColor
-                fontColor: thisTheme.fontColor
+                hoveredColor: thisTheme.itemHoverColor
+                fontColor: thisTheme.primaryTextColor
 
                 imgSource: coverImg+"?param="+200+"y"+200
                 text: name

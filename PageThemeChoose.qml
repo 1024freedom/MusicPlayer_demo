@@ -1,55 +1,57 @@
 import QtQuick 2.15
+import QtQuick.Controls 2.15
 import sz.window
 
-Flickable{
-    id:themeChoose
-    Rectangle{
-        id:content
-        Row{
-            id:title
-            topPadding: 30
-            Text {
-                id: titleText
-                text:"主题"
-                color: p_theme.m_currentTheme.fontColor
-                font.bold: true
-                font.pointSize: 20
-                horizontalAlignment: parent.Left
-                leftPadding: 30
-            }
-            bottomPadding: 10
-        }
+Rectangle{
+    anchors.fill: parent
+    color: p_theme.m_currentTheme.contentBackgroundColor
+    Flickable{
+        id:themeChoose
+        anchors.fill: parent//必须要有尺寸才能显示
+        contentHeight: content.height//确保flickable能正常滚动
+        clip:true
 
+        Rectangle{
+            id:content
+            width:parent.width
+            //高度自适应内容
+            height: title.height+themeFlow.height+50
+            color: "transparent"
+            Row{
+                id:title
+                topPadding: 30
+                width: parent.width
 
-        Row{
-            anchors.top: title.bottom
-            topPadding: 20
-            padding: 10
+                Text {
+                    id: titleText
+                    text:"主题"
+                    color: "BLACK"/*p_theme.m_currentTheme.primaryTextColor*/
+                    font.bold: true
+                    font.pointSize: 20
+                    horizontalAlignment: Text.AlignLeft
+                    leftPadding: 30
+                }
+                bottomPadding: 10
+            }
 
-            ThemeButton{
-                index:0
-                source: "qrc:/theme0.png"
-            }
-            ThemeButton{
-                index:1
-                source: "qrc:/theme1.png"
-            }
-            ThemeButton{
-                index:2
-                source: "qrc:/theme2.png"
-            }
-            ThemeButton{
-                index:3
-                source: "qrc:/theme3.png"
-            }
-            ThemeButton{
-                index:4
-                source: "qrc:/theme4.png"
-            }
-            ThemeButton{
-                index:5
-                source: "qrc:/theme5.png"
+            //使用Flow自动流式布局，可自动换行
+            Flow{
+                id:themeFlow
+                anchors.top: title.bottom
+                anchors.topMargin: 20
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.leftMargin: 30
+                spacing:20//按钮之间的间距
+                Repeater{
+                    model: p_theme.m_themes
+                    ThemeButton{
+                        index: model.index
+                    }
+                }
             }
         }
     }
+
 }
+

@@ -8,7 +8,7 @@ Rectangle{
     property double fontSize: 11
     width: parent.width
     height: 80
-    color: thisTheme.backgroundColor
+    color: thisTheme.windowBackgroundColor
 
     ThisPlayerListLabel{
         id:thisPlayerListLabel
@@ -27,11 +27,11 @@ Rectangle{
         to:p_musicPlayer.duration//总时长
         anchors.bottom: parent.top
         background: Rectangle{
-            color: thisTheme.subBackgroundColor
+            color: thisTheme.alternateRowColor
             Rectangle{
                 width: bottomBarSlider.visualPosition*parent.width
                 height: parent.height
-                color: thisTheme.subColor
+                color: thisTheme.accentColor
             }
         }
         handle: Rectangle{
@@ -41,8 +41,8 @@ Rectangle{
             y:-(height-bottomBarSlider.height)/2
             radius: 100
             border.width: 1.5
-            border.color: thisTheme.subBackgroundColor
-            color: bottomBarSlider.pressed?thisTheme.subBackgroundColor:"WHITE"
+            border.color: thisTheme.dividerColor
+            color: bottomBarSlider.pressed?thisTheme.itemSelectedColor:"WHITE"
         }
         onMoved: {
             movePressed=true
@@ -86,7 +86,7 @@ Rectangle{
                     width: parent.width
                     font.pointSize: bottomBar.fontSize
                     text: p_musicRes.thisPlayMusicInfo.name
-                    color: thisTheme.fontColor
+                    color: thisTheme.primaryTextColor
 
                     Connections{
                         target: p_musicRes
@@ -128,7 +128,7 @@ Rectangle{
                     width: parent.width
                     font.pointSize: bottomBar.fontSize-1
                     text: p_musicRes.thisPlayMusicInfo.artists
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     Connections{
                         target: p_musicRes
                         function onThisPlayMusicInfoChanged(){
@@ -177,7 +177,7 @@ Rectangle{
                 anchors.verticalCenter: parent.verticalCenter
                 source:"qrc:/listloop"
                 hintText:"列表循环"
-                hoveredColor: thisTheme.subBackgroundColor
+                hoveredColor: thisTheme.itemSelectedColor
                 color: "#00000000"
                 onClicked: {
                     p_musicPlayer.setPlayMode()
@@ -216,7 +216,7 @@ Rectangle{
                 height: width
                 anchors.verticalCenter: parent.verticalCenter
                 source:"qrc:/lastPlay"
-                hoveredColor: thisTheme.subBackgroundColor
+                hoveredColor: thisTheme.itemHoverColor
                 color: "#00000000"
                 hintText: "上一首"
                 onClicked: {
@@ -229,7 +229,7 @@ Rectangle{
                 anchors.verticalCenter: parent.verticalCenter
                 source:if(p_musicPlayer.playing)return "qrc:/play"
                 else return "qrc:/pause"
-                hoveredColor: thisTheme.subBackgroundColor
+                hoveredColor: thisTheme.itemHoverColor
                 hintText: if(p_musicPlayer.playing)return "暂停"
                           else return "播放"
                 color: "#00000000"
@@ -259,7 +259,7 @@ Rectangle{
                 transformOrigin: Item.Center
                 hintText: "下一首"
                 rotation: 180
-                hoveredColor: thisTheme.subBackgroundColor
+                hoveredColor: thisTheme.itemHoverColor
                 color: "#00000000"
                 onClicked: {
                     p_musicPlayer.nextMusicPlay()
@@ -284,14 +284,14 @@ Rectangle{
                 font.pointSize: bottomBar.fontSize
                 text: p_musicRes.setTime(bottomBarSlider.value)
                 font.weight: 1
-                color: thisTheme.fontColor
+                color: thisTheme.secondaryTextColor
                 anchors.verticalCenter: parent.verticalCenter
             }
             Text {
                 font.pointSize: bottomBar.fontSize
                 text: "/"+p_musicRes.thisPlayMusicInfo.allTime
                 font.weight: 1
-                color: thisTheme.fontColor
+                color: thisTheme.secondaryTextColor
                 anchors.verticalCenter: parent.verticalCenter
             }
 
@@ -308,7 +308,7 @@ Rectangle{
                 anchors.verticalCenter: parent.verticalCenter
                 source:if(!isClicked)return "qrc:/lyricforclicked"
                             else return "qrc:/lyricclicked"
-                hoveredColor: thisTheme.subBackgroundColor
+                hoveredColor: thisTheme.itemHoverColor
                 hintText: if(!isClicked)return "开启桌面歌词"
                           else return "关闭桌面歌词"
                 color: "#00000000"
@@ -333,7 +333,7 @@ Rectangle{
                 width: 20
                 height: width
                 source:"qrc:/playList"
-                hoveredColor: thisTheme.subBackgroundColor
+                hoveredColor: thisTheme.itemHoverColor
                 color: "#00000000"
                 hintText: "播放队列"
                 onClicked: {

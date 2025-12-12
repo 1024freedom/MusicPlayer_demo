@@ -28,7 +28,7 @@ Item {
                             width: 6
                             height: 6
                             radius: 3
-                            color: index===0?(root.themeData[itemSelectedColor]):Qt.rgba(0,0,0,0.2)
+                            color: index===0?(root.themeData["itemSelectedColor"]):Qt.rgba(0,0,0,0.2)
 
                         }
                     }

@@ -78,7 +78,7 @@ MouseArea{
         anchors.bottom: bottomBarVolumeBtn.top
         anchors.bottomMargin: 5
         radius: 12
-        color: "PINK"
+        color: thisTheme.windowBackgroundColor
         Text {
             anchors.bottom: bottomBarVolumeSlider.top
             anchors.bottomMargin: 1
@@ -86,7 +86,7 @@ MouseArea{
             font.pointSize: bottomBar.fontSize-1
             visible: bottomBarVolumeSlider.pressed
             text: parseInt(bottomBarVolumeSlider.value*100)
-            color: thisTheme.fontColor
+            color: thisTheme.secondaryTextColor
         }
 
         Slider{
@@ -99,14 +99,14 @@ MouseArea{
             orientation: Qt.Vertical//竖向布局
             anchors.centerIn: parent
             background: Rectangle{
-                color: thisTheme.subBackgroundColor
+                color: thisTheme.windowBackgroundColor
                 radius: 12
                 Rectangle{
                     width: parent.width
                     height: (1-bottomBarVolumeSlider.visualPosition)*parent.height
                     anchors.bottom: parent.bottom
                     radius: 12
-                    color: "RED"
+                    color: thisTheme.accentColor
                 }
             }
             handle: Rectangle{
@@ -116,8 +116,8 @@ MouseArea{
                 y:(bottomBarVolumeSlider.availableHeight-height)*bottomBarVolumeSlider.visualPosition
                 radius: 100
                 border.width: 1.5
-                border.color: thisTheme.subBackgroundColor
-                color: bottomBarVolumeSlider.pressed?thisTheme.subBackgroundColor:"WHITE"
+                border.color: thisTheme.dividerColor
+                color: bottomBarVolumeSlider.pressed?thisTheme.itemSelectedColor:"WHITE"
             }
             onMoved: {
                 p_musicPlayer.lastVolume=p_musicPlayer.volume
@@ -132,7 +132,7 @@ MouseArea{
         height: width
         source:"qrc:/soundChanger"
         anchors.bottom: parent.bottom
-        hoveredColor: thisTheme.subBackgroundColor
+        hoveredColor: thisTheme.itemHoverColor
         hintText: "调节音量"
         color: "#00000000"
         onEntered: {

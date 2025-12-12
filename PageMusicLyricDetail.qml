@@ -325,7 +325,7 @@ Item {
                         height: width
                         anchors.verticalCenter: parent.verticalCenter
                         source:"qrc:/listloop"
-                        hoveredColor: thisTheme.subBackgroundColor
+                        hoveredColor: thisTheme.itemHoverColor
                         color: "#00000000"
                         onClicked: {
                             p_musicPlayer.setPlayMode()
@@ -360,7 +360,7 @@ Item {
                         height: width
                         anchors.verticalCenter: parent.verticalCenter
                         source:"qrc:/lastPlay"
-                        hoveredColor: thisTheme.subBackgroundColor
+                        hoveredColor: thisTheme.itemHoverColor
                         color: "#00000000"
                         onClicked: {
                             p_musicPlayer.preMusicPlay()
@@ -399,7 +399,7 @@ Item {
                         source:"qrc:/lastPlay"
                         transformOrigin: Item.Center
                         rotation: 180
-                        hoveredColor: thisTheme.subBackgroundColor
+                        hoveredColor: thisTheme.itemHoverColor
                         color: "#00000000"
                         onClicked: {
                             p_musicPlayer.nextMusicPlay()
@@ -423,7 +423,7 @@ Item {
                         width: contentWidth
                         height: contentHeight
                         text: p_musicRes.setTime(footerSlider.value)
-                        color: "WHITE"
+                        color: thisTheme.accentColor
                     }
                     Slider{
                         id:footerSlider
@@ -434,11 +434,11 @@ Item {
                         from: 0
                         to:p_musicPlayer.duration//总时长
                         background: Rectangle{
-                            color: thisTheme.subBackgroundColor
+                            color: thisTheme.alternateRowColor
                             Rectangle{
                                 width: footerSlider.visualPosition*parent.width
                                 height: parent.height
-                                color: "RED"
+                                color: thisTheme.accentColor
                             }
                         }
                         handle: Rectangle{
@@ -448,8 +448,8 @@ Item {
                             y:-(height-footerSlider.height)/2
                             radius: 100
                             border.width: 1.5
-                            border.color: thisTheme.subBackgroundColor
-                            color: footerSlider.pressed?thisTheme.subBackgroundColor:"WHITE"
+                            border.color: thisTheme.dividerColor
+                            color: footerSlider.pressed?thisTheme.itemSelectedColor:"WHITE"
                         }
                         onMoved: {
                             movePressed=true
@@ -473,7 +473,7 @@ Item {
                         width: contentWidth
                         height: contentHeight
                         text: p_musicRes.setTime(p_musicRes.thisPlayMusicInfo.allTime)
-                        color: "WHITE"
+                        color: thisTheme.accentColor
                     }
                 }
 
@@ -490,7 +490,7 @@ Item {
                     width: 20
                     height: width
                     source:"qrc:/playList"
-                    hoveredColor: thisTheme.subBackgroundColor
+                    hoveredColor: thisTheme.itemSelectedColor
                     color: "#00000000"
                     onClicked: {
                         thisPlayerListLabel.visible=!thisPlayerListLabel.visible

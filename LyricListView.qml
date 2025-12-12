@@ -5,7 +5,7 @@ Item {
     id:lyricListView
     width: parent.width
     height: parent.height
-
+    property var thisTheme: p_theme.m_currentTheme
     property ListModel lyricData:ListModel{}
     property int current: -1
     property int delayTime: 10000
@@ -75,7 +75,7 @@ Item {
             radius: 12
             scale: lyricListView.offsetScale(index,listView.currentIndex)
             transformOrigin: Item.Left//向右缩放
-            color: if(isHovered)return "RED"
+            color: if(isHovered)return thisTheme.itemHoverColor
                         else return "#00000000"
             Behavior on color{
                 ColorAnimation {

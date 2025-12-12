@@ -154,8 +154,8 @@ Item {
 
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: if(newMusicContent.contentCurrent===index)
-                           return thisTheme.subBackgroundColor
-                        else if(isHovered) return thisTheme.subBackgroundColor
+                           return thisTheme.itemSelectedColor
+                        else if(isHovered) return thisTheme.itemHoverColor
                         else return "#00000000"
                 MouseArea{
                     anchors.fill: parent
@@ -199,7 +199,7 @@ Item {
                             anchors.verticalCenter: parent.verticalCenter
                             source:if(isFavorited)return "qrc:/favorited"
                                         else return "qrc:/like"
-                            hoveredColor: thisTheme.subBackgroundColor
+                            hoveredColor: thisTheme.itemHoverColor
                             color: "#00000000"
                             onClicked: {
                                 if(isFavorited){
@@ -229,7 +229,7 @@ Item {
                             font.weight: 2
                             font.pointSize: newMusicContent.fontSize
                             elide: Text.ElideRight
-                            color: thisTheme.fontColor
+                            color: thisTheme.primaryTextColor
                             text: name
                         }
                         Text {
@@ -239,7 +239,7 @@ Item {
                             font.weight: 2
                             font.pointSize: newMusicContent.fontSize
                             elide: Text.ElideRight
-                            color: thisTheme.fontColor
+                            color: thisTheme.secondaryTextColor
                             text: artists
                         }
                         Text {
@@ -249,7 +249,7 @@ Item {
                             font.weight: 2
                             font.pointSize: newMusicContent.fontSize
                             elide: Text.ElideRight
-                            color: thisTheme.fontColor
+                            color: thisTheme.secondaryTextColor
                             text: album
                         }
                         Text {
@@ -259,7 +259,7 @@ Item {
                             font.weight: 2
                             font.pointSize: newMusicContent.fontSize
                             elide: Text.ElideRight
-                            color: thisTheme.fontColor
+                            color: thisTheme.secondaryTextColor
                             text: allTime
                         }
                     }

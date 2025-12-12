@@ -84,21 +84,21 @@ ListView {
                         width: parent.width
                         font.pointSize: playListDetail.fontSize
                         elide: Text.ElideRight
-                        color: thisTheme.subBackgroundColor
+                        color: thisTheme.primaryTextColor
                         text: "歌单"
                     }
                     Text {
                         width: parent.width
                         font.pointSize: 20
                         elide: Text.ElideRight
-                        color: thisTheme.fontColor
+                        color: thisTheme.primaryTextColor
                         text: header.nameText
                     }
                     Text {
                         width: parent.width
                         font.pointSize: playListDetail.fontSize
                         elide: Text.ElideRight
-                        color: thisTheme.fontColor
+                        color: thisTheme.secondaryTextColor
                         text: header.descriptionText
                     }
                 }
@@ -111,7 +111,7 @@ ListView {
                     width: 34
                     height: width
                     source:"qrc:/pause"
-                    hoveredColor: thisTheme.subBackgroundColor
+                    hoveredColor: thisTheme.itemHoverColor
                     color: "#00000000"
                     onEntered: {
                         scale=1.1
@@ -130,7 +130,7 @@ ListView {
                     width: 33
                     height: width
                     source:"qrc:/playList"
-                    hoveredColor: thisTheme.subBackgroundColor
+                    hoveredColor: thisTheme.itemHoverColor
                     color: "#00000000"
                 }
 
@@ -147,7 +147,7 @@ ListView {
                     font.weight: 2
                     font.pointSize:fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     text: "序号"
                 }
                 Text {
@@ -157,7 +157,7 @@ ListView {
                     font.weight: 2
                     font.pointSize:fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.primaryTextColor
                     text: "歌名"
                 }
                 Text {
@@ -167,7 +167,7 @@ ListView {
                     font.weight: 2
                     font.pointSize: fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     text: "作者"
                 }
                 Text {
@@ -177,7 +177,7 @@ ListView {
                     font.weight: 2
                     font.pointSize: fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     text: "专辑"
                 }
                 Text {
@@ -187,7 +187,7 @@ ListView {
                     font.weight: 2
                     font.pointSize: fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     text: "时长"
                 }
             }
@@ -210,8 +210,8 @@ ListView {
         height: 80
         radius: 12
         color: if(currentIndex===index)
-                   return thisTheme.subBackgroundColor
-                else if(isHovered) return thisTheme.subBackgroundColor
+                   return thisTheme.itemSelectedColor
+                else if(isHovered) return thisTheme.itemHoverColor
                 else return "#00000000"
         onParentChanged: {
             if(parent!=null){
@@ -266,7 +266,7 @@ ListView {
                         font.weight: 2
                         font.pointSize:fontSize
                         elide: Text.ElideRight
-                        color: thisTheme.fontColor
+                        color: thisTheme.secondaryTextColor
                         text: index+1
                     }
                     ToolTipButtom{//添加喜欢按钮
@@ -276,7 +276,7 @@ ListView {
                         anchors.verticalCenter: parent.verticalCenter
                         source:if(isFavorited)return "qrc:/favorited"
                                     else return "qrc:/like"
-                        hoveredColor: thisTheme.subBackgroundColor
+                        hoveredColor: thisTheme.itemHoverColor
                         color: "#00000000"
                         onClicked: {
                             if(isFavorited){
@@ -304,7 +304,7 @@ ListView {
                     font.weight: 2
                     font.pointSize:fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.primaryTextColor
                     text: name
                 }
                 Text {
@@ -314,7 +314,7 @@ ListView {
                     font.weight: 2
                     font.pointSize: fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     text: artists
                 }
                 Text {
@@ -324,7 +324,7 @@ ListView {
                     font.weight: 2
                     font.pointSize: fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     text: album
                 }
                 Text {
@@ -334,7 +334,7 @@ ListView {
                     font.weight: 2
                     font.pointSize: fontSize
                     elide: Text.ElideRight
-                    color: thisTheme.fontColor
+                    color: thisTheme.secondaryTextColor
                     text: allTime
                 }
             }
