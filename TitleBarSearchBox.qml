@@ -7,10 +7,10 @@ Rectangle{
     width: 240
     height: searchTextField.height+10
     radius: width/2
-    border.width: 2
-    border.color: if(searchTextField.focus)return thisTheme.subColor
+    border.width: 4
+    border.color: if(searchTextField.focus)return thisTheme.dividerColor
                         else return "#00000000"
-    color: thisTheme.subBackgroundColor
+    color: thisTheme.contentBackgroundColor
     Behavior on border.color {
         ColorAnimation {
             duration: 200
@@ -51,7 +51,7 @@ Rectangle{
         anchors.left: parent.left
         anchors.leftMargin: 10
         font.pointSize: 10
-        color: thisTheme.fontColor
+        color: thisTheme.primaryTextColor
         background: Rectangle{
             color: "#00000000"
             border.width: 0
@@ -72,7 +72,7 @@ Rectangle{
         anchors.right: parent.right
         source:"qrc:/search"
         hintText: "搜索"
-        color: if(isHovered)return thisTheme.subColor
+        color: if(isHovered)return thisTheme.itemHoverColor
                 else return "#00000000"
         onClicked: {
             parent.showSearchResultPage();

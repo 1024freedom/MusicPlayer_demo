@@ -5,7 +5,7 @@ Rectangle {
     width: 350
     height: 500
     radius: 12
-    color: "#FAF2F1"
+    color: thisTheme.windowBackgroundColor
 
     function setHeight(children,spacing){
         var h=0
@@ -48,7 +48,7 @@ Rectangle {
                     font.pointSize: bottomBar.fontSize+5
                     text: "当前播放:"+p_musicRes.thisPlayMusicInfo.name
                     font.weight: 1
-                    color: thisTheme.fontColor
+                    color: thisTheme.primaryTextColor
                 }
                 Item{
                     width: parent.width
@@ -57,14 +57,14 @@ Rectangle {
                         font.pointSize: bottomBar.fontSize
                         text: "总共"+p_musicRes.thisPlayListInfo.count
                         font.weight: 1
-                        color: thisTheme.fontColor
+                        color: thisTheme.secondaryTextColor
                     }
                     Text {
                         anchors.right: parent.right
                         font.pointSize: bottomBar.fontSize
                         text: "清空列表"
                         font.weight: 1
-                        color: thisTheme.fontColor
+                        color: thisTheme.secondaryTextColor
                         MouseArea{
                             anchors.fill: parent
                             cursorShape: Qt.PointingHandCursor
@@ -89,23 +89,23 @@ Rectangle {
                     width: parent.width
                     height: 1
                     radius: width/2
-                    color: thisTheme.fontColor
+                    color: thisTheme.primaryTextColor
                 }
             }
         }
         model: p_musicRes.thisPlayListInfo
         delegate: Rectangle{
             property string fontColor:if(thisPlayerListLabelLv.currentIndex===index)
-                                          return thisTheme.subBackgroundColor+"FF"
-                                        else return thisTheme.fontColor
+                                          return thisTheme.itemSelectedColor
+                                        else return thisTheme.primaryTextColor
             property bool isHovered: false
             width: thisPlayerListLabel.width
             height: children[0].height+20
             color: if(isHovered)
-                       return "RED"
+                       return thisTheme.itemHoverColor
                         else if(index%2===0)
-                            return thisTheme.subBackgroundColor
-                        else return "PINK"
+                            return thisTheme.alternateRowColor
+                        else return thisTheme.contentBackgroundColor
 
             Row{
                 width: parent.width-40
@@ -178,6 +178,6 @@ Rectangle {
         anchors.centerIn: parent
         font.pointSize: bottomBar.fontSize+5
         text: "还未添加任何歌曲哦"
-        color: thisTheme.fontColor
+        color: thisTheme.disabledTextColor
     }
 }

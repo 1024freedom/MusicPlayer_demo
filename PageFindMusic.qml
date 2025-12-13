@@ -1,5 +1,5 @@
 import QtQuick
-
+import QtQuick.Controls
 Flickable {
     id:findMusicFlickable
     property var thisTheme: p_theme.m_currentTheme
@@ -25,6 +25,30 @@ Flickable {
             contentYChanged()
         }
     }
+
+    // 滚动条
+        ScrollBar.vertical: ScrollBar {
+            id: vbar
+            policy: ScrollBar.AsNeeded
+            width: 10
+            active: vbar.pressed || vbar.hovered || findMusicFlickableAni.running
+
+            // 自定义滑块
+            contentItem: Rectangle {
+                implicitWidth: parent.width
+                implicitHeight: 100
+                radius: width / 2
+
+                color: vbar.pressed ? thisTheme.itemSelectedColor
+                                    : Qt.rgba(thisTheme.primaryTextColor.r,
+                                              thisTheme.primaryTextColor.g,
+                                              thisTheme.primaryTextColor.b,
+                                              0.5)
+
+                opacity: vbar.active ? 1.0 : 0.0
+                Behavior on opacity { NumberAnimation { duration: 200 } }
+            }
+        }
 
     //滚动逻辑
     MouseArea{
@@ -132,3 +156,6 @@ Flickable {
         }
     }
 }
+
+
+

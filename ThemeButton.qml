@@ -31,7 +31,7 @@ Column{
             color:themeButton.isHovered ? themeButton.hoveredColor : "transparent"
             //如果是当前选中的主题，显示高亮框
             border.width: p_theme.m_currentTheme.name === themeButton.themeMap["name"] ? 6 : 0
-            border.color: p_theme.m_currentTheme.alternateRowColor
+            border.color: p_theme.m_currentTheme.disabledTextColor
         }
         ThemePreviewIcon{
             anchors.centerIn: parent

@@ -25,7 +25,7 @@ Rectangle{
                 Text {
                     id: titleText
                     text:"主题"
-                    color: "BLACK"/*p_theme.m_currentTheme.primaryTextColor*/
+                    color: p_theme.m_currentTheme.primaryTextColor
                     font.bold: true
                     font.pointSize: 20
                     horizontalAlignment: Text.AlignLeft
@@ -33,11 +33,19 @@ Rectangle{
                 }
                 bottomPadding: 10
             }
+            Rectangle{
+                id:line
+                anchors.top: title.bottom
+                anchors.topMargin: 10
+                width: parent.width
+                height: 2
+                color: p_theme.m_currentTheme.dividerColor
+            }
 
             //使用Flow自动流式布局，可自动换行
             Flow{
                 id:themeFlow
-                anchors.top: title.bottom
+                anchors.top: line.bottom
                 anchors.topMargin: 20
                 anchors.left: parent.left
                 anchors.right: parent.right

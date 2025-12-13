@@ -66,7 +66,7 @@ Rectangle{
                     font.family: "Brush Script MT"
                     anchors.verticalCenter: parent.verticalCenter
                     text: qsTr("Music Of Freedom")
-                    color: thisTheme.fontColor
+                    color: thisTheme.accentColor
                 }
                 Row{
                     width: 70
@@ -82,7 +82,7 @@ Rectangle{
                         transformOrigin: Item.Center
                         anchors.verticalCenter: parent.verticalCenter
                         source:"qrc:/next"
-                        hoveredColor: thisTheme.subBackgroundColor
+                        hoveredColor: thisTheme.itemHoverColor
                         color: "#00000000"
                         onClicked: {
                             rightContent.preStep()
@@ -95,7 +95,7 @@ Rectangle{
                         transformOrigin: Item.Center
                         anchors.verticalCenter: parent.verticalCenter
                         source:"qrc:/next"
-                        hoveredColor: thisTheme.subBackgroundColor
+                        hoveredColor: thisTheme.itemHoverColor
                         color: "#00000000"
                         onClicked: {
                             rightContent.nextStep()
@@ -123,7 +123,7 @@ Rectangle{
                     anchors.verticalCenter: parent.verticalCenter
                     source:"qrc:/theme"
                     hintText: "主题"
-                    hoveredColor: thisTheme.subColor
+                    hoveredColor: thisTheme.itemHoverColor
                     onClicked: {
                         if(!parent.themeVisible){
                             titleBar.thisQml="PageThemeChoose.qml"
@@ -145,13 +145,13 @@ Rectangle{
                     width: 25
                     height: 25
                     radius: 100
-                    color: if(isHovered) return "#1F572920"
+                    color: if(isHovered) return thisTheme.itemHoverColor
                             else return "#00000000"
                     Rectangle{
                         width: parent.width-5
                         height: 2
                         anchors.centerIn: parent
-                        color: thisTheme.fontColor
+                        color: thisTheme.accentColor
                     }
 
                     MouseArea{
@@ -174,7 +174,7 @@ Rectangle{
                     width: 25
                     height: 25
                     radius: 100
-                    color: if(isHovered) return "#1F572920"
+                    color: if(isHovered) return thisTheme.itemHoverColor
                             else return "#00000000"
                     Rectangle{
                         width: parent.width-5
@@ -183,7 +183,7 @@ Rectangle{
                         radius: 100
                         color: "#00000000"
                         border.width: 2
-                        border.color: thisTheme.fontColor
+                        border.color: thisTheme.accentColor
                     }
 
                     MouseArea{
@@ -210,21 +210,21 @@ Rectangle{
                     width: 25
                     height: 25
                     radius: 100
-                    color: if(isHovered) return "#1F572920"
+                    color: if(isHovered) return thisTheme.itemHoverColor
                             else return "#00000000"
                     Rectangle{
                         width: parent.width-5
                         height: 2
                         anchors.centerIn: parent
                         rotation: 45
-                        color: thisTheme.fontColor
+                        color: thisTheme.accentColor
                     }
                     Rectangle{
                         width: parent.width-5
                         height: 2
                         anchors.centerIn: parent
                         rotation: -45
-                        color: thisTheme.fontColor
+                        color: thisTheme.accentColor
                     }
                     MouseArea{
                         anchors.fill: parent

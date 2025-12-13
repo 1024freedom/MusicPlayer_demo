@@ -52,7 +52,7 @@ FramelessWindow {
             id:titleBar
             width:parent.width
             height: 80
-            color:thisTheme.backgroundColor
+            color:thisTheme.windowBackgroundColor
         }
 
         Rectangle{

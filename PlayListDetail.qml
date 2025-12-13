@@ -346,6 +346,7 @@ ListView {
         parent: playListDetail.contentItem
         y:-15
         width: playListDetail.width-50
+        color: thisTheme.contentBackgroundColor
         anchors.horizontalCenter: parent.horizontalCenter
         radius: 12
     }

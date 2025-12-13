@@ -151,8 +151,29 @@ Item {
 
             // 滚动条
             ScrollBar.vertical: ScrollBar {
+                id: vbar
                 policy: ScrollBar.AsNeeded
-                width: 8
+                width: 10
+
+                // 自定义滑块
+                contentItem: Rectangle {
+                    implicitWidth: parent.width
+                    implicitHeight: 100
+                    radius: width / 2
+
+                    // 颜色逻辑：
+                    // 按下时 -> 使用主题的强调色
+                    // 平时   -> 使用主题文字颜色的半透明版 (保证在任何背景下都能看见)
+                    color: vbar.pressed ? p_theme.m_currentTheme.itemSelectedColor
+                                        : Qt.rgba(p_theme.m_currentTheme.primaryTextColor.r,
+                                                  p_theme.m_currentTheme.primaryTextColor.g,
+                                                  p_theme.m_currentTheme.primaryTextColor.b,
+                                                  0.5) // 0.5 透明度，既明显又不遮挡太多
+
+                    //简单的悬停变暗效果
+                    opacity: vbar.active || vbar.pressed ? 1.0 : 0.0
+                    Behavior on opacity { NumberAnimation { duration: 200 } }
+                }
             }
 
             delegate: Rectangle {

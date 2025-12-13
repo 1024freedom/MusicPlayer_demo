@@ -37,7 +37,7 @@ MouseArea{
                     text:toolTipButton.hintText
                     font.pointSize: 8
                     font.bold: true
-                    color: p_theme.m_currentTheme.fontColor
+                    color: p_theme.m_currentTheme.disabledTextColor
                     anchors.centerIn: parent
                     wrapMode: Text.WordWrap
                     width: parent.width

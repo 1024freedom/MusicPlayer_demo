@@ -105,7 +105,7 @@ Item {
                     wrapMode: Text.Wrap
                     font.pointSize: 15
                     font.bold: true
-                    color: lyricListView.current===index?"#FFFFFF":"#7FFFFFFF"
+                    color: lyricListView.current===index?thisTheme.primaryTextColor:"#7FFFFFFF"
                     text: lyric
                     onContentWidthChanged: function (contentWidth){
                         if(contentWidth>parent.childMaxWidth){

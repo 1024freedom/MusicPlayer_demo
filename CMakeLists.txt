@@ -56,7 +56,7 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES BackgroundManager.qml
     QML_FILES
     QML_FILES
-    QML_FILES ThemeImage.qml
+    QML_FILES
     QML_FILES
     SOURCES thememanager.h thememanager.cpp
     QML_FILES PageThemeChoose.qml

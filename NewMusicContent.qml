@@ -124,7 +124,9 @@ Item {
         anchors.top: header.bottom
         anchors.topMargin: 15
         anchors.horizontalCenter: parent.horizontalCenter
+        border.color: thisTheme.dividerColor
         radius: 10
+        color: thisTheme.contentBackgroundColor
         /*Column*/Item{
             // topPadding: 10
             width: parent.width-20//
@@ -156,7 +158,8 @@ Item {
                 color: if(newMusicContent.contentCurrent===index)
                            return thisTheme.itemSelectedColor
                         else if(isHovered) return thisTheme.itemHoverColor
-                        else return "#00000000"
+                        else if(index%2===0) return thisTheme.alternateRowColor
+                           else return "#00000000"
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true

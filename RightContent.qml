@@ -11,7 +11,7 @@ Rectangle{
     property int stepPageCount: 0
 
     property alias loadItem: rightContentLoader.item
-    color:  thisTheme.subColor
+    color:  thisTheme.contentBackgroundColor
 
     function preStep(){
         if(stepCurrent<=0)return
