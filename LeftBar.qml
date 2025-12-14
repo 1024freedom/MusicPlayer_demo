@@ -110,12 +110,19 @@ Rectangle{
                 Row{
                     spacing: 10
                     anchors.verticalCenter: parent.verticalCenter
-                    Image {
-                        source: btnIcon
-                        sourceSize: Qt.size(32,32)
+                    // Image {
+                    //     source: btnIcon
+                    //     sourceSize: Qt.size(32,32)
+                    //     width: 20
+                    //     height: width
+                    // }
+                    ThemeImage{
                         width: 20
                         height: width
+                        source: btnIcon
+                        color: "RED"
                     }
+
                     Text {
                         font.bold: isThisBtn?true:false
                         scale: isThisBtn?1.1:1

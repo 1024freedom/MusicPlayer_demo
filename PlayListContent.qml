@@ -65,7 +65,7 @@ Item {
             if(w>=columns*content.spacing+(columns+1)*minContentItemWidth){
                 columns+=1
             }else if(columns > 1 && w<(columns-1)*content.spacing+columns*minContentItemWidth){
-                // Bug修复: 原代码写成了 column-=1
+
                 columns-=1
             }else {
                 break
