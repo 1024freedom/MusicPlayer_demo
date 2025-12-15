@@ -1,11 +1,11 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import "." // 假设 Theme.qml 在同级目录
 
 Rectangle {
     id: root
-    color: Theme.background // 使用全局背景色
+    property var thisTheme: p_theme.m_currentTheme
+    color: thisTheme.contentBackgroundColor
     anchors.fill: parent
 
     // ---------------------------------------------------------
@@ -20,7 +20,7 @@ Rectangle {
         id: topBar
         width: parent.width
         height: 60
-        color: Theme.surface
+        color: thisTheme.windowBackgroundColor
         z: 10
 
         RowLayout {
@@ -33,7 +33,7 @@ Rectangle {
                 text: "下载管理"
                 font.pixelSize: 24
                 font.bold: true
-                color: Theme.textPrimary
+                color: thisTheme.primaryTextColor
             }
 
             // Tab 切换按钮组
@@ -60,7 +60,7 @@ Rectangle {
         Rectangle {
             width: parent.width
             height: 1
-            color: Theme.divider
+            color: thisTheme.dividerColor
             anchors.bottom: parent.bottom
         }
     }
@@ -116,7 +116,7 @@ Rectangle {
 
                     // 鼠标悬停高亮
                     property bool hovered: false
-                    color: hovered ? Theme.surfaceHighlight : (index % 2 === 0 ? Theme.background : Theme.surface)
+                    color: hovered ? thisTheme.itemHoverColor : (index % 2 === 0 ? thisTheme.alternateRowColor :thisTheme.contentBackgroundColor)
 
                     MouseArea {
                         anchors.fill: parent
@@ -142,7 +142,7 @@ Rectangle {
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter
                                 text: modelData.name
-                                color: Theme.textPrimary
+                                color: thisTheme.primaryTextColor
                                 font.pixelSize: 14
                                 elide: Text.ElideRight
                                 width: parent.width
@@ -156,7 +156,7 @@ Rectangle {
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter
                                 text: modelData.artists
-                                color: Theme.textSecondary
+                                color: thisTheme.secondaryTextColor
                                 font.pixelSize: 13
                                 elide: Text.ElideRight
                                 width: parent.width
@@ -170,7 +170,7 @@ Rectangle {
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter
                                 text: modelData.album
-                                color: Theme.textSecondary
+                                color: thisTheme.secondaryTextColor
                                 font.pixelSize: 13
                                 elide: Text.ElideRight
                                 width: parent.width
@@ -184,7 +184,7 @@ Rectangle {
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter
                                 text: modelData.allTime
-                                color: Theme.textDisabled
+                                color: thisTheme.secondaryTextColor
                                 font.pixelSize: 13
                             }
                         }
@@ -196,7 +196,8 @@ Rectangle {
             Text {
                 anchors.centerIn: parent
                 text: "暂无已下载歌曲"
-                color: Theme.textDisabled
+                font.pointSize: 12
+                color: thisTheme.disabledTextColor
                 visible: musicDownloader.data.length === 0
             }
         }
@@ -235,9 +236,9 @@ Rectangle {
                     id: taskDelegate
                     width: downloadingListView.width
                     height: 80
-                    color: Theme.surface
+                    color: thisTheme.contentBackgroundColor
                     radius: 8
-                    border.color: Theme.divider
+                    border.color: thisTheme.dividerColor
                     border.width: 1
 
                     property string taskId: modelData
@@ -252,12 +253,12 @@ Rectangle {
                         // 图标
                         Rectangle {
                             width: 50; height: 50
-                            color: "#333"
+                            color: thisTheme.accentColor
                             radius: 4
                             Text {
                                 anchors.centerIn: parent
                                 text: "MP3"
-                                color: Theme.textDisabled
+                                color: thisTheme.disabledTextColor
                                 font.bold: true
                             }
                         }
@@ -272,7 +273,7 @@ Rectangle {
                                 Text {
                                     // 假设 TaskId 包含了一些可读信息，或者你需要从 taskObj 获取 name
                                     text: "任务: " + taskId
-                                    color: Theme.textPrimary
+                                    color: thisTheme.primaryTextColor
                                     font.pixelSize: 14
                                     font.bold: true
                                 }
@@ -281,7 +282,7 @@ Rectangle {
                                     // 这里假设 taskObj 有 progress 属性 (0.0 - 1.0)
                                     // 需要在 C++ DownloadTaskThread 中添加 Q_PROPERTY
                                     text: taskObj ? Math.floor(taskObj.progress * 100) + "%" : "0%"
-                                    color: Theme.accent
+                                    color: thisTheme.accentColor
                                     font.pixelSize: 12
                                 }
                             }
@@ -290,14 +291,14 @@ Rectangle {
                             Rectangle {
                                 Layout.fillWidth: true
                                 height: 4
-                                color: "#333"
+                                color: thisTheme.itemSelectedColor
                                 radius: 2
 
                                 // 进度条前景
                                 Rectangle {
                                     width: parent.width * (taskObj ? taskObj.progress : 0)
                                     height: parent.height
-                                    color: Theme.accent
+                                    color: thisTheme.accentColor
                                     radius: 2
 
                                     // 简单的动画效果
@@ -330,7 +331,7 @@ Rectangle {
                                 text: "X"
                                 contentItem: Text {
                                     text: "×"
-                                    color: Theme.error
+                                    color: thisTheme.accentColor
                                     font.pixelSize: 24
                                     anchors.centerIn: parent
                                 }
@@ -347,7 +348,8 @@ Rectangle {
             Text {
                 anchors.centerIn: parent
                 text: "当前没有正在进行的下载任务"
-                color: Theme.textDisabled
+                font.pointSize: 12
+                color: thisTheme.disabledTextColor
                 visible: parent.downloadingKeys.length === 0
             }
         }
@@ -371,13 +373,13 @@ Rectangle {
             text: parent.text
             font.pixelSize: 16
             font.bold: parent.isSelected
-            color: parent.isSelected ? Theme.textPrimary : (parent.containsMouse ? Theme.textPrimary : Theme.textSecondary)
+            color: parent.isSelected ? thisTheme.primaryTextColor : (parent.containsMouse ? thisTheme.primaryTextColor : thisTheme.secondaryTextColor)
 
             // 选中时的下划线
             Rectangle {
                 width: parent.width
                 height: 3
-                color: Theme.accent
+                color: thisTheme.accentColor
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: -6
                 visible: parent.parent.isSelected
@@ -394,17 +396,17 @@ Rectangle {
 
         Text {
             text: parent.text
-            color: Theme.textDisabled
+            color: thisTheme.disabledTextColor
             font.pixelSize: 13
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
             anchors.leftMargin: 20
         }
 
-        // 分割竖线 (可选)
+        // 分割竖线
         Rectangle {
             width: 1; height: 16
-            color: Theme.divider
+            color: thisTheme.dividerColor
             anchors.right: parent.right
             anchors.verticalCenter: parent.verticalCenter
             visible: true
