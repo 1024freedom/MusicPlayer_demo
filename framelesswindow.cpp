@@ -180,8 +180,6 @@ FramelessWindow::MousePosition FramelessWindow::getMousePosition(const QPointF& 
     int w = this->width();
     int h = this->height();
 
-
-
     // 检查边框区域（用于缩放）
     if (x >= 0 && x <= m_borderWidth && y >= 0 && y <= m_borderWidth) {
         return MousePosition::TOPLEFT;
@@ -272,6 +270,7 @@ void FramelessWindow::handleWindowMove(const QPointF& globalMousePos) {
 }
 
 void FramelessWindow::mousePressEvent(QMouseEvent* event) {
+
     if (event->button() == Qt::LeftButton) {
         m_startGlobalPos = event->globalPosition();
         m_startLocalPos = event->position();
@@ -286,8 +285,9 @@ void FramelessWindow::mousePressEvent(QMouseEvent* event) {
             m_isResizing = true;
         }
     }
-
     QQuickWindow::mousePressEvent(event);
+
+
 }
 
 void FramelessWindow::mouseReleaseEvent(QMouseEvent* event) {
@@ -300,6 +300,13 @@ void FramelessWindow::mouseReleaseEvent(QMouseEvent* event) {
 }
 
 void FramelessWindow::mouseMoveEvent(QMouseEvent* event) {
+    //调用基类先触发qml的鼠标样式变化
+    QQuickWindow::mouseMoveEvent(event);
+    //qml如果更改了鼠标样式，说明此时鼠标位置与窗口活动无关
+    if (cursor().shape() != Qt::ArrowCursor) {
+        return;
+    }
+
     QPointF localPos = event->position();
     QPointF globalPos = event->globalPosition();
 
@@ -315,5 +322,26 @@ void FramelessWindow::mouseMoveEvent(QMouseEvent* event) {
         handleWindowResize(globalPos);
     }
 
-    QQuickWindow::mouseMoveEvent(event);
+
 }
+void FramelessWindow::mouseDoubleClickEvent(QMouseEvent *event) {
+    if (event->button() == Qt::LeftButton) {
+        MousePosition mousePos = getMousePosition(event->position());
+        if (mousePos == MousePosition::TITLEBAR) {
+            if (this->visibility() == QWindow::Maximized) {
+                this->showNormal();
+            } else {
+                this->showMaximized();
+            }
+            event->accept();
+            return;
+        }
+    }
+    QQuickWindow::mouseDoubleClickEvent(event);
+}
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import sz.window
 
 MouseArea{
     id:toolTipButton
@@ -10,6 +11,7 @@ MouseArea{
     property string iconColor: ""
     property string hintText: ""
     property var thisTheme:p_theme.m_currentTheme
+
     width: 30
     height: width
     hoverEnabled: true

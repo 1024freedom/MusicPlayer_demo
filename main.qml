@@ -9,7 +9,7 @@ FramelessWindow {
     minimumWidth:1010
     minimumHeight: 710
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("Muisc of Freedom")
 
     // QtObject{
     //     id:p_theme
