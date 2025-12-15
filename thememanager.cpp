@@ -77,7 +77,7 @@ void ThemeManager::setM_themes() {
     lightTheme["contentBackgroundColor"] = "#FFFFFF";     // 核心内容区（歌单列表）背景
 
     // 列表交互
-    lightTheme["itemHoverColor"] = "#F2F2F3";             // 鼠标悬停时的背景
+    lightTheme["itemHoverColor"] = "#E9D6D6";             // 鼠标悬停时的背景
     lightTheme["itemSelectedColor"] = "#E3E3E5";          // 被选中/正在播放的背景
     lightTheme["alternateRowColor"] = "#FAFAFA";          // 偶数行颜色（极淡的灰色，增加条理感）
 
@@ -111,7 +111,7 @@ void ThemeManager::setM_themes() {
     darkTheme["disabledTextColor"] = "#555555";
 
     darkTheme["dividerColor"] = "#363636";
-    darkTheme["accentColor"] = "#1ECC94";                 // 强调色（QQ音乐绿或自定义金 #D4AF37）
+    darkTheme["accentColor"] = "#B026FF";                 // 强调色#FE2472备选#B026FF
 
     m_themes.append(darkTheme);
 

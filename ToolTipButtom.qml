@@ -9,6 +9,7 @@ MouseArea{
     property string hoveredColor: ""
     property string iconColor: ""
     property string hintText: ""
+    property var thisTheme:p_theme.m_currentTheme
     width: 30
     height: width
     hoverEnabled: true
@@ -19,13 +20,22 @@ MouseArea{
         color: if(parent.isHovered)return hoveredColor
         else return parent.color
     }
-    Image {
+    // Image {
+    //     width: parent.width*0.5
+    //     height: width
+    //     anchors.fill: parent
+    //     anchors.centerIn: parent
+    //     source: parent.source
+    // }
+    ThemeImage{
         width: parent.width*0.5
         height: width
         anchors.fill: parent
         anchors.centerIn: parent
         source: parent.source
+        color: thisTheme.accentColor
     }
+
     ToolTip{
         id:hintTip
         width: 60

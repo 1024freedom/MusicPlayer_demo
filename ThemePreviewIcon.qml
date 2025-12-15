@@ -23,12 +23,12 @@ Item {
                     anchors.centerIn: parent
                     spacing: 4
                     Repeater{
-                        model: 3
+                        model: 5
                         Rectangle{
                             width: 6
                             height: 6
                             radius: 3
-                            color: index===0?(root.themeData["itemSelectedColor"]):Qt.rgba(0,0,0,0.2)
+                            color: index%2===0?(root.themeData["accentColor"]):(root.themeData["itemSelectedColor"])
 
                         }
                     }

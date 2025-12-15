@@ -72,8 +72,8 @@ Rectangle{
         anchors.right: parent.right
         source:"qrc:/search"
         hintText: "搜索"
-        color: if(isHovered)return thisTheme.itemHoverColor
-                else return "#00000000"
+        hoveredColor: thisTheme.itemSelectedColor
+        color: "#00000000"
         onClicked: {
             parent.showSearchResultPage();
         }

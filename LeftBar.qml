@@ -120,7 +120,7 @@ Rectangle{
                         width: 20
                         height: width
                         source: btnIcon
-                        color: "RED"
+                        color: thisTheme.accentColor
                     }
 
                     Text {

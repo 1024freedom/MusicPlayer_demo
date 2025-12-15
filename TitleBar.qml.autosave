@@ -13,10 +13,6 @@ Rectangle{
            // 仅保证事件传递
            mouse.accepted = false;  // 不拦截，让事件传递到C++层
        }
-       onHoveredChanged: {
-        mouse.accepted=true;
-       }
-
 
         property var click_pos: Qt.point(0,0)
         onPositionChanged: function(mouse){
