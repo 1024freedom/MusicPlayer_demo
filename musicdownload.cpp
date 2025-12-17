@@ -135,20 +135,20 @@ bool MusicDownload::createTable() {
         return false;
     }
     query.exec("CREATE INDEX IF NOT EXISTS idx_id ON downloads (id)");
-    query.exec("CREATE INDEX IF NOT EXISTS idx_create_time ON downloads (savePath)");
+    query.exec("CREATE INDEX IF NOT EXISTS idx_savePath ON downloads (savePath)");
     return true;
 
 }
 bool MusicDownload::localExist(const QString &id) {
     QSqlQuery query(m_database);
-    query.prepare("SELECT COUNT(*) FROM favorites WHERE id = :id");
+    query.prepare("SELECT COUNT(*) FROM downloads WHERE id = :id");
     query.bindValue(":id", id);
     if (!query.exec() || !query.next()) {
         return false;
     }
     return query.value(0).toInt() > 0;
 }
-bool MusicDownload::addDownload(const QVariantMap &obj, const QString &savePath) {
+bool MusicDownload::addDownload(const QVariantMap &obj, const QString &savePath) {//写入数据库
     QSqlQuery query(m_database);
     query.prepare(R"(
         INSERT INTO downloads (id,savePath, name, artists, album, coverImg, url, allTime)
@@ -188,6 +188,7 @@ QVariantList MusicDownload::loadAllDownloads() {
         download["coverImg"] = query.value("coverImg").toString();
         download["url"] = query.value("url").toString();
         download["allTime"] = query.value("allTime").toString();
+        downloadsList.append(download);
     }
     return downloadsList;
 }

@@ -101,7 +101,7 @@ Rectangle {
                 clip: true
 
                 // 绑定 C++ loadAllDownloads 返回的数据
-                model: musicDownloader.data
+                model: p_musicDownloader.data
 
                 // 滚动条样式
                 ScrollBar.vertical: ScrollBar {
@@ -198,7 +198,7 @@ Rectangle {
                 text: "暂无已下载歌曲"
                 font.pointSize: 12
                 color: thisTheme.disabledTextColor
-                visible: musicDownloader.data.length === 0
+                visible: p_musicDownloader.data.length === 0
             }
         }
 
@@ -208,7 +208,7 @@ Rectangle {
             property var downloadingKeys: []
 
             function refreshKeys() {
-                var map = musicDownloader.downloadInfos
+                var map = p_musicDownloader.downloadInfos
                 if (map) {
                     downloadingKeys = Object.keys(map)
                 } else {
@@ -219,7 +219,7 @@ Rectangle {
             Component.onCompleted: refreshKeys()
 
             Connections {
-                target: musicDownloader
+                target: p_musicDownloader
                 function onDownloadInfosChanged() { refreshKeys() }
             }
 
@@ -243,7 +243,7 @@ Rectangle {
 
                     property string taskId: modelData
                     // 获取 C++ 线程对象
-                    property var taskObj: musicDownloader.downloadInfos[taskId]
+                    property var taskObj: p_musicDownloader.downloadInfos[taskId]
 
                     RowLayout {
                         anchors.fill: parent
@@ -318,7 +318,7 @@ Rectangle {
                                 icon.source: "qrc:/icons/pause.svg" // 请替换为你的资源路径
                                 icon.color: Theme.textPrimary
                                 text: "||" // 临时文本图标
-                                onClicked: musicDownloader.pauseDownload(taskId)
+                                onClicked: p_musicDownloader.pauseDownload(taskId)
 
                                 ToolTip.visible: hovered
                                 ToolTip.text: "暂停"
@@ -335,7 +335,7 @@ Rectangle {
                                     font.pixelSize: 24
                                     anchors.centerIn: parent
                                 }
-                                onClicked: musicDownloader.cancelDownload(taskId)
+                                onClicked: p_musicDownloader.cancelDownload(taskId)
 
                                 ToolTip.visible: hovered
                                 ToolTip.text: "取消任务"

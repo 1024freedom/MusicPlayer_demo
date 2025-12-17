@@ -43,6 +43,9 @@ FramelessWindow {
     PlayHistoryManager{
         id:p_history
     }
+    MuiscDownload{
+        id:p_musicDownloader
+    }
 
     Column{
         id:mainPage

@@ -22,13 +22,6 @@ MouseArea{
         color: if(parent.isHovered)return hoveredColor
         else return parent.color
     }
-    // Image {
-    //     width: parent.width*0.5
-    //     height: width
-    //     anchors.fill: parent
-    //     anchors.centerIn: parent
-    //     source: parent.source
-    // }
     ThemeImage{
         width: parent.width*0.5
         height: width
