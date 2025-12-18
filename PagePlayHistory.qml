@@ -66,14 +66,7 @@ Item {
 
                 Item { Layout.fillWidth: true } // 占位
 
-                // 这里可以加一个“清空全部”的按钮，如果后端支持的话
-                /*
-                Text {
-                    text: "清空列表"
-                    color: "#007AFF"
-                    MouseArea { anchors.fill: parent; onClicked: p_history.clearAll() }
-                }
-                */
+
             }
 
             // 底部线条

@@ -2,6 +2,7 @@
 #define DOWNLOADTASKTHREAD_H
 
 #include <QObject>
+#include <QPointer>
 #include "downloadtask.h"
 
 class DownloadTaskThread : public QObject {
@@ -23,7 +24,7 @@ public:
     QString getFileName()const;
     void setFileName(const QString& newFileName);
 
-    double getProgressValue()const;
+    Q_INVOKABLE double getProgressValue()const;
     void setProgressValue(const double newProgressValue);
 
     DownloadTask::TaskStatus getStatus()const;
@@ -49,7 +50,7 @@ signals:
 
     void albumChanged();
 private:
-    DownloadTask* m_downloadTask = nullptr;
+    QPointer<DownloadTask> m_downloadTask;
     std::mutex m_mutex;
     QThread* m_thread = nullptr;
     QString m_url = "";

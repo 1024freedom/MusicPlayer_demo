@@ -86,9 +86,9 @@ Rectangle {
                 spacing: 0
                 z: 5
 
-                HeaderItem { text: "音乐标题"; widthWeight: 4 }
+                HeaderItem { text: "音乐标题"; widthWeight: 3 }
                 HeaderItem { text: "歌手"; widthWeight: 2 }
-                HeaderItem { text: "专辑"; widthWeight: 2 }
+                HeaderItem { text: "专辑"; widthWeight: 1 }
                 HeaderItem { text: "时长"; widthWeight: 1 }
             }
 
@@ -103,10 +103,31 @@ Rectangle {
                 // 绑定 C++ loadAllDownloads 返回的数据
                 model: p_musicDownloader.data
 
-                // 滚动条样式
+                // 滚动条
                 ScrollBar.vertical: ScrollBar {
-                    width: 8
+                    id: vbar
                     policy: ScrollBar.AsNeeded
+                    width: 10
+
+                    // 自定义滑块
+                    contentItem: Rectangle {
+                        implicitWidth: parent.width
+                        implicitHeight: 100
+                        radius: width / 2
+
+                        // 颜色逻辑：
+                        // 按下时 -> 使用主题的强调色
+                        // 平时   -> 使用主题文字颜色的半透明版 (保证在任何背景下都能看见)
+                        color: vbar.pressed ? p_theme.m_currentTheme.itemSelectedColor
+                                            : Qt.rgba(p_theme.m_currentTheme.primaryTextColor.r,
+                                                      p_theme.m_currentTheme.primaryTextColor.g,
+                                                      p_theme.m_currentTheme.primaryTextColor.b,
+                                                      0.5) // 0.5 透明度，既明显又不遮挡太多
+
+                        //简单的悬停变暗效果
+                        opacity: vbar.active || vbar.pressed ? 1.0 : 0.0
+                        Behavior on opacity { NumberAnimation { duration: 200 } }
+                    }
                 }
 
                 delegate: Rectangle {
@@ -125,7 +146,16 @@ Rectangle {
                         onExited: parent.hovered = false
                         onDoubleClicked: {
                             console.log("播放本地文件:", modelData.savePath)
-                            // 这里可以调用播放器接口，例如 player.playLocal(modelData.savePath)
+                            var findIndex=p_musicRes.indexOf(modelData.id)
+                            if(findIndex===-1){
+                                p_musicRes.thisPlayListInfo.insert(p_musicRes.thisPlayCurrent+1,modelData)
+                                p_musicRes.thisPlayListInfoChanged()
+                                p_musicRes.thisPlayCurrent+=1
+                            }else{
+                                p_musicRes.thisPlayCurrent=findIndex
+                            }
+
+                            p_musicPlayer.playMusic(modelData.id,modelData)
                         }
                     }
 
@@ -204,23 +234,21 @@ Rectangle {
 
         // ================= Tab 2: 正在下载列表 =================
         Item {
+            id:tab2
             // 处理 Map 到 List 的转换
             property var downloadingKeys: []
 
             function refreshKeys() {
-                var map = p_musicDownloader.downloadInfos
-                if (map) {
-                    downloadingKeys = Object.keys(map)
-                } else {
-                    downloadingKeys = []
-                }
+                downloadingKeys=p_musicDownloader.getTaskKeys()
             }
 
             Component.onCompleted: refreshKeys()
 
             Connections {
                 target: p_musicDownloader
-                function onDownloadInfosChanged() { refreshKeys() }
+                function onDownloadInfosChanged(){
+                    tab2.refreshKeys()
+                }
             }
 
             ListView {
@@ -229,8 +257,8 @@ Rectangle {
                 anchors.margins: 20
                 spacing: 10
                 clip: true
-
-                model: parent.downloadingKeys
+                //数据源
+                model: parent.downloadingKeys//taskId数组
 
                 delegate: Rectangle {
                     id: taskDelegate
@@ -243,7 +271,7 @@ Rectangle {
 
                     property string taskId: modelData
                     // 获取 C++ 线程对象
-                    property var taskObj: p_musicDownloader.downloadInfos[taskId]
+                    property var taskObj: p_musicDownloader.getTaskById[taskId]
 
                     RowLayout {
                         anchors.fill: parent
@@ -271,7 +299,6 @@ Rectangle {
                             RowLayout {
                                 Layout.fillWidth: true
                                 Text {
-                                    // 假设 TaskId 包含了一些可读信息，或者你需要从 taskObj 获取 name
                                     text: "任务: " + taskId
                                     color: thisTheme.primaryTextColor
                                     font.pixelSize: 14
@@ -279,9 +306,8 @@ Rectangle {
                                 }
                                 Item { Layout.fillWidth: true }
                                 Text {
-                                    // 这里假设 taskObj 有 progress 属性 (0.0 - 1.0)
-                                    // 需要在 C++ DownloadTaskThread 中添加 Q_PROPERTY
-                                    text: taskObj ? Math.floor(taskObj.progress * 100) + "%" : "0%"
+
+                                    text: taskObj ? Math.floor(taskObj.getProgressValue * 100) + "%" : "0%"
                                     color: thisTheme.accentColor
                                     font.pixelSize: 12
                                 }
@@ -296,7 +322,7 @@ Rectangle {
 
                                 // 进度条前景
                                 Rectangle {
-                                    width: parent.width * (taskObj ? taskObj.progress : 0)
+                                    width: parent.width * (taskObj ? taskObj.getProgressValue : 0)
                                     height: parent.height
                                     color: thisTheme.accentColor
                                     radius: 2
@@ -311,34 +337,65 @@ Rectangle {
                         Row {
                             spacing: 10
 
-                            // 暂停/继续按钮
-                            RoundButton {
-                                width: 32; height: 32
-                                flat: true
-                                icon.source: "qrc:/icons/pause.svg" // 请替换为你的资源路径
-                                icon.color: Theme.textPrimary
-                                text: "||" // 临时文本图标
-                                onClicked: p_musicDownloader.pauseDownload(taskId)
 
-                                ToolTip.visible: hovered
-                                ToolTip.text: "暂停"
+                            // 暂停/继续按钮
+                            ToolTipButtom {
+                                width: 25; height: width
+                                anchors.verticalCenter: parent.verticalCenter
+                                property bool isPaused: false
+                                hoveredColor: thisTheme.itemHoverColor
+                                color: "00000000"
+                                source:if(!isPaused)return "qrc:/play"
+                                       else return "qrc:/pause"
+                                onClicked:{
+                                    isPaused=!isPaused
+                                    if(isPaused){
+                                        p_musicDownloader.pauseDownload(taskId)
+                                    }else{
+                                        p_musicDownloader.startDownload(taskId)
+                                    }
+                                }
+
+                                onEntered: {
+                                    scale=1.1
+                                }
+                                onExited: {
+                                    scale=1
+                                }
+                                Behavior on scale {
+                                    ScaleAnimator{
+                                        duration: 200
+                                        easing.type: Easing.InOutQuart
+                                    }
+                                }
+                                hintText: if(!isPaused)return "暂停"
+                                          else return "播放"
                             }
 
                             // 取消按钮
-                            RoundButton {
-                                width: 32; height: 32
-                                flat: true
-                                text: "X"
-                                contentItem: Text {
-                                    text: "×"
-                                    color: thisTheme.accentColor
-                                    font.pixelSize: 24
-                                    anchors.centerIn: parent
+                            ToolTipButtom {
+                                width: 25; height: width
+                                anchors.verticalCenter: parent.verticalCenter
+                                source:"qrc:/delete"
+                                hoveredColor: thisTheme.itemHoverColor
+                                color: "00000000"
+                                onClicked:{
+                                    p_musicDownloader.cancelDownload(taskId)
                                 }
-                                onClicked: p_musicDownloader.cancelDownload(taskId)
 
-                                ToolTip.visible: hovered
-                                ToolTip.text: "取消任务"
+                                onEntered: {
+                                    scale=1.1
+                                }
+                                onExited: {
+                                    scale=1
+                                }
+                                Behavior on scale {
+                                    ScaleAnimator{
+                                        duration: 200
+                                        easing.type: Easing.InOutQuart
+                                    }
+                                }
+                                hintText: "删除任务"
                             }
                         }
                     }

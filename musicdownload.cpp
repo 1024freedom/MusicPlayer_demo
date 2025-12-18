@@ -88,6 +88,7 @@ void MusicDownload::addTask(const QString &url, const QString &fileName, const Q
     m_downloadInfos.insert(taskId, new DownloadTaskThread(url, m_downloadSavePath, fileName));
     setCount(m_downloadInfos.count());
     qDebug() << "已添加任务" << "当前任务数：" << m_count;
+    emit downloadInfosChanged();
 }
 
 void MusicDownload::moveTask(const QString &taskId) {
@@ -98,6 +99,7 @@ void MusicDownload::moveTask(const QString &taskId) {
     DownloadTaskThread* task = m_downloadInfos.take(taskId);
     task->deleteLater();
     setCount(m_downloadInfos.count());
+    emit downloadInfosChanged();
 }
 
 bool MusicDownload::initDatabase() {
@@ -209,4 +211,10 @@ void MusicDownload::onDataChanged() {
 }
 bool MusicDownload::isDownloading(const QString &taskId) {
     return m_downloadInfos.contains(taskId);
+}
+QStringList MusicDownload::getTaskKeys()const {
+    return m_downloadInfos.keys();
+}
+DownloadTaskThread* MusicDownload::getTaskById(const QString &id) {
+    return m_downloadInfos.value(id, nullptr);
 }

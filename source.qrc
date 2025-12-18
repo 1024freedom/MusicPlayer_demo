@@ -29,5 +29,6 @@
         <file alias="up">上箭头.png</file>
         <file alias="downloaded">对号.png</file>
         <file alias="downloading">旋转.png</file>
+        <file alias="delete">删除.png</file>
     </qresource>
 </RCC>

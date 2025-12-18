@@ -32,6 +32,8 @@ public:
     Q_INVOKABLE void moveTask(const QString& taskId);
     Q_INVOKABLE bool localExist(const QString& id);
     Q_INVOKABLE bool isDownloading(const QString& taskId);//taskid和id其实是一个
+    Q_INVOKABLE QStringList getTaskKeys()const;
+    Q_INVOKABLE DownloadTaskThread* getTaskById(const QString& id);
 
     int getCount()const;
     void setCount(int newCount);

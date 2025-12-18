@@ -164,11 +164,12 @@ Rectangle {
             }
         }
     }
-    Image{
+    ThemeImage{
         id:thisPlayerListLabelPausePlay
         width: 20
         height: width
         anchors.verticalCenter: parent.verticalCenter
+        color:thisTheme.accentColor
         visible: parent!=thisPlayerListLabel
         source:if(p_musicPlayer.playbackState===1)return "qrc:/play"
                 else return "qrc:/pause"
