@@ -17,13 +17,24 @@ Item {
     // 内部状态: "normal" (未下载),  "downloading"(下载中),"downloaded" (已下载)
     state: "normal"
 
-    // 组件加载或数据变更时检查是否已存在
+    // 组件加载或数据变更时检查状态
     onSongDataChanged: {
         checkLocalStatus()
     }
 
     Component.onCompleted: {
         checkLocalStatus()
+    }
+
+    Timer{//确保页面显示与后端状态同步
+        id:statusRefesher
+        interval: 1000
+        repeat: true
+        running: root.visible&&songData&&songData.id
+        triggeredOnStart: true//启动时立即触发一次
+        onTriggered: {
+            checkLocalStatus()
+        }
     }
 
     function checkLocalStatus() {
@@ -107,6 +118,28 @@ Item {
     function startDownloadProcess() {
         if (!songData /*|| !songData.url */|| !songData.id) {
             console.error("歌曲数据不完整，无法下载")
+            return
+        }
+
+        //如果url为空，先获取url
+        if(!songData.url||songData.url===""){
+            console.log("检测到 URL 为空，正在请求 API 获取...")
+            root.state = "downloading" // 立即切换UI状态
+            var id=songData.id
+            p_musicRes.getMusicUrl({id,callBack:function(res){
+                if(res&&res.url){
+                    console.log("成功获取 URL:", res.url)
+
+                    // 更新当前组件的 songData 数据
+                    songData.url = res.url
+
+                    // 递归调用自己，这次 url 不为空了，就会走下载逻辑
+                    startDownloadProcess()
+                }else{
+                    console.error("获取 URL 失败或该歌曲需要 VIP")
+                    root.state = "normal"
+                }
+            }})
             return
         }
 

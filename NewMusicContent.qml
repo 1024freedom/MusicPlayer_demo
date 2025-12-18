@@ -9,7 +9,7 @@ Item {
     {name:"日本",type:"8"},
     {name:"韩国",type:"16"},]
     property double fontSize: 11
-    property var loadItems: []//
+    property var loadItems: []
     property int startY: parent.y
     property int headerCurrent: 0
     property int current: -1
@@ -165,7 +165,7 @@ Item {
                     hoverEnabled: true
                     onDoubleClicked: {
                         var musicInfo={id:id,name:name,artists:artists,
-                                        album:album,coverImg:coverImg,url:"",
+                                        album:album,coverImg:coverImg,url:url,
                                         allTime:allTime
                         }
                         var findIndex=p_musicRes.indexOf(id)
@@ -275,7 +275,7 @@ Item {
                                 "artists":artists,
                                 "album":album,
                                 "coverImg":coverImg,
-                                "url":"",
+                                "url":url,
                                 "allTime":allTime
                             }
                         }

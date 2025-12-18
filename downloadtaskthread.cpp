@@ -15,9 +15,9 @@ DownloadTaskThread::DownloadTaskThread(const QString &url, const QString &savePa
 DownloadTaskThread::~DownloadTaskThread() {
     //内存清理
     if (m_downloadTask) {
-        if (m_downloadTask->status() == DownloadTask::TaskStatus::Loading) {
-            m_downloadTask->pauseDownload();
-        }
+        // if (m_downloadTask->status() == DownloadTask::TaskStatus::Loading) {
+        //     m_downloadTask->pauseDownload();
+        // }
         m_downloadTask->deleteLater();
     }
     if (m_thread) {
@@ -63,19 +63,33 @@ void DownloadTaskThread::start() {
     if (m_thread != m_downloadTask->thread()) {
         m_downloadTask->moveToThread(m_thread);
         connect(m_thread, &QThread::started, m_downloadTask, &DownloadTask::startDownload);
+
         connect(m_downloadTask, &DownloadTask::downloadFinished, m_thread, [ = ]() { //值捕获避免竞争风险
             qDebug() << "已退出线程：" << QThread::currentThread();
             m_thread->quit();
             m_thread->wait();
         });
+        //注意：------线程结束后自动销毁task对象
+        connect(m_thread, &QThread::finished, m_downloadTask, &QObject::deleteLater);
     }
     m_thread->start();
 }
 
 void DownloadTaskThread::pause() {
     std::lock_guard<std::mutex> locker(m_mutex);
-    if (m_thread->isRunning()) {
-        m_downloadTask->pauseDownload();
+    // if (m_thread->isRunning()) {
+    //     m_downloadTask->pauseDownload();
+    // }错误写法
+    //使用invokeMethod将调用“投递”到子线程执行
+    if (m_downloadTask) {
+        QMetaObject::invokeMethod(m_downloadTask, "pauseDownload", Qt::QueuedConnection);
+    }
+}
+
+void DownloadTaskThread::cancel() {
+    std::lock_guard<std::mutex> locker(m_mutex);
+    if (m_downloadTask) {
+        QMetaObject::invokeMethod(m_downloadTask, "cancelDownload", Qt::QueuedConnection);
     }
 }
 

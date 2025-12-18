@@ -55,6 +55,8 @@ void MusicDownload::startDownload(const QString& taskId, const QVariantMap& obj)
     }
     m_downloadInfos[taskId]->start();
 
+    // 先断开之前的连接，防止重复连接
+    disconnect(m_downloadInfos[taskId], &DownloadTaskThread::downloadRelay, this, nullptr);
     connect(m_downloadInfos[taskId], &DownloadTaskThread::downloadRelay, this, [this, taskId, obj](const QString & fileName, const QString & savePath) {
         if (this->localExist(obj["id"].toString())) {//该歌曲是否已经下载过
             return;

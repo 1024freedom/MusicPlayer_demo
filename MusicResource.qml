@@ -227,8 +227,6 @@ Item {
         };
 
         makeRequest()
-
-
     }
 
     function getMusicPlayList(obj){//获取歌单
