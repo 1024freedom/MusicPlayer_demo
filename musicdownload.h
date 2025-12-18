@@ -30,8 +30,8 @@ public:
     Q_INVOKABLE void cancelDownload(const QString& taskId);
     Q_INVOKABLE void addTask(const QString& url, const QString& fileName, const QString& taskId);
     Q_INVOKABLE void moveTask(const QString& taskId);
-
-    bool localExist(const QString& id);
+    Q_INVOKABLE bool localExist(const QString& id);
+    Q_INVOKABLE bool isDownloading(const QString& taskId);//taskid和id其实是一个
 
     int getCount()const;
     void setCount(int newCount);

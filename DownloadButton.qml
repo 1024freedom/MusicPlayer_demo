@@ -27,15 +27,22 @@ Item {
     }
 
     function checkLocalStatus() {
-        if (!songData || !songData.id) return;
-        // 调用 C++ 函数检查本地是否已存在
+        if (!songData || !songData.id){
+            root.state="normal"
+            return
+        }
+        //已下载
         if (backend.localExist(songData.id)) {
             root.state = "downloaded"
-        } else {
-            if(root.state!=="downloading"){
-                root.state = "normal"
-            }
+            return
         }
+        //正下载
+        if(backend.isDownloading(songData.id)){
+            root.state="downloading"
+            return
+        }
+        root.state="normal"
+        return
     }
 
     // 按钮鼠标交互和背景区域
@@ -43,6 +50,7 @@ Item {
         id: bg
         anchors.fill: parent
         hoverEnabled: true
+        cursorShape: Qt.PointingHandCursor
         property bool isHovered: false
         property string source: if(root.state==="normal")return "qrc:/download"
             else if(root.state==="downloaded")return "qrc:/downloaded"
@@ -97,7 +105,7 @@ Item {
 
     // 逻辑处理函数
     function startDownloadProcess() {
-        if (!songData || !songData.url || !songData.id) {
+        if (!songData /*|| !songData.url */|| !songData.id) {
             console.error("歌曲数据不完整，无法下载")
             return
         }
@@ -109,7 +117,7 @@ Item {
         var taskId = songData.id.toString()
 
         // 2. 调用 C++: 添加任务 (创建线程)
-        backend.addTask(songData.url, fileName, taskId)//任务id就是歌曲id
+        backend.addTask(songData.url, fileName, taskId)//--------任务id就是歌曲id--------
 
         // 3. 调用 C++: 开始下载
         // 传递 taskId 和 完整的 songData (QVariantMap) 用于存库

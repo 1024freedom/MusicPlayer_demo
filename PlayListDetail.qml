@@ -328,7 +328,7 @@ ListView {
                     text: album
                 }
                 Text {
-                    width: parent.width*0.1
+                    width: parent.width*0.1-30
                     anchors.verticalCenter: parent.verticalCenter
                     horizontalAlignment: Text.AlignLeft
                     font.weight: 2
@@ -336,6 +336,20 @@ ListView {
                     elide: Text.ElideRight
                     color: thisTheme.secondaryTextColor
                     text: allTime
+                }
+                DownloadButton{
+                    width: 25
+                    height: width
+                    anchors.verticalCenter: parent.verticalCenter
+                    songData: {
+                        "id":id,
+                        "name":name,
+                        "artists":artists,
+                        "album":album,
+                        "coverImg":coverImg,
+                        "url":url,
+                        "allTime":allTime
+                    }
                 }
             }
 

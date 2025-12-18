@@ -78,7 +78,7 @@ Rectangle{
                 source:p_musicRes.thisPlayMusicInfo.coverImg 
             }
             Column{
-                width: parent.width-musicCoverImg.width-parent.spacing
+                width: parent.width-musicCoverImg.width-parent.spacing-100
                 clip: true
                 anchors.verticalCenter: parent.verticalCenter
                 Text {
@@ -163,6 +163,66 @@ Rectangle{
                             }
                         }
                     }
+                }
+            }
+            ToolTipButtom{//添加喜欢按钮
+                id:favoriteBtn
+                property bool isFavorited: false
+                width: 20
+                height: width
+                anchors.verticalCenter: parent.verticalCenter
+                source:if(isFavorited)return "qrc:/favorited"
+                            else return "qrc:/like"
+                hoveredColor: thisTheme.itemHoverColor
+                color: "#00000000"
+                onClicked: {
+                    if(isFavorited){
+                        p_favoriteManager.remove(p_musicRes.thisPlayMusicInfo.id)
+                        isFavorited=false
+                    }else{
+                        p_favoriteManager.append({
+                                                     "id":p_musicRes.thisPlayMusicInfo.id,
+                                                     "name":p_musicRes.thisPlayMusicInfo.name,
+                                                     "artists":p_musicRes.thisPlayMusicInfo.artists,
+                                                     "album":p_musicRes.thisPlayMusicInfo.album,
+                                                     "coverImg":p_musicRes.thisPlayMusicInfo.coverImg,
+                                                     "url":p_musicRes.thisPlayMusicInfo.url,
+                                                     "allTime":p_musicRes.thisPlayMusicInfo.allTime
+                                                 })
+                        isFavorited=true
+                    }
+                }
+                function checkFavoriteStatus() {
+                    // 增加空值判断，防止刚启动时报错
+                    if (!p_musicRes.thisPlayMusicInfo.id) return;
+
+                    var index = p_favoriteManager.indexOf(p_musicRes.thisPlayMusicInfo.id)
+                    favoriteBtn.isFavorited = (index !== -1)
+                }
+
+                // 1. 组件加载完成时检查一次
+                Component.onCompleted: checkFavoriteStatus()
+
+                // 2. 监听歌曲信息变化，切歌时检查
+                Connections {
+                    target: p_musicRes
+                    function onThisPlayMusicInfoChanged() {
+                        favoriteBtn.checkFavoriteStatus()
+                    }
+                }
+            }
+            DownloadButton{//下载按钮
+                width: 35
+                height: width
+                anchors.verticalCenter: parent.verticalCenter
+                songData: {
+                    "id":p_musicRes.thisPlayMusicInfo.id,
+                    "name":p_musicRes.thisPlayMusicInfo.name,
+                    "artists":p_musicRes.thisPlayMusicInfo.artists,
+                    "album":p_musicRes.thisPlayMusicInfo.album,
+                    "coverImg":p_musicRes.thisPlayMusicInfo.coverImg,
+                    "url":p_musicRes.thisPlayMusicInfo.url,
+                    "allTime":p_musicRes.thisPlayMusicInfo.allTime
                 }
             }
         }

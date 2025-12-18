@@ -205,3 +205,6 @@ void MusicDownload::setData(const QVariantList &newData) {
 void MusicDownload::onDataChanged() {
     setData(loadAllDownloads());
 }
+bool MusicDownload::isDownloading(const QString &taskId) {
+    return m_downloadInfos.contains(taskId);
+}

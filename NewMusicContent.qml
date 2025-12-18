@@ -99,7 +99,7 @@ Item {
                 font.bold: isHovered||newMusicContent.headerCurrent===index
                 font.pointSize: newMusicContent.fontSize
                 text: name
-                color: "#C3C3C3"
+                color:thisTheme.primaryTextColor
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true
@@ -256,7 +256,7 @@ Item {
                             text: album
                         }
                         Text {
-                            width: parent.width*0.2-parent.height
+                            width: parent.width*0.2-parent.height-40
                             anchors.verticalCenter: parent.verticalCenter
                             horizontalAlignment: Text.AlignLeft
                             font.weight: 2
@@ -264,6 +264,20 @@ Item {
                             elide: Text.ElideRight
                             color: thisTheme.secondaryTextColor
                             text: allTime
+                        }
+                        DownloadButton{
+                            width: 25
+                            height: width
+                            anchors.verticalCenter: parent.verticalCenter
+                            songData: {
+                                "id":id,
+                                "name":name,
+                                "artists":artists,
+                                "album":album,
+                                "coverImg":coverImg,
+                                "url":"",
+                                "allTime":allTime
+                            }
                         }
                     }
                 }
