@@ -110,12 +110,6 @@ Rectangle{
                 Row{
                     spacing: 10
                     anchors.verticalCenter: parent.verticalCenter
-                    // Image {
-                    //     source: btnIcon
-                    //     sourceSize: Qt.size(32,32)
-                    //     width: 20
-                    //     height: width
-                    // }
                     ThemeImage{
                         width: 20
                         height: width

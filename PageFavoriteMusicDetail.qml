@@ -11,13 +11,6 @@ ListView {
     currentIndex: -1
     clip: true
 
-    //连接错误提示信号
-    // Connections{
-    //     target: downloadButton
-    //     function onError(msg){
-    //         toast.show(msg)
-    //     }
-    // }
     Toast{
         id:toast
     }

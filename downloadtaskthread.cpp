@@ -13,17 +13,6 @@ DownloadTaskThread::DownloadTaskThread(const QString &url, const QString &savePa
 }
 
 DownloadTaskThread::~DownloadTaskThread() {
-    //内存清理
-    // if (m_downloadTask) {
-    //     m_downloadTask->deleteLater();
-    // }
-    // if (m_thread) {
-    //     if (m_thread->isRunning()) {
-    //         m_thread->quit();
-    //         m_thread->wait();
-    //     }
-    //     m_thread->deleteLater();
-    // }
     if (m_thread) {
         //如果子线程还在跑
         if (m_thread->isRunning()) {
@@ -72,16 +61,9 @@ void DownloadTaskThread::start() {
         m_downloadTask->moveToThread(m_thread);
         connect(m_thread, &QThread::started, m_downloadTask, &DownloadTask::startDownload);
 
-        //-------优雅的退出链条-------
+        //-------退出链条-------
         connect(m_downloadTask, &DownloadTask::downloadFinished, m_downloadTask, &QObject::deleteLater);
         connect(m_downloadTask, &QObject::destroyed, m_thread, &QThread::quit);
-        // connect(m_downloadTask, &DownloadTask::downloadFinished, m_thread, [ = ]() { //值捕获避免竞争风险
-        //     qDebug() << "已退出线程：" << QThread::currentThread();
-        //     m_thread->quit();
-        //     m_thread->wait();
-        // });
-        // //注意：------线程结束后自动销毁task对象
-        // connect(m_thread, &QThread::finished, m_downloadTask, &QObject::deleteLater);
     }
     m_thread->start();
 }

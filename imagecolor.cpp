@@ -26,63 +26,6 @@ double ImageColor::colorEuclideanDistance(const QColor &c1, const QColor &c2) {
     return std::sqrt(dr * dr + dg * dg + db * db);
 }
 
-
-// //选择初始聚类中心的K-means++算法
-// QVector<QColor> ImageColor::kmeansPlusPlus(const QImage &image, int k){
-
-//     QVector<QColor> centroids;//存储聚类中心
-
-//     if(image.width()<=0||image.height()<=0||k<=0){
-//         return centroids;
-//     }
-
-//     //选择第一个聚类中心 随机选择一个像素
-//     int x=QRandomGenerator::global()->bounded(image.width());
-//     int y=QRandomGenerator::global()->bounded(image.height());
-//     centroids.append(image.pixelColor(x,y));
-
-//     //选择剩余的聚类中心
-//     for(int i=1;i<k;i++){
-
-//         QVector<double>minDistance(image.width()*image.height(),std::numeric_limits<double>::max());//所有元素初始值设为double所能表示的最大值
-
-//         double totalDist=0.0;
-
-//         //计算每个像素到最近聚类中心的距离(被现有中心覆盖的程度)
-//         for(int y=0;y<image.height();y++){
-//             for(int x=0;x<image.width();x++){
-//                 QColor pixel=image.pixelColor(x,y);
-//                 for(int j=0;j<centroids.size();j++){
-//                     double d=ImageColor:: colorEuclideanDistance(pixel,centroids[j]);
-//                     minDistance[y*image.width()+x]=std::min(minDistance[y*image.width()+x],d);
-
-//                 }
-//                 totalDist+=minDistance[y*image.width()+x];//累加所有最小距离(每个样本的选中概率为minDistance[i]/totalDist，距离越大的样本，被选中为下一个中心的概率越高，避免聚类中心扎堆)
-//             }
-//         }
-
-//         //根据距离加权随机选择下一个聚类中心
-//         double randVal=QRandomGenerator::global()->bounded(totalDist);//生成[0.0,totalDist）区间内的随机double数
-//         double sum=0.0;
-//         int x;
-//         int y;
-//         //线性搜索找到随机值对应的像素位置
-//         for(y=0;y<image.height();y++){
-//             for(x=0;x<image.width();x++){
-//                 sum+=minDistance[y*image.width()+x];
-//                 if(sum>=randVal){
-//                     break;
-//                 }
-//             }
-//             if(sum>=randVal){
-//                 break;
-//             }
-//         }
-//         centroids.append(image.pixelColor(x,y));//添加新的聚类中心
-//     }
-//     return centroids;
-// }
-
 //选择初始聚类中心的K-means++算法
 QVector<QColor> ImageColor::kmeansPlusPlus(const QImage &image, int k) {
     QVector<QColor> centroids;

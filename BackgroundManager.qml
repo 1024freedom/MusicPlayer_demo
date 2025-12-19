@@ -55,16 +55,6 @@ Item {
                 position: 1.0;
                 color: thirdColor
             }
-            // GradientStop {
-            //     id: gradientStop4
-            //     position: 0.75;
-            //     color: forthColor
-            // }
-            // GradientStop {
-            //     id: gradientStop5
-            //     position: 1.0;
-            //     color: fifthColor
-            // }
 
         }
         Component.onCompleted: {
@@ -330,15 +320,13 @@ Item {
             gradientStop1.color = color1
             gradientStop2.color = color2
             gradientStop3.color = color3
-            // gradientStop4.color = color4
-            // gradientStop5.color = color5
+
             
             // 同时更新属性，以便外部访问
             firstColor = color1
             secondColor = color2
             thirdColor = color3
-            // forthColor = color4
-            // fifthColor = color5
+
             
             console.log("背景颜色成功更新:", firstColor, "->", secondColor)
         })

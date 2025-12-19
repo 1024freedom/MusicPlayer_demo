@@ -1,102 +1,3 @@
-// #include "favoritemanager.h"
-
-// FavoriteManager::FavoriteManager(QObject* parent): QObject(parent) {
-//     m_data = readFile(m_savePath);
-//     connect(this, &FavoriteManager::dataValueChanged, this, &FavoriteManager::onDataValueChanged);
-// }
-
-// QJsonArray FavoriteManager::data() const {
-//     return m_data;
-// }
-
-// void FavoriteManager::setData(const QJsonArray &newData) {
-//     if (m_data == newData) {
-//         return;
-//     }
-//     m_data = newData;
-//     emit dataChanged();
-// }
-
-// QString FavoriteManager::savePath() const {
-//     return m_savePath;
-// }
-
-// void FavoriteManager::setSavePath(const QString &newSavePath) {
-//     if (m_savePath == newSavePath) {
-//         return;
-//     }
-//     m_savePath = newSavePath;
-//     emit savePathChanged();
-// }
-
-// void FavoriteManager::append(const QJsonObject &obj) {
-
-//     QString id = QString::number(obj["id"].toInt());
-//     if (indexOf(id) <= -1) {
-//         m_data.insert(0,obj);
-//     }
-
-//     emit dataValueChanged();
-// }
-
-// void FavoriteManager::remove(const QString &id) {
-//     int index = indexOf(id);
-//     if (index <= -1) {
-//         return;
-//     }
-//     m_data.removeAt(index);
-//     emit dataValueChanged();
-// }
-
-// QJsonArray FavoriteManager::readFile(const QString &filePath) {
-//     QJsonArray jsonArr;
-//     QFile file(filePath);
-//     if (!file.open(QIODevice::ReadOnly)) {
-//         return jsonArr;
-//     }
-//     QByteArray data(file.readAll());
-//     file.close();
-//     QJsonParseError error;
-//     QJsonDocument jsonDoc = QJsonDocument::fromJson(data, &error);
-//     if (error.error == QJsonParseError::NoError) {
-//         qDebug() << "json转换成功";
-//         return jsonDoc.array();
-//     }
-//     qDebug() << "json转换失败";
-//     return jsonArr;
-// }
-
-// void FavoriteManager::writeFile(const QString &filePath, const QJsonArray &obj) {
-//     QJsonDocument jsonDoc(obj);
-//     QFileInfo fileInfo(filePath);
-//     QDir dir = fileInfo.absoluteDir();
-//     if (!dir.exists()) { //检查当前路径是否存在，不存在则创建
-//         dir.mkpath(".");
-//     }
-//     QFile file(filePath);
-//     if (!file.open(QIODevice::WriteOnly)) {
-//         return;
-//     }
-//     file.write(jsonDoc.toJson());
-//     file.close();
-//     qDebug() << "文件保存路径" << fileInfo.absoluteFilePath();
-// }
-
-// int FavoriteManager::indexOf(const QString &findId) {
-//     for (int i = 0; i < m_data.count(); i++) {
-//         QString id = QString::number(m_data.at(i).toObject()["id"].toInt());
-//         if (id == findId) {
-//             return i;
-//         }
-//     }
-//     return -1;
-// }
-
-// void FavoriteManager::onDataValueChanged() {
-//     //数据变化时写入文件
-//     writeFile(m_savePath, m_data);
-// }
-
 #include "favoritemanager.h"
 
 FavoriteManager::FavoriteManager(QObject* parent): QObject(parent) {
@@ -159,8 +60,8 @@ bool FavoriteManager::createTable() {
 
     //创建索引提高查询性能
     query.exec("CREATE INDEX IF NOT EXISTS idx_id ON favorites (id)");
-    query.exec("CREATE INDEX IF NOT EXISTS idx_create_time ON favorites (url)");
-    query.exec("CREATE INDEX IF NOT EXISTS idx_create_time ON favorites (coverImg)");
+    query.exec("CREATE INDEX IF NOT EXISTS idx_url ON favorites (url)");
+    query.exec("CREATE INDEX IF NOT EXISTS idx_coverImg ON favorites (coverImg)");
 
     return true;
 }
@@ -190,16 +91,6 @@ void FavoriteManager::setDatabasePath(const QString &newDatabasePath) {
     emit databasePathChanged();
 }
 
-// void FavoriteManager::append(const QJsonObject &obj) {
-//     QString id = QString::number(obj["id"].toInt());
-//     if (!favoriteExists(id)) {
-//         if (addFavorite(obj)) {
-//             refreshData(loadAllFavorites());
-//         } else {
-//             qDebug() << "添加收藏失败";
-//         }
-//     }
-// }
 void FavoriteManager::append(const QVariantMap& obj) {
     QString id = obj["id"].toString();
     if (!favoriteExists(id)) {
@@ -219,15 +110,6 @@ void FavoriteManager::remove(const QString &id) {
     }
 }
 
-// int FavoriteManager::indexOf(const QString &findId) {
-//     for (int i = 0; i < m_data.count(); i++) {
-//         QString id = QString::number(m_data.at(i).toObject()["id"].toInt());
-//         if (id == findId) {
-//             return i;
-//         }
-//     }
-//     return -1;
-// }
 int FavoriteManager::indexOf(const QString &findId) {
     for (int i = 0; i < m_data.count(); i++) {
         QVariantMap item = m_data[i].toMap();

@@ -11,16 +11,6 @@ FramelessWindow {
     visible: true
     title: qsTr("Muisc of Freedom")
 
-    // QtObject{
-    //     id:p_theme
-    //     property int current: 0
-    //     //分别为 默认主题、
-    //     property var defaultTheme: [
-    //         {name:"pink",type:"defult",backgroundColor:"#FAF2F1",
-    //             subBackgroundColor:"#F2A49B",clickBackgroundColor:"#F6867A",
-    //             fontColor:"#572920",subColor:"#FAF7F6"}
-    //     ]
-    // }
     MusicResource{
         id:p_musicRes
     }
@@ -43,7 +33,7 @@ FramelessWindow {
     PlayHistoryManager{
         id:p_history
     }
-    MuiscDownload{
+    MusicDownload{
         id:p_musicDownloader
     }
 
@@ -157,11 +147,4 @@ FramelessWindow {
             showHideAni.start()
         }
     }
-
-
-    // PageMusicLyricDetail{
-    //     id:musicLyricPage
-    // }
-
-
 }
