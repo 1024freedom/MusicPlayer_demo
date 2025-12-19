@@ -17,6 +17,9 @@ Item {
     property int contentCurrent: -1
     width: parent.width
     height: header.height+content.height+80
+    Toast{
+        id:toast
+    }
 
     onHeaderCurrentChanged: {
         setContentModel()
@@ -278,6 +281,9 @@ Item {
                                 "url":url,
                                 "allTime":allTime
                             }
+                            onError: (msg)=>{
+                                        toast.show(msg)
+                                     }
                         }
                     }
                 }

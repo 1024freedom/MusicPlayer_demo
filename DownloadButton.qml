@@ -14,7 +14,10 @@ Item {
     // 引用 C++ 后端单例
     property var backend: p_musicDownloader
 
+    //错误信号
+    signal error(string msg)
     // 内部状态: "normal" (未下载),  "downloading"(下载中),"downloaded" (已下载)
+
     state: "normal"
 
     // 组件加载或数据变更时检查状态
@@ -118,6 +121,7 @@ Item {
     function startDownloadProcess() {
         if (!songData /*|| !songData.url */|| !songData.id) {
             console.error("歌曲数据不完整，无法下载")
+            error("歌曲数据不完整，无法下载")
             return
         }
 
@@ -137,6 +141,7 @@ Item {
                     startDownloadProcess()
                 }else{
                     console.error("获取 URL 失败或该歌曲需要 VIP")
+                    error("获取 URL 失败或该歌曲需要 VIP")
                     root.state = "normal"
                 }
             }})

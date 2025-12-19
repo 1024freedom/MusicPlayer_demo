@@ -12,6 +12,25 @@ Rectangle {
     // 状态管理
     // ---------------------------------------------------------
     property int currentTab: 0 // 0: 已下载, 1: 正在下载
+    property bool isNewest: true//数据是否最新，用于删除下载记录后更新页面
+    //刷新用定时器
+    Timer{
+        id:refreshTimer
+        interval: 50
+        repeat: false
+        onTriggered: {
+            var currentData=p_musicDownloader.data
+            downloadedListView.model=[]//置空欺骗 ListView，让它认为源数据变了，从而强制重新渲染
+            downloadedListView.model=currentData
+            root.isNewest=true
+        }
+    }
+
+    onIsNewestChanged:{
+        if(isNewest===false){
+            refreshTimer.restart()
+        }
+    }
 
     // ---------------------------------------------------------
     // 顶部标题栏与 Tab
@@ -218,6 +237,24 @@ Rectangle {
                                 font.pixelSize: 13
                             }
                         }
+                        Item {
+                            Layout.preferredWidth: parent.width * 0.1
+                            Layout.fillHeight: true
+                            ToolTipButtom{
+                                width: 20
+                                height: width
+                                anchors.verticalCenter: parent.verticalCenter
+                                source:"qrc:/delete"
+                                hintText: "删除"
+                                hoveredColor: thisTheme.itemHoverColor
+                                color: "#00000000"
+                                onClicked: {
+                                    p_musicDownloader.removeDownload(modelData.id)
+                                    root.isNewest=false
+                                }
+                            }
+                        }
+
                     }
                 }
             }

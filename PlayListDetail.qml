@@ -11,6 +11,10 @@ ListView {
     currentIndex: -1
     clip: true
 
+    Toast{
+        id:toast
+    }
+
     onPlayListInfoChanged: {
         headerItem.id=playListInfo.id
         headerItem.nameText=playListInfo.name
@@ -350,6 +354,9 @@ ListView {
                         "url":url,
                         "allTime":allTime
                     }
+                    onError: (msg)=>{
+                                toast.show(msg)
+                             }
                 }
             }
 

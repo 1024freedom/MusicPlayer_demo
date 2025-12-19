@@ -11,6 +11,17 @@ ListView {
     currentIndex: -1
     clip: true
 
+    //连接错误提示信号
+    // Connections{
+    //     target: downloadButton
+    //     function onError(msg){
+    //         toast.show(msg)
+    //     }
+    // }
+    Toast{
+        id:toast
+    }
+
     onCountChanged: {
         contentItemBackground.height=count*80+30
     }
@@ -352,6 +363,7 @@ ListView {
                     text: model.allTime
                 }
                 DownloadButton{
+                    id:downloadButton
                     width: 25
                     height: width
                     anchors.verticalCenter: parent.verticalCenter
@@ -364,6 +376,9 @@ ListView {
                         "url":url,
                         "allTime":allTime
                     }
+                    onError: (msg)=>{
+                                toast.show(msg)
+                             }
                 }
             }
 

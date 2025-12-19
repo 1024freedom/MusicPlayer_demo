@@ -174,6 +174,38 @@ bool MusicDownload::addDownload(const QVariantMap &obj, const QString &savePath)
     return true;
 }
 
+void MusicDownload::removeDownload(const QString &id) {
+    QSqlQuery query(m_database);
+    //查询物理路径
+    QString filePath;
+    query.prepare("SELECT savePath FROM downloads WHERE id = :id");
+    query.bindValue(":id", id);
+    if (query.exec() && query.next()) {
+        filePath = query.value("savePath").toString();
+
+        //删除本地文件
+        if (!filePath.isEmpty()) {
+            QFile file(filePath);
+            if (file.exists()) {
+                if (file.remove()) {
+                    qDebug() << "本地文件删除成功" << filePath;
+                } else {
+                    qDebug() << "本地文件删除失败" << filePath;
+                }
+            }
+        }
+    }
+    //删除对应数据库文件
+    query.prepare("DELETE FROM downloads WHERE id = :id");
+    query.bindValue(":id", id);
+    if (query.exec()) {
+        qDebug() << "数据库记录删除成功";
+        emit dataChanged();
+    } else {
+        qDebug() << "数据库记录删除失败" << query.lastError().text();
+    }
+}
+
 QVariantList MusicDownload::loadAllDownloads() {
     QVariantList downloadsList;
     QSqlQuery query(m_database);

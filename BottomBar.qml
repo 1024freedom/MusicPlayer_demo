@@ -10,6 +10,10 @@ Rectangle{
     height: 80
     color: thisTheme.windowBackgroundColor
 
+    Toast{
+        id:toast
+    }
+
     ThisPlayerListLabel{
         id:thisPlayerListLabel
         visible: false
@@ -224,6 +228,9 @@ Rectangle{
                     "url":p_musicRes.thisPlayMusicInfo.url,
                     "allTime":p_musicRes.thisPlayMusicInfo.allTime
                 }
+                onError: (msg)=>{
+                            toast.show(msg)
+                         }
             }
         }
         Row{
