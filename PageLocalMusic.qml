@@ -16,7 +16,7 @@ Item {
         id: folderDialog
         title: "选择本地音乐文件夹"
         onAccepted: {
-            p_localMusicManager.scanDirectory(folder)
+            p_localmusicManager.scanDirectory(folder)
         }
     }
 
@@ -27,15 +27,15 @@ Item {
 
     // 监听后端数据变化
     Connections {
-        target: p_localMusicManager
+        target: p_localmusicManager
         function onDataChanged() {
             updateMusicList()
         }
     }
 
-    // JS函数：数据转换与刷新
+    // 数据转换与刷新
     function updateMusicList() {
-        var list = p_localMusicManager.data
+        var list = p_localmusicManager.data
         musicModel.clear()
         for(var i = 0; i < list.length; i++) {
             musicModel.append(list[i])
@@ -89,14 +89,16 @@ Item {
 
                     contentItem: Text {
                         text: parent.text
-                        color: "#FFFFFF" // 永远白色
+                        color: thisTheme.accentColor
                         font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                     }
 
                     background: Rectangle {
-                        color: parent.down ? Qt.darker(thisTheme.itemSelectedColor) : thisTheme.itemSelectedColor // 假设选中色是主题红
+                        color: if(parent.down)return Qt.darker(thisTheme.itemSelectedColor)
+                        else if(parent.hovered)return thisTheme.itemHoverColor
+                        else return thisTheme.itemSelectedColor
                         radius: 15
                     }
                     onClicked: {
@@ -152,7 +154,7 @@ Item {
                 Item { Layout.preferredWidth: 50 } // 序号
 
                 Text {
-                    text: "音乐标题"
+                    text: "音乐名"
                     color: thisTheme.secondaryTextColor
                     font.pixelSize: 13
                     Layout.fillWidth: true; Layout.preferredWidth: 4
@@ -202,7 +204,7 @@ Item {
             model: ListModel { id: musicModel }
             boundsBehavior: Flickable.StopAtBounds
 
-            // 滚动条 (复用你的样式)
+            // 滚动条
             ScrollBar.vertical: ScrollBar {
                 id: vbar
                 policy: ScrollBar.AsNeeded
@@ -246,14 +248,14 @@ Item {
                         var musicInfo = {
                             "id": model.path, // 本地音乐通常用路径做 ID
                             "name": model.name,
-                            "artists": model.artist, // 注意 C++ 那边如果是 "artist"
+                            "artists": model.artists, // 注意 C++ 那边如果是 "artist"
                             "album": model.album,
                             "url": "file://" + model.path, // 本地文件需加协议头
                             "duration": model.duration,
                             "coverImg": "qrc:/images/default_cover.png" // 本地音乐暂无封面，给个默认图
                         }
 
-                        // 调用播放接口
+                        // 调用播放接口 需要增加一个使用路径而不是id的重载方法
                         p_musicPlayer.playMusic(model.path, musicInfo)
                     }
                 }
@@ -271,7 +273,7 @@ Item {
                         horizontalAlignment: Text.AlignCenter
                     }
 
-                    // 2. 标题
+                    // 2. 名
                     Text {
                         Layout.fillWidth: true; Layout.preferredWidth: 4
                         text: model.name
@@ -285,7 +287,7 @@ Item {
                     // 3. 歌手
                     Text {
                         Layout.fillWidth: true; Layout.preferredWidth: 2
-                        text: model.artist
+                        text: model.artists
                         color: thisTheme.secondaryTextColor
                         font.pixelSize: 13
                         elide: Text.ElideRight
@@ -333,7 +335,7 @@ Item {
     Rectangle {
         anchors.fill: parent
         color: "#80FFFFFF" // 半透明遮罩
-        visible: p_localMusicManager.isLoading
+        visible: p_localmusicManager.isLoading
         z: 999
 
         Column {

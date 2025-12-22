@@ -14,12 +14,12 @@ Qt 机制限制（核心）： Qt 的 SQL 模块维护了一个全局的连接�
 LocalMusicManager::LocalMusicManager(QObject *parent)
     : QObject{parent} {
     //标准应用数据目录
-    QString docPath = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation);
-    QDir dir(docPath);
-    if (!dir.exists()) {
-        dir.mkpath(".");
-    }
-    m_databasePath = dir.filePath("local_music.db");
+    // QString docPath = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation);
+    // QDir dir(docPath);
+    // if (!dir.exists()) {
+    //     dir.mkpath(".");
+    // }
+    // m_databasePath = dir.filePath("local_music.db");
     initializeDatabase();
     refreshData();//加载已经有的数据
     //监听异步任务结束
@@ -28,7 +28,7 @@ LocalMusicManager::LocalMusicManager(QObject *parent)
         emit isLoadingChanged();
         refreshData();//重新从数据库加载数据
         emit scanFinished(m_data.count());
-        qDebug() << "后台扫描任务完成";
+        qDebug() << "后台扫描任务完成:" << m_data.count();
     });
 }
 LocalMusicManager::~LocalMusicManager() {
@@ -42,6 +42,11 @@ LocalMusicManager::~LocalMusicManager() {
     }
 }
 bool LocalMusicManager::initializeDatabase() {
+    QFileInfo fileInfo(m_databasePath);
+    QDir dir = fileInfo.absoluteDir();
+    if (!dir.exists()) {
+        dir.mkpath(".");
+    }
     //主线程连接，用于读取
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "main_connection");
     db.setDatabaseName(m_databasePath);
@@ -59,7 +64,7 @@ bool LocalMusicManager::createTable() {
         CREATE TABLE IF NOT EXISTS local_music (
             path TEXT PRIMARY KEY,
             name TEXT,
-            artist TEXT,
+            artists TEXT,
             album TEXT,
             size TEXT,
             duration TEXT,
@@ -69,7 +74,7 @@ bool LocalMusicManager::createTable() {
     if (!query.exec(createTableSQL)) return false;
 
     query.exec("CREATE INDEX IF NOT EXISTS idx_name ON local_music (name)");
-    query.exec("CREATE INDEX IF NOT EXISTS idx_artist ON local_music (artist)");
+    query.exec("CREATE INDEX IF NOT EXISTS idx_artists ON local_music (artists)");
     return true;
 
 }
@@ -79,11 +84,15 @@ void LocalMusicManager::scanDirectory(const QString &path) {
     isLoading = true;
     emit isLoadingChanged();
 
-    QString cleanPath = path;
-    //移除路径开头的 file:// 前缀（文件 URL 协议头），得到纯本地文件路径
-    if (cleanPath.startsWith("file://")) {
-        cleanPath.replace("file://", "");
+    // 使用 QUrl 自动转为本地路径
+    // 它会自动把 "file:///C:/Music" 变成 "C:/Music" (Windows)
+    // 或 "file:///home/music" 变成 "/home/music" (Linux/Mac)
+    QString cleanPath = QUrl(path).toLocalFile();
+    if (cleanPath.isEmpty()) {
+        cleanPath = path;
     }
+
+    qDebug() << "准备扫描的路径:" << cleanPath;
     //在后台线程启动扫描文件夹任务，传递文件和数据库路径，跨线程不能传递 QSqlDatabase 对象
     QFuture<void> future = QtConcurrent::run(LocalMusicManager::scanTask, cleanPath, m_databasePath);
     m_watcher.setFuture(future);
@@ -108,8 +117,8 @@ void LocalMusicManager::scanTask(const QString &folderPath, const QString &dbPat
         }
         QSqlQuery query(db);
         query.prepare(R"(
-                INSERT OR REPLACE INTO local_music (path, name, artist, album, size, duration)
-                VALUES (:path, :name, :artist, :album, :size, :duration)
+                INSERT OR REPLACE INTO local_music (path, name, artists, album, size, duration)
+                VALUES (:path, :name, :artists, :album, :size, :duration)
             )");
 
         //开启事务，提升性能（减少磁盘IO次数）
@@ -131,7 +140,7 @@ void LocalMusicManager::scanTask(const QString &folderPath, const QString &dbPat
             QVariantMap meta = extractMetaData(fileInfo);
             query.bindValue(":path", fileInfo.absoluteFilePath());
             query.bindValue(":name", meta["name"]);
-            query.bindValue(":artist", meta["artist"]);
+            query.bindValue(":artists", meta["artists"]);
             query.bindValue(":album", meta["album"]);
             query.bindValue(":size", meta["size"]);
             query.bindValue(":duration", meta["duration"]);
@@ -189,7 +198,7 @@ void LocalMusicManager::refreshData() {
             QVariantMap map;
             map["path"] = query.value("path");
             map["name"] = query.value("name");
-            map["artist"] = query.value("artist");
+            map["artists"] = query.value("artists");
             map["album"] = query.value("album");
             map["size"] = query.value("size");
             map["duration"] = query.value("duration");
