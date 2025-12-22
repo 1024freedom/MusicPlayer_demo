@@ -15,10 +15,6 @@ find_package(Qt6 REQUIRED COMPONENTS Qml Sql)
 find_package(OpenMP)
 find_package(Qt6 REQUIRED COMPONENTS Concurrent)
 find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
 #
 qt_add_executable(appMusicPlayer_demo
     main.cpp
@@ -74,6 +70,9 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES ThemeImage.qml
     QML_FILES DownloadButton.qml
     QML_FILES Toast.qml
+    SOURCES
+    SOURCES localmusicmanager.h localmusicmanager.cpp
+    QML_FILES PageLocalMusic.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -100,10 +99,6 @@ target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Concurrent)
 if(OpenMP_CXX_FOUND)
     message("支持openMP")
     target_link_libraries(appMusicPlayer_demo PUBLIC OpenMP::OpenMP_CXX)
-target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
-target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
-target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
-target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
 else()
     message("不支持")

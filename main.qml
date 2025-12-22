@@ -36,6 +36,9 @@ FramelessWindow {
     MusicDownload{
         id:p_musicDownloader
     }
+    LocalMusicManager{
+        id:p_localmusicManager
+    }
 
     Column{
         id:mainPage
