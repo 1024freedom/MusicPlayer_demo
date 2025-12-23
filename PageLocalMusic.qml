@@ -82,45 +82,21 @@ Item {
                 // --- 顶部按钮组 ---
 
                 // 1. 播放全部按钮
-                Button {
+                TextButton{
                     text: "播放全部"
                     Layout.preferredHeight: 30
-                    Layout.preferredWidth: 100
-
-                    contentItem: Text {
-                        text: parent.text
-                        color: thisTheme.accentColor
-                        font.bold: true
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                    }
-
-                    background: Rectangle {
-                        color: if(parent.down)return Qt.darker(thisTheme.itemSelectedColor)
-                        else if(parent.hovered)return thisTheme.itemHoverColor
-                        else return thisTheme.itemSelectedColor
-                        radius: 15
-                    }
-                    onClicked: {
-                        // TODO: 播放列表所有歌曲逻辑
-                    }
+                    Layout.preferredWidth: 80
+                    color: thisTheme.itemSelectedColor
+                    hoveredColor: thisTheme.itemHoverColor
                 }
 
                 // 2. 选择目录按钮
-                Button {
+                TextButton{
                     text: "选择目录"
                     Layout.preferredHeight: 30
                     Layout.preferredWidth: 80
-                    onClicked: folderDialog.open()
-
-                    contentItem: Text {
-                        text: parent.text
-                        color: thisTheme.itemSelectedColor // 使用主题色作为文字颜色
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                        font.underline: parent.hovered // 悬停下划线
-                    }
-                    background: Item {} // 透明背景
+                    color: thisTheme.itemSelectedColor
+                    hoveredColor: thisTheme.itemHoverColor
                 }
             }
 
@@ -228,7 +204,6 @@ Item {
                 width: listView.width
                 height: 35
 
-                // 颜色逻辑：选中 > 悬停 > 斑马纹
                 color: {
                     if (listView.currentIndex === index) return thisTheme.itemSelectedColor
                     if (mouseArea.containsMouse) return thisTheme.itemHoverColor
@@ -244,15 +219,15 @@ Item {
                     onClicked: listView.currentIndex = index
 
                     onDoubleClicked: {
-                        // 构造播放数据对象 (键名需与 C++ 这里提取的一致)
+
                         var musicInfo = {
                             "id": model.path, // 本地音乐通常用路径做 ID
                             "name": model.name,
-                            "artists": model.artists, // 注意 C++ 那边如果是 "artist"
+                            "artists": model.artists,
                             "album": model.album,
-                            "url": "file://" + model.path, // 本地文件需加协议头
-                            "duration": model.duration,
-                            "coverImg": "qrc:/images/default_cover.png" // 本地音乐暂无封面，给个默认图
+                            "url": model.path,
+                            "allTime": model.duration,
+                            "coverImg": "qrc:/undefined"
                         }
 
                         // 调用播放接口 需要增加一个使用路径而不是id的重载方法

@@ -37,13 +37,24 @@ MediaPlayer {
 
     function playMusic(id,musicInfo){
         p_history.addRecentPlay(musicInfo);//添加到播放历史
-        var musicUrlCallBack=res=>{
-            musicInfo.url=res.url
-            p_musicRes.thisPlayMusicInfo=musicInfo
-            p_musicRes.thisPlayMusicInfoChanged()
+
+        //判断是否为本地音乐
+        var idStr=id.toString()
+        var isLocalFile=idStr.indexOf("/")!==-1||idStr.indexOf("\\")!==-1
+        if(isLocalFile){
+            p_musicRes.thisPlayMusicInfo = musicInfo;
+            p_musicRes.thisPlayMusicInfoChanged();
+        }else{
+            var musicUrlCallBack=res=>{
+                musicInfo.url=res.url
+                p_musicRes.thisPlayMusicInfo=musicInfo
+                p_musicRes.thisPlayMusicInfoChanged()
+            }
+            p_musicRes.getMusicUrl({id,callBack:musicUrlCallBack})
         }
-        p_musicRes.getMusicUrl({id,callBack:musicUrlCallBack})
+
     }
+
 
     function playPauseMusic(){//暂停或播放
         //没有播放源时返回

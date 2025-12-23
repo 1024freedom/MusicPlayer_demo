@@ -161,6 +161,21 @@ Item {
         var id=obj.id||"0"
         var callBack=obj.callBack||(()=>{})
 
+        var idStr = id.toString();
+        var isLocalMusic = idStr.indexOf("/") !== -1 || idStr.indexOf("\\") !== -1 || isNaN(Number(idStr));
+
+        if (isLocalMusic) {
+            console.log("检测到本地音乐，跳过网络请求，加载默认占位歌词");
+
+            // 手动构造一个简单的歌词字符串
+            // 格式：[分:秒.毫秒] 歌词内容
+            var localLrcStr = "[00:00.00] " + (obj.name || "本地音乐") + "\n[00:02.00] 本地音乐暂无歌词\n[99:59.00] ";
+            var lyricData = parseLyric(localLrcStr, "");
+
+            callBack(lyricData);
+            return; // 直接结束，不发送请求
+        }
+
         function makeRequest(){
             var xhr=new XMLHttpRequest()
             xhr.onreadystatechange=function(){
