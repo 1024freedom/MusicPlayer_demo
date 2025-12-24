@@ -23,7 +23,10 @@ private:
     //格式化时间
     QString formatTime(int ms);
     //处理网络请求与回调
-    void makeRequest(const QString& url, const QJSValue& callBack, std::function<QJSValue(QByteArray)>parser);
+    //callBack是QML传过来的一个JS回调函数
+    //parser是一个函数，接收QByteArray,返回QJSValue
+    void makeRequest(const QString& urlString, const QJSValue& callBack, std::function<QJSValue(QByteArray)>parser);
+
 
 signals:
 };
