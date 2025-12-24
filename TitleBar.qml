@@ -5,6 +5,7 @@ Rectangle{
     id:titleBar
     property var thisTheme: p_theme.m_currentTheme
     property string thisQml: ""
+    property string searchKeyword: ""
 
     RowLayout{
         width: parent.width-20

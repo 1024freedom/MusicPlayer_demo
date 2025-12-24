@@ -39,6 +39,9 @@ FramelessWindow {
     LocalMusicManager{
         id:p_localmusicManager
     }
+    MusicSearch{
+        id:p_musicSearch
+    }
 
     Column{
         id:mainPage
@@ -77,8 +80,10 @@ FramelessWindow {
                         value:titleBar.thisQml
                     }
 
+                    searchKeyword:titleBar.searchKeyword
+
                     Component.onCompleted: {
-                        let qml=leftBar.thisQml
+                        let qml_left=leftBar.thisQml
                         let btnText=leftBar.thisBtnText
                         let func=()=>{
                             leftBar.thisQml=qml

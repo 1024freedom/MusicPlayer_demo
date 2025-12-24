@@ -24,7 +24,7 @@ QString MusicSearch::formatTime(int ms) {
     return timeStr;
 }
 
-void MusicSearch::makeRequest(const QString &urlString, const QJSValue &callBack, std::function<QJSValue(QByteArray)> parser) {
+void MusicSearch::makeRequest(const QString &urlString, const QJSValue &callBack, std::function<QJsonValue(QByteArray)> parser) {
     QUrl url(urlString);
     QNetworkRequest request(url);
 
@@ -38,10 +38,6 @@ void MusicSearch::makeRequest(const QString &urlString, const QJSValue &callBack
 
             QJsonValue resultData = parser(data);
             QJSEngine* engine = qjsEngine(this); //找到当前c++对象所属的QML引擎
-
-            if (!engine && cbCopy.isCallable()) {
-                engine = cbCopy.engine();
-            }
             if (engine) {
                 QJSValueList args;
                 args << engine->toScriptValue(resultData.toVariant()); //转换为qml能用的类型
@@ -118,7 +114,7 @@ void MusicSearch::search(const QJSValue &obj) {
                 output.insert("allTime", formatTime(duration));
                 finalArray.append(output);
             }
-        } else if (type == 1000) { //歌单
+        } else if (type == "1000") { //歌单
             QJsonArray playlists = result.value("playlists").toArray();
             for (const auto& val : playlists) {
                 QJsonObject list = val.toObject();
@@ -141,6 +137,7 @@ void MusicSearch::search(const QJSValue &obj) {
                 finalArray.append(output);
             }
         }
+        return finalArray;
     };
     makeRequest(urlStr, callBack, parser);
 }
@@ -160,10 +157,10 @@ void MusicSearch::searchSuggest(const QJSValue &obj) {
             QJsonObject result = root.value("result").toObject();
             if (result.contains("allMatch")) {
                 QJsonArray allMatch = result.value("allMatch").toArray();
-                //遍历提取keywords
+                //遍历提取keyword
                 for (const auto& val : allMatch) {
                     QJsonObject item = val.toObject();
-                    suggestions.append(item.value("keywords").toString());
+                    suggestions.append(item.value("keyword").toString());
                 }
             }
         }

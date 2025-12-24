@@ -8,6 +8,7 @@
 #include "musicdownload.h"
 #include "playhistorymanager.h"
 #include "localmusicmanager.h"
+#include "musicsearch.h"
 
 int main(int argc, char* argv[]) {
 
@@ -30,6 +31,8 @@ int main(int argc, char* argv[]) {
     //注册为不可创建类型，但qml可访问其属性
     qmlRegisterUncreatableType<DownloadTaskThread>("sz.window", 1, 0, "DownloadTaskThread", "Cannot create in QML");
     qmlRegisterType<LocalMusicManager>("sz.window", 1, 0, "LocalMusicManager");
+    qmlRegisterType<MusicSearch>("sz.window", 1, 0, "MusicSearch");
+
 
     QObject::connect(
         &engine,

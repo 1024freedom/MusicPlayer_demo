@@ -25,7 +25,7 @@ private:
     //处理网络请求与回调
     //callBack是QML传过来的一个JS回调函数
     //parser是一个函数，接收QByteArray,返回QJSValue
-    void makeRequest(const QString& urlString, const QJSValue& callBack, std::function<QJSValue(QByteArray)>parser);
+    void makeRequest(const QString& urlString, const QJSValue& callBack, std::function<QJsonValue(QByteArray)>parser);
 
 
 signals:

@@ -5,6 +5,7 @@ Rectangle{
     id:rightContent
     property string thisQml: ""
     property var thisTheme: p_theme.m_currentTheme
+    property string searchKeyword: ""
 
     property var stepPage: []//页面前进/回退相关
     property int stepCurrent: -1
@@ -37,6 +38,16 @@ Rectangle{
         source: rightContent.thisQml
         onLoaded: {
             item.parent=parent
+        }
+        Binding{
+            target:rightContentLoader.item//当前加载的页面
+            //------加载搜索结果页面时把搜索关键词传进去------
+            property: "searchKeyword"
+            value:rightContent.searchKeyword
+            // 保护措施：只有当页面加载了且页面里确实有这个属性时才生效
+            when: rightContentLoader.status === Loader.Ready &&
+                  rightContentLoader.item &&
+                  rightContentLoader.item.hasOwnProperty("searchKeyword")
         }
     }
 }
