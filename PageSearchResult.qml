@@ -5,22 +5,14 @@ import QtQuick.Layouts 1.15
 Rectangle {
     id: searchResultPage
     anchors.fill: parent
-    color: theme.backgroundColor
+    property var thisTheme: p_theme.m_currentTheme
+
+    color: thisTheme.contentBackgroundColor
 
     // 接收外部传入的搜索关键字
     property string searchKeyword: ""
 
-    // ---------------- 主题颜色管理 ----------------
-    QtObject {
-        id: theme
-        property color primaryColor: "#EC4141"      // 网易云红
-        property color backgroundColor: "#FFFFFF"   // 背景白
-        property color hoverColor: "#F2F2F3"        // 列表悬停灰
-        property color headerColor: "#FAFAFA"       // 表头灰
-        property color textColor: "#333333"         // 主文字
-        property color subTextColor: "#888888"      // 副文字
-        property color dividerColor: "#E0E0E0"      // 分割线
-    }
+
 
     // ---------------- 逻辑控制 ----------------
     Component.onCompleted: {
@@ -41,7 +33,7 @@ Rectangle {
         loadingIndicator.running = true
 
         // 调用 C++ 接口
-        musicSearch.search({
+        p_musicSearch.search({
             "keywords": searchKeyword,
             "type": type.toString(),
             "callBack": function(result) {
@@ -73,7 +65,7 @@ Rectangle {
             text: "搜索 \"" + searchKeyword + "\""
             font.pixelSize: 20
             font.bold: true
-            color: theme.textColor
+            color: thisTheme.primaryTextColor
         }
 
         // 2. Tab 切换栏
@@ -103,7 +95,7 @@ Rectangle {
                         text: modelData.name
                         font.pixelSize: 16
                         font.bold: currentType === modelData.type
-                        color: currentType === modelData.type ? theme.textColor : theme.subTextColor
+                        color: currentType === modelData.type ? thisTheme.primaryTextColor : thisTheme.secondaryTextColor
                     }
 
                     // 选中下划线
@@ -112,7 +104,7 @@ Rectangle {
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: parent.width * 0.8
                         height: 3
-                        color: theme.primaryColor
+                        color: thisTheme.accentColor
                         visible: currentType === modelData.type
                     }
                 }
@@ -144,30 +136,41 @@ Rectangle {
                 header: Rectangle {
                     width: parent.width
                     height: 36
-                    color: theme.headerColor
+                    color: thisTheme.alternateRowColor
                     RowLayout {
                         anchors.fill: parent
                         spacing: 0
                         Item { width: 50 } // 序号占位
-                        Text { Layout.fillWidth: true; Layout.preferredWidth: 4; text: "音乐标题"; color: theme.subTextColor; font.pixelSize: 13 }
-                        Text { Layout.fillWidth: true; Layout.preferredWidth: 2; text: "歌手"; color: theme.subTextColor; font.pixelSize: 13 }
-                        Text { Layout.fillWidth: true; Layout.preferredWidth: 2; text: "专辑"; color: theme.subTextColor; font.pixelSize: 13 }
-                        Text { width: 80; text: "时长"; color: theme.subTextColor; font.pixelSize: 13; horizontalAlignment: Text.AlignRight; rightPadding: 20}
+                        Text { Layout.fillWidth: true; Layout.preferredWidth: 3; text: "音乐标题"; color: thisTheme.secondaryTextColor; font.pixelSize: 13 }
+                        Text { Layout.fillWidth: true; Layout.preferredWidth: 2; text: "歌手"; color: thisTheme.secondaryTextColor; font.pixelSize: 13 }
+                        Text { Layout.fillWidth: true; Layout.preferredWidth: 3; text: "专辑"; color: thisTheme.secondaryTextColor; font.pixelSize: 13 }
+                        Text { width: 80; text: "时长"; color: thisTheme.secondaryTextColor; font.pixelSize: 13; horizontalAlignment: Text.AlignRight; rightPadding: 20}
                     }
                 }
 
                 delegate: Rectangle {
-                    width: parent.width
+                    width: songListView.width
                     height: 36
-                    color: index % 2 === 0 ? theme.backgroundColor : "#FAFAFA" // 斑马纹
+                    color: index % 2 === 0 ? thisTheme.alternateRowColor : thisTheme.contentBackgroundColor
 
                     MouseArea {
                         anchors.fill: parent
                         hoverEnabled: true
-                        onEntered: parent.color = theme.hoverColor
-                        onExited: parent.color = (index % 2 === 0 ? theme.backgroundColor : "#FAFAFA")
+                        onEntered: parent.color = thisTheme.itemHoverColor
+                        onExited: parent.color = (index % 2 === 0 ? thisTheme.alternateRowColor : thisTheme.contentBackgroundColor)
                         // 双击播放逻辑
-                        onDoubleClicked: console.log("Play song id: " + model.id)
+                        onDoubleClicked: {
+                            var musicInfo = {
+                                "id": model.id,
+                                "name": model.name,
+                                "artists": model.artists,
+                                "album": model.album,
+                                "coverImg": model.coverImg,
+                                "url": "",
+                                "allTime": model.allTime
+                            }
+                            p_musicPlayer.playMusic(id, musicInfo)
+                        }
                     }
 
                     RowLayout {
@@ -178,7 +181,7 @@ Rectangle {
                         Text {
                             width: 50
                             text: (index + 1).toString().padStart(2, '0')
-                            color: theme.subTextColor
+                            color: thisTheme.secondaryTextColor
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: 13
                         }
@@ -186,9 +189,9 @@ Rectangle {
                         // 歌名
                         Text {
                             Layout.fillWidth: true
-                            Layout.preferredWidth: 4
+                            Layout.preferredWidth: 3
                             text: model.name
-                            color: theme.textColor
+                            color: thisTheme.primaryTextColor
                             elide: Text.ElideRight
                             font.pixelSize: 13
                         }
@@ -198,7 +201,7 @@ Rectangle {
                             Layout.fillWidth: true
                             Layout.preferredWidth: 2
                             text: model.artists
-                            color: theme.subTextColor
+                            color: thisTheme.secondaryTextColor
                             elide: Text.ElideRight
                             font.pixelSize: 13
                         }
@@ -206,9 +209,9 @@ Rectangle {
                         // 专辑
                         Text {
                             Layout.fillWidth: true
-                            Layout.preferredWidth: 2
+                            Layout.preferredWidth: 3
                             text: model.album
-                            color: theme.subTextColor
+                            color: thisTheme.secondaryTextColor
                             elide: Text.ElideRight
                             font.pixelSize: 13
                         }
@@ -217,7 +220,7 @@ Rectangle {
                         Text {
                             width: 80
                             text: model.allTime
-                            color: theme.subTextColor
+                            color: thisTheme.secondaryTextColor
                             horizontalAlignment: Text.AlignRight
                             rightPadding: 20
                             font.pixelSize: 13
@@ -233,79 +236,114 @@ Rectangle {
                 anchors.fill: parent
                 anchors.margins: 20
                 visible: currentType === 1000
-                cellWidth: width / 5 // 一行5个
-                cellHeight: cellWidth + 50
+
+                property int itemsPerRow: 4//一行四个
+                property int itemSpacing: 15//间距
+
+                cellWidth: width / itemsPerRow
+                cellHeight: cellWidth + 60
                 model: ListModel { id: playlistsModel }
                 clip: true
+
 
                 delegate: Item {
                     width: playlistView.cellWidth
                     height: playlistView.cellHeight
 
-                    Column {
-                        anchors.centerIn: parent
-                        width: parent.width - 20
-                        spacing: 8
-
-                        // 封面
-                        Rectangle {
-                            width: parent.width
-                            height: width
-                            radius: 5
-                            color: "#E0E0E0"
-                            clip: true
-
-                            Image {
-                                anchors.fill: parent
-                                source: model.coverImg
-                                fillMode: Image.PreserveAspectCrop
-                            }
-
-                            // 播放量遮罩
-                            Rectangle {
-                                anchors.top: parent.top
-                                anchors.right: parent.right
-                                width: parent.width
-                                height: 20
-                                gradient: Gradient {
-                                    GradientStop { position: 0.0; color: "#66000000" }
-                                    GradientStop { position: 1.0; color: "#00000000" }
-                                }
-                                Text {
-                                    anchors.right: parent.right
-                                    anchors.rightMargin: 5
-                                    anchors.verticalCenter: parent.verticalCenter
-                                    text: "▷ " + (model.playCount > 10000 ? (model.playCount/10000).toFixed(1)+"万" : model.playCount)
-                                    color: "white"
-                                    font.pixelSize: 10
-                                }
-                            }
-                        }
-
-                        // 歌单名
-                        Text {
-                            width: parent.width
-                            text: model.name
-                            color: theme.textColor
-                            font.pixelSize: 13
-                            elide: Text.ElideRight
-                            wrapMode: Text.Wrap
-                            maximumLineCount: 2
-                        }
-
-                        // 创建者
-                        Text {
-                            text: "by " + model.creator
-                            color: theme.subTextColor
-                            font.pixelSize: 12
-                        }
-                    }
-
-                    MouseArea {
+                    Rectangle{
+                        id:cardContainer
                         anchors.fill: parent
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: console.log("Open playlist id: " + model.id)
+                        anchors.margins: 7.5
+
+                        border.width: 1
+                        border.color: thisTheme.dividerColor
+                        radius: 8
+                        color: mouseArea.isHovered?thisTheme.itemHoverColor: thisTheme.contentBackgroundColor
+
+                        Column {
+                            id: contentCol
+                            width: parent.width - 10 // 内部内容左右留白
+                            anchors.top: parent.top
+                            anchors.topMargin: 5      // 图片距离边框顶部的距离
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            spacing: 8
+
+                            // 封面
+                            Rectangle {
+                                width: parent.width
+                                height: width
+                                radius: 5
+                                color: thisTheme.alternateRowColor
+                                clip: true
+
+                                Image {
+                                    anchors.fill: parent
+                                    source: model.coverImg
+                                    fillMode: Image.PreserveAspectCrop
+                                }
+
+                                // 播放量遮罩
+                                Rectangle {
+                                    anchors.top: parent.top
+                                    anchors.right: parent.right
+                                    width: parent.width
+                                    height: 20
+                                    gradient: Gradient {
+                                        GradientStop { position: 0.0; color: "#66000000" }
+                                        GradientStop { position: 1.0; color: "#00000000" }
+                                    }
+                                    Text {
+                                        anchors.right: parent.right
+                                        anchors.rightMargin: 5
+                                        anchors.verticalCenter: parent.verticalCenter
+                                        text: "▷ " + (model.playCount > 10000 ? (model.playCount/10000).toFixed(1)+"万" : model.playCount)
+                                        color: "white"
+                                        font.pixelSize: 10
+                                    }
+                                }
+                            }
+
+                            // 歌单名
+                            Text {
+                                width: parent.width
+                                text: model.name
+                                color: thisTheme.primaryTextColor
+                                font.pixelSize: 13
+                                elide: Text.ElideRight
+                                wrapMode: Text.Wrap
+                                maximumLineCount: 2
+                                lineHeight: 1.2
+                                height: 32
+                            }
+
+                            // 创建者
+                            Text {
+                                width: parent.width
+                                text: "by " + model.creator
+                                color: thisTheme.secondaryTextColor
+                                font.pixelSize: 12
+                                elide: Text.ElideRight
+                            }
+                        }
+
+                        MouseArea {
+                            id:mouseArea
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: console.log("Open playlist id: " + model.id)
+                            property bool isHovered: false
+                            hoverEnabled: true
+                            onEntered: {
+                                isHovered=true
+                            }
+                            onExited: {
+                                isHovered=false
+                            }
+                        }
+
                     }
+
+
                 }
                 ScrollBar.vertical: ScrollBar {}
             }

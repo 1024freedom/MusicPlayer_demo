@@ -197,13 +197,10 @@ Item {
                             "artists": artists,
                             "album": album,
                             "coverImg": coverImg,
-                            "url": url,
+                            "url": "",
                             "allTime": allTime
                         }
-
-                        // 调用你在 MediaPlayer 中定义的函数
                         p_musicPlayer.playMusic(id, musicInfo)
-                        //添加到播放列表
 
 
                     }

@@ -82,14 +82,47 @@ FramelessWindow {
 
                     searchKeyword:titleBar.searchKeyword
 
-                    Component.onCompleted: {
-                        let qml_left=leftBar.thisQml
-                        let btnText=leftBar.thisBtnText
-                        let func=()=>{
+                    onThisQmlChanged: {
+                        if(rightContent.isHistoryNavigating)return
+                        if(thisQml==="")return
+                    }
+
+                    function addCurrentPageToHistory(){
+                        var qml=""
+                        var btnText=""
+                        var isTitle=false
+                        if(titleBar.thisQml!==""){
+                            qml=titleBar.thisQml
+                            btnText=""
+                            isTitle=true
+                        }else{
+                            qml=leftBar.thisQml
+                            btnText=leftBar.thisBtnText
+                            isTitle=false
+                        }
+                        let func_title=()=>{
+                            leftBar.thisBtnText=""
+                            titleBar.thisQml=qml
+                        }
+                        let func_left=()=>{
+                            titleBar.thisQml=""
                             leftBar.thisQml=qml
                             leftBar.thisBtnText=btnText
                         }
-                        rightContent.pushStep({name:btnText,callBack:func})
+
+                        rightContent.pushStep({name:isTitle?"": btnText,callBack:isTitle?func_title:func_left})
+                    }
+
+                    Component.onCompleted: {
+                        addCurrentPageToHistory()
+                    }
+                    //----监听titlebar搜索动作-----
+                    Connections{
+                        target: titleBar
+                        function onSearchKeywordChanged(){
+                            leftBar.thisBtnText=""
+                            titleBar.thisQml ="PageSearchResult.qml"
+                        }
                     }
                 }
             }

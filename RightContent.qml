@@ -13,20 +13,32 @@ Rectangle{
 
     property alias loadItem: rightContentLoader.item
     color:  thisTheme.contentBackgroundColor
+    //-----防止回退时触发新的push------
+    property bool isHistoryNavigating: false
 
     function preStep(){
         if(stepCurrent<=0)return
+        isHistoryNavigating=true
         stepCurrent-=1
         stepPage[stepCurrent].callBack()
         console.log("执行命令"+stepPage[stepCurrent].name)
+        isHistoryNavigating=false
     }
     function nextStep(){
         if(stepCurrent>=stepPageCount-1)return
+        isHistoryNavigating=true
         stepCurrent+=1
         stepPage[stepCurrent].callBack()
         console.log("执行命令"+stepPage[stepCurrent].name)
+        isHistoryNavigating=false
     }
     function pushStep(obj){
+        if(isHistoryNavigating)return
+        //如果当前不在队尾，产生新操作时，截断后面的历史
+        if(stepCurrent<stepPageCount-1){
+            stepPage=stepPage.slice(0,stepCurrent+1)
+        }
+
         let infp={name:"",callBack:(()=>{})}
         stepPage.push(obj)
         stepCurrent+=1

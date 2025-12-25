@@ -28,7 +28,7 @@ Rectangle{
 
     property var thisData: filterLeftBarData(leftBarData)
     property string thisQml: "PageFindMusic.qml"
-    property string thisBtnText: "乐库"
+    property string thisBtnText: "新歌速递"
     property int count: thisData.length
     property int btnHeight: 40
     property int fontSize: 11
