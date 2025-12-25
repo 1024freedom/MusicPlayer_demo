@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Controls
 
 Item {
     id:newMusicContent
@@ -27,21 +28,17 @@ Item {
 
     Component.onCompleted: {
         setContentModel()
-        // var callBack=res=>{
-        //     console.log(JSON.stringify(res[0]))
-        //     content.height=res.length*80+20
-        //     contentModel.append(res)
-        // }
-        // p_musicRes.getNewMusic({type:headerData[headerCurrent].type,callBack})
     }
 
     function setContentModel(){
+        loadingIndicator.running=true
         content.height=0
         contentModel.clear()
         var callBack=res=>{
             console.log(JSON.stringify(res[0]))
             content.height=res.length*80+20
             contentModel.append(res)
+            loadingIndicator.running=false
         }
         p_musicRes.getNewMusic({type:headerData[headerCurrent].type,callBack})
     }
@@ -130,6 +127,14 @@ Item {
         border.color: thisTheme.dividerColor
         radius: 10
         color: thisTheme.contentBackgroundColor
+
+        BusyIndicator {
+            id: loadingIndicator
+            anchors.centerIn: parent
+            running: false
+            z: 10
+        }
+
         /*Column*/Item{
             // topPadding: 10
             width: parent.width-20//

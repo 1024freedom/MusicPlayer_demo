@@ -32,6 +32,9 @@ Item {
 
     function setContentModel(cat){
         content.height=0
+        //启动加载动画
+        headerLoadingIndicator.running=true
+        contentLoadingIndicator.running=true
         var boutiquePlayListCallBack=res=>{
             boutiquePlayListData=res.slice(0,res.length)
             // 注意：这里要做个非空判断，防止 crash
@@ -40,6 +43,7 @@ Item {
                 headerBoutiquePlayListInfo.nameText=boutiquePlayListData[0].name
                 headerBoutiquePlayListInfo.descriptionText=boutiquePlayListData[0].description
                 console.log("BoutiquePlayList:"+JSON.stringify(res[0]))
+                headerLoadingIndicator.running=false
             }
         }
         var playListCallBack=res=>{
@@ -49,6 +53,7 @@ Item {
             // 重新计算 Grid 高度
             content.height=rows*contentItemHeight+rows*content.spacing
             console.log("playListCallBack:"+JSON.stringify(res[0]))
+            contentLoadingIndicator.running=false
         }
 
         p_musicRes.getMusicBoutiquePlayList({cat:cat,callBack:boutiquePlayListCallBack})
@@ -96,7 +101,7 @@ Item {
             Column {
                 id: header
                 width: parent.width*0.9
-                // height:headerBackground.height+headerPlayListSelectBar.height+spacing
+
                 topPadding: 30
 
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -106,6 +111,13 @@ Item {
                     id:headerBackground
                     width: parent.width
                     height: 160
+                    BusyIndicator {
+                        id: headerLoadingIndicator
+                        anchors.centerIn: parent
+                        running: false
+                        z: 10
+                    }
+
                     RoundImage{
                         id:headerBackground_1
                         anchors.fill: parent
@@ -259,6 +271,7 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 spacing: 20
                 columns: 3
+
                 onWidthChanged: {
                     if(width>0){
                         setContentItemSize()
@@ -303,5 +316,12 @@ Item {
                 }
             }
         }
+    }
+    BusyIndicator {
+        id: contentLoadingIndicator
+        running: false
+        z: 10
+        anchors.centerIn: parent
+        anchors.verticalCenterOffset: 50
     }
 }
