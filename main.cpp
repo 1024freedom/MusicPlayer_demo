@@ -1,5 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QIcon>
 #include "framelesswindow.h"
 #include "favoritemanager.h"
 #include "desktoplyric.h"
@@ -13,6 +14,8 @@
 int main(int argc, char* argv[]) {
 
     QGuiApplication app(argc, argv);
+
+    app.setWindowIcon(QIcon(":/topleft"));
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/MusicPlayer_demo/main.qml"));

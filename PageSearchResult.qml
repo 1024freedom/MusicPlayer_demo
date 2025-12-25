@@ -330,7 +330,6 @@ Rectangle {
                             id:mouseArea
                             anchors.fill: parent
                             cursorShape: Qt.PointingHandCursor
-                            onClicked: console.log("Open playlist id: " + model.id)
                             property bool isHovered: false
                             hoverEnabled: true
                             onEntered: {
@@ -338,6 +337,20 @@ Rectangle {
                             }
                             onExited: {
                                 isHovered=false
+                            }
+
+                            onClicked: {
+                                let lb=leftBar
+                                let rc=rightContent
+                                let playListInfo={id:model.id,name:model.name,description:model.description,coverImg:model.coverImg}
+                                let func=()=>{
+                                    lb.thisBtnText=""
+                                    rc.thisQml="PlayListDetail.qml"
+                                    rc.loadItem.playListInfo=playListInfo
+                                }
+                                func()
+                                rightContent.pushStep({name:name,callBack:func})
+                                console.log("标签被点击")
                             }
                         }
 

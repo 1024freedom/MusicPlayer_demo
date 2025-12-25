@@ -82,7 +82,7 @@ Item {
                                             album:obj.album.name,
                                             coverImg:obj.album.picUrl,
                                             url:"",
-                                            allTime:"00:00"
+                                            allTime:setTime(obj.duration)
                                         }
                                     })
                         callBack(res)

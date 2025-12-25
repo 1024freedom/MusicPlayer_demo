@@ -2,6 +2,7 @@ import QtQuick
 import sz.window
 import QtQuick.Layouts
 import QtQuick.Controls
+import QtQuick.Window
 Rectangle{
     id:bottomBar
     property var thisTheme:p_theme.m_currentTheme
@@ -9,6 +10,21 @@ Rectangle{
     width: parent.width
     height: 80
     color: thisTheme.windowBackgroundColor
+
+    z:100
+    //全屏透明遮罩层，用于关闭播放列表
+    MouseArea{
+        id:outsideMask
+        parent: bottomBar.parent.parent//整个窗口
+        anchors.fill: parent
+        visible: thisPlayerListLabel.visible
+        z:99
+        hoverEnabled: true
+        onClicked: {
+            thisPlayerListLabel.visible=false
+        }
+    }
+
 
     Toast{
         id:toast

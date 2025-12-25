@@ -4,7 +4,7 @@ import QtQuick.Controls //引入 Controls 模块以使用 ScrollView
 
 Item {
     id: playListContent
-    anchors.fill: parent // 建议让根节点填满父容器，而不是手动算高度
+    anchors.fill: parent
 
     property var thisTheme: p_theme.m_currentTheme
     property var headerData: [{name:"ACG"},
