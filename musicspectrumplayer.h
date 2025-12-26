@@ -6,7 +6,10 @@
 #include <QAudioDecoder>
 #include <QMediaDevices>
 #include <QAudioDevice>
+#include <QtMath>
+#include <QDebug>
 #include <QBuffer>
+#include <QPainter>
 #include <QTimer>
 #include <vector>
 #include <complex>
@@ -43,6 +46,13 @@ public slots:
     void stop();
 
 signals:
+    void sourceChanged();
+    void durationChanged();
+    void positionChanged();
+    void playbackStateChanged();
+    void barColorChanged();
+    void playbackFinished();
+private slots:
     void onBufferReady();
     void onFinished();
     void handleStateChanged(QAudio::State newState);

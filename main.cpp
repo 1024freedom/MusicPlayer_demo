@@ -31,10 +31,12 @@ int main(int argc, char* argv[]) {
     qmlRegisterType<ThemeManager>("sz.window", 1, 0, "ThemeManager");
     qmlRegisterType<PlayHistoryManager>("sz.window", 1, 0, "PlayHistoryManager");
     qmlRegisterType<MusicDownload>("sz.window", 1, 0, "MusicDownload");
-    //注册为不可创建类型，但qml可访问其属性
-    qmlRegisterUncreatableType<DownloadTaskThread>("sz.window", 1, 0, "DownloadTaskThread", "Cannot create in QML");
     qmlRegisterType<LocalMusicManager>("sz.window", 1, 0, "LocalMusicManager");
     qmlRegisterType<MusicSearch>("sz.window", 1, 0, "MusicSearch");
+
+    //注册为不可创建类型，但qml可访问其属性
+    qmlRegisterUncreatableType<DownloadTaskThread>("sz.window", 1, 0, "DownloadTaskThread", "Cannot create in QML");
+
 
 
     QObject::connect(
