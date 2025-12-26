@@ -105,8 +105,8 @@ Rectangle {
                 spacing: 0
                 z: 5
 
-                HeaderItem { text: "音乐标题"; widthWeight: 3 }
-                HeaderItem { text: "歌手"; widthWeight: 2 }
+                HeaderItem { text: "音乐标题"; widthWeight: 2.5 }
+                HeaderItem { text: "歌手"; widthWeight: 1.5 }
                 HeaderItem { text: "专辑"; widthWeight: 1 }
                 HeaderItem { text: "时长"; widthWeight: 1 }
             }
@@ -186,7 +186,7 @@ Rectangle {
 
                         // 1. 歌名
                         Item {
-                            Layout.preferredWidth: parent.width * 0.4 // 对应表头权重 4
+                            Layout.preferredWidth: parent.width * 0.3 // 对应表头权重 3
                             Layout.fillHeight: true
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter
@@ -200,7 +200,7 @@ Rectangle {
 
                         // 2. 歌手
                         Item {
-                            Layout.preferredWidth: parent.width * 0.2
+                            Layout.preferredWidth: parent.width * 0.3
                             Layout.fillHeight: true
                             Text {
                                 anchors.verticalCenter: parent.verticalCenter

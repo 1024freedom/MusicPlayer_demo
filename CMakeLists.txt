@@ -9,11 +9,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
 #添加
 set(CMAKE_AUTORCC ON)
-find_package(Qt6 REQUIRED COMPONENTS Quick QuickEffects)
+find_package(Qt6 REQUIRED COMPONENTS Quick QuickEffects Multimedia)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Qml Sql)
 find_package(OpenMP)
 find_package(Qt6 REQUIRED COMPONENTS Concurrent)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 #
@@ -76,6 +77,7 @@ qt_add_qml_module(appMusicPlayer_demo
     QML_FILES PageLocalMusic.qml
     QML_FILES TextButton.qml
     SOURCES musicsearch.h musicsearch.cpp
+    SOURCES musicspectrumplayer.h musicspectrumplayer.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -99,11 +101,10 @@ target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Quick)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Qml Qt6::Sql)
 target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Concurrent)
+target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Quick Qt6::Multimedia)
 if(OpenMP_CXX_FOUND)
     message("支持openMP")
     target_link_libraries(appMusicPlayer_demo PUBLIC OpenMP::OpenMP_CXX)
-target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
-target_link_libraries(appMusicPlayer_demo PRIVATE Qt6::Core)
 else()
     message("不支持")
 endif()

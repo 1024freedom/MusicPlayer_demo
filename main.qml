@@ -11,6 +11,7 @@ FramelessWindow {
     minimumHeight: 710
     visible: true
     title: qsTr("Muisc of Freedom")
+    //让整个应用窗口位于屏幕中心
     x: (Screen.width - width) / 2
     y: (Screen.height - height) / 2
 
